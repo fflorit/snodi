@@ -1,0 +1,19 @@
+INFO    : Generating assets for web
+INFO    : Generating any needed assets.
+INFO    : XSL conversion of C:\Users\Federico\Desktop\Snodi\snodi\source\main.ptx by C:\Users\Federico\.ptx\2.36.0\core\xsl\utilities\pretext-enhanced-source.xsl
+ERROR   : Error loading file:///C:/Users/Federico/Desktop/Snodi/snodi/source/frontmatter.ptx: Comment not terminated, line 27, column 1 (file:///C:/Users/Federico/Desktop/Snodi/snodi/source/frontmatter.ptx, line 27)
+ERROR   : Failed to generate assets: Comment not terminated, line 27, column 1 (file:///C:/Users/Federico/Desktop/Snodi/snodi/source/frontmatter.ptx, line 27) 
+
+INFO    : Building target web
+INFO    : XSL conversion of C:\Users\Federico\Desktop\Snodi\snodi\source\main.ptx by C:\Users\Federico\.ptx\2.36.0\core\xsl\utilities\pretext-enhanced-source.xsl
+ERROR   : Error loading file:///C:/Users/Federico/Desktop/Snodi/snodi/source/frontmatter.ptx: Comment not terminated, line 27, column 1 (file:///C:/Users/Federico/Desktop/Snodi/snodi/source/frontmatter.ptx, line 27)
+ERROR   : Error assembling source file: Comment not terminated, line 27, column 1 (file:///C:/Users/Federico/Desktop/Snodi/snodi/source/frontmatter.ptx, line 27)
+CRITICAL: XML syntax for source file is invalid
+INFO    : ------------------------
+CRITICAL: Failed to build without errors.  Exiting...
+INFO    : 
+----------------------------------------------------
+INFO    : While running pretext, the following errors occurred:
+
+INFO    : (see log messages above or in the 'logs' folder for more information)
+INFO    : ----------------------------------------------------

@@ -1,0 +1,26 @@
+INFO    : Since no target was supplied, we will use "html".
+
+INFO    : Generating any needed assets.
+INFO    : XSL conversion of C:\Users\Federico\Desktop\Snodi\snodi\source\main.ptx by C:\Users\Federico\.ptx\2.36.0\core\xsl\utilities\pretext-enhanced-source.xsl
+INFO    : successful application of C:\Users\Federico\.ptx\2.36.0\core\xsl\utilities\pretext-enhanced-source.xsl
+INFO    : converting latex-image pictures from C:\Users\Federico\Desktop\Snodi\snodi\source\main.ptx to svg graphics for placement in C:\Users\Federico\Desktop\Snodi\snodi\generated-assets\latex-image
+INFO    : extracting latex-image pictures from C:\Users\Federico\Desktop\Snodi\snodi\source\main.ptx
+INFO    : string parameters passed to extraction stylesheet: {'publisher': 'C:/Users/Federico/Desktop/Snodi/snodi/publication/publication.ptx'}
+INFO    : discovering source file's directory name: C:\Users\Federico\Desktop\Snodi\snodi\source
+INFO    : verifying and expanding input directory: C:\Users\Federico\Desktop\Snodi\snodi\source\../generated-assets
+INFO    : input directory expanded to absolute path: C:\Users\Federico\Desktop\Snodi\snodi\generated-assets
+INFO    : verifying and expanding input directory: C:\Users\Federico\Desktop\Snodi\snodi\source\../assets
+INFO    : input directory expanded to absolute path: C:\Users\Federico\Desktop\Snodi\snodi\assets
+INFO    : discovering source file's directory name: C:\Users\Federico\Desktop\Snodi\snodi\source
+INFO    : XSL conversion of C:\Users\Federico\Desktop\Snodi\snodi\source\main.ptx by C:\Users\Federico\.ptx\2.36.0\core\xsl\extract-latex-image.xsl
+INFO    : successful application of C:\Users\Federico\.ptx\2.36.0\core\xsl\extract-latex-image.xsl
+INFO    : converting thm-derivazione_retta-3-1-1.tex to thm-derivazione_retta-3-1-1.pdf
+INFO    : cropping thm-derivazione_retta-3-1-1.pdf to cropped-thm-derivazione_retta-3-1-1.pdf
+INFO    : renaming cropped-thm-derivazione_retta-3-1-1.pdf to thm-derivazione_retta-3-1-1.pdf
+INFO    : converting thm-derivazione_retta-3-1-1.pdf to thm-derivazione_retta-3-1-1.svg
+INFO    : Removing temporary directory C:\Users\Federico\AppData\Local\Temp\ptx-8g0_yqzw
+INFO    : Finished generating assets.
+
+INFO    : Finished generating assets successfully.
+
+INFO    : 

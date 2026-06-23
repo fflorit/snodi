@@ -1,45 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- This frontmatter division will contain all content before the -->
-<!-- first chapter.  Fill in and comment/uncomment to see how this -->
-<!-- works.                                                        -->
 
 <frontmatter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="frontmatter">
-  <titlepage>
+  <bibinfo>
     <author>
-      <personname>Me</personname>
-      <department>My department</department>
-      <institution>My school</institution>
+      <personname>Federico Florit</personname>
     </author>
     <date><today/></date>
+
+    <!-- <copyright>
+      <year>2026</year>
+      <holder>Tuo Nome</holder>
+      <shortlicense>CC BY-NC-SA 4.0</shortlicense>
+    </copyright> -->
+    <copyright>
+      <year>2026</year>
+      <holder>Federico Florit</holder>
+      <minilicense>Creative Commons BY-NC-SA</minilicense>
+      <shortlicense>
+        This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+        To view a copy of this license, visit <url href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CreativeCommons.org</url>
+      </shortlicense>
+    </copyright>
+  </bibinfo>
+
+  <titlepage>
+    <titlepage-items/>
   </titlepage>
 
   <colophon>
-
-    <website>
-      <url href="https://pretextbook.org">My Website</url>
-    </website>
-
-    <copyright>
-      <!-- In addition to specifying the copyright holder, you should  -->
-      <!-- include a license, such as the cc-by-sa license shown below -->
-      <!-- so people reading your book know how they can use it.       -->
-      <year>2020<ndash/>2022</year>
-      <holder>Me</holder>
-      <!-- <minilicense><image source="../images/by-sa.png" /></minilicense> -->
-      <shortlicense>
-        <!-- <image source="../images/by-sa.png" width="15%"/>  -->
-        This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.
-        To view a copy of this license, visit
-        <url 
-          href="http://creativecommons.org/licenses/by-sa/4.0/"
-          visual="creativecommons.org/licenses/by-sa/4.0">
-          CreativeCommons.org</url>
-      </shortlicense>
-    </copyright>
-
+    <colophon-items/>
   </colophon>
 
-  <dedication>
+  <preface>
+      <p>Prefazione...</p>
+  </preface>
+
+  <!-- <dedication>
     <p>
       For ...
     </p>
@@ -49,23 +45,8 @@
     <p>
       I would like to thank...
     </p>
-  </acknowledgement>
-
-  <preface xml:id="frontmatter-preface">
-    <!-- You should be a little careful about what you put here -->
-    <!-- Avoid elements that should have a number, for example  -->
-    <p>
-      About this book:
-    </p>
-  </preface>
-
-  <!-- You can have more than one preface. -->
-  <preface>
-    <title>Not just that..</title>
-    <p>
-      I still have more to say!
-    </p>
-  </preface>
+  </acknowledgement> -->
+  
 
 </frontmatter>
 

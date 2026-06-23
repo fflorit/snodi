@@ -12,12 +12,6 @@
 		<xi:include href="./fig-tikz.ptx" />
 	</section>
 
-	<section xml:id="sec-sageplot">
-		<title>SagePlot Examples</title>
-		<xi:include href="./fig-sage2d.ptx" />
-		<xi:include href="./fig-sage3d.ptx" />
-	</section>
-
 	<section xml:id="sec-asymptote">
 		<title>Asymptote Example</title>
 		<xi:include href="./fig-asymptote.ptx" />
@@ -27,18 +21,6 @@
 		<title><webwork /> Example</title>
 		<exercise>
 			<xi:include href="./ww.ptx" />
-		</exercise>
-	</section>
-
-	<section xml:id="sec-mom">
-		<title>MyOpenMath</title>
-		<exercise>
-			<introduction>
-				<p>
-					Here is a problem from MyOpenMath.
-				</p>
-			</introduction>
-			<myopenmath problem="2572"/>
 		</exercise>
 	</section>
 

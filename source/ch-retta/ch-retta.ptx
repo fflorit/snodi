@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- The @xmlns:xi attribute is needed if you use xi:include in this file -->
+<chapter xml:id="ch-retta" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Retta</title>
+  <introduction>
+    <p>This is the introduction to the chapter</p>
+  </introduction>
+
+  <xi:include href="./sec-equazione.ptx" />
+
+
+  <section xml:id="sec-retta_interattiva">
+	<title>Esempio interattivo</title>
+		<!-- From the sample article -->
+		<figure>
+			<caption>Effetto di <m>m</m> e <m>q</m> sul grafico di una retta.</caption>
+			<interactive xml:id="interactive-retta" platform="jsxgraph" width="60%"
+			source="jsxgraph/retta.js">
+			<slate xml:id="jsxgraph-retta" surface="jsxboard" />
+			<instructions>
+			<p>Trascina gli slider per modificare l'inclinazione e l'intercetta della retta.</p>
+			</instructions>
+			</interactive>
+		</figure>
+	</section>
+
+  <section xml:id="sec-parabola_interattiva">
+	<title>Esempio interattivo</title>
+		<!-- From the sample article -->
+		<figure>
+			<caption>Effetto di <m>m</m> e <m>q</m> sul grafico di una retta.</caption>
+			<interactive xml:id="interactive-parabola" platform="jsxgraph" width="60%"
+			source="jsxgraph/parabola.js">
+			<slate xml:id="jsxgraph-parabola" surface="jsxboard" />
+			<instructions>
+			<p>Trascina gli slider per modificare l'inclinazione e l'intercetta della retta.</p>
+			</instructions>
+			</interactive>
+		</figure>
+	</section>
+
+  <!-- One or more of the sections of a chapter might be exercises
+  <xi:include href="./ex-first.ptx"/>-->
+</chapter>

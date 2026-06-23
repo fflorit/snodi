@@ -13,22 +13,24 @@
     for more information.
   -->
 
-  <document-id>changeme</document-id>
+  <document-id>snodi</document-id>
   <!--
     A brief description for the book in a catalog; see the links above.
     The @shelf is used only when publishing to Runestone; see
     https://runestone.academy/ns/books/index for a list of valid values.
     You must copy these @shelf names exactly, including capitalization.
-  -->
-  <blurb shelf="AP Computer Science">
+  <blurb shelf="Mathematics">
     A simple string (no markup is allowed) to describe your book.
   </blurb>
+  -->
 
   <!-- The next three lines are likely for mature projects only: -->
 
   <!-- <brandlogo url="" source="images/cover.png"/> -->
   <!-- <covers front="images/front.pdf" back="images/back.pdf"/> -->
   <!-- <document-id>unique-book-id</document-id> -->
+
+  <jsxgraph />
 
   <!-- macros for defining latex math shortcuts. It is good practice  -->
   <!-- to define these semantically, so that the macro relates to what-->
@@ -47,11 +49,33 @@
     \usetikzlibrary{positioning,matrix,arrows}
     \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
     \usetikzlibrary{decorations.markings}
+    \pgfplotsset{compat=newest}
+
+    %% Stile globale per i grafici
+    \pgfplotsset{
+      every axis/.style={
+        axis lines       = center,
+        xlabel style     = {anchor=west},
+        ylabel style     = {anchor=south},
+        tick label style = {font=\small},
+        grid             = both,
+        grid style       = {line width=0.2pt, draw=gray!30},
+      },
+      /pgf/number format/use comma,   % virgola come separatore decimale (IT)
+    }
+
+    %% Stile per funzioni principali vs secondarie
+    \pgfplotsset{
+      funzione principale/.style = {red, thick},
+      funzione secondaria/.style = {red!70!black, dashed, thick},
+      punto evidenziato/.style   = {only marks, mark=*, mark size=2pt,
+                                    mark options={fill=ptxaccent}},
+    }
   </latex-image-preamble>
 
-  <!-- It is possible to rename elements using the tags below -->
+  <!-- It is possible to rename elements using the tags below
   <rename element="investigation" xml:lang="en-US">Puzzle</rename>
-  <rename element="assemblage" xml:lang="en-US">Summary</rename>
+  <rename element="assemblage" xml:lang="en-US">Summary</rename> -->
 
   <!-- Specify the default type of cross reference:           -->
   <cross-references text="type-global" />

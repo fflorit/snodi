@@ -26,10 +26,24 @@
     <index-list/>
   </index>
 
-  <colophon>
-    <p>
-      This book was authored in <pretext/>.
-    </p>
-  </colophon>
+  <!-- <colophon>
+    <website>
+      <url href="https://github.com/fflorit">GitHub</url>
+    </website>
+
+    <copyright>
+      <year>2026<ndash/></year>
+      <holder>Federico Florit</holder>
+      <minilicense>Creative Commons BY-NC-SA</minilicense>
+      <shortlicense>
+        This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+        To view a copy of this license, visit
+        <url 
+          href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+          visual="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+          CreativeCommons.org</url>
+      </shortlicense>
+    </copyright>
+  </colophon> -->
 </backmatter>
 

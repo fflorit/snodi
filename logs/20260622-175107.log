@@ -1,0 +1,12 @@
+INFO    : Building target html
+INFO    : XSL conversion of C:\Users\Federico\Desktop\Snodi\snodi\source\main.ptx by C:\Users\Federico\.ptx\2.36.0\core\xsl\utilities\pretext-enhanced-source.xsl
+ERROR   : Error assembling source file: Extra content at the end of the document, line 14, column 1 (file:/C:/Users/Federico/Desktop/Snodi/snodi/source/main.ptx, line 14)
+CRITICAL: XML syntax for source file is invalid
+INFO    : ------------------------
+CRITICAL: Failed to build without errors.  Exiting...
+INFO    : 
+----------------------------------------------------
+INFO    : While running pretext, the following errors occurred:
+
+INFO    : (see log messages above or in the 'logs' folder for more information)
+INFO    : ----------------------------------------------------

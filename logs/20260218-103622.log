@@ -1,0 +1,26 @@
+WARNING : Could not find a target 'html', but found a target 'web' with format='html'; using this target.
+INFO    : Generating assets for web
+INFO    : Generating any needed assets.
+INFO    : XSL conversion of C:\Users\Federico\Desktop\Snodi\snodi\source\main.ptx by C:\Users\Federico\.ptx\2.36.0\core\xsl\utilities\pretext-enhanced-source.xsl
+INFO    : messages from the log for XSL processing:
+INFO    : * failed to load external entity "C:/Users/Federico/Desktop/Snodi/snodi/publication/publication/publication.ptx"
+ERROR   : processing with C:\Users\Federico\.ptx\2.36.0\core\xsl\utilities\pretext-enhanced-source.xsl has failed
+
+ERROR   : Failed to generate assets: Cannot resolve URI C:/Users/Federico/Desktop/Snodi/snodi/publication/publication/publication.ptx 
+
+INFO    : Building target web
+INFO    : XSL conversion of C:\Users\Federico\Desktop\Snodi\snodi\source\main.ptx by C:\Users\Federico\.ptx\2.36.0\core\xsl\utilities\pretext-enhanced-source.xsl
+INFO    : messages from the log for XSL processing:
+INFO    : * failed to load external entity "C:/Users/Federico/Desktop/Snodi/snodi/publication/publication/publication.ptx"
+ERROR   : processing with C:\Users\Federico\.ptx\2.36.0\core\xsl\utilities\pretext-enhanced-source.xsl has failed
+
+ERROR   : Error assembling source file: Cannot resolve URI C:/Users/Federico/Desktop/Snodi/snodi/publication/publication/publication.ptx
+CRITICAL: XML syntax for source file is invalid
+INFO    : ------------------------
+CRITICAL: Failed to build without errors.  Exiting...
+INFO    : 
+----------------------------------------------------
+INFO    : While running pretext, the following errors occurred:
+
+INFO    : (see log messages above or in the 'logs' folder for more information)
+INFO    : ----------------------------------------------------

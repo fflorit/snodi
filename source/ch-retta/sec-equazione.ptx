@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-equazione" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Equazione della retta</title>
+  <introduction>
+    <p>Intro to section, because we will have subsections.</p>
+    <p>Another paragraph of the introduction.</p>
+  </introduction>
+
+  <subsection xml:id="subsec-a-subsection">
+    <title>Teoremi e dimostrazioni</title>
+    <p>Content of the subsection.</p>
+    <p>More content.</p>
+
+    <theorem xml:id="thm-derivazione_retta">
+      <title>Equazione della retta passante per l'origine</title>
+      <statement>
+        <p>Le rette che passano per l'origine hanno equazione esplicita <m>y=mx</m> con <m>m\in\R</m>.</p>
+      </statement>
+      <proof>
+        <sidebyside widths='35% 60%' valign='middle'>
+          <image><latex-image>
+            \begin{tikzpicture}
+            \begin{axis}
+            \addplot[funzione principale, domain=-3:3] {.7*x};
+            \end{axis}
+            \end{tikzpicture}
+          </latex-image></image>
+          <p>Dimostrazione ...</p>
+        </sidebyside>
+      </proof>
+      </theorem>
+  </subsection>
+
+
+  <conclusion>
+    <p>
+      After the last subsection, you might have a conclusion.
+    </p>
+  </conclusion>
+</section>
+

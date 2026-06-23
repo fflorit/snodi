@@ -1,0 +1,20 @@
+WARNING : Could not find a target 'html', but found a target 'web' with format='html'; using this target.
+INFO    : Generating assets for web
+INFO    : Generating any needed assets.
+INFO    : XSL conversion of C:\Users\Federico\Desktop\Snodi\snodi\source\main.ptx by C:\Users\Federico\.ptx\2.36.0\core\xsl\utilities\pretext-enhanced-source.xsl
+INFO    : successful application of C:\Users\Federico\.ptx\2.36.0\core\xsl\utilities\pretext-enhanced-source.xsl
+ERROR   : Failed to generate assets: 2 validation errors for PublicationSubset
+external
+  [line 12]: Field required [type=missing, input_value={}, input_type=dict]
+generated
+  [line 12]: Field required [type=missing, input_value={}, input_type=dict] 
+
+INFO    : Building target web
+CRITICAL: It appears there is an error with your publication file.  Are you missing the required source/directories/@external and @generated attributes?
+CRITICAL: Failed to build without errors.  Exiting...
+INFO    : 
+----------------------------------------------------
+INFO    : While running pretext, the following errors occurred:
+
+INFO    : (see log messages above or in the 'logs' folder for more information)
+INFO    : ----------------------------------------------------
