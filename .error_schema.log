@@ -1,5 +1,5 @@
-<string>:34:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element blockquote, got p
-<string>:19:0:ERROR:RELAXNGV:RELAXNG_ERR_NOTELEM: Expecting an element got text
-<string>:20:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMWRONG: Did not expect element introduction there
-<string>:20:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element sidebyside, got introduction
-<string>:20:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element proof, got introduction
+<string>:13:0:ERROR:RELAXNGV:RELAXNG_ERR_EXTRACONTENT: Element copyright has extra content: minilicense
+<string>:14:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMWRONG: Did not expect element subtitle there
+<string>:12:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element book failed to validate content
+<string>:8:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element docinfo, got pretext
+<string>:8:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMWRONG: Did not expect element pretext there
