@@ -9,8 +9,8 @@
   <xi:include href="./sec-equazione.ptx" />
 
 
-  <section xml:id="sec-retta_interattiva">
-	<title>Esempio interattivo</title>
+  	<section xml:id="sec-retta_interattiva">
+		<title>Esempio interattivo</title>
 		<!-- From the sample article -->
 		<figure>
 			<caption>Effetto di <m>m</m> e <m>q</m> sul grafico di una retta.</caption>
@@ -24,8 +24,8 @@
 		</figure>
 	</section>
 
-  <section xml:id="sec-parabola_interattiva">
-	<title>Esempio interattivo</title>
+  	<section xml:id="sec-parabola_interattiva">
+		<title>Esempio interattivo</title>
 		<!-- From the sample article -->
 		<figure>
 			<caption>Effetto di <m>m</m> e <m>q</m> sul grafico di una retta.</caption>
