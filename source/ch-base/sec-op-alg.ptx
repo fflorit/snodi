@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<section xml:id="sec-op-alg" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Operazioni algebriche</title>
+<introduction>
+    <p>Fin dalla Scuola Primaria ci hanno insegnato che le operazioni fondamentali sono quattro (somma, sottrazione, prodotto e divisione): le rivediamo in modo approfondito con le loro proprietà. Rivediamo anche i concetti di elevamento a potenza intera (e le proprietà delle potenze) e definiamo i concetti di sommatoria e produttoria.
+    </p>
+    <p>Più formalmente: con i numeri naturali possiamo tranquillamente fare le operazioni di somma e prodotto, mentre la sottrazione (per essere sempre possibile) richiede l'estensione dei numeri naturali almeno all'insieme dei numeri interi relativi. La divisione richiede invece l'estensione almeno ai numeri razionali per essere sempre (o quasi) definita. In generale in questo testo parleremo di numeri reali, quindi le operazioni di somma, sottrazione, prodotto, divisione ed elevamento a potenza sono (quasi) sempre definite.
+    </p>
+</introduction>
+
+<subsection>
+    <title>Somma</title>
+    <definition>
+    <statement><p>Si definisce <term>elemento neutro della somma</term> ...</p></statement>
+    </definition>
+    <p></p>
+</subsection>
+
+<subsection>
+    <title>Prodotto</title>
+    <definition>
+    <statement><p>Si definisce <term>elemento neutro del prodotto</term> ...</p></statement>
+    </definition>
+    <p></p>
+</subsection>
+
+<subsection>
+    <title>Sottrazione</title>
+    <definition>
+    <statement><p>Si definisce <term>opposto</term> di un numero ...</p></statement>
+    </definition>
+    <p></p>
+</subsection>
+
+<subsection>
+    <title>Divisione</title>
+    <definition>
+    <statement><p>Si definisce <term>reciproco</term> di un numero ...</p></statement>
+    </definition>
+    <p></p>
+</subsection>
+
+<subsection>
+    <title>Eleveamento a potenza</title>
+    <p></p>
+</subsection>
+
+<subsection>
+    <title>Sommatoria e produttoria</title>
+    <p></p>
+</subsection>
+
+</section>

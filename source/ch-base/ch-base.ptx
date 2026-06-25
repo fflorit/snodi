@@ -1,11 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
-<chapter xml:id="ch-notazione" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Linguaggio matematico</title>
+
+<chapter xml:id="ch-base" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Concetti base</title>
   <introduction>
     <p>In questo capitolo verranno indicati i simboli e i concetti base usati in questo testo.</p>
   </introduction>
 
   <xi:include href="./sec-affermazioni.ptx" />
   <xi:include href="./sec-insiemi.ptx" />
+  <xi:include href="./sec-op-alg.ptx" />
 
 </chapter>

@@ -127,6 +127,51 @@ var ptx_lunr_docs = [
   "body": "insiemi numerici intervalli "
 },
 {
+  "id": "sec-op-alg",
+  "level": "1",
+  "url": "sec-op-alg.html",
+  "type": "Paragrafo",
+  "number": "1.3",
+  "title": "Operazioni algebriche",
+  "body": " Operazioni algebriche   Fin dalla Scuola Primaria ci hanno insegnato che le operazioni fondamentali sono quattro (somma, sottrazione, prodotto e divisione): le rivediamo in modo approfondito con le loro proprietà. Rivediamo anche i concetti di elevamento a potenza intera (e le proprietà delle potenze) e definiamo i concetti di sommatoria e produttoria.  Più formalmente: con i numeri naturali possiamo tranquillamente fare le operazioni di somma e prodotto, mentre la sottrazione (per essere sempre possibile) richiede l'estensione dei numeri naturali almeno all'insieme dei numeri interi relativi. La divisione richiede invece l'estensione almeno ai numeri razionali per essere sempre (o quasi) definita. In generale in questo testo parleremo di numeri reali, quindi le operazioni di somma, sottrazione, prodotto, divisione ed elevamento a potenza sono (quasi) sempre definite.    Somma   Si definisce elemento neutro della somma ...      Prodotto   Si definisce elemento neutro del prodotto ...      Sottrazione   Si definisce opposto di un numero ...      Divisione   Si definisce reciproco di un numero ...      Eleveamento a potenza     Sommatoria e produttoria    "
+},
+{
+  "id": "sec-op-alg-3-2",
+  "level": "2",
+  "url": "sec-op-alg.html#sec-op-alg-3-2",
+  "type": "Definizione",
+  "number": "1.3.1",
+  "title": "",
+  "body": " Si definisce elemento neutro della somma ...  "
+},
+{
+  "id": "sec-op-alg-4-2",
+  "level": "2",
+  "url": "sec-op-alg.html#sec-op-alg-4-2",
+  "type": "Definizione",
+  "number": "1.3.2",
+  "title": "",
+  "body": " Si definisce elemento neutro del prodotto ...  "
+},
+{
+  "id": "sec-op-alg-5-2",
+  "level": "2",
+  "url": "sec-op-alg.html#sec-op-alg-5-2",
+  "type": "Definizione",
+  "number": "1.3.3",
+  "title": "",
+  "body": " Si definisce opposto di un numero ...  "
+},
+{
+  "id": "sec-op-alg-6-2",
+  "level": "2",
+  "url": "sec-op-alg.html#sec-op-alg-6-2",
+  "type": "Definizione",
+  "number": "1.3.4",
+  "title": "",
+  "body": " Si definisce reciproco di un numero ...  "
+},
+{
   "id": "ch-equazioni",
   "level": "1",
   "url": "ch-equazioni.html",
