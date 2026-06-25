@@ -15,7 +15,7 @@
 
     <xi:include href="./frontmatter.ptx" />
 
-    <xi:include href="./ch-notazione.ptx" />
+    <xi:include href="./ch-notazione/ch-notazione.ptx" />
 
     <chapter xml:id="ch-equazioni" xmlns:xi="http://www.w3.org/2001/XInclude">
       <title>Equazioni</title>

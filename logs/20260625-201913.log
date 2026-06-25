@@ -1,0 +1,13 @@
+INFO    : Building target html
+INFO    : XSL conversion of C:\Users\Federico\Desktop\Snodi\snodi\source\main.ptx by C:\Users\Federico\.ptx\2.36.0\core\xsl\utilities\pretext-enhanced-source.xsl
+ERROR   : Error loading file:///C:/Users/Federico/Desktop/Snodi/snodi/source/ch-notazione/sec-affermazioni.ptx: Opening and ending tag mismatch: em line 8 and attribution, line 8, column 90 (file:///C:/Users/Federico/Desktop/Snodi/snodi/source/ch-notazione/sec-affermazioni.ptx, line 8)
+ERROR   : Error assembling source file: Opening and ending tag mismatch: em line 8 and attribution, line 8, column 90 (file:///C:/Users/Federico/Desktop/Snodi/snodi/source/ch-notazione/sec-affermazioni.ptx, line 8)
+CRITICAL: XML syntax for source file is invalid
+INFO    : ------------------------
+CRITICAL: Failed to build without errors.  Exiting...
+INFO    : 
+----------------------------------------------------
+INFO    : While running pretext, the following errors occurred:
+
+INFO    : (see log messages above or in the 'logs' folder for more information)
+INFO    : ----------------------------------------------------

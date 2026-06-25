@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<section xml:id="sec-affermazioni" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Affermazioni matematiche</title>
+<introduction>
+    <blockquote>
+        <p>You can prove anything you want by coldly logical reason &#x2014; if you pick the proper postulates</p>
+        <attribution>Isaac Asimov, <q>Reason</q> in <em>I, Robot</em> (1950)</attribution>
+    </blockquote>
+
+    <p>La matematica si basa su ragionamenti logici che partono da delle affermazioni base per trarre delle conclusioni vere finchè sono vere le affermazioni base. Ogni considerazione matematica che abbiamo visto (e che vedremo) è basata su questo principio. Elenchiamo ora come si chiamano queste affermazioni nel linguaggio della matematica.</p>
+</introduction>
+
+<subsection>
+    <title>Definizione</title>
+    <definition>
+    <statement><p>Si chiama <term>definizione</term> una proposizione che descrive, chiaramente e sinteticamente, un ente matematico (algebrico o geometrico) servendosi di termini aventi un significato noto.</p></statement>
+    </definition>
+    <p>La definizione è solo un <q>chiamare qualcosa di complicato con un nome più semplice o unico</q>. Soprattutto quando si svolgono dei conti è comodo definire con un nome diverso un insieme di oggetti/operazioni. Ogni tanto vedremo una relazione di uguaglianza specifica (<m>\defeq</m>) per indicare che si tratta di una definizione e non di un passaggio matematico particolare.</p>
+    <p>Esempio di definizione: definizione di postulato, definizione del discriminante di un’equazione di secondo grado <m>\Delta\defeq b^2-4ac</m>, definizione della variabile ausiliaria nelle equazioni risolvibili per sostituzione (come le trinomie).</p>
+</subsection>
+
+<subsection>
+    <title>Postulato o assioma</title>
+    <definition>
+    <statement><p>Si definisce <term>postulato</term> (o <term>assioma</term>) un principio indimostrato la cui validità si ammette a priori per evidenza o convenzione allo scopo di fornire la spiegazione di determinati fatti o di costruire una teoria.</p></statement>
+    </definition>
+    <p>I postulati/assiomi sono quindi delle affermazioni che vengono fatte senza dimostrarle, da cui si trarranno delle conclusioni. In gergo matematico si dice che un’affermazione viene <q>postulata</q> per dire che viene ipotizzata come vera senza dimostrazione. Gli assiomi sono alla base del metodo scientifico e spesso rappresentano le ipotesi di un ragionamento.</p>
+    <p>Esempi di assiomi: postulati di Euclide (su cui si basa la geometria classica), assiomi di Peano (su cui si basa l’algebra classica), postulato della relatività (su cui si basa la fisica), principio del terzo escluso (su cui si basa la logica proposizionale).</p>
+</subsection>
+
+<subsection>
+    <title>Teorema</title>
+    <definition>
+    <statement><p>Si definisce <term>teorema</term> un enunciato (o formula o proprietà) che può essere dimostrato, cioè che può essere dedotto logicamente dagli enunciati primitivi (assiomi/postulati) o da altri teoremi già dimostrati.</p></statement>
+    </definition>
+    <p>I teoremi sono il cuore del metodo scientifico: partendo da delle <em>ipotesi</em> (postulate o dimostrate) si giunge in maniera logica a una tesi (l’<em>enunciato</em> del teorema) Esistono molte tecniche deduttive per dimostrare un teorema, tra cui:
+    <ul>
+    <li>dimostrazione diretta: dalle ipotesi si deduce in maniera lineare la tesi attraverso uno più passaggi;</li>
+    <li>dimostrazione per assurdo (anche detta dal latino <foreign xml:lang="la">reductio ad absurdum</foreign>): si suppone che il teorema sia falso sotto le sue ipotesi e, attraverso vari passaggi, si ottiene che almeno un’ipotesi viene violata (si arriva un assurdo); ne segue che il teorema non può essere falso, quindi è vero (sulla base del principio del terzo escluso);</li>
+    <li>dimostrazione per esaustione: si dimostra il teorema per tutti i possibili casi (che non possono essere infiniti), uno a uno.</li>
+    </ul></p>
+    <p>Di solito la dimostrazione di un teorema segue l’enunciato e termina con un simbolo o acronimo specifico: <q>&#x25A0;</q> oppure <q>c.v.d.</q> o <q>CVD</q> (Come Volevasi Dimostrare) oppure <q>q.e.d.</q> o <q>QED</q> (dal latino <foreign xml:lang="la">Quod Erat Demonstrandum</foreign>).</p>
+    <p>Esempi di teoremi: teorema di Ruffini (nella divisione tra polinomi), teorema di Weierstrass (nello studio di funzioni matematiche), teorema di Böhm-Jacopini (nella scrittura di algoritmi per l’informatica).</p>
+</subsection>
+
+<subsection>
+    <title>Corollario e lemma</title>
+    <definition>
+    <statement><p>Si definisce <term>lemma</term> una proposizione che può essere facilmente dimostrata e precede un importante teorema, così da porne le basi per la dimostrazione.</p></statement>
+    </definition>
+    <definition>
+    <statement><p>Si definisce <term>corollario</term> una proposizione che segue direttamente da un teorema, senza bisogno di una dimostrazione formale estesa.</p></statement>
+    </definition>
+    <p>Spesso i corollari sono delle conclusioni secondarie dei teoremi, nate da passaggi intermedi nella dimostrazione o da casi particolari del teorema. La differenza tra lemma, teorema e corollario è quindi solo una questione di importanza e di momento in cui una determinata proposizione è presentata in un discorso matematico.</p>
+</subsection>
+
+<subsection>
+    <title>Congettura</title>
+    <definition>
+    <statement><p>Si definisce <term>congettura</term> un enunciato che si ritiene vero ma per il quale non è stata ancora fornita una dimostrazione (per provarne la verità) o un controesempio (per dimostrarne la falsità).</p></statement>
+    </definition>
+    <p>Le congetture sono quindi delle affermazioni che si verificano nella pratica, senza però averne certezza logico-matematica. Sono quindi dei teoremi senza dimostrazione rigorosa.</p>
+    <p>Esempi di congetture: problemi per il millennio, congettura di Collatz.</p>
+    <p>Di solito la dimostrazione delle congetture più rilevanti porta a un premio in denaro (oltre che magari a qualche medaglia). Per esempio i problemi del millennio hanno un premio di un milione di dollari!</p>
+</subsection>
+
+</section>
