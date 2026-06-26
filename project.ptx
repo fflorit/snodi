@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project ptx-version="2">
   <targets>
-    <target name="html" format="html" source="main.ptx" publication="publication.ptx" output-dir="html">
-      <stringparams html.css.extra="assets/custom-styles.css"/>
-    </target>
+    <target name="html" format="html" source="main.ptx" publication="publication.ptx" output-dir="html" />
     <target name="pdf" format="pdf" source="main.ptx" publication="publication.ptx" output-dir="pdf" />
     <!-- <target name="pdf-print" format="pdf" source="main.ptx" publication="pdf.ptx" output-dir="pdf-print" /> -->
   </targets>

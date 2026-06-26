@@ -24,7 +24,16 @@
           Sviluppato con PreTeXt
       </acknowledgement>
     </footer>
+    <css>
+      <extra filename="custom-styles.css" />
+    </css>
   </web> -->
+
+  <!-- <html>
+    <css>
+      <extra filename="custom-styles.css" />
+    </css>
+  </html> -->
   
 
 </publication>
