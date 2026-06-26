@@ -8,8 +8,8 @@
   <!-- Numerazione degli elementi -->
   <numbering>
     <divisions chapter-start="1"/>
-    <!-- Gli esempi e i teoremi sono numerati per capitolo (es. Teorema 2.3) -->
-    <blocks level="2"/>
+    <!-- Gli esempi e i teoremi sono numerati per capitolo (es. Teorema 2.3.1) -->
+    <blocks level="2" />
   </numbering>
 
   <source>

@@ -8,6 +8,6 @@
 
   <xi:include href="./sec-affermazioni.ptx" />
   <xi:include href="./sec-insiemi.ptx" />
-  <xi:include href="./sec-op-alg.ptx" />
+  <xi:include href="./sec-op-arit.ptx" />
 
 </chapter>
