@@ -96,6 +96,14 @@
       </introduction>
     </chapter>
 
+
+    <chapter xml:id="ch-storia" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <title>Storia della matematica</title>
+      <introduction>
+        <p>TODO</p>
+      </introduction>
+    </chapter>
+
     <!-- <xi:include href="./ch-first%20with%20spaces.ptx" />
     <xi:include href="./ch-empty.ptx" /> -->
 
