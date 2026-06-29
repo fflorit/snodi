@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <publication>
-  <!-- <common>
-    <chunking level="2" />
-  </common> -->
-
-  <!-- Numerazione degli elementi -->
   <numbering>
     <divisions chapter-start="1"/>
-    <!-- Gli esempi e i teoremi sono numerati per capitolo (es. Teorema 2.3.1) -->
     <blocks level="2" />
   </numbering>
 
@@ -16,24 +10,10 @@
     <directories external="../assets" generated="../generated-assets" />
   </source>
 
-  <!-- <web>
-    <search google="no" />
-    <watermark clickable="no" />
-    <footer>
-      <acknowledgement>
-          Sviluppato con PreTeXt
-      </acknowledgement>
-    </footer>
-    <css>
-      <extra filename="custom-styles.css" />
-    </css>
-  </web> -->
-
-  <!-- <html>
-    <css>
-      <extra filename="custom-styles.css" />
-    </css>
-  </html> -->
+  <html>
+    <css theme="denver" color-main="#114CEE" color-do="#4511EE" color-fact="#EE4511" primary-color-dark="#BAEE11" />
+    <calculator model="geogebra-classic" />
+  </html>
   
 
 </publication>
