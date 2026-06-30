@@ -11,15 +11,17 @@
 
 <subsection>
     <title>Somma</title>
-    <definition>
-    <statement><p>Si definisce <term>elemento neutro della somma</term> ...</p></statement>
+    <definition><title>Elemento neutro della somma</title><idx><h>elemento neutro</h><h>somma</h></idx>
+    <statement>
+    <p>Si definisce <term>elemento neutro della somma</term> ...</p></statement>
     </definition>
     <p></p>
 </subsection>
 
 <subsection>
     <title>Moltiplicazione</title>
-    <definition>
+
+    <definition><title>Elemento neutro della moltiplicazione</title><idx><h>elemento neutro</h><h>moltiplicazione</h></idx>
     <statement><p>Si definisce <term>elemento neutro della moltiplicazione</term> ...</p></statement>
     </definition>
     <p></p>
@@ -27,7 +29,7 @@
 
 <subsection>
     <title>Sottrazione</title>
-    <definition>
+    <definition><title>Opposto</title><idx><h>opposto</h></idx>
     <statement><p>Si definisce <term>opposto</term> di un numero ...</p></statement>
     </definition>
     <p></p>
@@ -35,7 +37,7 @@
 
 <subsection>
     <title>Divisione</title>
-    <definition>
+    <definition><title>Reciproco</title><idx><h>reciproco</h></idx>
     <statement><p>Si definisce <term>reciproco</term> di un numero ...</p></statement>
     </definition>
     <p></p>
@@ -48,7 +50,7 @@
 
 <subsection>
     <title>Estrazione di radice</title>
-    <definition>
+    <definition><title>Estrazione di radice</title><idx>radicale</idx>
     <statement><p>L'<term>estrazione di radice</term> è quell'operazione che associa a due numeri <m>a</m> e <m>n\in \N-\{0\}</m> quel numero <m>b</m> tale che:
         <md>\sqrt[n]{a}=b \qquad b^n=a</md>
     <m>a</m> prende il nome di <term>radicando</term> e <m>n</m> il nome di <term>indice</term> e si parla di radice <m>n</m>-esima del numero <m>a</m>. Se <m>n</m> non è inidcato si sottointende il valore <m>n=2</m>.</p>

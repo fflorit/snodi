@@ -1,49 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- This file contains all of the "backmatter" material  -->
-<!-- We show examples of how to have hints to divisional  -->
-<!-- excercies appear in a section, and then their        -->
-<!-- solutions in the next.  Then there is an appendix    -->
-<!-- with all notation generated, and finally the index.  -->
 <backmatter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="backmatter">
   <title>Backmatter</title>
   
-  <solutions divisional="hint">
+  <!-- <solutions divisional="hint">
     <title>Selected Hints</title>
   </solutions>
   
   <solutions divisional="solution">
     <title>Selected Solutions</title>
-  </solutions>
+  </solutions> -->
   
   <appendix>
-    <title>List of Symbols</title>
+    <title>Notazione</title>
     <notation-list/>
   </appendix>
 
+  <appendix>
+    <title>Assiomi, definizioni, teoremi</title>
+    <list-of elements="axiom definition theorem" divisions="chapter" empty="yes"/>
+</appendix>
+
   <index>
-    <title>Index</title>
+    <title>Indice analitico</title>
     <index-list/>
   </index>
 
-  <!-- <colophon>
-    <website>
-      <url href="https://github.com/fflorit">GitHub</url>
-    </website>
-
-    <copyright>
-      <year>2026<ndash/></year>
-      <holder>Federico Florit</holder>
-      <minilicense>Creative Commons BY-NC-SA</minilicense>
-      <shortlicense>
-        This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
-        To view a copy of this license, visit
-        <url 
-          href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
-          visual="https://creativecommons.org/licenses/by-nc-sa/4.0/">
-          CreativeCommons.org</url>
-      </shortlicense>
-    </copyright>
-  </colophon> -->
 </backmatter>
-
