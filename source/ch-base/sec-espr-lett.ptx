@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<section xml:id="sec-espr-lett" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Espressioni letterali</title>
+<introduction>
+    <p>Monomi e polinomi</p>
+</introduction>
+
+<subsection>
+    <title>Monomi</title>
+    <definition><title>Monomio</title><idx>monomio</idx>
+    <statement><p>Si definisce <term>monomio</term> ...</p></statement>
+    </definition>
+</subsection>
+
+<subsection>
+    <title>Polinomi</title>
+    <definition><title>Somma algebrica</title><idx>somma algebrica</idx>
+    <statement><p>Si definisce <term>somma algebrica</term> ...</p></statement>
+    </definition>
+
+    <definition><title>Polinomio</title><idx>polinomio</idx>
+    <statement><p>Si definisce <term>polinomio</term> ...</p></statement>
+    </definition>
+</subsection>
+
+</section>

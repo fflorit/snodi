@@ -16,7 +16,7 @@
     <definition><title>Definizione</title><idx><h>proposizione</h><h>definizione</h></idx>
     <statement><p>Si chiama <term>definizione</term> una proposizione che descrive, chiaramente e sinteticamente, un ente matematico (algebrico o geometrico) servendosi di termini aventi un significato noto.</p></statement>
     </definition>
-    <p>La definizione è solo un <q>chiamare qualcosa di complicato con un nome più semplice o unico</q>. Soprattutto quando si svolgono dei conti è comodo definire con un nome diverso un insieme di oggetti/operazioni. Ogni tanto vedremo una relazione di uguaglianza specifica (<m>\defeq</m>) per indicare che si tratta di una definizione e non di un passaggio matematico particolare.</p>
+    <p>La definizione è solo un <q>chiamare qualcosa di complicato con un nome più semplice o unico</q>. Soprattutto quando si svolgono dei conti è comodo definire con un nome diverso un insieme di oggetti/operazioni. Ogni tanto vedremo una relazione di uguaglianza specifica (<m>\defeq</m>) per indicare che si tratta di una definizione e non di un passaggio matematico particolare. <notation><usage><m>\defeq</m></usage><description>Definizione di una quantità</description></notation></p>
     <p>Esempio di definizione: definizione di postulato, definizione del discriminante di un’equazione di secondo grado <m>\Delta\defeq b^2-4ac</m>, definizione della variabile ausiliaria nelle equazioni risolvibili per sostituzione (come le trinomie).</p>
 </subsection>
 
