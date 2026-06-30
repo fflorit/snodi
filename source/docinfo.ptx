@@ -37,6 +37,7 @@
     \newcommand{\Z}{\mathbb Z}
     \newcommand{\Q}{\mathbb Q}
     \newcommand{\R}{\mathbb R}
+    \newcommand{\C}{\mathbb C}
 
     <!-- \usepackage{graphicx,amsmath,makebox}
     \newcommand{\defeq}{\overset{\makebox[0pt]{\mbox{\normalfont\tiny def}}}{=}}} -->
@@ -45,7 +46,7 @@
   </macros>
 
   <latex-image-preamble>
-    \usepackage{tikz, pgfplots}
+    \usepackage{tikz, pgfplots, graphicx, amsmath}
     \usetikzlibrary{positioning,matrix,arrows}
     \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
     \usetikzlibrary{decorations.markings}

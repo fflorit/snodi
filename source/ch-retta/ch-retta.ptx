@@ -24,9 +24,8 @@
 		</figure>
 	</section>
 
-  	<section xml:id="sec-parabola_interattiva">
+  	<!-- <section xml:id="sec-parabola_interattiva">
 		<title>Esempio interattivo</title>
-		<!-- From the sample article -->
 		<figure>
 			<caption>Effetto di <m>m</m> e <m>q</m> sul grafico di una retta.</caption>
 			<interactive xml:id="interactive-parabola" platform="jsxgraph" width="60%"
@@ -37,7 +36,7 @@
 			</instructions>
 			</interactive>
 		</figure>
-	</section>
+	</section> -->
 
   <!-- One or more of the sections of a chapter might be exercises
   <xi:include href="./ex-first.ptx"/>-->

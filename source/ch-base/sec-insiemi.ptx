@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 
 <section xml:id="sec-insiemi" xmlns:xi="http://www.w3.org/2001/XInclude">
-<title>Insiemi, operazioni tra insiemi, intervalli</title>
+<title>Insiemi, operazioni tra insiemi, insiemi numerici, intervalli</title>
 <introduction>
     <p>Gli insiemi e i sottoinsiemi sono alla base della maggior parte delle scritture matematiche. Tra i più usati possiamo ricordare gli insiemi numerici, l'insieme delle soluzioni di un'equazione o una disequazione, l'insieme di definizione di una funzione, eccetera. Gli insiemi in generale non contengono solo numeri: potrebbero contenere oggetti astratti, parole, lettere e perfino altri insiemi.
     </p>
@@ -9,11 +9,12 @@
 
 <subsection>
     <title>Insiemi e operazioni</title>
-    <p>La definizione di <term>insieme</term> non esiste, perchè è un <em>ente primitivo</em> della matematica e non ci serve una definizione per capire cos'è in quanto è intuitivo. Definiamo quindi solo la notazione: un insieme composto si indica solitamente con una lettera maiuscola e i suoi elementi, se indicati singolarmente, vanno indicati dopo l'uguale, tra parentesi graffe separati da virgole <notation><usage><m>A = \{a_1, a_2, a_3, \dots\}</m></usage><description>Insieme con elementi specificati</description></notation>
+    <p>La definizione di <term>insieme</term> non esiste, perchè è un <em>ente primitivo</em> della matematica e non ci serve una definizione per capire cos'è in quanto è intuitivo. Definiamo quindi solo la notazione: un insieme composto si indica solitamente con una lettera maiuscola e i suoi elementi, se indicati singolarmente, vanno indicati dopo l'uguale, tra parentesi graffe separati da virgole <notation><usage><m>A = \{a_1, a_2, a_3, \dots\}</m></usage><description>Insieme con elementi specificati</description><idx>insieme</idx></notation>
     <md>A = \{a_1, a_2, a_3, \dots\}</md>
     Per esempio: l'insieme <m>L</m> delle lettere che compongono la parola <q>matematica</q> è <m>L=\{a, c, e, i, m, t\}</m>; l'insieme delle soluzioni (radici) dell'equazione di secondo grado <m>x^2-1=0</m> è <m>S=\{-1,1\}</m> o anche <m>S=\{\pm 1\}</m>.</p>
-    <p>Per indicare che un elemento <term>appartiene</term> a un insieme (cioè che l'elemento è uno degli elementi dell'insieme) useremo il simbolo <m>\in</m>. Negli esempi precedenti <m>a \in L</m> (tra gli altri) e <m>-1 \in S</m>. Se un elemento <term>non appartine</term> a un insieme usiamo il simbolo <m>\not\in</m>. Per esempio la lettera b non fa parte della parola <q>matematica</q>, quindi <m>b\not\in L</m>.<notation><usage><m>\in, \not\in</m></usage><description>Apparteiene, non appartiene</description></notation></p>
+    <p>Per indicare che un elemento <term>appartiene</term> a un insieme (cioè che l'elemento è uno degli elementi dell'insieme) useremo il simbolo <m>\in</m>. Negli esempi precedenti <m>a \in L</m> (tra gli altri) e <m>-1 \in S</m>. Se un elemento <term>non appartine</term> a un insieme usiamo il simbolo <m>\not\in</m>. Per esempio la lettera b non fa parte della parola <q>matematica</q>, quindi <m>b\not\in L</m>.<notation><usage><m>\in, \not\in</m></usage><description>Appartiene, non appartiene</description></notation></p>
     <p>Se un insieme non contine elementi si chiama <term>insieme vuoto</term> e si indica con il simbolo <m>\emptyset</m>. <notation><usage><m>\emptyset</m></usage><description>Insieme vuoto</description></notation> Per esempio: l'equazione <m>x^2+1=0</m> non ammette soluzioni reali e quindi diremo che l'insieme delle soluzioni è vuoto <m>S=\emptyset</m>. <alert>Attenzione!</alert> <m>S=\{\emptyset\}</m> non è la stessa cosa: in questo caso <m>\{\emptyset\}</m> indica l'insieme che contiene l'insieme vuoto, quindi <m>S</m> non è vuoto, ma contiene un elemento!</p>
+    <p>Se un insieme <m>A</m> ha tutti gli elementi contenuti in un altro insieme <m>B</m>, allora si dice che <m>A</m> è un <term>sottoinsieme</term> di <m>B</m><idx><h>insieme</h><h>sottoinsieme</h></idx> e si indica come <m>A\subseteq B</m><notation><usage><m>\subseteq</m></usage><description>Sottoinsieme</description></notation>. Per esempio l'insieme <m>L_1=\{a, e, m, o, r\}</m> delle lettere che costituiscono la parola <q>amore</q> è un sottoinsieme di <m>L_2=\{a, e, m, o, r, t\}</m> delle lettere che costituiscono la parola <q>teorema</q>, quindi <m>L_1\subseteq L_2</m>.</p>
     <p>Tra insiemi si posso fare delle operazioni binarie (cioè fra due insiemi <m>A</m> e <m>B</m>) che danno come risultato un altro insieme e in particolare utilizzeremo: <notation><usage><m>\cup,\cap</m></usage><description>Unione, intersezione</description></notation>
     <ul>
     <li>l'<term>unione</term> <m>A \cup B</m>, cioè l'insieme gli elementi comuni e non comuni dei due insiemi;</li>
@@ -25,7 +26,51 @@
 
 <subsection>
     <title>Insiemi numerici</title>
-    <p>Gli insiemi che contengono solo numeri sono chiamati <term>insiemi numerici</term>. Tra i sottoinsiemi degli insiemi numerici troviamo anche gli <term>intervalli</term>.</p>
+    <p>Gli insiemi che contengono solo numeri sono chiamati <term>insiemi numerici</term>. Dal punto di vista formale, attraverso gli assiomi di Peano si può definire l'insieme dei <term>numeri naturali</term> <m>\N</m><notation><usage><m>\N</m></usage><description>Insieme dei numeri naturali</description></notation>. I numeri naturali sono quelli che abbiamo imparato a usare fin da piccoli, cioè <m>\N=\{0, 1, 2, \dots\}</m>.<idx><h>insieme</h><h>dei numeri naturali</h></idx></p>
+    <p>Ammettendo l'esistenza del concetto di opposto di un numero per definire la sottrazione si estende il concetto di numero naturale a quello di numero negativo e si costruisce l'insieme dei numeri <term>interi relativi</term> <m>\Z</m>.<notation><usage><m>\Z</m></usage><description>Insieme dei numeri interi relativi</description></notation> Questo insieme contiene lo zero e i numeri interi positivi (cioè tutti i numeri naturali) ma anche i numeri interi negativi, per cui <m>\Z=\{\dots, -2, -1, 0, 1, 2, \dots\}</m> e quindi <m>\N\subseteq\Z</m>.<idx><h>insieme</h><h>dei numeri interi relativi</h></idx></p>
+    <p>Introducendo il concetto di reciproco di un numero per definire la divisione si estende il concetto di numero intero relativo a quello di numero razionale (le frazioni) e si costruisce l'insieme dei numeri <term>razionali</term> <m>\Q</m>.<notation><usage><m>\Q</m></usage><description>Insieme dei numeri razionali</description></notation> Questo insieme contiene tutte le possibili combinazioni di numeri divisi tra loro, quindi contiene tutti i numeri interi relativi (dati dalla divisione di qualsiasi numero per 1) ma anche i numeri decimali (sia finiti che periodici), per cui <m>\Z\subseteq\Q</m>.<idx><h>insieme</h><h>dei numeri razionali</h></idx></p>
+    <p>Se si introducono altre operazioni (come per esempio la radice, il logaritmo, le funzioni goniometriche), i numeri razionali non bastano più e bisogna ricorrere ai numeri irrazionali (come per esempio <m>\sqrt{2}</m> e <m>\pi</m>). L'unione tra l'insieme dei numeri razionali e l'insieme dei numeri irrazionali costituisce l'insieme dei numeri <term>reali</term> <m>\R</m>.<notation><usage><m>\R</m></usage><description>Insieme dei numeri reali</description></notation> Questo insieme contiene per costruzione tutti i numeri razionali, per cui <m>\Q\subseteq\R</m>.<idx><h>insieme</h><h>dei numeri reali</h></idx></p>
+    <p>Alcune operazioni non sono possibili nei numeri reali (per esempio cercare la radice quadrata di -1). Queste operazioni richiedono quelli che sono i numeri immaginari, che insieme ai numeri reali formano l'insieme dei numeri <term>complessi</term> <m>\C</m>.<notation><usage><m>\C</m></usage><description>Insieme dei numeri complessi</description></notation> Questo insieme contiene per costruzione tutti i numeri reali, per cui <m>\R\subseteq\C</m>. Con i numeri complessi si può praticamente fare tutto, quindi non ci servirà (in questo libro) un insieme numerico più grande dei numeri complessi.<idx><h>insieme</h><h>dei numeri complessi</h></idx></p>
+    <sidebyside widths='50% 45%' valign='middle'><p>Dalle relazioni tra gli insiemi elencate prima è possibile creare il diagramma in figura che mostra come l'insieme dei numeri reali contenga tutti gli altri.</p>
+    <image><latex-image>
+        \begin{tikzpicture}
+            \draw[blue, fill=blue!10] (0,2) ellipse (5 and 4.25) (-5,2) node[fill=blue!10, inner sep=0]{$\R$};
+            \draw[magenta, fill=magenta!10] (0,1.25) ellipse (4 and 3.25) (-4,1.25) node[fill=magenta!10, inner sep=0]{$\Q$};
+            \draw[red, fill=red!10] (0,.5) ellipse (3 and 2.25) (-3,.5) node[fill=red!10, inner sep=0]{$\Z$};
+            \draw[orange, fill=orange!10] (0,0) ellipse (2 and 1.5) (-2,0) node[fill=orange!10, inner sep=0]{$\N$};
+            \draw[font=\small] (-.8,.1) node{$0$} (.5,.7) node{$1$} (.7,-.7) node{$2$}
+            (-.8,2) node{$-1$} (.9,1.7) node{$-2$}
+            (-1.8,3.2) node{$\dfrac{3}{4}$} (1.2,3.3) node{$-\dfrac{1}{2}$} (-.2,3.5) node{$\dfrac{5}{3}$}
+            (-1.4,4.9) node{$\pi$} (.3,5.1) node{$e$} (1.5,4.9) node{$\sqrt{2}$} (-2.8,4.6) node{$-\sqrt{3}$} (2.8,4.6) node{$\dfrac{1}{\pi}$};
+        \end{tikzpicture}
+    </latex-image></image>
+    </sidebyside>
+    <p>Una proprietà importante di tutti gli insiemi numerici (eccetto quello dei numeri complessi) è che i numeri possono essere ordinati. Esiste quindi una <term>relazione d'ordine</term> che permette di ordinare i numeri dal più piccolo al più grande e anche di rappresentare i numeri su una <term>linea orientata</term>. Questo permette di scrivere delle relazioni tra numeri come <m>\frac{3}{9}=\frac{1}{3}</m>, <m>-1\lt 0</m> oppure <m>\pi\gt 3</m> con i simboli di <term>uguaglianza</term> (<m>=</m>) e disuguaglianza stretta (<term>minore</term> <m>\lt</m> e <term>maggiore</term> <m>\gt</m>). Esistono anche i simboli di disuaguaglianza <term>minore o uguale</term> <m>\le</m> e di <term>maggiore o uguale</term> <m>\ge</m> che permettono di confrontare numeri, ammettendo che possano anche essere uguali tra loro. Esiste anche il simbolo di disuguaglianza <term>diverso</term> <m>\ne</m> per indicare che due numeri non sono uguali.<notation><usage><m>=, \lt, \gt, \le, \ge, \ne</m></usage><description>Uguale, minore, maggiore, minore o uguale, maggiore o uguale, diverso</description></notation></p>
+    <image><latex-image>
+        \begin{tikzpicture}[scale=2.5]
+            \draw[-latex, ultra thick] (-2.3,0) -- (3.5,0);
+            \draw[font=\small]
+            (-2,-.1) -- ++(0,.2) node[above]{$-2$}
+            (-1.732,.1) -- ++(0,-.2) node[below]{$-\sqrt{3}$}
+            (-1,-.1) -- ++(0,.2) node[above]{$-1$}
+            (-1/2,.1) -- ++(0,-.2) node[below]{$-\dfrac{1}{2}$}
+            (0,-.1) -- ++(0,.2) node[above]{$0$}
+            (0.3183,.1) -- ++(0,-.2) node[below]{$\dfrac{1}{\pi}$}
+            (3/4,.1) -- ++(0,-.2) node[below]{$\dfrac{3}{4}$}
+            (1,-.1) -- ++(0,.2) node[above]{$1$}
+            (1.414,.1) -- ++(0,-.2) node[below]{$\sqrt{2}$}
+            (5/3,.1) -- ++(0,-.2) node[below]{$\dfrac{5}{3}$}
+            (2,-.1) -- ++(0,.2) node[above]{$2$}
+            (2.7183,.1) -- ++(0,-.2) node[below]{$e$}
+            (3,-.1) -- ++(0,.2) node[above]{$3$}
+            (3.1416,.1) -- ++(0,-.2) node[below]{$\pi$};
+        \end{tikzpicture}
+    </latex-image></image>
+</subsection>
+
+<subsection>
+    <title>Intervalli</title>
+    <p>Tra i sottoinsiemi degli insiemi numerici troviamo anche gli <term>intervalli</term>.</p>
 </subsection>
 
 </section>

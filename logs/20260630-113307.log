@@ -1,0 +1,351 @@
+INFO    : Building target html
+INFO    : XSL conversion of C:\Users\Federico\Desktop\Snodi\snodi\source\main.ptx by C:\Users\Federico\.ptx\2.42.0\core\xsl\utilities\pretext-enhanced-source.xsl
+INFO    : successful application of C:\Users\Federico\.ptx\2.42.0\core\xsl\utilities\pretext-enhanced-source.xsl
+WARNING : Schema validation could not be completed: no validator was available (jing is not installed and lxml could not compile the schema). Continuing with build.
+INFO    : Generating any needed assets.
+INFO    : Finished generating assets.
+
+INFO    : Preparing to build into C:\Users\Federico\Desktop\Snodi\snodi\output\html.
+INFO    : discovering source file's directory name: C:\Users\Federico\Desktop\Snodi\snodi\source
+INFO    : verifying and expanding input directory: C:\Users\Federico\Desktop\Snodi\snodi\source\../generated-assets
+INFO    : input directory expanded to absolute path: C:\Users\Federico\Desktop\Snodi\snodi\generated-assets
+INFO    : verifying and expanding input directory: C:\Users\Federico\Desktop\Snodi\snodi\source\../assets
+INFO    : input directory expanded to absolute path: C:\Users\Federico\Desktop\Snodi\snodi\assets
+INFO    : discovering source file's directory name: C:\Users\Federico\Desktop\Snodi\snodi\source
+INFO    : XSL conversion of C:\Users\Federico\Desktop\Snodi\snodi\source\main.ptx by C:\Users\Federico\.ptx\2.42.0\core\xsl\utilities\report-publisher-variables.xsl
+INFO    : successful application of C:\Users\Federico\.ptx\2.42.0\core\xsl\utilities\report-publisher-variables.xsl
+INFO    : Downloading rs services file from https://runestone.academy/cdn/runestone/latest/webpack_static_imports.xml.
+INFO    : Runestone Services via online CDN query: version 8.1.6
+INFO    : Downloading Runestone Services, version 8.1.6
+INFO    : Extracting Runestone Services from archive file
+WARNING : Color #EE4511 does not have enough contrast with expected background color #fff. Contrast ratio is 3.821377629515867 but should be at least 4.5. Adjust your publisher file html/css/variables to ensure sufficient contrast.
+INFO    : Building custom css theme: theme-denver
+INFO    : converting C:\Users\Federico\Desktop\Snodi\snodi\source\main.ptx to HTML in C:\Users\Federico\AppData\Local\Temp\ptx-f5r1xp0p
+INFO    : XSL conversion of C:\Users\Federico\Desktop\Snodi\snodi\source\main.ptx by C:\Users\Federico\.ptx\2.42.0\core\xsl\pretext-html.xsl
+INFO    : messages from the log for XSL processing:
+INFO    : * PTX:INFO:   checking all deprecated elements.
+WARNING : * PTX:WARNING: could not translate string with id "open-new-tab" into language for code "it-IT"
+WARNING : * PTX:WARNING: could not translate string with id "open-new-tab" into language for code "it-IT"
+WARNING : * PTX:WARNING: could not translate string with id "term" into language for code "it-IT"
+ERROR   : * PTX:ERROR:   An object (term) lacks a serial number, search output for "[NUM]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Definizione" (title)
+ERROR   : * PTX:ERROR:   An object (term) lacks a structure number, search output for "[STRUCT]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Definizione" (title)
+WARNING : * PTX:WARNING: could not translate string with id "term" into language for code "it-IT"
+ERROR   : * PTX:ERROR:   An object (term) lacks a serial number, search output for "[NUM]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Definizione" (title)
+ERROR   : * PTX:ERROR:   An object (term) lacks a structure number, search output for "[STRUCT]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Definizione" (title)
+WARNING : * PTX:WARNING: could not translate string with id "term" into language for code "it-IT"
+ERROR   : * PTX:ERROR:   An object (term) lacks a serial number, search output for "[NUM]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Postulato o assioma" (title)
+ERROR   : * PTX:ERROR:   An object (term) lacks a structure number, search output for "[STRUCT]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Postulato o assioma" (title)
+WARNING : * PTX:WARNING: could not translate string with id "term" into language for code "it-IT"
+ERROR   : * PTX:ERROR:   An object (term) lacks a serial number, search output for "[NUM]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Postulato o assioma" (title)
+ERROR   : * PTX:ERROR:   An object (term) lacks a structure number, search output for "[STRUCT]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Postulato o assioma" (title)
+WARNING : * PTX:WARNING: could not translate string with id "term" into language for code "it-IT"
+ERROR   : * PTX:ERROR:   An object (term) lacks a serial number, search output for "[NUM]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Postulato o assioma" (title)
+ERROR   : * PTX:ERROR:   An object (term) lacks a structure number, search output for "[STRUCT]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Postulato o assioma" (title)
+WARNING : * PTX:WARNING: could not translate string with id "term" into language for code "it-IT"
+ERROR   : * PTX:ERROR:   An object (term) lacks a serial number, search output for "[NUM]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Postulato o assioma" (title)
+ERROR   : * PTX:ERROR:   An object (term) lacks a structure number, search output for "[STRUCT]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Postulato o assioma" (title)
+WARNING : * PTX:WARNING: could not translate string with id "term" into language for code "it-IT"
+ERROR   : * PTX:ERROR:   An object (term) lacks a serial number, search output for "[NUM]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Teorema" (title)
+ERROR   : * PTX:ERROR:   An object (term) lacks a structure number, search output for "[STRUCT]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Teorema" (title)
+WARNING : * PTX:WARNING: could not translate string with id "term" into language for code "it-IT"
+ERROR   : * PTX:ERROR:   An object (term) lacks a serial number, search output for "[NUM]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Teorema" (title)
+ERROR   : * PTX:ERROR:   An object (term) lacks a structure number, search output for "[STRUCT]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Teorema" (title)
+WARNING : * PTX:WARNING: could not translate string with id "term" into language for code "it-IT"
+ERROR   : * PTX:ERROR:   An object (term) lacks a serial number, search output for "[NUM]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Corollario e lemma" (title)
+ERROR   : * PTX:ERROR:   An object (term) lacks a structure number, search output for "[STRUCT]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Corollario e lemma" (title)
+WARNING : * PTX:WARNING: could not translate string with id "term" into language for code "it-IT"
+ERROR   : * PTX:ERROR:   An object (term) lacks a serial number, search output for "[NUM]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Corollario e lemma" (title)
+ERROR   : * PTX:ERROR:   An object (term) lacks a structure number, search output for "[STRUCT]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Corollario e lemma" (title)
+WARNING : * PTX:WARNING: could not translate string with id "term" into language for code "it-IT"
+ERROR   : * PTX:ERROR:   An object (term) lacks a serial number, search output for "[NUM]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Corollario e lemma" (title)
+ERROR   : * PTX:ERROR:   An object (term) lacks a structure number, search output for "[STRUCT]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Corollario e lemma" (title)
+WARNING : * PTX:WARNING: could not translate string with id "term" into language for code "it-IT"
+ERROR   : * PTX:ERROR:   An object (term) lacks a serial number, search output for "[NUM]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Corollario e lemma" (title)
+ERROR   : * PTX:ERROR:   An object (term) lacks a structure number, search output for "[STRUCT]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Corollario e lemma" (title)
+WARNING : * PTX:WARNING: could not translate string with id "term" into language for code "it-IT"
+ERROR   : * PTX:ERROR:   An object (term) lacks a serial number, search output for "[NUM]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Congettura" (title)
+ERROR   : * PTX:ERROR:   An object (term) lacks a structure number, search output for "[STRUCT]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Congettura" (title)
+WARNING : * PTX:WARNING: could not translate string with id "term" into language for code "it-IT"
+ERROR   : * PTX:ERROR:   An object (term) lacks a serial number, search output for "[NUM]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Congettura" (title)
+ERROR   : * PTX:ERROR:   An object (term) lacks a structure number, search output for "[STRUCT]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Congettura" (title)
+WARNING : * PTX:WARNING: could not translate string with id "term" into language for code "it-IT"
+ERROR   : * PTX:ERROR:   An object (term) lacks a serial number, search output for "[NUM]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/p/term
+INFO    : *              located within: "Insiemi e operazioni" (title)
+ERROR   : * PTX:ERROR:   An object (term) lacks a structure number, search output for "[STRUCT]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/p/term
+INFO    : *              located within: "Insiemi e operazioni" (title)
+WARNING : * PTX:WARNING: could not translate string with id "term" into language for code "it-IT"
+ERROR   : * PTX:ERROR:   An object (term) lacks a serial number, search output for "[NUM]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/p/term
+INFO    : *              located within: "Insiemi e operazioni" (title)
+ERROR   : * PTX:ERROR:   An object (term) lacks a structure number, search output for "[STRUCT]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/p/term
+INFO    : *              located within: "Insiemi e operazioni" (title)
+WARNING : * PTX:WARNING: could not translate string with id "term" into language for code "it-IT"
+ERROR   : * PTX:ERROR:   An object (term) lacks a serial number, search output for "[NUM]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/p/term
+INFO    : *              located within: "Insiemi e operazioni" (title)
+ERROR   : * PTX:ERROR:   An object (term) lacks a structure number, search output for "[STRUCT]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/p/term
+INFO    : *              located within: "Insiemi e operazioni" (title)
+WARNING : * PTX:WARNING: could not translate string with id "term" into language for code "it-IT"
+ERROR   : * PTX:ERROR:   An object (term) lacks a serial number, search output for "[NUM]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/p/term
+INFO    : *              located within: "Insiemi e operazioni" (title)
+ERROR   : * PTX:ERROR:   An object (term) lacks a structure number, search output for "[STRUCT]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/p/term
+INFO    : *              located within: "Insiemi e operazioni" (title)
+WARNING : * PTX:WARNING: could not translate string with id "term" into language for code "it-IT"
+ERROR   : * PTX:ERROR:   An object (term) lacks a serial number, search output for "[NUM]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/p/term
+INFO    : *              located within: "Insiemi e operazioni" (title)
+ERROR   : * PTX:ERROR:   An object (term) lacks a structure number, search output for "[STRUCT]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/p/term
+INFO    : *              located within: "Insiemi e operazioni" (title)
+WARNING : * PTX:WARNING: could not translate string with id "term" into language for code "it-IT"
+ERROR   : * PTX:ERROR:   An object (term) lacks a serial number, search output for "[NUM]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/p/term
+INFO    : *              located within: "Insiemi e operazioni" (title)
+ERROR   : * PTX:ERROR:   An object (term) lacks a structure number, search output for "[STRUCT]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/p/term
+INFO    : *              located within: "Insiemi e operazioni" (title)
+WARNING : * PTX:WARNING: could not translate string with id "term" into language for code "it-IT"
+ERROR   : * PTX:ERROR:   An object (term) lacks a serial number, search output for "[NUM]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/p/term
+INFO    : *              located within: "Insiemi e operazioni" (title)
+ERROR   : * PTX:ERROR:   An object (term) lacks a structure number, search output for "[STRUCT]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/p/term
+INFO    : *              located within: "Insiemi e operazioni" (title)
+WARNING : * PTX:WARNING: could not translate string with id "term" into language for code "it-IT"
+ERROR   : * PTX:ERROR:   An object (term) lacks a serial number, search output for "[NUM]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/p/term
+INFO    : *              located within: "Insiemi e operazioni" (title)
+ERROR   : * PTX:ERROR:   An object (term) lacks a structure number, search output for "[STRUCT]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/p/term
+INFO    : *              located within: "Insiemi e operazioni" (title)
+WARNING : * PTX:WARNING: could not translate string with id "term" into language for code "it-IT"
+ERROR   : * PTX:ERROR:   An object (term) lacks a serial number, search output for "[NUM]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/p/ul/li/term
+INFO    : *              located within: "Insiemi e operazioni" (title)
+ERROR   : * PTX:ERROR:   An object (term) lacks a structure number, search output for "[STRUCT]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/p/ul/li/term
+INFO    : *              located within: "Insiemi e operazioni" (title)
+WARNING : * PTX:WARNING: could not translate string with id "term" into language for code "it-IT"
+ERROR   : * PTX:ERROR:   An object (term) lacks a serial number, search output for "[NUM]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/p/ul/li/term
+INFO    : *              located within: "Insiemi e operazioni" (title)
+ERROR   : * PTX:ERROR:   An object (term) lacks a structure number, search output for "[STRUCT]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/p/ul/li/term
+INFO    : *              located within: "Insiemi e operazioni" (title)
+WARNING : * PTX:WARNING: could not translate string with id "term" into language for code "it-IT"
+ERROR   : * PTX:ERROR:   An object (term) lacks a serial number, search output for "[NUM]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/p/ul/li/term
+INFO    : *              located within: "Insiemi e operazioni" (title)
+ERROR   : * PTX:ERROR:   An object (term) lacks a structure number, search output for "[STRUCT]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/p/ul/li/term
+INFO    : *              located within: "Insiemi e operazioni" (title)
+WARNING : * PTX:WARNING: could not translate string with id "term" into language for code "it-IT"
+ERROR   : * PTX:ERROR:   An object (term) lacks a serial number, search output for "[NUM]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/p/ul/li/term
+INFO    : *              located within: "Insiemi e operazioni" (title)
+ERROR   : * PTX:ERROR:   An object (term) lacks a structure number, search output for "[STRUCT]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/p/ul/li/term
+INFO    : *              located within: "Insiemi e operazioni" (title)
+WARNING : * PTX:WARNING: could not translate string with id "term" into language for code "it-IT"
+ERROR   : * PTX:ERROR:   An object (term) lacks a serial number, search output for "[NUM]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/p/term
+INFO    : *              located within: "Insiemi numerici" (title)
+ERROR   : * PTX:ERROR:   An object (term) lacks a structure number, search output for "[STRUCT]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/p/term
+INFO    : *              located within: "Insiemi numerici" (title)
+WARNING : * PTX:WARNING: could not translate string with id "term" into language for code "it-IT"
+ERROR   : * PTX:ERROR:   An object (term) lacks a serial number, search output for "[NUM]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/p/term
+INFO    : *              located within: "Insiemi numerici" (title)
+ERROR   : * PTX:ERROR:   An object (term) lacks a structure number, search output for "[STRUCT]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/p/term
+INFO    : *              located within: "Insiemi numerici" (title)
+WARNING : * PTX:WARNING: could not translate string with id "term" into language for code "it-IT"
+ERROR   : * PTX:ERROR:   An object (term) lacks a serial number, search output for "[NUM]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/p/term
+INFO    : *              located within: "Insiemi numerici" (title)
+ERROR   : * PTX:ERROR:   An object (term) lacks a structure number, search output for "[STRUCT]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/p/term
+INFO    : *              located within: "Insiemi numerici" (title)
+WARNING : * PTX:WARNING: could not translate string with id "term" into language for code "it-IT"
+ERROR   : * PTX:ERROR:   An object (term) lacks a serial number, search output for "[NUM]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/p/term
+INFO    : *              located within: "Insiemi numerici" (title)
+ERROR   : * PTX:ERROR:   An object (term) lacks a structure number, search output for "[STRUCT]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/p/term
+INFO    : *              located within: "Insiemi numerici" (title)
+WARNING : * PTX:WARNING: could not translate string with id "term" into language for code "it-IT"
+ERROR   : * PTX:ERROR:   An object (term) lacks a serial number, search output for "[NUM]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Somma" (title)
+ERROR   : * PTX:ERROR:   An object (term) lacks a structure number, search output for "[STRUCT]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Somma" (title)
+WARNING : * PTX:WARNING: could not translate string with id "term" into language for code "it-IT"
+ERROR   : * PTX:ERROR:   An object (term) lacks a serial number, search output for "[NUM]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Somma" (title)
+ERROR   : * PTX:ERROR:   An object (term) lacks a structure number, search output for "[STRUCT]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Somma" (title)
+WARNING : * PTX:WARNING: could not translate string with id "term" into language for code "it-IT"
+ERROR   : * PTX:ERROR:   An object (term) lacks a serial number, search output for "[NUM]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Moltiplicazione" (title)
+ERROR   : * PTX:ERROR:   An object (term) lacks a structure number, search output for "[STRUCT]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Moltiplicazione" (title)
+WARNING : * PTX:WARNING: could not translate string with id "term" into language for code "it-IT"
+ERROR   : * PTX:ERROR:   An object (term) lacks a serial number, search output for "[NUM]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Moltiplicazione" (title)
+ERROR   : * PTX:ERROR:   An object (term) lacks a structure number, search output for "[STRUCT]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Moltiplicazione" (title)
+WARNING : * PTX:WARNING: could not translate string with id "term" into language for code "it-IT"
+ERROR   : * PTX:ERROR:   An object (term) lacks a serial number, search output for "[NUM]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Sottrazione" (title)
+ERROR   : * PTX:ERROR:   An object (term) lacks a structure number, search output for "[STRUCT]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Sottrazione" (title)
+WARNING : * PTX:WARNING: could not translate string with id "term" into language for code "it-IT"
+ERROR   : * PTX:ERROR:   An object (term) lacks a serial number, search output for "[NUM]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Sottrazione" (title)
+ERROR   : * PTX:ERROR:   An object (term) lacks a structure number, search output for "[STRUCT]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Sottrazione" (title)
+WARNING : * PTX:WARNING: could not translate string with id "term" into language for code "it-IT"
+ERROR   : * PTX:ERROR:   An object (term) lacks a serial number, search output for "[NUM]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Divisione" (title)
+ERROR   : * PTX:ERROR:   An object (term) lacks a structure number, search output for "[STRUCT]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Divisione" (title)
+WARNING : * PTX:WARNING: could not translate string with id "term" into language for code "it-IT"
+ERROR   : * PTX:ERROR:   An object (term) lacks a serial number, search output for "[NUM]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Divisione" (title)
+ERROR   : * PTX:ERROR:   An object (term) lacks a structure number, search output for "[STRUCT]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Divisione" (title)
+WARNING : * PTX:WARNING: could not translate string with id "term" into language for code "it-IT"
+ERROR   : * PTX:ERROR:   An object (term) lacks a serial number, search output for "[NUM]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Estrazione di radice" (title)
+ERROR   : * PTX:ERROR:   An object (term) lacks a structure number, search output for "[STRUCT]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Estrazione di radice" (title)
+WARNING : * PTX:WARNING: could not translate string with id "term" into language for code "it-IT"
+ERROR   : * PTX:ERROR:   An object (term) lacks a serial number, search output for "[NUM]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Estrazione di radice" (title)
+ERROR   : * PTX:ERROR:   An object (term) lacks a structure number, search output for "[STRUCT]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Estrazione di radice" (title)
+WARNING : * PTX:WARNING: could not translate string with id "term" into language for code "it-IT"
+ERROR   : * PTX:ERROR:   An object (term) lacks a serial number, search output for "[NUM]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Estrazione di radice" (title)
+ERROR   : * PTX:ERROR:   An object (term) lacks a structure number, search output for "[STRUCT]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Estrazione di radice" (title)
+WARNING : * PTX:WARNING: could not translate string with id "term" into language for code "it-IT"
+ERROR   : * PTX:ERROR:   An object (term) lacks a serial number, search output for "[NUM]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Estrazione di radice" (title)
+ERROR   : * PTX:ERROR:   An object (term) lacks a structure number, search output for "[STRUCT]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Estrazione di radice" (title)
+WARNING : * PTX:WARNING: could not translate string with id "term" into language for code "it-IT"
+ERROR   : * PTX:ERROR:   An object (term) lacks a serial number, search output for "[NUM]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Estrazione di radice" (title)
+ERROR   : * PTX:ERROR:   An object (term) lacks a structure number, search output for "[STRUCT]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Estrazione di radice" (title)
+WARNING : * PTX:WARNING: could not translate string with id "term" into language for code "it-IT"
+ERROR   : * PTX:ERROR:   An object (term) lacks a serial number, search output for "[NUM]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Estrazione di radice" (title)
+ERROR   : * PTX:ERROR:   An object (term) lacks a structure number, search output for "[STRUCT]"
+INFO    : *              located at: pretext/book/chapter/section/subsection/definition/statement/p/term
+INFO    : *              located within: "Estrazione di radice" (title)
+INFO    : successful application of C:\Users\Federico\.ptx\2.42.0\core\xsl\pretext-html.xsl
+INFO    : Removing temporary directory C:\Users\Federico\AppData\Local\Temp\ptx-f5r1xp0p
+INFO    : Removing temporary directory C:\Users\Federico\AppData\Local\Temp\ptx-qy3byxkv
+INFO    : 
+Finished build for target html. Run `pretext view html` to see the results.
+
+CRITICAL: There were errors during the build.  See above.
+INFO    : ------------------------
+CRITICAL: Failed to build without errors.  Exiting...
+INFO    : 
+----------------------------------------------------
+INFO    : While running pretext, the following errors occurred:
+
+INFO    : (see log messages above or in the 'logs' folder for more information)
+INFO    : ----------------------------------------------------

@@ -1,0 +1,70 @@
+INFO    : Building target html
+INFO    : XSL conversion of C:\Users\Federico\Desktop\Snodi\snodi\source\main.ptx by C:\Users\Federico\.ptx\2.42.0\core\xsl\utilities\pretext-enhanced-source.xsl
+INFO    : successful application of C:\Users\Federico\.ptx\2.42.0\core\xsl\utilities\pretext-enhanced-source.xsl
+WARNING : Schema validation could not be completed: no validator was available (jing is not installed and lxml could not compile the schema). Continuing with build.
+WARNING : Destroying directory C:\Users\Federico\Desktop\Snodi\snodi\output\html to clean previously built files.
+INFO    : Generating any needed assets.
+WARNING : Now generating QR codes
+WARNING : You are trying to generate qrcodes, but the publication file does not have a base URL. This will result in qrcodes that do not point to anything meaningful.
+INFO    : XSL conversion of C:\Users\Federico\Desktop\Snodi\snodi\source\main.ptx by C:\Users\Federico\.ptx\2.42.0\core\xsl\utilities\report-publisher-variables.xsl
+INFO    : successful application of C:\Users\Federico\.ptx\2.42.0\core\xsl\utilities\report-publisher-variables.xsl
+INFO    : discovering source file's directory name: C:\Users\Federico\Desktop\Snodi\snodi\source
+INFO    : verifying and expanding input directory: C:\Users\Federico\Desktop\Snodi\snodi\source\../generated-assets
+INFO    : input directory expanded to absolute path: C:\Users\Federico\Desktop\Snodi\snodi\generated-assets
+INFO    : verifying and expanding input directory: C:\Users\Federico\Desktop\Snodi\snodi\source\../assets
+INFO    : input directory expanded to absolute path: C:\Users\Federico\Desktop\Snodi\snodi\assets
+INFO    : manufacturing QR codes from C:\Users\Federico\Desktop\Snodi\snodi\source\main.ptx for placement in C:\Users\Federico\Desktop\Snodi\snodi\generated-assets\qrcode
+INFO    : XSL conversion of C:\Users\Federico\Desktop\Snodi\snodi\source\main.ptx by C:\Users\Federico\.ptx\2.42.0\core\xsl\extract-qrcode.xsl
+INFO    : successful application of C:\Users\Federico\.ptx\2.42.0\core\xsl\extract-qrcode.xsl
+INFO    : creating URL with content "interactive-retta.html" as C:\Users\Federico\Desktop\Snodi\snodi\generated-assets\qrcode\interactive-retta.png...
+INFO    : QR code creation complete
+WARNING : Now generating latex images
+INFO    : converting latex-image pictures from C:\Users\Federico\Desktop\Snodi\snodi\source\main.ptx to svg graphics for placement in C:\Users\Federico\Desktop\Snodi\snodi\generated-assets\latex-image
+INFO    : extracting latex-image pictures from C:\Users\Federico\Desktop\Snodi\snodi\source\main.ptx
+INFO    : string parameters passed to extraction stylesheet: {'cli.version': '2.42', 'publisher': 'C:/Users/Federico/Desktop/Snodi/snodi/publication/publication.ptx'}
+INFO    : discovering source file's directory name: C:\Users\Federico\Desktop\Snodi\snodi\source
+INFO    : verifying and expanding input directory: C:\Users\Federico\Desktop\Snodi\snodi\source\../generated-assets
+INFO    : input directory expanded to absolute path: C:\Users\Federico\Desktop\Snodi\snodi\generated-assets
+INFO    : verifying and expanding input directory: C:\Users\Federico\Desktop\Snodi\snodi\source\../assets
+INFO    : input directory expanded to absolute path: C:\Users\Federico\Desktop\Snodi\snodi\assets
+INFO    : discovering source file's directory name: C:\Users\Federico\Desktop\Snodi\snodi\source
+INFO    : XSL conversion of C:\Users\Federico\Desktop\Snodi\snodi\source\main.ptx by C:\Users\Federico\.ptx\2.42.0\core\xsl\extract-latex-image.xsl
+INFO    : successful application of C:\Users\Federico\.ptx\2.42.0\core\xsl\extract-latex-image.xsl
+INFO    : converting thm-derivazione_retta-3-1-1.tex to thm-derivazione_retta-3-1-1.pdf
+INFO    : cropping thm-derivazione_retta-3-1-1.pdf to cropped-thm-derivazione_retta-3-1-1.pdf
+INFO    : renaming cropped-thm-derivazione_retta-3-1-1.pdf to thm-derivazione_retta-3-1-1.pdf
+INFO    : converting thm-derivazione_retta-3-1-1.pdf to thm-derivazione_retta-3-1-1.svg
+INFO    : Removing temporary directory C:\Users\Federico\AppData\Local\Temp\ptx-1gsigtyb
+INFO    : Removing temporary directory C:\Users\Federico\AppData\Local\Temp\ptx-llziympe
+INFO    : Finished generating assets.
+
+INFO    : Preparing to build into C:\Users\Federico\Desktop\Snodi\snodi\output\html.
+INFO    : discovering source file's directory name: C:\Users\Federico\Desktop\Snodi\snodi\source
+INFO    : verifying and expanding input directory: C:\Users\Federico\Desktop\Snodi\snodi\source\../generated-assets
+INFO    : input directory expanded to absolute path: C:\Users\Federico\Desktop\Snodi\snodi\generated-assets
+INFO    : verifying and expanding input directory: C:\Users\Federico\Desktop\Snodi\snodi\source\../assets
+INFO    : input directory expanded to absolute path: C:\Users\Federico\Desktop\Snodi\snodi\assets
+INFO    : discovering source file's directory name: C:\Users\Federico\Desktop\Snodi\snodi\source
+INFO    : XSL conversion of C:\Users\Federico\Desktop\Snodi\snodi\source\main.ptx by C:\Users\Federico\.ptx\2.42.0\core\xsl\utilities\report-publisher-variables.xsl
+INFO    : successful application of C:\Users\Federico\.ptx\2.42.0\core\xsl\utilities\report-publisher-variables.xsl
+INFO    : Downloading rs services file from https://runestone.academy/cdn/runestone/latest/webpack_static_imports.xml.
+INFO    : Runestone Services via online CDN query: version 8.1.6
+INFO    : Downloading Runestone Services, version 8.1.6
+INFO    : Extracting Runestone Services from archive file
+WARNING : Color #EE4511 does not have enough contrast with expected background color #fff. Contrast ratio is 3.821377629515867 but should be at least 4.5. Adjust your publisher file html/css/variables to ensure sufficient contrast.
+INFO    : Building custom css theme: theme-denver
+INFO    : converting C:\Users\Federico\Desktop\Snodi\snodi\source\main.ptx to HTML in C:\Users\Federico\AppData\Local\Temp\ptx-lo80bktw
+INFO    : XSL conversion of C:\Users\Federico\Desktop\Snodi\snodi\source\main.ptx by C:\Users\Federico\.ptx\2.42.0\core\xsl\pretext-html.xsl
+INFO    : messages from the log for XSL processing:
+INFO    : * PTX:INFO:   checking all deprecated elements.
+WARNING : * PTX:WARNING: could not translate string with id "open-new-tab" into language for code "it-IT"
+INFO    : successful application of C:\Users\Federico\.ptx\2.42.0\core\xsl\pretext-html.xsl
+INFO    : Removing temporary directory C:\Users\Federico\AppData\Local\Temp\ptx-lo80bktw
+INFO    : Removing temporary directory C:\Users\Federico\AppData\Local\Temp\ptx-qebpzmmk
+INFO    : 
+Finished build for target html. Run `pretext view html` to see the results.
+
+INFO    : 
+Success!  Built requested target(s) without errors.
+
+INFO    : 
