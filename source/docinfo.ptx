@@ -52,6 +52,29 @@
     \usetikzlibrary{decorations.markings}
     \pgfplotsset{compat=newest}
 
+    \newcommand{\GraficoSegni}[3][x]{
+      \foreach \x [count=\xx] in #2 {
+        \global\let\numNum=\xx
+        \draw[thin] (\x,-.1) -- ++(0,.2) node[above]{$\x$};
+      }
+      \draw[-latex, ultra thick] (-1,0) -- (\numNum,0) node[above]{$#1$};
+      
+      \foreach \f\l [count=\ll] in #3 {
+        \global\let\numRighe=\ll
+        \draw (-1.5,-\ll*.8+.25) node{$\f$} ++(.5,0)
+        foreach \s in \l {
+            ++(.5,0) node{$\s$}
+        }
+        ;
+      }
+      \pgfmathsetmacro\pos{-.8*(2*\numRighe-1)/2+.25}
+      \draw (-2,\pos) -- (\numNum,\pos);
+
+      \foreach \x in #2 {
+        \draw[dotted] (\x,0) -- ++(0,\pos-.8);
+      }
+  }
+
 
     %% Stile globale per i grafici
     \pgfplotsset{

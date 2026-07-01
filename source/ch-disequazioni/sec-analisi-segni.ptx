@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<section xml:id="sec-analisi-segni" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Analisi del segno</title>
+
+<subsection>
+    <title>Grafico dei segni</title>
+    <image width="50%">
+        <latex-image>
+            \begin{tikzpicture}
+                \GraficoSegni{{0,1}}{{{N/-,0,+,,+}, {D/-,,-,0,+}, {\frac{N}{D}/+,0,-,\nexists,+}}}
+            \end{tikzpicture}
+        </latex-image>
+    </image>
+</subsection>
+
+</section>

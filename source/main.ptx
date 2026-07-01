@@ -24,12 +24,7 @@
       </introduction>
     </chapter>
 
-    <chapter xml:id="ch-disequazioni" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <title>Disequazioni</title>
-      <introduction>
-        <p>TODO</p>
-      </introduction>
-    </chapter>
+    <xi:include href="./ch-disequazioni/ch-disequazioni.ptx" />
 
     <chapter xml:id="ch-funzioni" xmlns:xi="http://www.w3.org/2001/XInclude">
       <title>Funzioni</title>
