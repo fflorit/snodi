@@ -1,0 +1,11 @@
+openDate          = 01/01/2027 at 12:00am
+dueDate           = 12/31/2027 at 10:00pm
+answerDate        = 12/31/2027 at 10:00pm
+paperHeaderFile   = Snodi/header/Snodi.pg
+screenHeaderFile  = Snodi/header/Snodi.pg
+description       = Snodi
+problemListV2
+problem_start
+source_file = Snodi/1_3_5-Operazioni_elementari_tra_numeri_razionali.pg
+problem_id = 5
+problem_end

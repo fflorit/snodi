@@ -77,6 +77,7 @@
   <!-- It is possible to rename elements using the tags below
   <rename element="investigation" xml:lang="en-US">Puzzle</rename>
   <rename element="assemblage" xml:lang="en-US">Summary</rename> -->
+  <rename element="inlineexercise" xml:lang="it-IT">Esercizio</rename>
 
   <!-- Specify the default type of cross reference:           -->
   <cross-references text="type-global" />

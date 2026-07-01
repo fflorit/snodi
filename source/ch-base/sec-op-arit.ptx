@@ -43,6 +43,8 @@
     <p></p>
 </subsection>
 
+<xi:include href="./exint-op-aritm.ptx" />
+
 <subsection>
     <title>Eleveamento a potenza</title>
     <p></p>
