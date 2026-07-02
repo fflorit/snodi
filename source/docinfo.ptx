@@ -41,9 +41,43 @@
     \newcommand{\C}{\mathbb C}
 
     <!-- Definizione di variabili -->
-    \newcommand{\defeq}{\mathrel{\overset{\scriptscriptstyle\text{def}}{=}}}
+    \newcommand{\defeq}{\stackrel{\text{def}}{=}}
     <!-- Passaggio col teorema di de l'Hopital -->
-    \newcommand{\Hfeq}{\mathrel{\overset{\scriptscriptstyle\text{H}}{=}}}
+    \newcommand{\Heq}{\stackrel{\text{H}}{=}}
+
+    <!-- Macro per disegnare la parabolina nella soluzione delle disequazioni di secondo grado -->
+    <!-- Richiede un argomento: soluzioni dell'equazione associata (se nessuno va lasciato vuoto, se 1 si indica il numero, se due si indica la lista ordinata {x1,x2} -->
+    <!-- Ha un parametro opzionale: concavità 1 verso l'alto (default), -1 verso il basso -->
+    \newcommand{\parabolina}[2][1]{
+      \ifx\relax#2\relax
+        % Se è vuoto, definiamo manualmente nS a 0 (o quello che preferisci)
+        \gdef\nS{0}
+      \else
+        \foreach \x [count=\xx] in #2 {\global\let\nS=\xx}
+      \fi
+      \ifnum#1>0
+        \def\pos{below}
+      \else
+        \def\pos{above}
+      \fi
+      \begin{tikzpicture}
+        \begin{axis}[xmin=-2,xmax=2, ymin=-2,ymax=2, axis y line=none, axis lines=middle, xtick=\empty, width=3.5cm, clip=false]
+          \ifnum \nS=0 \addplot[domain=-1.5:1.5] {#1*(x^2+1)}; \fi
+          \ifnum \nS=1
+            \addplot[domain=-1.5:1.5] {#1*(x^2)};
+            \addplot[mark=*, mark size=1pt, font=\tiny, inner xsep=0, inner ysep=2pt] coordinates {(0,0)} node[\pos]{$#2$};
+          \fi
+          \ifnum \nS=2
+            \addplot[domain=-1.5:1.5] {#1*(x^2-1)};
+            \addplot[mark=*, mark size=1pt, draw=none] coordinates {(-1,0) (1,0)};
+            \draw[font=\tiny] 
+            \foreach \x [count=\xx] in #2 {
+              (\xx*2-3,0) node[\pos, fill=white, fill opacity=.3, text opacity=1, text=black, inner xsep=0, inner ysep=2pt]{$\x$}
+            };
+          \fi
+        \end{axis}
+      \end{tikzpicture}
+    }
 
     <!-- Macro per il grafico dei segni -->
     <!-- Richiede due argomenti: Lista dei numeri da mettere sull'asse orientato. Es. {0,\frac{1}{2}}
@@ -53,7 +87,7 @@
       \def\spazio{0.8}
       \foreach \x [count=\xx] in #2 {
         \global\let\numNum=\xx
-        \draw[thin] (\x,-.1) -- ++(0,.2) node[above]{$\x$}; %tick sull'asse
+        \draw[thin] (\xx-1,-.1) -- ++(0,.2) node[above]{$\x$}; %tick sull'asse
       }
       \draw[-latex, ultra thick] (-1,0) -- (\numNum,0) node[above]{$#1$}; %asse
       
@@ -72,8 +106,8 @@
         \draw (-2,\pos) -- (\numNum,\pos);
       \fi
 
-      \foreach \x in #2 {
-        \draw[dotted] (\x,0) -- ++(0,\pos-\spazio); %riga verticale puntinata per ogni numero
+      \foreach \x [count=\xx] in #2 {
+        \draw[dotted] (\xx-1,0) -- ++(0,\pos-\spazio); %riga verticale puntinata per ogni numero
       }
     }
   </macros>

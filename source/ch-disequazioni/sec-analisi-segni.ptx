@@ -11,6 +11,100 @@
     <p>La tecnica più efficace per studiare il segno di un polinomio, una frazione algebrica o qualsiasi altra espressione letterale è usare la tecnica del <foreign xml:lang="la">divide et impera</foreign>, separando il problema in sottoproblemi più piccoli e semplici da risolvere. Nel caso dello studio del segno si cerca di scopporre qualsiasi espressione in fattori (i polinomi in particolare vengono scomposti in fattori di grado 2 al massimo), così che sia possibile studiare il segno di ogni fattore per poi riunire queste informazioni in quello che si chiama il <term>grafico di segni</term><idx><h>segno</h><h>grafico di</h></idx>.</p>
     <p>Questo strumento è utilizzato ogniqualvolta sia possibile scomporre un'espressione letterale in fattori, ottenendo delle moltiplicazioni tra espressioni. Questo può accadere per esempio nelle disequazioni con polinomi di grado superiore al secondo o nelle disequazioni trascendenti. Visto che la divisione è un particolare tipo di moltiplicazione, il grafico dei segni si usa anche nelle disequazioni fratte. In questo caso il grafico dei segni sarà anche utile per generare o verificare le C.E. dell'espressione letterale.</p>
 
+    <algorithm xml:id="alg-grafico-segni">
+    <title>Costruzione del grafico dei segni</title>
+    <statement><p>
+        <ol>
+            <li><p>Si nominano tutti i fattori <m>F</m> dell'espressione letterale <alert>scomposta</alert>, per esempio <m>F_1</m>, <m>F_2</m> e <m>F_3</m> o <m>N</m> ed <m>D</m> (uno per ogni fattore sia a numeratore che a denominatore)</p></li>
+            <li><p>Si scrivono le C.E. dei singoli fattori <m>F</m> se presenti (questo accade se un fattore è una funzione logaritmica o tangente), ottenendo gli intervalli di definizione dei fattori</p></li>
+            <li><p>Si studia il segno di ogni fattore <m>F</m>, cioè si risolvono tante disequazioni <m>F\ge 0</m> quante sono i fattori (per convenzione si usa il <m>\ge</m>), ottenendo gli intervalli delle soluzioni <m>I_F</m></p></li>
+            <li><p>Si traccia una linea orizzontale orientata (una freccia verso destra), si dispongono <alert>in ordine</alert> i valori numerici degli estremi degli intervalli ottenuti ai punti precedenti e si tracciano delle linee verticali sotto ogni numero scritto.</p></li>
+            <li><p>Ogni fattore avrà una riga di simboli da inserire in quest'ordine:
+                <ul>
+                    <li><p>(solo per logaritmi e tangenti) <m>\nexists</m> in linea con gli intervalli complementari alle C.E. del fattore: questo lascerà vuoti tutti gli intervalli ammessi dalle C.E.</p></li>
+                    <li><p><m>0</m> sulle linee verticali in corrispondenza dei numero che sono estremi di <m>I_F</m></p></li>
+                    <li><p><m>+</m> tra le linee verticali negli intervalli indicati da <m>I_F</m></p></li>
+                    <li><p><m>-</m> negli spazi rimasti vuoti</p></li>
+                </ul>
+            Terminati i fattori si otterrà una tabella piena di simboli tutti incolonnati
+            </p></li>
+            <li><p>Si traccia una riga orizzontale e si procede al calcolo del segno dell'espressione letterale di partenza:
+                <ul>
+                    <li><p><m>\nexists</m> in colonna con qualsiasi <m>0</m> di fattori <alert>a denominatore</alert> equalsiasi <m>\nexists</m></p></li>
+                    <li><p><m>0</m> in colonna con qualsiasi <m>0</m> di fattori <alert>solo a numeratore</alert></p></li>
+                    <li><p><m>+</m> e <m>-</m> in base alla regola dei segni operando una moltiplicazione dei segni dei fattori</p></li>
+                </ul>
+            </p></li>
+        </ol>
+    È buona norma indicare il nome dei fattori su ogni riga a sinistra e l'operazione tra i fattori nella riga del risultato.
+    </p></statement>
+    </algorithm>
+
+    <example><title>Studio del segno di un polinomio di terzo grado</title>
+    <statement><p>Studia il segno di <m>P_3(x)=x^3+x^2-2x</m> al variare di <m>x\in \R</m>.</p></statement>
+    <solution>
+        <p>
+            Si scompone il polinomio. Per raccoglimento totale:
+            <md>P_3(x)=x^3+x^2-2x = \underbrace{x}_{F_1}\underbrace{(x^2+x-2)}_{F_2}</md>
+            che fornisce due fattori <m>F_1</m> e <m>F_2</m> di grado massimo 2.
+        </p>
+        <p>
+            Si studia il segno dei due fattori:
+            <md>F_1\ge0 \qquad x\ge 0</md>
+            <md>F_2\ge0 \qquad x^2+x-2\ge 0</md>
+            che va risolta partendo dall'equazione associata e disegnando la parabolina:
+            <md>\text{Eq. assoc.} \quad x^2+x-2 = 0</md>
+            <md>\Delta=1+8=9</md>
+        </p>
+        <sidebyside widths="75% 20%" margins="0% 5%" valign="middle">
+            <p><md> x_{1,2}= \dfrac{-1\pm \sqrt{9}}{2} = \dfrac{-1\pm 3}{2} = \begin{cases}-2\\1\end{cases} </md></p>
+            <image><latex-image>
+                    \parabolina{{-2,1}}
+            </latex-image></image>
+        </sidebyside>
+        <p>
+            <md>x\le -2 \vee x\ge 1</md>
+            Si può quindi costruire il grafico dei segni con due righe per i due fattori e una riga finale per la moltiplicazione:
+        </p>
+        <image width="40%">
+            <latex-image>
+                \begin{tikzpicture}
+                    \GraficoSegni{{-2,0,1}}{{{F_1/-,,-,0,+,,+}, {F_2/+,0,-,,-,0,+}, {F_1\cdot F_2/-,0,+,0,-,0,+}}}
+                \end{tikzpicture}
+            </latex-image>
+        </image>
+        <p>Visto che <m>P_3=F_1\cdot F_2</m>, otteniamo che il polinomio di terzo grado ha tre zeri <m>\{-2,0,1\}</m>, è positivo in <m>(-2,0)\cup(1,+\infty)</m> e negativo in <m>(-\infty,-2)\cup(0,1)</m>.</p>
+    </solution>
+    <solution>
+        <p>
+            Si scompone il polinomio. Per raccoglimento totale:
+            <md>P_3(x)=x^3+x^2-2x = x(x^2+x-2)</md>
+            e poi mediante il trinomio speciale <m>s=1,p=-2</m> che fornisce la coppia <m>(-1,2)</m>, quindi:
+            <md>P_3(x)= x(x^2+x-2) = \underbrace{x}_{F_1} \underbrace{(x-1)}_{F_2} \underbrace{(x+2)}_{F_3}</md>
+            che fornisce tre fattori <m>F_1</m>, <m>F_2</m> e <m>F_3</m> di grado 1.
+        </p>
+        <p>
+            Si studia il segno dei tre fattori:
+            <md>F_1\ge0 \qquad x\ge 0</md>
+            <md>F_2\ge0 \qquad x-1\ge 0 \qquad x\ge 1</md>
+            <md>F_3\ge0 \qquad x+2\ge 0 \qquad x\ge -2</md>
+            Si può quindi costruire il grafico dei segni con tre righe per i tre fattori e una riga finale per la moltiplicazione:
+        </p>
+        <image width="40%">
+            <latex-image>
+                \begin{tikzpicture}
+                    \GraficoSegni{{-2,0,1}}{{{F_1/-,,-,0,+,,+}, {F_2/-,,-,,-,0,+}, {F_3/-,0,+,,+,,+}, {F_{123}/-,0,+,0,-,0,+}}}
+                \end{tikzpicture}
+            </latex-image>
+        </image>
+        <p>Visto che <m>P_3=F_{123}=F_1\cdot F_2\cdot F_3</m>, otteniamo che il polinomio di terzo grado ha tre zeri <m>\{-2,0,1\}</m>, è positivo in <m>(-2,0)\cup(1,+\infty)</m> e negativo in <m>(-\infty,-2)\cup(0,1)</m>.</p>
+    </solution>
+    </example>
+
+
+
+
+
     <image width="50%">
         <latex-image>
             \begin{tikzpicture}
