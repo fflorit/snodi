@@ -1,10 +1,16 @@
 <?xml version='1.0' encoding='utf-8'?>
 
 <section xml:id="sec-analisi-segni" xmlns:xi="http://www.w3.org/2001/XInclude">
-<title>Analisi del segno</title>
+<title>Studio del segno</title>
+<introduction>
+    <p>Il polinomio <m>P_3(x)=x^3+x^2-2x</m> può essere positivo (<m>P_3(x)\gt 0</m>), negativo (<m>P_3(x)\lt 0</m>) o nullo (<m>P_3(x)=0</m>) in base al valore della variabile <m>x</m>. Potremmo provare a sostituire dei valori casuali di <m>x</m> per vedere il segno di <m>P_3</m>, ma non avremmo la certezza di controllare tutti i valori significativi di <m>x</m>, dimenticando qualcosa per strada. Lo <term>studio del segno</term><idx><h>segno</h><h>studio del</h></idx> è quella procedura che permette di determinare il segno di un'espressione letterale (cioè vedere quando è positiva, negativa o nulla) in funzione del valore della variabile senza però provare a sostituire infiniti valori di tale variabile per testare il segno.</p>
+</introduction>
 
 <subsection>
     <title>Grafico dei segni</title>
+    <p>La tecnica più efficace per studiare il segno di un polinomio, una frazione algebrica o qualsiasi altra espressione letterale è usare la tecnica del <foreign xml:lang="la">divide et impera</foreign>, separando il problema in sottoproblemi più piccoli e semplici da risolvere. Nel caso dello studio del segno si cerca di scopporre qualsiasi espressione in fattori (i polinomi in particolare vengono scomposti in fattori di grado 2 al massimo), così che sia possibile studiare il segno di ogni fattore per poi riunire queste informazioni in quello che si chiama il <term>grafico di segni</term><idx><h>segno</h><h>grafico di</h></idx>.</p>
+    <p>Questo strumento è utilizzato ogniqualvolta sia possibile scomporre un'espressione letterale in fattori, ottenendo delle moltiplicazioni tra espressioni. Questo può accadere per esempio nelle disequazioni con polinomi di grado superiore al secondo o nelle disequazioni trascendenti. Visto che la divisione è un particolare tipo di moltiplicazione, il grafico dei segni si usa anche nelle disequazioni fratte. In questo caso il grafico dei segni sarà anche utile per generare o verificare le C.E. dell'espressione letterale.</p>
+
     <image width="50%">
         <latex-image>
             \begin{tikzpicture}
