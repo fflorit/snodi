@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='utf-8'?>
+<webwork-reps version="2" webwork2_major_version="2" webwork2_minor_version="20" xml:id="extracted-sec-analisi-segni-3-6" assembly-id="sec-analisi-segni-3-6">
+  <static seed="2">
+    <statement><p>Studia il segno della frazione algebrica:</p>
+<p><me>\frac{x^{2}+7x+10}{x^{2}-4x+4}</me></p>
+</statement>
+    <solution><tabular valign="top">
+<col halign="center"/>
+<col halign="center"/>
+<col halign="center"/>
+<col halign="center"/>
+<col halign="center"/>
+<col halign="center"/>
+<col halign="center"/>
+<col halign="center"/>
+<row bottom="minor" header="yes">
+<cell/>
+<cell> </cell>
+<cell><m>-5</m></cell>
+<cell> </cell>
+<cell><m>-2</m></cell>
+<cell> </cell>
+<cell><m>2</m></cell>
+<cell> </cell>
+</row>
+<row>
+<cell><m>N</m></cell>
+<cell><m>+</m></cell>
+<cell><m>0</m></cell>
+<cell><m>-</m></cell>
+<cell><m>0</m></cell>
+<cell><m>+</m></cell>
+<cell> </cell>
+<cell><m>+</m></cell>
+</row>
+<row bottom="minor">
+<cell><m>D</m></cell>
+<cell><m>+</m></cell>
+<cell> </cell>
+<cell><m>+</m></cell>
+<cell> </cell>
+<cell><m>+</m></cell>
+<cell><m>0</m></cell>
+<cell><m>+</m></cell>
+</row>
+<row>
+<cell><m>N/D</m></cell>
+<cell><m>+</m></cell>
+<cell><m>0</m></cell>
+<cell><m>-</m></cell>
+<cell><m>0</m></cell>
+<cell><m>+</m></cell>
+<cell><m>\nexists</m></cell>
+<cell><m>+</m></cell>
+</row>
+</tabular>
+</solution>
+  </static>
+  <rendering-data problemSource="Snodi/3_1_3-Studio_di_una_frazione_algebrica_grado_2grado_2.pg" origin="generated" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" passwd="anonymous" language="it-IT"/>
+  <pg><![CDATA[
+
+        DOCUMENT();
+
+loadMacros(
+    "PGstandard.pl",
+    "PGchoicemacros.pl",
+    "MathObjects.pl",
+    "PGML.pl"
+);
+
+Context("Numeric");
+
+$solN1 = random(-9, 9, 1);
+$solN2 = random(-9, 9, 1);
+$solD1 = random(-9, 9, 1);
+$solD2 = random(-9, 9, 1);
+
+$aN = 1;
+$aD = 1;
+$bN = -($aN*$solN1 + $solN2);
+$cN = $aN*$solN1 * $solN2;
+$bD = -($aD*$solD1 + $solD2);
+$cD = $aD*$solD1 * $solD2;
+
+$probDn = random(0,1,.01);
+if ($probDn < 0.05) {#sol complesse coniugate a numeratore
+  $re = $solN1; #parte reale
+  $im = random(1, 4, 1); #parte immaginaria
+  $bN = -2*$re;
+  $cN = $re**2 + $im**2;
+  @sols = ($solD1, $solD2);
+} elsif ($probDn < 0.1) {#frazione con 2 a denominatore
+  $re = $solD1; #parte reale
+  $im = random(1, 4, 1); #parte immaginaria
+  $bD = -2*$re;
+  $cD = $re**2 + $im**2;
+  @sols = ($solN1, $solN2);
+} else {
+  $re = 0;
+  $im = 0;
+  @sols = ($solN1, $solN2, $solD1, $solD2);
+}
+
+$prob = random(0,1,.01);
+if ($prob < 0.15) {#cambia segno a numeratore
+    $aN = -($aN);
+    $bN = -($bN);
+    $cN = -($cN);
+} elsif ($prob < 0.3) {#cambia segno a denominatore
+    $aD = -($aD);
+    $bD = -($bD);
+    $cD = -($cD);
+}
+
+$N = Compute("($aN)*x^2+($bN)*x+($cN)")->reduce;
+$D = Compute("($aD)*x^2+($bD)*x+($cD)")->reduce;
+
+@x0 = num_sort(uniq(@sols)); #array degli zeri unici di N e D
+$nx = @x0; #assegna la lunghezza dell'array x0
+
+#crea un array di test del segno e degli zeri
+@test = ($x0[0] - 1);
+for ($i = 0; $i < $nx - 1; $i++) {
+    push(@test, $x0[$i]);
+    $media = ($x0[$i] + $x0[$i+1]) / 2;
+    push(@test, $media);
+}
+push(@test, $x0[-1]);
+push(@test, $x0[-1] + 1);
+
+@test = ($x0[0] - 1);
+for ($i = 0; $i < $nx - 1; $i++) {
+    push(@test, $x0[$i]);
+    $media = ($x0[$i] + $x0[$i+1]) / 2;
+    push(@test, $media);
+}
+push(@test, $x0[-1]);
+push(@test, $x0[-1] + 1);
+
+@num_top = ();
+@segnoN = ();
+@segnoD = ();
+@segnoF = ();
+for ($i = 0; $i < @test; $i++) {
+  $Ntmp = $N->eval(x => $test[$i]);
+  $Dtmp = $D->eval(x => $test[$i]);
+  $Ftmp = $Ntmp*$Dtmp; #svolge il prodotto per evitare i problemi della divisione per zero, che viene gestita a mano
+
+  if ($i % 2 != 0) {
+    #colonna in corrispondenza del valore numerico
+    push(@num_top, "\($test[$i]\)");
+
+    if ($Ntmp != 0) {
+      push(@segnoN, " ");
+    } else {
+      push(@segnoN, "\(0\)");
+    }
+
+    if ($Dtmp != 0) {
+      #zero solo del numeratore
+      push(@segnoD, " ");
+      push(@segnoF, "\(0\)");
+    } else {
+      push(@segnoD, "\(0\)");
+      push(@segnoF, "\(\nexists\)");
+    }
+  } else {
+    #colonna tra i valori numerici
+    push(@num_top, " ");
+
+    if ($Ntmp > 0) {
+        push(@segnoN, "\(+\)");
+    } else {
+        push(@segnoN, "\(-\)");
+    }
+
+    if ($Dtmp > 0) {
+        push(@segnoD, "\(+\)");
+    } else {
+        push(@segnoD, "\(-\)");
+    }
+
+    if ($Ftmp > 0) {
+        push(@segnoF, "\(+\)");
+    } else {
+        push(@segnoF, "\(-\)");
+    }
+  }
+}
+
+
+
+
+
+Context()->texStrings;
+TEXT(beginproblem());
+BEGIN_TEXT
+Studia il segno della frazione algebrica:
+
+\[ \frac{$N}{$D} \]
+
+
+
+END_TEXT
+
+
+BEGIN_SOLUTION
+\{
+DataTable(
+  [
+    [["", headerrow => 1, midrule=>1], @num_top],
+    ["\(N \)", @segnoN],
+    [["\(D \)", midrule=>1], @segnoD],
+    ["\(N/D \)", @segnoF]
+  ],
+);
+\}
+END_SOLUTION
+
+ENDDOCUMENT();
+    ]]></pg>
+</webwork-reps>

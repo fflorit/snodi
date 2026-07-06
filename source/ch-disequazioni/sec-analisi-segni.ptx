@@ -102,16 +102,13 @@
     </example>
 
 
+<exercise>
+    <title>Studio di una frazione algebrica (grado 2/grado 2)</title>
+    <webwork>
+        <xi:include href="..\..\assets\pgml\exint-fraz-alg_2-2.pg" parse="text" />
+    </webwork>
+</exercise>
 
-
-
-    <image width="50%">
-        <latex-image>
-            \begin{tikzpicture}
-                \GraficoSegni{{0,1}}{{{N/-,0,+,,+}, {D/-,,-,0,+}, {\frac{N}{D}/+,0,-,\nexists,+}}}
-            \end{tikzpicture}
-        </latex-image>
-    </image>
 </subsection>
 
 </section>
