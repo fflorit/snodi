@@ -10,6 +10,6 @@ source_file = Snodi/1_3_5-Operazioni_elementari_tra_numeri_razionali.pg
 problem_id = 5
 problem_end
 problem_start
-source_file = Snodi/3_1_3-Studio_di_una_frazione_algebrica_grado_2grado_2.pg
+source_file = Snodi/3_1_3-Studio_del_segno_di_una_frazione_algebrica.pg
 problem_id = 3
 problem_end

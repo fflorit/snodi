@@ -1,67 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
-<webwork-reps version="2" webwork2_major_version="2" webwork2_minor_version="20" xml:id="extracted-sec-analisi-segni-3-6" assembly-id="sec-analisi-segni-3-6">
-  <static seed="2">
-    <statement><p>Studia il segno della frazione algebrica</p>
-<p><me>\frac{x^{2}+7x+10}{2-x}</me></p>
-<p>al variare di <m>x \in \mathbb R</m>.</p>
-</statement>
-    <solution><p>Dopo aver studiato il segno di numeratore e denominatore (risolvendo <m>N\ge 0</m> e <m>D\ge 0</m>), si ottiene il grafico dei segni:</p>
-<tabular valign="top">
-<col halign="center"/>
-<col halign="center"/>
-<col halign="center"/>
-<col halign="center"/>
-<col halign="center"/>
-<col halign="center"/>
-<col halign="center"/>
-<col halign="center"/>
-<row bottom="minor" header="yes">
-<cell/>
-<cell> </cell>
-<cell><m>(-5)</m></cell>
-<cell> </cell>
-<cell><m>(-2)</m></cell>
-<cell> </cell>
-<cell><m>2</m></cell>
-<cell> </cell>
-</row>
-<row>
-<cell><m>N</m></cell>
-<cell><m>+</m></cell>
-<cell><m>0</m></cell>
-<cell><m>-</m></cell>
-<cell><m>0</m></cell>
-<cell><m>+</m></cell>
-<cell> </cell>
-<cell><m>+</m></cell>
-</row>
-<row bottom="minor">
-<cell><m>D</m></cell>
-<cell><m>+</m></cell>
-<cell> </cell>
-<cell><m>+</m></cell>
-<cell> </cell>
-<cell><m>+</m></cell>
-<cell><m>0</m></cell>
-<cell><m>-</m></cell>
-</row>
-<row>
-<cell><m>N/D</m></cell>
-<cell><m>+</m></cell>
-<cell><m>0</m></cell>
-<cell><m>-</m></cell>
-<cell><m>0</m></cell>
-<cell><m>+</m></cell>
-<cell><m>\nexists</m></cell>
-<cell><m>-</m></cell>
-</row>
-</tabular>
-</solution>
-  </static>
-  <rendering-data problemSource="Snodi/3_1_3-Studio_del_segno_di_una_frazione_algebrica.pg" origin="generated" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" passwd="anonymous" language="it-IT"/>
-  <pg><![CDATA[
-
-        DOCUMENT();
+DOCUMENT();
 
 loadMacros(
     "PGstandard.pl",
@@ -269,5 +206,3 @@ DataTable(
 END_SOLUTION
 
 ENDDOCUMENT();
-    ]]></pg>
-</webwork-reps>

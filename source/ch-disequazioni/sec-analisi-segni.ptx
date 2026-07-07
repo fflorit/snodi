@@ -30,8 +30,8 @@
             </p></li>
             <li><p>Si traccia una riga orizzontale e si procede al calcolo del segno dell'espressione letterale di partenza:
                 <ul>
-                    <li><p><m>\nexists</m> in colonna con qualsiasi <m>0</m> di fattori <alert>a denominatore</alert> equalsiasi <m>\nexists</m></p></li>
-                    <li><p><m>0</m> in colonna con qualsiasi <m>0</m> di fattori <alert>solo a numeratore</alert></p></li>
+                    <li><p><m>\nexists</m> in colonna con qualsiasi <m>0</m> di fattori a denominatore (<alert>non si può dividere per zero</alert>) e qualsiasi altro <m>\nexists</m> già presente</p></li>
+                    <li><p><m>0</m> in colonna con qualsiasi <m>0</m> di fattori solo a numeratore (<alert>zero è divisibile per qualsiasi numero diverso da zero</alert>)</p></li>
                     <li><p><m>+</m> e <m>-</m> in base alla regola dei segni operando una moltiplicazione dei segni dei fattori</p></li>
                 </ul>
             </p></li>
@@ -103,9 +103,9 @@
 
 
 <exercise>
-    <title>Studio di una frazione algebrica (grado 2/grado 2)</title>
+    <title>Studio del segno di una frazione algebrica</title>
     <webwork>
-        <xi:include href="..\..\assets\pgml\exint-fraz-alg_2-2.pg" parse="text" />
+        <xi:include href="..\..\assets\pgml\exmkr-segno-fraz-alg.pg" parse="text" />
     </webwork>
 </exercise>
 
