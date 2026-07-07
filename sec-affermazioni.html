@@ -22,7 +22,7 @@
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
 startMathJax({
-hasWebworkReps: false,
+hasWebworkReps: true,
 hasSage: false,
 isReact: false,
 htmlPresentation: false,
@@ -36,7 +36,7 @@ htmlPresentation: false,
 <meta name="twitter:description" content="TBD">
 <meta property="og:description" content="TBD">
 <meta name="twitter:card" content="summary">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.43"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.42"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -58,65 +58,123 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.1.6';
+eBookConfig.runestone_version = '8.1.8';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.53a23d1b65c1dce2.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.4787412a251795e3.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<script src="_static/prefix-runtime.917dfc3cfe0bb764.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.d40a1acc1751a0b6.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
-<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdn.geogebra.org/apps/deployggb.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Calcola (Sage)';
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="_static/pretext/js/dist/pretext-webwork/2.20/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://cdn.geogebra.org/apps/deployggb.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Calcola (Sage)';
 </script>
 </head>
-<body id="snodi" class="pretext book ignore-math">
+<body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Vai all'indice generale</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
 <h1 class="heading"><a href="snodi.html"><span class="title">Snodi</span> <span class="subtitle">TBD</span></a></h1>
-<p class="byline">Federico Florit</p>
+<p class="byline">Federico Florit (Curatore)</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
-<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Indice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Indice</span></button><a class="index-button button" href="backmatter-5.html" title="Indice analitico"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Indice analitico</span></a><div class="ptx-search-box">
-<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="[search-book]"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">[search-book]</span></button></div>
-<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
-<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Chiudi" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+<button class="toc-toggle button" title="Indice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Indice</span></button><a class="index-button button" href="backmatter-4.html" title="Indice analitico"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Indice analitico</span></a><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search book" commandfor="ptx-search-dialog" command="show-modal"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog" closedby="closerequest"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close search" id="ptx-search-close" class="ptx-search-close" commandfor="ptx-search-dialog" command="close"><span class="material-symbols-outlined">close</span></button>
 </div>
 <div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
-<h2 class="heading ptx-search-results-heading">Risultati: </h2>
+<h2 class="ptx-search-results-heading">Risultati: </h2>
 <div id="ptx-search-empty" class="ptx-search-empty"><span>Nessun risultato.</span></div>
 <ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
 </div>
-<span class="nav-other-controls"><button type="button" id="ptx-calculator-toggle" class="ptx-calculator-toggle button" title="[calculator]"><span class="icon material-symbols-outlined" aria-hidden="true">&#xea5f;</span><span class="name">[calculator]</span></button><dialog id="ptx-calculator-container" class="ptx-dialog ptx-calculator-container" aria-label="[calculator]"><div id="ptx-geogebra-calculator" class="ptx-geogebra-calculator"></div>
-<script id="ptx-geogebra-calculator-params">
-let ggbParams = {
-    "appName": "classic"
-};
-</script></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="[readability-settings]"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">[readability-settings]</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
-<h2 class="heading">[readability-settings]</h2>
-<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Chiudi"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
-</div>
-<div class="ptx-readability-options-group">
-<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>[readability-line-height]</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
-</div>
-<div class="ptx-readability-options-group">
-<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>[readability-content-font-size]</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
-</div>
-<fieldset class="ptx-readability-options-group ptx-readability-options-group-theme">
-<legend>[readability-theme]</legend>
-<label for="ptx-readability-theme-system"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-system" value="system"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe1ab;</span><span>[readability-theme-system]</span></label><label for="ptx-readability-theme-light"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-light" value="light"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe518;</span><span>[readability-theme-light]</span></label><label for="ptx-readability-theme-dark"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-dark" value="dark"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span>[readability-theme-dark]</span></label>
-</fieldset>
-<fieldset class="ptx-readability-options-group">
-<legend>[readability-assistive-technologies]</legend>
-<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>[readability-expose-permalinks]</span></label>
-</fieldset>
-<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">[reset-all]</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="ch-base.html" title="Precedente"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prec</span></a><a class="up-button button" href="ch-base.html" title="Su"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Su</span></a><a class="next-button button" href="sec-insiemi.html" title="Successivo"><span class="name">Succ</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<span class="nav-other-controls"><button id="calculator-toggle" class="calculator-toggle button" title="Show calculator" aria-expanded="false" aria-controls="calculator-container"><span class="icon material-symbols-outlined" aria-hidden="true">&#xea5f;</span><span class="name">Calc</span></button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
+<script>
+var ggbApp = new GGBApplet({"appName": "classic",
+    "width": 330,
+    "height": 600,
+    "showToolBar": true,
+    "showAlgebraInput": true,
+    "perspective": "G/A",
+    "algebraInputPosition": "bottom",
+    "scaleContainerClass": "calculator-container",
+    "allowUpscale": true,
+    "autoHeight": true,
+    "disableAutoScale": false},
+true);
+</script><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="ch-base.html" title="Precedente"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prec</span></a><a class="up-button button" href="ch-base.html" title="Su"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Su</span></a><a class="next-button button" href="sec-insiemi.html" title="Successivo"><span class="name">Succ</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\Q}{\mathbb Q}
 \newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+
+
+\newcommand{\defeq}{\stackrel{\text{def}}{=}}
+
+\newcommand{\Heq}{\stackrel{\text{H}}{=}}
 
 
 
-\newcommand{\defeq}{\mathrel{\overset{\scriptscriptstyle\text{def}}{=}}}
+
+\newcommand{\parabolina}[2][1]{
+  \ifx\relax#2\relax
+    
+    \gdef\nS{0}
+  \else
+    \foreach \x [count=\xx] in #2 {\global\let\nS=\xx}
+  \fi
+  \ifnum#1&gt;0
+    \def\pos{below}
+  \else
+    \def\pos{above}
+  \fi
+  \begin{tikzpicture}
+    \begin{axis}[xmin=-2,xmax=2, ymin=-2,ymax=2, axis y line=none, axis lines=middle, xtick=\empty, width=3.5cm, clip=false]
+      \ifnum \nS=0 \addplot[domain=-1.5:1.5] {#1*(x^2+1)}; \fi
+      \ifnum \nS=1
+        \addplot[domain=-1.5:1.5] {#1*(x^2)};
+        \addplot[mark=*, mark size=1pt, font=\tiny, inner xsep=0, inner ysep=2pt] coordinates {(0,0)} node[\pos]{$#2$};
+      \fi
+      \ifnum \nS=2
+        \addplot[domain=-1.5:1.5] {#1*(x^2-1)};
+        \addplot[mark=*, mark size=1pt, draw=none] coordinates {(-1,0) (1,0)};
+        \draw[font=\tiny] 
+        \foreach \x [count=\xx] in #2 {
+          (\xx*2-3,0) node[\pos, fill=white, fill opacity=.3, text opacity=1, text=black, inner xsep=0, inner ysep=2pt]{$\x$}
+        };
+      \fi
+    \end{axis}
+  \end{tikzpicture}
+}
+
+
+
+
+\newcommand{\GraficoSegni}[3][x]{
+  \def\spazio{0.8}
+  \foreach \x [count=\xx] in #2 {
+    \global\let\numNum=\xx
+    \draw[thin] (\xx-1,-.1) -- ++(0,.2) node[above]{$\x$}; 
+  }
+  \draw[-latex, ultra thick] (-1,0) -- (\numNum,0) node[above]{$#1$}; 
+  
+  \foreach \f\l [count=\ll] in #3 {
+    \global\let\numRighe=\ll
+    
+    \draw (-1.5,-\ll*\spazio+.25) node{$\f$} ++(.5,0)
+    foreach \s in \l {
+        ++(.5,0) node{$\s$}
+    }
+    ;
+  }
+  \pgfmathsetmacro\pos{-\spazio*(2*\numRighe-1)/2+.25} 
+  
+  \ifnum \numRighe&gt;1
+    \draw (-2,\pos) -- (\numNum,\pos);
+  \fi
+
+  \foreach \x [count=\xx] in #2 {
+    \draw[dotted] (\xx-1,0) -- ++(0,\pos-\spazio); 
+  }
+}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -124,20 +182,14 @@ let ggbParams = {
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Indice" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
-<li class="toc-item toc-frontmatter">
-<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Materiale iniziale</span></a></div>
-<ul id="ptx-toc-group-frontmatter" class="structural toc-item-list">
-<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Colophon</span></a></div></li>
-<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Prefazione</span></a></div></li>
-</ul>
-</li>
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Materiale iniziale</span></a></div></li>
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch-base.html" class="internal"><span class="codenumber">1</span> <span class="title">Concetti base</span></a></div>
-<ul class="structural toc-item-list contains-active" id="ptx-toc-group-ch-base">
+<ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="sec-affermazioni.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Affermazioni matematiche</span></a></div>
-<ul class="structural toc-item-list active" id="ptx-toc-group-sec-affermazioni">
+<ul class="structural toc-item-list active">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-affermazioni.html#sec-affermazioni-3" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Definizione</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-affermazioni.html#sec-affermazioni-4" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Postulato o assioma</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-affermazioni.html#sec-affermazioni-5" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Teorema</span></a></div></li>
@@ -146,38 +198,52 @@ let ggbParams = {
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-insiemi.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Insiemi, operazioni tra insiemi, intervalli</span></a></div>
-<ul id="ptx-toc-group-sec-insiemi" class="structural toc-item-list">
+<div class="toc-title-box"><a href="sec-insiemi.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Insiemi, operazioni tra insiemi, insiemi numerici, intervalli</span></a></div>
+<ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-insiemi.html#sec-insiemi-3" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Insiemi e operazioni</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-insiemi.html#sec-insiemi-4" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Insiemi numerici</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-insiemi.html#sec-insiemi-5" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Intervalli</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-op-arit.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Operazioni aritmetiche</span></a></div>
-<ul id="ptx-toc-group-sec-op-arit" class="structural toc-item-list">
+<ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-op-arit.html#sec-op-arit-3" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Somma</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-op-arit.html#sec-op-arit-4" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Moltiplicazione</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-op-arit.html#sec-op-arit-5" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Sottrazione</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-op-arit.html#sec-op-arit-6" class="internal"><span class="codenumber">1.3.4</span> <span class="title">Divisione</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-op-arit.html#sec-op-arit-7" class="internal"><span class="codenumber">1.3.5</span> <span class="title">Eleveamento a potenza</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-op-arit.html#sec-op-arit-8" class="internal"><span class="codenumber">1.3.6</span> <span class="title">Estrazione di radice</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-op-arit.html#exint-op-aritm" class="internal"><span class="codenumber">1.3.5</span> <span class="title">Esercizi sulle operazioni base</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-op-arit.html#sec-op-arit-8" class="internal"><span class="codenumber">1.3.6</span> <span class="title">Eleveamento a potenza</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-op-arit.html#sec-op-arit-9" class="internal"><span class="codenumber">1.3.7</span> <span class="title">Estrazione di radice</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-espr-lett.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Espressioni letterali</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-espr-lett.html#sec-espr-lett-3" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Monomi</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-espr-lett.html#sec-espr-lett-4" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Polinomi</span></a></div></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-equazioni.html" class="internal"><span class="codenumber">2</span> <span class="title">Equazioni</span></a></div></li>
-<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-disequazioni.html" class="internal"><span class="codenumber">3</span> <span class="title">Disequazioni</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-disequazioni.html" class="internal"><span class="codenumber">3</span> <span class="title">Disequazioni</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-analisi-segni.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Studio del segno</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-analisi-segni.html#sec-analisi-segni-3" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Grafico dei segni</span></a></div></li></ul>
+</li></ul>
+</li>
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-funzioni.html" class="internal"><span class="codenumber">4</span> <span class="title">Funzioni</span></a></div></li>
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-piano-cartesiano.html" class="internal"><span class="codenumber">5</span> <span class="title">Piano cartesiano</span></a></div></li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-retta.html" class="internal"><span class="codenumber">6</span> <span class="title">Retta</span></a></div>
-<ul id="ptx-toc-group-ch-retta" class="structural toc-item-list">
+<ul class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-equazione.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Equazione della retta</span></a></div>
-<ul id="ptx-toc-group-sec-equazione" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-equazione.html#subsec-a-subsection" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Teoremi e dimostrazioni</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-equazione.html#subsec-a-subsection" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Teoremi e dimostrazioni</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-retta_interattiva.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Esempio interattivo</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-parabola_interattiva.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Esempio interattivo</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-parabola.html" class="internal"><span class="codenumber">7</span> <span class="title">Parabola</span></a></div></li>
@@ -189,12 +255,11 @@ let ggbParams = {
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-mat-fin.html" class="internal"><span class="codenumber">13</span> <span class="title">Matematica finanziaria</span></a></div></li>
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-storia.html" class="internal"><span class="codenumber">14</span> <span class="title">Storia della matematica</span></a></div></li>
 <li class="toc-item toc-backmatter">
-<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
-<ul id="ptx-toc-group-backmatter" class="structural toc-item-list">
-<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Selected Hints</span></a></div></li>
-<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="codenumber">B</span> <span class="title">Selected Solutions</span></a></div></li>
-<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="codenumber">C</span> <span class="title">List of Symbols</span></a></div></li>
-<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-5.html" class="internal"><span class="title">Index</span></a></div></li>
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Appendici</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Notazione</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="codenumber">B</span> <span class="title">Assiomi, definizioni, teoremi</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="title">Indice analitico</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
@@ -205,126 +270,126 @@ let ggbParams = {
 </h2>
 <section class="introduction" id="sec-affermazioni-2">
 <blockquote class="blockquote" id="sec-affermazioni-2-1">
-<div class="para" id="sec-affermazioni-2-1-1">You can prove anything you want by coldly logical reason — if you pick the proper postulates.<div class="autopermalink" aria-hidden="true" data-description="Capoverso"><a tabindex="-1" href="#sec-affermazioni-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="para" id="sec-affermazioni-2-1-1">You can prove anything you want by coldly logical reason — if you pick the proper postulates.<div class="autopermalink" data-description="Capoverso"><a href="#sec-affermazioni-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<cite class="attribution">―Isaac Asimov, “Reason” in <em class="emphasis">I, Robot</em> (1950)</cite><div class="autopermalink" aria-hidden="true" data-description="Citazione"><a tabindex="-1" href="#sec-affermazioni-2-1" title="Copy heading and permalink for Citazione" aria-label="Copy heading and permalink for Citazione">🔗</a></div>
+<cite class="attribution">―Isaac Asimov, “Reason” in <em class="emphasis">I, Robot</em> (1950)</cite><div class="autopermalink" data-description="Citazione"><a href="#sec-affermazioni-2-1" title="Copy heading and permalink for Citazione" aria-label="Copy heading and permalink for Citazione">🔗</a></div>
 </blockquote>
-<div class="para" id="sec-affermazioni-2-2">La matematica si basa su ragionamenti logici che partono da delle affermazioni base per trarre delle conclusioni vere finchè sono vere le affermazioni base. Ogni considerazione matematica che abbiamo visto (e che vedremo) è basata su questo principio. Elenchiamo ora come si chiamano queste affermazioni nel linguaggio della matematica.<div class="autopermalink" aria-hidden="true" data-description="Capoverso"><a tabindex="-1" href="#sec-affermazioni-2-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="para" id="sec-affermazioni-2-2">La matematica si basa su ragionamenti logici che partono da delle affermazioni base per trarre delle conclusioni vere finchè sono vere le affermazioni base. Ogni considerazione matematica che abbiamo visto (e che vedremo) è basata su questo principio. Elenchiamo ora come si chiamano queste affermazioni nel linguaggio della matematica.<div class="autopermalink" data-description="Capoverso"><a href="#sec-affermazioni-2-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div></section>
 <section class="subsection" id="sec-affermazioni-3">
 <h3 class="heading hide-type">
 <span class="type">Sottoparagrafo</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Definizione</span>
 </h3>
 <article class="definition definition-like" id="sec-affermazioni-3-2"><h4 class="heading">
-<span class="type">Definizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<span class="type">Definizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Definizione.</span>
 </h4>
-<div class="para" id="sec-affermazioni-3-2-1-1">Si chiama <dfn class="terminology">definizione</dfn> una proposizione che descrive, chiaramente e sinteticamente, un ente matematico (algebrico o geometrico) servendosi di termini aventi un significato noto.<div class="autopermalink" aria-hidden="true" data-description="Capoverso"><a tabindex="-1" href="#sec-affermazioni-3-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="para" id="sec-affermazioni-3-2-3-1">Si chiama <dfn class="terminology">definizione</dfn> una proposizione che descrive, chiaramente e sinteticamente, un ente matematico (algebrico o geometrico) servendosi di termini aventi un significato noto.<div class="autopermalink" data-description="Capoverso"><a href="#sec-affermazioni-3-2-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Definizione 1.1.1"><a tabindex="-1" href="#sec-affermazioni-3-2" title="Copy heading and permalink for Definizione 1.1.1" aria-label="Copy heading and permalink for Definizione 1.1.1">🔗</a></div>
+<div class="autopermalink" data-description="Definizione 1.1.1: Definizione"><a href="#sec-affermazioni-3-2" title="Copy heading and permalink for Definizione 1.1.1: Definizione" aria-label="Copy heading and permalink for Definizione 1.1.1: Definizione">🔗</a></div>
 </article>
-<div class="para" id="sec-affermazioni-3-3">La definizione è solo un “chiamare qualcosa di complicato con un nome più semplice o unico”. Soprattutto quando si svolgono dei conti è comodo definire con un nome diverso un insieme di oggetti/operazioni. Ogni tanto vedremo una relazione di uguaglianza specifica (<span class="process-math">\(\defeq\)</span>) per indicare che si tratta di una definizione e non di un passaggio matematico particolare.<div class="autopermalink" aria-hidden="true" data-description="Capoverso"><a tabindex="-1" href="#sec-affermazioni-3-3" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="para" id="sec-affermazioni-3-3">La definizione è solo un “chiamare qualcosa di complicato con un nome più semplice o unico”. Soprattutto quando si svolgono dei conti è comodo definire con un nome diverso un insieme di oggetti/operazioni. Ogni tanto vedremo una relazione di uguaglianza specifica (<span class="process-math">\(\defeq\)</span>) per indicare che si tratta di una definizione e non di un passaggio matematico particolare. <div class="autopermalink" data-description="Capoverso"><a href="#sec-affermazioni-3-3" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="para" id="sec-affermazioni-3-4">Esempio di definizione: definizione di postulato, definizione del discriminante di un’equazione di secondo grado <span class="process-math">\(\Delta\defeq b^2-4ac\text{,}\)</span> definizione della variabile ausiliaria nelle equazioni risolvibili per sostituzione (come le trinomie).<div class="autopermalink" aria-hidden="true" data-description="Capoverso"><a tabindex="-1" href="#sec-affermazioni-3-4" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="para" id="sec-affermazioni-3-4">Esempio di definizione: definizione di postulato, definizione del discriminante di un’equazione di secondo grado <span class="process-math">\(\Delta\defeq b^2-4ac\text{,}\)</span> definizione della variabile ausiliaria nelle equazioni risolvibili per sostituzione (come le trinomie).<div class="autopermalink" data-description="Capoverso"><a href="#sec-affermazioni-3-4" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Sottoparagrafo 1.1.1: Definizione"><a tabindex="-1" href="#sec-affermazioni-3" title="Copy heading and permalink for Sottoparagrafo 1.1.1: Definizione" aria-label="Copy heading and permalink for Sottoparagrafo 1.1.1: Definizione">🔗</a></div>
+<div class="autopermalink" data-description="Sottoparagrafo 1.1.1: Definizione"><a href="#sec-affermazioni-3" title="Copy heading and permalink for Sottoparagrafo 1.1.1: Definizione" aria-label="Copy heading and permalink for Sottoparagrafo 1.1.1: Definizione">🔗</a></div>
 </section>
 <section class="subsection" id="sec-affermazioni-4">
 <h3 class="heading hide-type">
 <span class="type">Sottoparagrafo</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Postulato o assioma</span>
 </h3>
 <article class="definition definition-like" id="sec-affermazioni-4-2"><h4 class="heading">
-<span class="type">Definizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<span class="type">Definizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Postulato.</span>
 </h4>
-<div class="para" id="sec-affermazioni-4-2-1-1">Si definisce <dfn class="terminology">postulato</dfn> (o <dfn class="terminology">assioma</dfn>) un principio indimostrato la cui validità si ammette a priori per evidenza o convenzione allo scopo di fornire la spiegazione di determinati fatti o di costruire una teoria.<div class="autopermalink" aria-hidden="true" data-description="Capoverso"><a tabindex="-1" href="#sec-affermazioni-4-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="para" id="sec-affermazioni-4-2-4-1">Si definisce <dfn class="terminology">postulato</dfn> (o <dfn class="terminology">assioma</dfn>) un principio indimostrato la cui validità si ammette a priori per evidenza o convenzione allo scopo di fornire la spiegazione di determinati fatti o di costruire una teoria.<div class="autopermalink" data-description="Capoverso"><a href="#sec-affermazioni-4-2-4-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Definizione 1.1.2"><a tabindex="-1" href="#sec-affermazioni-4-2" title="Copy heading and permalink for Definizione 1.1.2" aria-label="Copy heading and permalink for Definizione 1.1.2">🔗</a></div>
+<div class="autopermalink" data-description="Definizione 1.1.2: Postulato"><a href="#sec-affermazioni-4-2" title="Copy heading and permalink for Definizione 1.1.2: Postulato" aria-label="Copy heading and permalink for Definizione 1.1.2: Postulato">🔗</a></div>
 </article>
-<div class="para" id="sec-affermazioni-4-3">I postulati/assiomi sono quindi delle affermazioni che vengono fatte senza dimostrarle, da cui si trarranno delle conclusioni. In gergo matematico si dice che un’affermazione viene “postulata” per dire che viene ipotizzata come vera senza dimostrazione. Gli assiomi sono alla base del metodo scientifico e spesso rappresentano le ipotesi di un ragionamento.<div class="autopermalink" aria-hidden="true" data-description="Capoverso"><a tabindex="-1" href="#sec-affermazioni-4-3" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="para" id="sec-affermazioni-4-3">I postulati/assiomi sono quindi delle affermazioni che vengono fatte senza dimostrarle, da cui si trarranno delle conclusioni. In gergo matematico si dice che un’affermazione viene “postulata” per dire che viene ipotizzata come vera senza dimostrazione. Gli assiomi sono alla base del metodo scientifico e spesso rappresentano le ipotesi di un ragionamento.<div class="autopermalink" data-description="Capoverso"><a href="#sec-affermazioni-4-3" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="para" id="sec-affermazioni-4-4">Esempi di assiomi: postulati di Euclide (su cui si basa la geometria classica), assiomi di Peano (su cui si basa l’algebra classica), postulato della relatività (su cui si basa la fisica), principio del terzo escluso (su cui si basa la logica proposizionale).<div class="autopermalink" aria-hidden="true" data-description="Capoverso"><a tabindex="-1" href="#sec-affermazioni-4-4" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="para" id="sec-affermazioni-4-4">Esempi di assiomi: postulati di Euclide (su cui si basa la geometria classica), assiomi di Peano (su cui si basa l’algebra classica), postulato della relatività (su cui si basa la fisica), principio del terzo escluso (su cui si basa la logica proposizionale).<div class="autopermalink" data-description="Capoverso"><a href="#sec-affermazioni-4-4" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Sottoparagrafo 1.1.2: Postulato o assioma"><a tabindex="-1" href="#sec-affermazioni-4" title="Copy heading and permalink for Sottoparagrafo 1.1.2: Postulato o assioma" aria-label="Copy heading and permalink for Sottoparagrafo 1.1.2: Postulato o assioma">🔗</a></div>
+<div class="autopermalink" data-description="Sottoparagrafo 1.1.2: Postulato o assioma"><a href="#sec-affermazioni-4" title="Copy heading and permalink for Sottoparagrafo 1.1.2: Postulato o assioma" aria-label="Copy heading and permalink for Sottoparagrafo 1.1.2: Postulato o assioma">🔗</a></div>
 </section>
 <section class="subsection" id="sec-affermazioni-5">
 <h3 class="heading hide-type">
 <span class="type">Sottoparagrafo</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Teorema</span>
 </h3>
 <article class="definition definition-like" id="sec-affermazioni-5-2"><h4 class="heading">
-<span class="type">Definizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<span class="type">Definizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Teorema.</span>
 </h4>
-<div class="para" id="sec-affermazioni-5-2-1-1">Si definisce <dfn class="terminology">teorema</dfn> un enunciato (o formula o proprietà) che può essere dimostrato, cioè che può essere dedotto logicamente dagli enunciati primitivi (assiomi/postulati) o da altri teoremi già dimostrati.<div class="autopermalink" aria-hidden="true" data-description="Capoverso"><a tabindex="-1" href="#sec-affermazioni-5-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="para" id="sec-affermazioni-5-2-3-1">Si definisce <dfn class="terminology">teorema</dfn> un enunciato (o formula o proprietà) che può essere dimostrato, cioè che può essere dedotto logicamente dagli enunciati primitivi (assiomi/postulati) o da altri teoremi già dimostrati.<div class="autopermalink" data-description="Capoverso"><a href="#sec-affermazioni-5-2-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Definizione 1.1.3"><a tabindex="-1" href="#sec-affermazioni-5-2" title="Copy heading and permalink for Definizione 1.1.3" aria-label="Copy heading and permalink for Definizione 1.1.3">🔗</a></div>
+<div class="autopermalink" data-description="Definizione 1.1.3: Teorema"><a href="#sec-affermazioni-5-2" title="Copy heading and permalink for Definizione 1.1.3: Teorema" aria-label="Copy heading and permalink for Definizione 1.1.3: Teorema">🔗</a></div>
 </article>
 <div class="para logical" id="sec-affermazioni-5-3">
 <div class="para">I teoremi sono il cuore del metodo scientifico: partendo da delle <em class="emphasis">ipotesi</em> (postulate o dimostrate) si giunge in maniera logica a una tesi (l’<em class="emphasis">enunciato</em> del teorema) Esistono molte tecniche deduttive per dimostrare un teorema, tra cui:</div>
 <ul class="disc" id="sec-affermazioni-5-3-3">
 <li id="sec-affermazioni-5-3-3-1">
 <div class="para" id="p-derived-sec-affermazioni-5-3-3-1">dimostrazione diretta: dalle ipotesi si deduce in maniera lineare la tesi attraverso uno più passaggi;</div>
-<div class="autopermalink" aria-hidden="true" data-description="Punto"><a tabindex="-1" href="#sec-affermazioni-5-3-3-1" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+<div class="autopermalink" data-description="Punto"><a href="#sec-affermazioni-5-3-3-1" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
 </li>
 <li id="sec-affermazioni-5-3-3-2">
 <div class="para" id="p-derived-sec-affermazioni-5-3-3-2">dimostrazione per assurdo (anche detta dal latino <i class="foreign" lang="la">reductio ad absurdum</i>): si suppone che il teorema sia falso sotto le sue ipotesi e, attraverso vari passaggi, si ottiene che almeno un’ipotesi viene violata (si arriva un assurdo); ne segue che il teorema non può essere falso, quindi è vero (sulla base del principio del terzo escluso);</div>
-<div class="autopermalink" aria-hidden="true" data-description="Punto"><a tabindex="-1" href="#sec-affermazioni-5-3-3-2" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+<div class="autopermalink" data-description="Punto"><a href="#sec-affermazioni-5-3-3-2" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
 </li>
 <li id="sec-affermazioni-5-3-3-3">
 <div class="para" id="p-derived-sec-affermazioni-5-3-3-3">dimostrazione per esaustione: si dimostra il teorema per tutti i possibili casi (che non possono essere infiniti), uno a uno.</div>
-<div class="autopermalink" aria-hidden="true" data-description="Punto"><a tabindex="-1" href="#sec-affermazioni-5-3-3-3" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+<div class="autopermalink" data-description="Punto"><a href="#sec-affermazioni-5-3-3-3" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
 </li>
 </ul>
-<div class="autopermalink" aria-hidden="true" data-description="Capoverso"><a tabindex="-1" href="#sec-affermazioni-5-3" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-affermazioni-5-3" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="para" id="sec-affermazioni-5-4">Di solito la dimostrazione di un teorema segue l’enunciato e termina con un simbolo o acronimo specifico: “■” oppure “c.v.d.” o “CVD” (Come Volevasi Dimostrare) oppure “q.e.d.” o “QED” (dal latino <i class="foreign" lang="la">Quod Erat Demonstrandum</i>).<div class="autopermalink" aria-hidden="true" data-description="Capoverso"><a tabindex="-1" href="#sec-affermazioni-5-4" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="para" id="sec-affermazioni-5-4">Di solito la dimostrazione di un teorema segue l’enunciato e termina con un simbolo o acronimo specifico: “■” oppure “c.v.d.” o “CVD” (Come Volevasi Dimostrare) oppure “q.e.d.” o “QED” (dal latino <i class="foreign" lang="la">Quod Erat Demonstrandum</i>).<div class="autopermalink" data-description="Capoverso"><a href="#sec-affermazioni-5-4" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="para" id="sec-affermazioni-5-5">Esempi di teoremi: teorema di Ruffini (nella divisione tra polinomi), teorema di Weierstrass (nello studio di funzioni matematiche), teorema di Böhm-Jacopini (nella scrittura di algoritmi per l’informatica).<div class="autopermalink" aria-hidden="true" data-description="Capoverso"><a tabindex="-1" href="#sec-affermazioni-5-5" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="para" id="sec-affermazioni-5-5">Esempi di teoremi: teorema di Ruffini (nella divisione tra polinomi), teorema di Weierstrass (nello studio di funzioni matematiche), teorema di Böhm-Jacopini (nella scrittura di algoritmi per l’informatica).<div class="autopermalink" data-description="Capoverso"><a href="#sec-affermazioni-5-5" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Sottoparagrafo 1.1.3: Teorema"><a tabindex="-1" href="#sec-affermazioni-5" title="Copy heading and permalink for Sottoparagrafo 1.1.3: Teorema" aria-label="Copy heading and permalink for Sottoparagrafo 1.1.3: Teorema">🔗</a></div>
+<div class="autopermalink" data-description="Sottoparagrafo 1.1.3: Teorema"><a href="#sec-affermazioni-5" title="Copy heading and permalink for Sottoparagrafo 1.1.3: Teorema" aria-label="Copy heading and permalink for Sottoparagrafo 1.1.3: Teorema">🔗</a></div>
 </section>
 <section class="subsection" id="sec-affermazioni-6">
 <h3 class="heading hide-type">
 <span class="type">Sottoparagrafo</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Corollario e lemma</span>
 </h3>
 <article class="definition definition-like" id="sec-affermazioni-6-2"><h4 class="heading">
-<span class="type">Definizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<span class="type">Definizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Lemma.</span>
 </h4>
-<div class="para" id="sec-affermazioni-6-2-1-1">Si definisce <dfn class="terminology">lemma</dfn> una proposizione che può essere facilmente dimostrata e precede un importante teorema, così da porne le basi per la dimostrazione.<div class="autopermalink" aria-hidden="true" data-description="Capoverso"><a tabindex="-1" href="#sec-affermazioni-6-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="para" id="sec-affermazioni-6-2-3-1">Si definisce <dfn class="terminology">lemma</dfn> una proposizione che può essere facilmente dimostrata e precede un importante teorema, così da porne le basi per la dimostrazione.<div class="autopermalink" data-description="Capoverso"><a href="#sec-affermazioni-6-2-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Definizione 1.1.4"><a tabindex="-1" href="#sec-affermazioni-6-2" title="Copy heading and permalink for Definizione 1.1.4" aria-label="Copy heading and permalink for Definizione 1.1.4">🔗</a></div>
+<div class="autopermalink" data-description="Definizione 1.1.4: Lemma"><a href="#sec-affermazioni-6-2" title="Copy heading and permalink for Definizione 1.1.4: Lemma" aria-label="Copy heading and permalink for Definizione 1.1.4: Lemma">🔗</a></div>
 </article>
 <article class="definition definition-like" id="sec-affermazioni-6-3"><h4 class="heading">
-<span class="type">Definizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<span class="type">Definizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Corollario.</span>
 </h4>
-<div class="para" id="sec-affermazioni-6-3-1-1">Si definisce <dfn class="terminology">corollario</dfn> una proposizione che segue direttamente da un teorema, senza bisogno di una dimostrazione formale estesa.<div class="autopermalink" aria-hidden="true" data-description="Capoverso"><a tabindex="-1" href="#sec-affermazioni-6-3-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="para" id="sec-affermazioni-6-3-3-1">Si definisce <dfn class="terminology">corollario</dfn> una proposizione che segue direttamente da un teorema, senza bisogno di una dimostrazione formale estesa.<div class="autopermalink" data-description="Capoverso"><a href="#sec-affermazioni-6-3-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Definizione 1.1.5"><a tabindex="-1" href="#sec-affermazioni-6-3" title="Copy heading and permalink for Definizione 1.1.5" aria-label="Copy heading and permalink for Definizione 1.1.5">🔗</a></div>
+<div class="autopermalink" data-description="Definizione 1.1.5: Corollario"><a href="#sec-affermazioni-6-3" title="Copy heading and permalink for Definizione 1.1.5: Corollario" aria-label="Copy heading and permalink for Definizione 1.1.5: Corollario">🔗</a></div>
 </article>
-<div class="para" id="sec-affermazioni-6-4">Spesso i corollari sono delle conclusioni secondarie dei teoremi, nate da passaggi intermedi nella dimostrazione o da casi particolari del teorema. La differenza tra lemma, teorema e corollario è quindi solo una questione di importanza e di momento in cui una determinata proposizione è presentata in un discorso matematico.<div class="autopermalink" aria-hidden="true" data-description="Capoverso"><a tabindex="-1" href="#sec-affermazioni-6-4" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="para" id="sec-affermazioni-6-4">Spesso i corollari sono delle conclusioni secondarie dei teoremi, nate da passaggi intermedi nella dimostrazione o da casi particolari del teorema. La differenza tra lemma, teorema e corollario è quindi solo una questione di importanza e di momento in cui una determinata proposizione è presentata in un discorso matematico.<div class="autopermalink" data-description="Capoverso"><a href="#sec-affermazioni-6-4" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Sottoparagrafo 1.1.4: Corollario e lemma"><a tabindex="-1" href="#sec-affermazioni-6" title="Copy heading and permalink for Sottoparagrafo 1.1.4: Corollario e lemma" aria-label="Copy heading and permalink for Sottoparagrafo 1.1.4: Corollario e lemma">🔗</a></div>
+<div class="autopermalink" data-description="Sottoparagrafo 1.1.4: Corollario e lemma"><a href="#sec-affermazioni-6" title="Copy heading and permalink for Sottoparagrafo 1.1.4: Corollario e lemma" aria-label="Copy heading and permalink for Sottoparagrafo 1.1.4: Corollario e lemma">🔗</a></div>
 </section>
 <section class="subsection" id="sec-affermazioni-7">
 <h3 class="heading hide-type">
 <span class="type">Sottoparagrafo</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Congettura</span>
 </h3>
 <article class="definition definition-like" id="sec-affermazioni-7-2"><h4 class="heading">
-<span class="type">Definizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<span class="type">Definizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Congettura.</span>
 </h4>
-<div class="para" id="sec-affermazioni-7-2-1-1">Si definisce <dfn class="terminology">congettura</dfn> un enunciato che si ritiene vero ma per il quale non è stata ancora fornita una dimostrazione (per provarne la verità) o un controesempio (per dimostrarne la falsità).<div class="autopermalink" aria-hidden="true" data-description="Capoverso"><a tabindex="-1" href="#sec-affermazioni-7-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="para" id="sec-affermazioni-7-2-3-1">Si definisce <dfn class="terminology">congettura</dfn> un enunciato che si ritiene vero ma per il quale non è stata ancora fornita una dimostrazione (per provarne la verità) o un controesempio (per dimostrarne la falsità).<div class="autopermalink" data-description="Capoverso"><a href="#sec-affermazioni-7-2-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Definizione 1.1.6"><a tabindex="-1" href="#sec-affermazioni-7-2" title="Copy heading and permalink for Definizione 1.1.6" aria-label="Copy heading and permalink for Definizione 1.1.6">🔗</a></div>
+<div class="autopermalink" data-description="Definizione 1.1.6: Congettura"><a href="#sec-affermazioni-7-2" title="Copy heading and permalink for Definizione 1.1.6: Congettura" aria-label="Copy heading and permalink for Definizione 1.1.6: Congettura">🔗</a></div>
 </article>
-<div class="para" id="sec-affermazioni-7-3">Le congetture sono quindi delle affermazioni che si verificano nella pratica, senza però averne certezza logico-matematica. Sono quindi dei teoremi senza dimostrazione rigorosa.<div class="autopermalink" aria-hidden="true" data-description="Capoverso"><a tabindex="-1" href="#sec-affermazioni-7-3" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="para" id="sec-affermazioni-7-3">Le congetture sono quindi delle affermazioni che si verificano nella pratica, senza però averne certezza logico-matematica. Sono quindi dei teoremi senza dimostrazione rigorosa.<div class="autopermalink" data-description="Capoverso"><a href="#sec-affermazioni-7-3" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="para" id="sec-affermazioni-7-4">Esempi di congetture: problemi per il millennio, congettura di Collatz.<div class="autopermalink" aria-hidden="true" data-description="Capoverso"><a tabindex="-1" href="#sec-affermazioni-7-4" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="para" id="sec-affermazioni-7-4">Esempi di congetture: problemi per il millennio, congettura di Collatz.<div class="autopermalink" data-description="Capoverso"><a href="#sec-affermazioni-7-4" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="para" id="sec-affermazioni-7-5">Di solito la dimostrazione delle congetture più rilevanti porta a un premio in denaro (oltre che magari a qualche medaglia). Per esempio i problemi del millennio hanno un premio di un milione di dollari!<div class="autopermalink" aria-hidden="true" data-description="Capoverso"><a tabindex="-1" href="#sec-affermazioni-7-5" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="para" id="sec-affermazioni-7-5">Di solito la dimostrazione delle congetture più rilevanti porta a un premio in denaro (oltre che magari a qualche medaglia). Per esempio i problemi del millennio hanno un premio di un milione di dollari!<div class="autopermalink" data-description="Capoverso"><a href="#sec-affermazioni-7-5" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Sottoparagrafo 1.1.5: Congettura"><a tabindex="-1" href="#sec-affermazioni-7" title="Copy heading and permalink for Sottoparagrafo 1.1.5: Congettura" aria-label="Copy heading and permalink for Sottoparagrafo 1.1.5: Congettura">🔗</a></div>
-</section><div class="autopermalink" aria-hidden="true" data-description="Paragrafo 1.1: Affermazioni matematiche"><a tabindex="-1" href="#sec-affermazioni" title="Copy heading and permalink for Paragrafo 1.1: Affermazioni matematiche" aria-label="Copy heading and permalink for Paragrafo 1.1: Affermazioni matematiche">🔗</a></div>
+<div class="autopermalink" data-description="Sottoparagrafo 1.1.5: Congettura"><a href="#sec-affermazioni-7" title="Copy heading and permalink for Sottoparagrafo 1.1.5: Congettura" aria-label="Copy heading and permalink for Sottoparagrafo 1.1.5: Congettura">🔗</a></div>
+</section><div class="autopermalink" data-description="Paragrafo 1.1: Affermazioni matematiche"><a href="#sec-affermazioni" title="Copy heading and permalink for Paragrafo 1.1: Affermazioni matematiche" aria-label="Copy heading and permalink for Paragrafo 1.1: Affermazioni matematiche">🔗</a></div>
 </section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="ch-base.html" title="Precedente"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prec</span></a><a class="top-button button" href="#" title="[top]"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">[top]</span></a><a class="next-button button" href="sec-insiemi.html" title="Successivo"><span class="name">Succ</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="ch-base.html" title="Precedente"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prec</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-insiemi.html" title="Successivo"><span class="name">Succ</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

@@ -22,7 +22,7 @@
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
 startMathJax({
-hasWebworkReps: false,
+hasWebworkReps: true,
 hasSage: false,
 isReact: false,
 htmlPresentation: false,
@@ -36,7 +36,7 @@ htmlPresentation: false,
 <meta name="twitter:description" content="TBD">
 <meta property="og:description" content="TBD">
 <meta name="twitter:card" content="summary">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.43"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.42"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -58,65 +58,123 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.1.6';
+eBookConfig.runestone_version = '8.1.8';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.53a23d1b65c1dce2.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.4787412a251795e3.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<script src="_static/prefix-runtime.917dfc3cfe0bb764.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.d40a1acc1751a0b6.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
-<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdn.geogebra.org/apps/deployggb.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Calcola (Sage)';
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="_static/pretext/js/dist/pretext-webwork/2.20/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://cdn.geogebra.org/apps/deployggb.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Calcola (Sage)';
 </script>
 </head>
-<body id="snodi" class="pretext book ignore-math">
+<body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Vai all'indice generale</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
 <h1 class="heading"><a href="snodi.html"><span class="title">Snodi</span> <span class="subtitle">TBD</span></a></h1>
-<p class="byline">Federico Florit</p>
+<p class="byline">Federico Florit (Curatore)</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
-<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Indice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Indice</span></button><a class="index-button button" href="backmatter-5.html" title="Indice analitico"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Indice analitico</span></a><div class="ptx-search-box">
-<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="[search-book]"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">[search-book]</span></button></div>
-<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
-<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Chiudi" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+<button class="toc-toggle button" title="Indice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Indice</span></button><a class="index-button button" href="backmatter-4.html" title="Indice analitico"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Indice analitico</span></a><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search book" commandfor="ptx-search-dialog" command="show-modal"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog" closedby="closerequest"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close search" id="ptx-search-close" class="ptx-search-close" commandfor="ptx-search-dialog" command="close"><span class="material-symbols-outlined">close</span></button>
 </div>
 <div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
-<h2 class="heading ptx-search-results-heading">Risultati: </h2>
+<h2 class="ptx-search-results-heading">Risultati: </h2>
 <div id="ptx-search-empty" class="ptx-search-empty"><span>Nessun risultato.</span></div>
 <ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
 </div>
-<span class="nav-other-controls"><button type="button" id="ptx-calculator-toggle" class="ptx-calculator-toggle button" title="[calculator]"><span class="icon material-symbols-outlined" aria-hidden="true">&#xea5f;</span><span class="name">[calculator]</span></button><dialog id="ptx-calculator-container" class="ptx-dialog ptx-calculator-container" aria-label="[calculator]"><div id="ptx-geogebra-calculator" class="ptx-geogebra-calculator"></div>
-<script id="ptx-geogebra-calculator-params">
-let ggbParams = {
-    "appName": "classic"
-};
-</script></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="[readability-settings]"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">[readability-settings]</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
-<h2 class="heading">[readability-settings]</h2>
-<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Chiudi"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
-</div>
-<div class="ptx-readability-options-group">
-<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>[readability-line-height]</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
-</div>
-<div class="ptx-readability-options-group">
-<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>[readability-content-font-size]</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
-</div>
-<fieldset class="ptx-readability-options-group ptx-readability-options-group-theme">
-<legend>[readability-theme]</legend>
-<label for="ptx-readability-theme-system"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-system" value="system"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe1ab;</span><span>[readability-theme-system]</span></label><label for="ptx-readability-theme-light"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-light" value="light"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe518;</span><span>[readability-theme-light]</span></label><label for="ptx-readability-theme-dark"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-dark" value="dark"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span>[readability-theme-dark]</span></label>
-</fieldset>
-<fieldset class="ptx-readability-options-group">
-<legend>[readability-assistive-technologies]</legend>
-<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>[readability-expose-permalinks]</span></label>
-</fieldset>
-<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">[reset-all]</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="sec-insiemi.html" title="Precedente"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prec</span></a><a class="up-button button" href="ch-base.html" title="Su"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Su</span></a><a class="next-button button" href="ch-equazioni.html" title="Successivo"><span class="name">Succ</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<span class="nav-other-controls"><button id="calculator-toggle" class="calculator-toggle button" title="Show calculator" aria-expanded="false" aria-controls="calculator-container"><span class="icon material-symbols-outlined" aria-hidden="true">&#xea5f;</span><span class="name">Calc</span></button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
+<script>
+var ggbApp = new GGBApplet({"appName": "classic",
+    "width": 330,
+    "height": 600,
+    "showToolBar": true,
+    "showAlgebraInput": true,
+    "perspective": "G/A",
+    "algebraInputPosition": "bottom",
+    "scaleContainerClass": "calculator-container",
+    "allowUpscale": true,
+    "autoHeight": true,
+    "disableAutoScale": false},
+true);
+</script><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-insiemi.html" title="Precedente"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prec</span></a><a class="up-button button" href="ch-base.html" title="Su"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Su</span></a><a class="next-button button" href="sec-espr-lett.html" title="Successivo"><span class="name">Succ</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\Q}{\mathbb Q}
 \newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+
+
+\newcommand{\defeq}{\stackrel{\text{def}}{=}}
+
+\newcommand{\Heq}{\stackrel{\text{H}}{=}}
 
 
 
-\newcommand{\defeq}{\mathrel{\overset{\scriptscriptstyle\text{def}}{=}}}
+
+\newcommand{\parabolina}[2][1]{
+  \ifx\relax#2\relax
+    
+    \gdef\nS{0}
+  \else
+    \foreach \x [count=\xx] in #2 {\global\let\nS=\xx}
+  \fi
+  \ifnum#1&gt;0
+    \def\pos{below}
+  \else
+    \def\pos{above}
+  \fi
+  \begin{tikzpicture}
+    \begin{axis}[xmin=-2,xmax=2, ymin=-2,ymax=2, axis y line=none, axis lines=middle, xtick=\empty, width=3.5cm, clip=false]
+      \ifnum \nS=0 \addplot[domain=-1.5:1.5] {#1*(x^2+1)}; \fi
+      \ifnum \nS=1
+        \addplot[domain=-1.5:1.5] {#1*(x^2)};
+        \addplot[mark=*, mark size=1pt, font=\tiny, inner xsep=0, inner ysep=2pt] coordinates {(0,0)} node[\pos]{$#2$};
+      \fi
+      \ifnum \nS=2
+        \addplot[domain=-1.5:1.5] {#1*(x^2-1)};
+        \addplot[mark=*, mark size=1pt, draw=none] coordinates {(-1,0) (1,0)};
+        \draw[font=\tiny] 
+        \foreach \x [count=\xx] in #2 {
+          (\xx*2-3,0) node[\pos, fill=white, fill opacity=.3, text opacity=1, text=black, inner xsep=0, inner ysep=2pt]{$\x$}
+        };
+      \fi
+    \end{axis}
+  \end{tikzpicture}
+}
+
+
+
+
+\newcommand{\GraficoSegni}[3][x]{
+  \def\spazio{0.8}
+  \foreach \x [count=\xx] in #2 {
+    \global\let\numNum=\xx
+    \draw[thin] (\xx-1,-.1) -- ++(0,.2) node[above]{$\x$}; 
+  }
+  \draw[-latex, ultra thick] (-1,0) -- (\numNum,0) node[above]{$#1$}; 
+  
+  \foreach \f\l [count=\ll] in #3 {
+    \global\let\numRighe=\ll
+    
+    \draw (-1.5,-\ll*\spazio+.25) node{$\f$} ++(.5,0)
+    foreach \s in \l {
+        ++(.5,0) node{$\s$}
+    }
+    ;
+  }
+  \pgfmathsetmacro\pos{-\spazio*(2*\numRighe-1)/2+.25} 
+  
+  \ifnum \numRighe&gt;1
+    \draw (-2,\pos) -- (\numNum,\pos);
+  \fi
+
+  \foreach \x [count=\xx] in #2 {
+    \draw[dotted] (\xx-1,0) -- ++(0,\pos-\spazio); 
+  }
+}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -124,20 +182,14 @@ let ggbParams = {
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Indice" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
-<li class="toc-item toc-frontmatter">
-<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Materiale iniziale</span></a></div>
-<ul id="ptx-toc-group-frontmatter" class="structural toc-item-list">
-<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Colophon</span></a></div></li>
-<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Prefazione</span></a></div></li>
-</ul>
-</li>
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Materiale iniziale</span></a></div></li>
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch-base.html" class="internal"><span class="codenumber">1</span> <span class="title">Concetti base</span></a></div>
-<ul class="structural toc-item-list contains-active" id="ptx-toc-group-ch-base">
+<ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-affermazioni.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Affermazioni matematiche</span></a></div>
-<ul id="ptx-toc-group-sec-affermazioni" class="structural toc-item-list">
+<ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-affermazioni.html#sec-affermazioni-3" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Definizione</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-affermazioni.html#sec-affermazioni-4" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Postulato o assioma</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-affermazioni.html#sec-affermazioni-5" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Teorema</span></a></div></li>
@@ -146,38 +198,52 @@ let ggbParams = {
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-insiemi.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Insiemi, operazioni tra insiemi, intervalli</span></a></div>
-<ul id="ptx-toc-group-sec-insiemi" class="structural toc-item-list">
+<div class="toc-title-box"><a href="sec-insiemi.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Insiemi, operazioni tra insiemi, insiemi numerici, intervalli</span></a></div>
+<ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-insiemi.html#sec-insiemi-3" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Insiemi e operazioni</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-insiemi.html#sec-insiemi-4" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Insiemi numerici</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-insiemi.html#sec-insiemi-5" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Intervalli</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="sec-op-arit.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Operazioni aritmetiche</span></a></div>
-<ul class="structural toc-item-list active" id="ptx-toc-group-sec-op-arit">
+<ul class="structural toc-item-list active">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-op-arit.html#sec-op-arit-3" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Somma</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-op-arit.html#sec-op-arit-4" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Moltiplicazione</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-op-arit.html#sec-op-arit-5" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Sottrazione</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-op-arit.html#sec-op-arit-6" class="internal"><span class="codenumber">1.3.4</span> <span class="title">Divisione</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-op-arit.html#sec-op-arit-7" class="internal"><span class="codenumber">1.3.5</span> <span class="title">Eleveamento a potenza</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-op-arit.html#sec-op-arit-8" class="internal"><span class="codenumber">1.3.6</span> <span class="title">Estrazione di radice</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-op-arit.html#exint-op-aritm" class="internal"><span class="codenumber">1.3.5</span> <span class="title">Esercizi sulle operazioni base</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-op-arit.html#sec-op-arit-8" class="internal"><span class="codenumber">1.3.6</span> <span class="title">Eleveamento a potenza</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-op-arit.html#sec-op-arit-9" class="internal"><span class="codenumber">1.3.7</span> <span class="title">Estrazione di radice</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-espr-lett.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Espressioni letterali</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-espr-lett.html#sec-espr-lett-3" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Monomi</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-espr-lett.html#sec-espr-lett-4" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Polinomi</span></a></div></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-equazioni.html" class="internal"><span class="codenumber">2</span> <span class="title">Equazioni</span></a></div></li>
-<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-disequazioni.html" class="internal"><span class="codenumber">3</span> <span class="title">Disequazioni</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-disequazioni.html" class="internal"><span class="codenumber">3</span> <span class="title">Disequazioni</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-analisi-segni.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Studio del segno</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-analisi-segni.html#sec-analisi-segni-3" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Grafico dei segni</span></a></div></li></ul>
+</li></ul>
+</li>
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-funzioni.html" class="internal"><span class="codenumber">4</span> <span class="title">Funzioni</span></a></div></li>
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-piano-cartesiano.html" class="internal"><span class="codenumber">5</span> <span class="title">Piano cartesiano</span></a></div></li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-retta.html" class="internal"><span class="codenumber">6</span> <span class="title">Retta</span></a></div>
-<ul id="ptx-toc-group-ch-retta" class="structural toc-item-list">
+<ul class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-equazione.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Equazione della retta</span></a></div>
-<ul id="ptx-toc-group-sec-equazione" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-equazione.html#subsec-a-subsection" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Teoremi e dimostrazioni</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-equazione.html#subsec-a-subsection" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Teoremi e dimostrazioni</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-retta_interattiva.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Esempio interattivo</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-parabola_interattiva.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Esempio interattivo</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-parabola.html" class="internal"><span class="codenumber">7</span> <span class="title">Parabola</span></a></div></li>
@@ -189,12 +255,11 @@ let ggbParams = {
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-mat-fin.html" class="internal"><span class="codenumber">13</span> <span class="title">Matematica finanziaria</span></a></div></li>
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-storia.html" class="internal"><span class="codenumber">14</span> <span class="title">Storia della matematica</span></a></div></li>
 <li class="toc-item toc-backmatter">
-<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
-<ul id="ptx-toc-group-backmatter" class="structural toc-item-list">
-<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Selected Hints</span></a></div></li>
-<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="codenumber">B</span> <span class="title">Selected Solutions</span></a></div></li>
-<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="codenumber">C</span> <span class="title">List of Symbols</span></a></div></li>
-<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-5.html" class="internal"><span class="title">Index</span></a></div></li>
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Appendici</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Notazione</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="codenumber">B</span> <span class="title">Assiomi, definizioni, teoremi</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="title">Indice analitico</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
@@ -204,83 +269,140 @@ let ggbParams = {
 <span class="type">Paragrafo</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Operazioni aritmetiche</span>
 </h2>
 <section class="introduction" id="sec-op-arit-2">
-<div class="para" id="sec-op-arit-2-1">Fin dalla Scuola Primaria ci hanno insegnato che le operazioni fondamentali sono quattro (somma, sottrazione, moltiplicazione e divisione): le rivediamo in modo approfondito con le loro proprietà. Rivediamo anche i concetti di elevamento a potenza intera (e le proprietà delle potenze) e di estrazione di radice. Le operazioni aritmetiche (quelle operazioni applicate ai numeri) sono poi estese con le stesse proprietà alle operazioni algebriche (quelle con anche le lettere).<div class="autopermalink" aria-hidden="true" data-description="Capoverso"><a tabindex="-1" href="#sec-op-arit-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="para" id="sec-op-arit-2-1">Fin dalla Scuola Primaria ci hanno insegnato che le operazioni fondamentali sono quattro (somma, sottrazione, moltiplicazione e divisione): le rivediamo in modo approfondito con le loro proprietà. Rivediamo anche i concetti di elevamento a potenza intera (e le proprietà delle potenze) e di estrazione di radice. Le operazioni aritmetiche (quelle operazioni applicate ai numeri) sono poi estese con le stesse proprietà alle operazioni algebriche (quelle con anche le lettere).<div class="autopermalink" data-description="Capoverso"><a href="#sec-op-arit-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="para" id="sec-op-arit-2-2">Più formalmente: con i numeri naturali possiamo tranquillamente fare le operazioni di somma e moltiplicazione, mentre la sottrazione (per essere sempre possibile) richiede l’estensione dei numeri naturali almeno all’insieme dei numeri interi relativi. La divisione richiede invece l’estensione almeno ai numeri razionali per essere sempre (o quasi) definita. L’estrazione di radice richiede invece l’estensione almeno ai numeri reali, ma anche in quel caso non è sempre definita (per esserlo dovremmo usare i numeri complessi). In generale in questo testo parleremo di numeri reali, quindi le operazioni di somma, sottrazione, prodotto, divisione, elevamento a potenza ed estrazione di radice sono (quasi) sempre definite.<div class="autopermalink" aria-hidden="true" data-description="Capoverso"><a tabindex="-1" href="#sec-op-arit-2-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="para" id="sec-op-arit-2-2">Più formalmente: con i numeri naturali possiamo tranquillamente fare le operazioni di somma e moltiplicazione, mentre la sottrazione (per essere sempre possibile) richiede l’estensione dei numeri naturali almeno all’insieme dei numeri interi relativi. La divisione richiede invece l’estensione almeno ai numeri razionali per essere sempre (o quasi) definita. L’estrazione di radice richiede invece l’estensione almeno ai numeri reali, ma anche in quel caso non è sempre definita (per esserlo dovremmo usare i numeri complessi). In generale in questo testo parleremo di numeri reali, quindi le operazioni di somma, sottrazione, prodotto, divisione, elevamento a potenza ed estrazione di radice sono (quasi) sempre definite.<div class="autopermalink" data-description="Capoverso"><a href="#sec-op-arit-2-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div></section>
 <section class="subsection" id="sec-op-arit-3">
 <h3 class="heading hide-type">
 <span class="type">Sottoparagrafo</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Somma</span>
 </h3>
 <article class="definition definition-like" id="sec-op-arit-3-2"><h4 class="heading">
-<span class="type">Definizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<span class="type">Definizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Elemento neutro della somma.</span>
 </h4>
-<div class="para" id="sec-op-arit-3-2-1-1">Si definisce <dfn class="terminology">elemento neutro della somma</dfn> ...<div class="autopermalink" aria-hidden="true" data-description="Capoverso"><a tabindex="-1" href="#sec-op-arit-3-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="para" id="sec-op-arit-3-2-3-1">Si definisce <dfn class="terminology">elemento neutro della somma</dfn> ...<div class="autopermalink" data-description="Capoverso"><a href="#sec-op-arit-3-2-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Definizione 1.3.1"><a tabindex="-1" href="#sec-op-arit-3-2" title="Copy heading and permalink for Definizione 1.3.1" aria-label="Copy heading and permalink for Definizione 1.3.1">🔗</a></div>
+<div class="autopermalink" data-description="Definizione 1.3.1: Elemento neutro della somma"><a href="#sec-op-arit-3-2" title="Copy heading and permalink for Definizione 1.3.1: Elemento neutro della somma" aria-label="Copy heading and permalink for Definizione 1.3.1: Elemento neutro della somma">🔗</a></div>
 </article>
-<div class="para" id="sec-op-arit-3-3"><div class="autopermalink" aria-hidden="true" data-description="Capoverso"><a tabindex="-1" href="#sec-op-arit-3-3" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div></div>
-<div class="autopermalink" aria-hidden="true" data-description="Sottoparagrafo 1.3.1: Somma"><a tabindex="-1" href="#sec-op-arit-3" title="Copy heading and permalink for Sottoparagrafo 1.3.1: Somma" aria-label="Copy heading and permalink for Sottoparagrafo 1.3.1: Somma">🔗</a></div>
+<div class="para" id="sec-op-arit-3-3"><div class="autopermalink" data-description="Capoverso"><a href="#sec-op-arit-3-3" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div></div>
+<div class="autopermalink" data-description="Sottoparagrafo 1.3.1: Somma"><a href="#sec-op-arit-3" title="Copy heading and permalink for Sottoparagrafo 1.3.1: Somma" aria-label="Copy heading and permalink for Sottoparagrafo 1.3.1: Somma">🔗</a></div>
 </section>
 <section class="subsection" id="sec-op-arit-4">
 <h3 class="heading hide-type">
 <span class="type">Sottoparagrafo</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Moltiplicazione</span>
 </h3>
 <article class="definition definition-like" id="sec-op-arit-4-2"><h4 class="heading">
-<span class="type">Definizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<span class="type">Definizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Elemento neutro della moltiplicazione.</span>
 </h4>
-<div class="para" id="sec-op-arit-4-2-1-1">Si definisce <dfn class="terminology">elemento neutro della moltiplicazione</dfn> ...<div class="autopermalink" aria-hidden="true" data-description="Capoverso"><a tabindex="-1" href="#sec-op-arit-4-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="para" id="sec-op-arit-4-2-3-1">Si definisce <dfn class="terminology">elemento neutro della moltiplicazione</dfn> ...<div class="autopermalink" data-description="Capoverso"><a href="#sec-op-arit-4-2-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Definizione 1.3.2"><a tabindex="-1" href="#sec-op-arit-4-2" title="Copy heading and permalink for Definizione 1.3.2" aria-label="Copy heading and permalink for Definizione 1.3.2">🔗</a></div>
+<div class="autopermalink" data-description="Definizione 1.3.2: Elemento neutro della moltiplicazione"><a href="#sec-op-arit-4-2" title="Copy heading and permalink for Definizione 1.3.2: Elemento neutro della moltiplicazione" aria-label="Copy heading and permalink for Definizione 1.3.2: Elemento neutro della moltiplicazione">🔗</a></div>
 </article>
-<div class="para" id="sec-op-arit-4-3"><div class="autopermalink" aria-hidden="true" data-description="Capoverso"><a tabindex="-1" href="#sec-op-arit-4-3" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div></div>
-<div class="autopermalink" aria-hidden="true" data-description="Sottoparagrafo 1.3.2: Moltiplicazione"><a tabindex="-1" href="#sec-op-arit-4" title="Copy heading and permalink for Sottoparagrafo 1.3.2: Moltiplicazione" aria-label="Copy heading and permalink for Sottoparagrafo 1.3.2: Moltiplicazione">🔗</a></div>
+<div class="para" id="sec-op-arit-4-3"><div class="autopermalink" data-description="Capoverso"><a href="#sec-op-arit-4-3" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div></div>
+<div class="autopermalink" data-description="Sottoparagrafo 1.3.2: Moltiplicazione"><a href="#sec-op-arit-4" title="Copy heading and permalink for Sottoparagrafo 1.3.2: Moltiplicazione" aria-label="Copy heading and permalink for Sottoparagrafo 1.3.2: Moltiplicazione">🔗</a></div>
 </section>
 <section class="subsection" id="sec-op-arit-5">
 <h3 class="heading hide-type">
 <span class="type">Sottoparagrafo</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sottrazione</span>
 </h3>
 <article class="definition definition-like" id="sec-op-arit-5-2"><h4 class="heading">
-<span class="type">Definizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<span class="type">Definizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Opposto.</span>
 </h4>
-<div class="para" id="sec-op-arit-5-2-1-1">Si definisce <dfn class="terminology">opposto</dfn> di un numero ...<div class="autopermalink" aria-hidden="true" data-description="Capoverso"><a tabindex="-1" href="#sec-op-arit-5-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="para" id="sec-op-arit-5-2-3-1">Si definisce <dfn class="terminology">opposto</dfn> di un numero ...<div class="autopermalink" data-description="Capoverso"><a href="#sec-op-arit-5-2-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Definizione 1.3.3"><a tabindex="-1" href="#sec-op-arit-5-2" title="Copy heading and permalink for Definizione 1.3.3" aria-label="Copy heading and permalink for Definizione 1.3.3">🔗</a></div>
+<div class="autopermalink" data-description="Definizione 1.3.3: Opposto"><a href="#sec-op-arit-5-2" title="Copy heading and permalink for Definizione 1.3.3: Opposto" aria-label="Copy heading and permalink for Definizione 1.3.3: Opposto">🔗</a></div>
 </article>
-<div class="para" id="sec-op-arit-5-3"><div class="autopermalink" aria-hidden="true" data-description="Capoverso"><a tabindex="-1" href="#sec-op-arit-5-3" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div></div>
-<div class="autopermalink" aria-hidden="true" data-description="Sottoparagrafo 1.3.3: Sottrazione"><a tabindex="-1" href="#sec-op-arit-5" title="Copy heading and permalink for Sottoparagrafo 1.3.3: Sottrazione" aria-label="Copy heading and permalink for Sottoparagrafo 1.3.3: Sottrazione">🔗</a></div>
+<div class="para" id="sec-op-arit-5-3"><div class="autopermalink" data-description="Capoverso"><a href="#sec-op-arit-5-3" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div></div>
+<div class="autopermalink" data-description="Sottoparagrafo 1.3.3: Sottrazione"><a href="#sec-op-arit-5" title="Copy heading and permalink for Sottoparagrafo 1.3.3: Sottrazione" aria-label="Copy heading and permalink for Sottoparagrafo 1.3.3: Sottrazione">🔗</a></div>
 </section>
 <section class="subsection" id="sec-op-arit-6">
 <h3 class="heading hide-type">
 <span class="type">Sottoparagrafo</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Divisione</span>
 </h3>
 <article class="definition definition-like" id="sec-op-arit-6-2"><h4 class="heading">
-<span class="type">Definizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<span class="type">Definizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Reciproco.</span>
 </h4>
-<div class="para" id="sec-op-arit-6-2-1-1">Si definisce <dfn class="terminology">reciproco</dfn> di un numero ...<div class="autopermalink" aria-hidden="true" data-description="Capoverso"><a tabindex="-1" href="#sec-op-arit-6-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="para" id="sec-op-arit-6-2-3-1">Si definisce <dfn class="terminology">reciproco</dfn> di un numero ...<div class="autopermalink" data-description="Capoverso"><a href="#sec-op-arit-6-2-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Definizione 1.3.4"><a tabindex="-1" href="#sec-op-arit-6-2" title="Copy heading and permalink for Definizione 1.3.4" aria-label="Copy heading and permalink for Definizione 1.3.4">🔗</a></div>
+<div class="autopermalink" data-description="Definizione 1.3.4: Reciproco"><a href="#sec-op-arit-6-2" title="Copy heading and permalink for Definizione 1.3.4: Reciproco" aria-label="Copy heading and permalink for Definizione 1.3.4: Reciproco">🔗</a></div>
 </article>
-<div class="para" id="sec-op-arit-6-3"><div class="autopermalink" aria-hidden="true" data-description="Capoverso"><a tabindex="-1" href="#sec-op-arit-6-3" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div></div>
-<div class="autopermalink" aria-hidden="true" data-description="Sottoparagrafo 1.3.4: Divisione"><a tabindex="-1" href="#sec-op-arit-6" title="Copy heading and permalink for Sottoparagrafo 1.3.4: Divisione" aria-label="Copy heading and permalink for Sottoparagrafo 1.3.4: Divisione">🔗</a></div>
+<div class="para" id="sec-op-arit-6-3"><div class="autopermalink" data-description="Capoverso"><a href="#sec-op-arit-6-3" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div></div>
+<div class="autopermalink" data-description="Sottoparagrafo 1.3.4: Divisione"><a href="#sec-op-arit-6" title="Copy heading and permalink for Sottoparagrafo 1.3.4: Divisione" aria-label="Copy heading and permalink for Sottoparagrafo 1.3.4: Divisione">🔗</a></div>
 </section>
-<section class="subsection" id="sec-op-arit-7">
+<section class="subsection" id="exint-op-aritm">
 <h3 class="heading hide-type">
-<span class="type">Sottoparagrafo</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Eleveamento a potenza</span>
+<span class="type">Sottoparagrafo</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Esercizi sulle operazioni base</span>
 </h3>
-<div class="para" id="sec-op-arit-7-2"><div class="autopermalink" aria-hidden="true" data-description="Capoverso"><a tabindex="-1" href="#sec-op-arit-7-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div></div>
-<div class="autopermalink" aria-hidden="true" data-description="Sottoparagrafo 1.3.5: Eleveamento a potenza"><a tabindex="-1" href="#sec-op-arit-7" title="Copy heading and permalink for Sottoparagrafo 1.3.5: Eleveamento a potenza" aria-label="Copy heading and permalink for Sottoparagrafo 1.3.5: Eleveamento a potenza">🔗</a></div>
+<div class="para" id="exint-op-aritm-2">Il seguente esercizio interattivo ti permette di verificare le tue abilità di calcolo con le frazioni per le operazioni elementari di somma, sottrazione, moltiplicazione e divisione.<div class="autopermalink" data-description="Capoverso"><a href="#exint-op-aritm-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<details id="exint-op-aritm-3" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Esercizio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Operazioni elementari tra numeri razionali.</span>
+</h4></summary>
+<article class="exercise exercise-like knowl__content"><div id="exint-op-aritm-3-ww-inner" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="1" data-localize-correct="Giusto" data-localize-incorrect="Sbagliato" data-localize-blank="Spazio vuoto" data-localize-submit="Invia" data-localize-check-responses="Controlla le risposte" data-localize-reveal="Mostra" data-localize-randomize="Casuale" data-localize-reset="Azzera" data-localize-hint="Suggerimento" data-localize-solution="Soluzione" data-origin="generated" data-problemSource="Snodi/1_3_5-Operazioni_elementari_tra_numeri_razionali.pg" data-documentID="" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('exint-op-aritm-3-ww-inner')">Attiva</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-exint-op-aritm-3-1-1-1">Determina somma, differenza, prodotto e quoziente dei due numeri razionali <span class="process-math">\({{\frac{1}{4}}}\)</span> e <span class="process-math">\({{\frac{4}{15}}}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#extracted-exint-op-aritm-3-1-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div> 
+<div class="para" id="extracted-exint-op-aritm-3-1-1-2">Somma: <span class="process-math">\({{\frac{1}{4}}}+{{\frac{4}{15}}}=\)</span> <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span><div class="autopermalink" data-description="Capoverso"><a href="#extracted-exint-op-aritm-3-1-1-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div> 
+<div class="para" id="extracted-exint-op-aritm-3-1-1-3">Differenza: <span class="process-math">\({{\frac{1}{4}}}-{{\frac{4}{15}}}=\)</span> <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span><div class="autopermalink" data-description="Capoverso"><a href="#extracted-exint-op-aritm-3-1-1-3" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div> 
+<div class="para" id="extracted-exint-op-aritm-3-1-1-4">Prodotto: <span class="process-math">\({{\frac{1}{4}}}\cdot{{\frac{4}{15}}}=\)</span> <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span><div class="autopermalink" data-description="Capoverso"><a href="#extracted-exint-op-aritm-3-1-1-4" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div> 
+<div class="para" id="extracted-exint-op-aritm-3-1-1-5">Quoziente: <span class="process-math">\(\dfrac{{{\frac{1}{4}}}}{{{\frac{4}{15}}}}=\)</span> <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span><div class="autopermalink" data-description="Capoverso"><a href="#extracted-exint-op-aritm-3-1-1-5" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="extracted-exint-op-aritm-3-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para" id="extracted-exint-op-aritm-3-1-2-1">
+<span class="process-math">\({\frac{31}{60}}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#extracted-exint-op-aritm-3-1-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Risposta 1.3.5.1"><a href="#extracted-exint-op-aritm-3-1-2" title="Copy heading and permalink for Risposta 1.3.5.1" aria-label="Copy heading and permalink for Risposta 1.3.5.1">🔗</a></div>
+</div></details>
+<details id="extracted-exint-op-aritm-3-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para" id="extracted-exint-op-aritm-3-1-3-1">
+<span class="process-math">\(-{\frac{1}{60}}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#extracted-exint-op-aritm-3-1-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Risposta 1.3.5.2"><a href="#extracted-exint-op-aritm-3-1-3" title="Copy heading and permalink for Risposta 1.3.5.2" aria-label="Copy heading and permalink for Risposta 1.3.5.2">🔗</a></div>
+</div></details>
+<details id="extracted-exint-op-aritm-3-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para" id="extracted-exint-op-aritm-3-1-4-1">
+<span class="process-math">\({\frac{1}{15}}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#extracted-exint-op-aritm-3-1-4-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Risposta 1.3.5.3"><a href="#extracted-exint-op-aritm-3-1-4" title="Copy heading and permalink for Risposta 1.3.5.3" aria-label="Copy heading and permalink for Risposta 1.3.5.3">🔗</a></div>
+</div></details>
+<details id="extracted-exint-op-aritm-3-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para" id="extracted-exint-op-aritm-3-1-5-1">
+<span class="process-math">\({\frac{15}{16}}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#extracted-exint-op-aritm-3-1-5-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Risposta 1.3.5.4"><a href="#extracted-exint-op-aritm-3-1-5" title="Copy heading and permalink for Risposta 1.3.5.4" aria-label="Copy heading and permalink for Risposta 1.3.5.4">🔗</a></div>
+</div></details>
+</div>
+</div>
+</div>
+<div class="autopermalink" data-description="Esercizio 1.3.5: Operazioni elementari tra numeri razionali"><a href="#exint-op-aritm-3" title="Copy heading and permalink for Esercizio 1.3.5: Operazioni elementari tra numeri razionali" aria-label="Copy heading and permalink for Esercizio 1.3.5: Operazioni elementari tra numeri razionali">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Sottoparagrafo 1.3.5: Esercizi sulle operazioni base"><a href="#exint-op-aritm" title="Copy heading and permalink for Sottoparagrafo 1.3.5: Esercizi sulle operazioni base" aria-label="Copy heading and permalink for Sottoparagrafo 1.3.5: Esercizi sulle operazioni base">🔗</a></div>
 </section>
 <section class="subsection" id="sec-op-arit-8">
 <h3 class="heading hide-type">
-<span class="type">Sottoparagrafo</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Estrazione di radice</span>
+<span class="type">Sottoparagrafo</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Eleveamento a potenza</span>
 </h3>
-<article class="definition definition-like" id="sec-op-arit-8-2"><h4 class="heading">
-<span class="type">Definizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="para" id="sec-op-arit-8-2"><div class="autopermalink" data-description="Capoverso"><a href="#sec-op-arit-8-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div></div>
+<div class="autopermalink" data-description="Sottoparagrafo 1.3.6: Eleveamento a potenza"><a href="#sec-op-arit-8" title="Copy heading and permalink for Sottoparagrafo 1.3.6: Eleveamento a potenza" aria-label="Copy heading and permalink for Sottoparagrafo 1.3.6: Eleveamento a potenza">🔗</a></div>
+</section>
+<section class="subsection" id="sec-op-arit-9">
+<h3 class="heading hide-type">
+<span class="type">Sottoparagrafo</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.7</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Estrazione di radice</span>
+</h3>
+<article class="definition definition-like" id="sec-op-arit-9-2"><h4 class="heading">
+<span class="type">Definizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Estrazione di radice.</span>
 </h4>
-<div class="para logical" id="sec-op-arit-8-2-1-1">
+<div class="para logical" id="sec-op-arit-9-2-3-1">
 <div class="para">L’<dfn class="terminology">estrazione di radice</dfn> è quell’operazione che associa a due numeri <span class="process-math">\(a\)</span> e <span class="process-math">\(n\in \N-\{0\}\)</span> quel numero <span class="process-math">\(b\)</span> tale che:</div>
-<div class="displaymath process-math" id="sec-op-arit-8-2-1-1-5">
+<div class="displaymath process-math" id="sec-op-arit-9-2-3-1-5">
 \begin{equation*}
 \sqrt[n]{a}=b \qquad b^n=a
 \end{equation*}
@@ -288,13 +410,13 @@ let ggbParams = {
 <div class="para">
 <span class="process-math">\(a\)</span> prende il nome di <dfn class="terminology">radicando</dfn> e <span class="process-math">\(n\)</span> il nome di <dfn class="terminology">indice</dfn> e si parla di radice <span class="process-math">\(n\)</span>-esima del numero <span class="process-math">\(a\text{.}\)</span> Se <span class="process-math">\(n\)</span> non è inidcato si sottointende il valore <span class="process-math">\(n=2\text{.}\)</span>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Capoverso"><a tabindex="-1" href="#sec-op-arit-8-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-op-arit-9-2-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Definizione 1.3.5"><a tabindex="-1" href="#sec-op-arit-8-2" title="Copy heading and permalink for Definizione 1.3.5" aria-label="Copy heading and permalink for Definizione 1.3.5">🔗</a></div>
+<div class="autopermalink" data-description="Definizione 1.3.6: Estrazione di radice"><a href="#sec-op-arit-9-2" title="Copy heading and permalink for Definizione 1.3.6: Estrazione di radice" aria-label="Copy heading and permalink for Definizione 1.3.6: Estrazione di radice">🔗</a></div>
 </article>
-<div class="para logical" id="sec-op-arit-8-3">
+<div class="para logical" id="sec-op-arit-9-3">
 <div class="para">La radice è quindi quel numero che elevato all’indice della radice restituisce il radicando. Il radicando è allora il risultato di un elevamento a potenza nei numeri reali e il segno del risultato dipende dall’esponente della potenza (indice della radice): se <span class="process-math">\(n\)</span> è pari il risultato di <span class="process-math">\(b^n\)</span> sarà positivo o nullo, mentre se <span class="process-math">\(n\)</span> è dispari il risultato di <span class="process-math">\(b^n\)</span> potrà essere qualsiasi numero. Questo genera quella che è la <em class="alert">condizione di esistenza</em> delle radici nei numeri reali: il radicando di una radice di indice pari deve essere positivo o nullo, mentre non ci sono condizioni se l’indice è dispari. Scriveremo quindi:</div>
-<div class="displaymath process-math" id="sec-op-arit-8-3-6">
+<div class="displaymath process-math" id="sec-op-arit-9-3-6">
 \begin{equation*}
 \sqrt[n]{a}=b \qquad \text{C.E. }\begin{cases}
 a\ge 0 &amp; n \text{ pari}\\
@@ -303,7 +425,7 @@ a\in\R &amp; n \text{ dispari}
 \end{equation*}
 </div>
 <div class="para">Il risultato della radice ha lo stesso segno del radicando se <span class="process-math">\(n\)</span> è dispari, mentre è per definizione positivo o nullo se <span class="process-math">\(n\)</span> è pari, cioè:</div>
-<div class="displaymath process-math" id="sec-op-arit-8-3-9">
+<div class="displaymath process-math" id="sec-op-arit-9-3-9">
 \begin{equation*}
 \sqrt[n]{a}=b \qquad \begin{cases}
 b\ge 0 &amp; n \text{ pari}\\
@@ -311,110 +433,110 @@ b\in\R &amp; n \text{ dispari}
 \end{cases}
 \end{equation*}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Capoverso"><a tabindex="-1" href="#sec-op-arit-8-3" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-op-arit-9-3" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<details id="sec-op-arit-8-4" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
-<span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Radici di indice pari.</span>
+<details id="sec-op-arit-9-4" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Radici di indice pari.</span>
 </h4></summary>
 <article class="example example-like knowl__content">
-<div class="para logical" id="sec-op-arit-8-4-2-1">
+<div class="para logical" id="sec-op-arit-9-4-2-1">
 <div class="para">Calcola dalla definizione</div>
-<ol class="lower-alpha ol-marker-1" id="sec-op-arit-8-4-2-1-1">
-<li id="sec-op-arit-8-4-2-1-1-1">
-<div class="para" id="p-derived-sec-op-arit-8-4-2-1-1-1"><span class="process-math">\(\displaystyle \sqrt{4}\)</span></div>
-<div class="autopermalink" aria-hidden="true" data-description="Punto a"><a tabindex="-1" href="#sec-op-arit-8-4-2-1-1-1" title="Copy heading and permalink for Punto a" aria-label="Copy heading and permalink for Punto a">🔗</a></div>
+<ol class="lower-alpha ol-marker-1" id="sec-op-arit-9-4-2-1-1">
+<li id="sec-op-arit-9-4-2-1-1-1">
+<div class="para" id="p-derived-sec-op-arit-9-4-2-1-1-1"><span class="process-math">\(\displaystyle \sqrt{4}\)</span></div>
+<div class="autopermalink" data-description="Punto a"><a href="#sec-op-arit-9-4-2-1-1-1" title="Copy heading and permalink for Punto a" aria-label="Copy heading and permalink for Punto a">🔗</a></div>
 </li>
-<li id="sec-op-arit-8-4-2-1-1-2">
-<div class="para" id="p-derived-sec-op-arit-8-4-2-1-1-2"><span class="process-math">\(\displaystyle \sqrt[4]{81}\)</span></div>
-<div class="autopermalink" aria-hidden="true" data-description="Punto b"><a tabindex="-1" href="#sec-op-arit-8-4-2-1-1-2" title="Copy heading and permalink for Punto b" aria-label="Copy heading and permalink for Punto b">🔗</a></div>
+<li id="sec-op-arit-9-4-2-1-1-2">
+<div class="para" id="p-derived-sec-op-arit-9-4-2-1-1-2"><span class="process-math">\(\displaystyle \sqrt[4]{81}\)</span></div>
+<div class="autopermalink" data-description="Punto b"><a href="#sec-op-arit-9-4-2-1-1-2" title="Copy heading and permalink for Punto b" aria-label="Copy heading and permalink for Punto b">🔗</a></div>
 </li>
-<li id="sec-op-arit-8-4-2-1-1-3">
-<div class="para" id="p-derived-sec-op-arit-8-4-2-1-1-3"><span class="process-math">\(\displaystyle \sqrt{-81}\)</span></div>
-<div class="autopermalink" aria-hidden="true" data-description="Punto c"><a tabindex="-1" href="#sec-op-arit-8-4-2-1-1-3" title="Copy heading and permalink for Punto c" aria-label="Copy heading and permalink for Punto c">🔗</a></div>
+<li id="sec-op-arit-9-4-2-1-1-3">
+<div class="para" id="p-derived-sec-op-arit-9-4-2-1-1-3"><span class="process-math">\(\displaystyle \sqrt{-81}\)</span></div>
+<div class="autopermalink" data-description="Punto c"><a href="#sec-op-arit-9-4-2-1-1-3" title="Copy heading and permalink for Punto c" aria-label="Copy heading and permalink for Punto c">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" aria-hidden="true" data-description="Capoverso"><a tabindex="-1" href="#sec-op-arit-8-4-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-op-arit-9-4-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="sec-op-arit-8-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<details id="sec-op-arit-9-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="solution solution-like knowl__content">
-<ol class="lower-alpha ol-marker-1" id="sec-op-arit-8-4-3-1">
-<li id="sec-op-arit-8-4-3-1-1">
-<div class="para" id="p-derived-sec-op-arit-8-4-3-1-1">Abbiamo <span class="process-math">\(a=4\)</span> e <span class="process-math">\(n=2\text{.}\)</span> Quindi cerchiamo quel numero <span class="process-math">\(b\)</span> che elvato alla 2 dà come risultato 4. Questo numero è <span class="process-math">\(b=2\text{,}\)</span> quindi <span class="process-math">\(\sqrt{4}=2\text{.}\)</span> Si potrebbe dire anche che -2 è una soluzione, ma per definizione la radice di indice pari è positiva o nulla.</div>
-<div class="autopermalink" aria-hidden="true" data-description="Punto a"><a tabindex="-1" href="#sec-op-arit-8-4-3-1-1" title="Copy heading and permalink for Punto a" aria-label="Copy heading and permalink for Punto a">🔗</a></div>
+<ol class="lower-alpha ol-marker-1" id="sec-op-arit-9-4-3-1">
+<li id="sec-op-arit-9-4-3-1-1">
+<div class="para" id="p-derived-sec-op-arit-9-4-3-1-1">Abbiamo <span class="process-math">\(a=4\)</span> e <span class="process-math">\(n=2\text{.}\)</span> Quindi cerchiamo quel numero <span class="process-math">\(b\)</span> che elvato alla 2 dà come risultato 4. Questo numero è <span class="process-math">\(b=2\text{,}\)</span> quindi <span class="process-math">\(\sqrt{4}=2\text{.}\)</span> Si potrebbe dire anche che -2 è una soluzione, ma per definizione la radice di indice pari è positiva o nulla.</div>
+<div class="autopermalink" data-description="Punto a"><a href="#sec-op-arit-9-4-3-1-1" title="Copy heading and permalink for Punto a" aria-label="Copy heading and permalink for Punto a">🔗</a></div>
 </li>
-<li id="sec-op-arit-8-4-3-1-2">
-<div class="para" id="p-derived-sec-op-arit-8-4-3-1-2">Abbiamo <span class="process-math">\(a=81\)</span> e <span class="process-math">\(n=4\text{.}\)</span> Quindi cerchiamo quel numero <span class="process-math">\(b\)</span> che elvato alla 4 dà come risultato 81. Questo numero è <span class="process-math">\(b=3\text{,}\)</span> quindi <span class="process-math">\(\sqrt[4]{81}=3\text{.}\)</span> Si potrebbe dire anche che -3 è una soluzione, ma per definizione la radice di indice pari è positiva o nulla.</div>
-<div class="autopermalink" aria-hidden="true" data-description="Punto b"><a tabindex="-1" href="#sec-op-arit-8-4-3-1-2" title="Copy heading and permalink for Punto b" aria-label="Copy heading and permalink for Punto b">🔗</a></div>
+<li id="sec-op-arit-9-4-3-1-2">
+<div class="para" id="p-derived-sec-op-arit-9-4-3-1-2">Abbiamo <span class="process-math">\(a=81\)</span> e <span class="process-math">\(n=4\text{.}\)</span> Quindi cerchiamo quel numero <span class="process-math">\(b\)</span> che elvato alla 4 dà come risultato 81. Questo numero è <span class="process-math">\(b=3\text{,}\)</span> quindi <span class="process-math">\(\sqrt[4]{81}=3\text{.}\)</span> Si potrebbe dire anche che -3 è una soluzione, ma per definizione la radice di indice pari è positiva o nulla.</div>
+<div class="autopermalink" data-description="Punto b"><a href="#sec-op-arit-9-4-3-1-2" title="Copy heading and permalink for Punto b" aria-label="Copy heading and permalink for Punto b">🔗</a></div>
 </li>
-<li id="sec-op-arit-8-4-3-1-3">
-<div class="para" id="p-derived-sec-op-arit-8-4-3-1-3">Abbiamo <span class="process-math">\(a=-81\)</span> e <span class="process-math">\(n=2\text{.}\)</span> Quindi cerchiamo quel numero <span class="process-math">\(b\)</span> che elvato alla 2 dà come risultato -81. Questo numero non esiste, perchè un numero reale elevato a una potenza pari non può risultare in un numero negativo. <span class="process-math">\(\sqrt{-81}\)</span> non esiste nei numeri reali, in accordo con le condizioni di esistenza.</div>
-<div class="autopermalink" aria-hidden="true" data-description="Punto c"><a tabindex="-1" href="#sec-op-arit-8-4-3-1-3" title="Copy heading and permalink for Punto c" aria-label="Copy heading and permalink for Punto c">🔗</a></div>
+<li id="sec-op-arit-9-4-3-1-3">
+<div class="para" id="p-derived-sec-op-arit-9-4-3-1-3">Abbiamo <span class="process-math">\(a=-81\)</span> e <span class="process-math">\(n=2\text{.}\)</span> Quindi cerchiamo quel numero <span class="process-math">\(b\)</span> che elvato alla 2 dà come risultato -81. Questo numero non esiste, perchè un numero reale elevato a una potenza pari non può risultare in un numero negativo. <span class="process-math">\(\sqrt{-81}\)</span> non esiste nei numeri reali, in accordo con le condizioni di esistenza.</div>
+<div class="autopermalink" data-description="Punto c"><a href="#sec-op-arit-9-4-3-1-3" title="Copy heading and permalink for Punto c" aria-label="Copy heading and permalink for Punto c">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" aria-hidden="true" data-description="Soluzione 1.3.6.1"><a tabindex="-1" href="#sec-op-arit-8-4-3" title="Copy heading and permalink for Soluzione 1.3.6.1" aria-label="Copy heading and permalink for Soluzione 1.3.6.1">🔗</a></div>
+<div class="autopermalink" data-description="Soluzione 1.3.7.1"><a href="#sec-op-arit-9-4-3" title="Copy heading and permalink for Soluzione 1.3.7.1" aria-label="Copy heading and permalink for Soluzione 1.3.7.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Esempio 1.3.6: Radici di indice pari"><a tabindex="-1" href="#sec-op-arit-8-4" title="Copy heading and permalink for Esempio 1.3.6: Radici di indice pari" aria-label="Copy heading and permalink for Esempio 1.3.6: Radici di indice pari">🔗</a></div>
+<div class="autopermalink" data-description="Esempio 1.3.7: Radici di indice pari"><a href="#sec-op-arit-9-4" title="Copy heading and permalink for Esempio 1.3.7: Radici di indice pari" aria-label="Copy heading and permalink for Esempio 1.3.7: Radici di indice pari">🔗</a></div>
 </article></details>
-<details id="sec-op-arit-8-5" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
-<span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Radici di indice dispari.</span>
+<details id="sec-op-arit-9-5" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Radici di indice dispari.</span>
 </h4></summary>
 <article class="example example-like knowl__content">
-<div class="para logical" id="sec-op-arit-8-5-2-1">
+<div class="para logical" id="sec-op-arit-9-5-2-1">
 <div class="para">Calcola dalla definizione</div>
-<ol class="lower-alpha ol-marker-1" id="sec-op-arit-8-5-2-1-1">
-<li id="sec-op-arit-8-5-2-1-1-1">
-<div class="para" id="p-derived-sec-op-arit-8-5-2-1-1-1"><span class="process-math">\(\displaystyle \sqrt[3]{8}\)</span></div>
-<div class="autopermalink" aria-hidden="true" data-description="Punto a"><a tabindex="-1" href="#sec-op-arit-8-5-2-1-1-1" title="Copy heading and permalink for Punto a" aria-label="Copy heading and permalink for Punto a">🔗</a></div>
+<ol class="lower-alpha ol-marker-1" id="sec-op-arit-9-5-2-1-1">
+<li id="sec-op-arit-9-5-2-1-1-1">
+<div class="para" id="p-derived-sec-op-arit-9-5-2-1-1-1"><span class="process-math">\(\displaystyle \sqrt[3]{8}\)</span></div>
+<div class="autopermalink" data-description="Punto a"><a href="#sec-op-arit-9-5-2-1-1-1" title="Copy heading and permalink for Punto a" aria-label="Copy heading and permalink for Punto a">🔗</a></div>
 </li>
-<li id="sec-op-arit-8-5-2-1-1-2">
-<div class="para" id="p-derived-sec-op-arit-8-5-2-1-1-2"><span class="process-math">\(\displaystyle \sqrt[3]{-27}\)</span></div>
-<div class="autopermalink" aria-hidden="true" data-description="Punto b"><a tabindex="-1" href="#sec-op-arit-8-5-2-1-1-2" title="Copy heading and permalink for Punto b" aria-label="Copy heading and permalink for Punto b">🔗</a></div>
+<li id="sec-op-arit-9-5-2-1-1-2">
+<div class="para" id="p-derived-sec-op-arit-9-5-2-1-1-2"><span class="process-math">\(\displaystyle \sqrt[3]{-27}\)</span></div>
+<div class="autopermalink" data-description="Punto b"><a href="#sec-op-arit-9-5-2-1-1-2" title="Copy heading and permalink for Punto b" aria-label="Copy heading and permalink for Punto b">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" aria-hidden="true" data-description="Capoverso"><a tabindex="-1" href="#sec-op-arit-8-5-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-op-arit-9-5-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="sec-op-arit-8-5-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<details id="sec-op-arit-9-5-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="solution solution-like knowl__content">
-<ol class="lower-alpha ol-marker-1" id="sec-op-arit-8-5-3-1">
-<li id="sec-op-arit-8-5-3-1-1">
-<div class="para" id="p-derived-sec-op-arit-8-5-3-1-1">Abbiamo <span class="process-math">\(a=8\)</span> e <span class="process-math">\(n=3\text{.}\)</span> Quindi cerchiamo quel numero <span class="process-math">\(b\)</span> che elvato alla 3 dà come risultato 8. Questo numero è <span class="process-math">\(b=2\text{,}\)</span> quindi <span class="process-math">\(\sqrt[3]{8}=2\text{.}\)</span>
+<ol class="lower-alpha ol-marker-1" id="sec-op-arit-9-5-3-1">
+<li id="sec-op-arit-9-5-3-1-1">
+<div class="para" id="p-derived-sec-op-arit-9-5-3-1-1">Abbiamo <span class="process-math">\(a=8\)</span> e <span class="process-math">\(n=3\text{.}\)</span> Quindi cerchiamo quel numero <span class="process-math">\(b\)</span> che elvato alla 3 dà come risultato 8. Questo numero è <span class="process-math">\(b=2\text{,}\)</span> quindi <span class="process-math">\(\sqrt[3]{8}=2\text{.}\)</span>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Punto a"><a tabindex="-1" href="#sec-op-arit-8-5-3-1-1" title="Copy heading and permalink for Punto a" aria-label="Copy heading and permalink for Punto a">🔗</a></div>
+<div class="autopermalink" data-description="Punto a"><a href="#sec-op-arit-9-5-3-1-1" title="Copy heading and permalink for Punto a" aria-label="Copy heading and permalink for Punto a">🔗</a></div>
 </li>
-<li id="sec-op-arit-8-5-3-1-2">
-<div class="para" id="p-derived-sec-op-arit-8-5-3-1-2">Abbiamo <span class="process-math">\(a=-27\)</span> e <span class="process-math">\(n=3\text{.}\)</span> Quindi cerchiamo quel numero <span class="process-math">\(b\)</span> che elvato alla 3 dà come risultato -27. Questo numero è <span class="process-math">\(b=-3\text{,}\)</span> quindi <span class="process-math">\(\sqrt[3]{-27}=-3\text{.}\)</span> Da notare che in questo caso non ci sono problemi con il numero negativo sotto radice perchè l’indice della radice è dispari.</div>
-<div class="autopermalink" aria-hidden="true" data-description="Punto b"><a tabindex="-1" href="#sec-op-arit-8-5-3-1-2" title="Copy heading and permalink for Punto b" aria-label="Copy heading and permalink for Punto b">🔗</a></div>
+<li id="sec-op-arit-9-5-3-1-2">
+<div class="para" id="p-derived-sec-op-arit-9-5-3-1-2">Abbiamo <span class="process-math">\(a=-27\)</span> e <span class="process-math">\(n=3\text{.}\)</span> Quindi cerchiamo quel numero <span class="process-math">\(b\)</span> che elvato alla 3 dà come risultato -27. Questo numero è <span class="process-math">\(b=-3\text{,}\)</span> quindi <span class="process-math">\(\sqrt[3]{-27}=-3\text{.}\)</span> Da notare che in questo caso non ci sono problemi con il numero negativo sotto radice perchè l’indice della radice è dispari.</div>
+<div class="autopermalink" data-description="Punto b"><a href="#sec-op-arit-9-5-3-1-2" title="Copy heading and permalink for Punto b" aria-label="Copy heading and permalink for Punto b">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" aria-hidden="true" data-description="Soluzione 1.3.7.1"><a tabindex="-1" href="#sec-op-arit-8-5-3" title="Copy heading and permalink for Soluzione 1.3.7.1" aria-label="Copy heading and permalink for Soluzione 1.3.7.1">🔗</a></div>
+<div class="autopermalink" data-description="Soluzione 1.3.8.1"><a href="#sec-op-arit-9-5-3" title="Copy heading and permalink for Soluzione 1.3.8.1" aria-label="Copy heading and permalink for Soluzione 1.3.8.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Esempio 1.3.7: Radici di indice dispari"><a tabindex="-1" href="#sec-op-arit-8-5" title="Copy heading and permalink for Esempio 1.3.7: Radici di indice dispari" aria-label="Copy heading and permalink for Esempio 1.3.7: Radici di indice dispari">🔗</a></div>
+<div class="autopermalink" data-description="Esempio 1.3.8: Radici di indice dispari"><a href="#sec-op-arit-9-5" title="Copy heading and permalink for Esempio 1.3.8: Radici di indice dispari" aria-label="Copy heading and permalink for Esempio 1.3.8: Radici di indice dispari">🔗</a></div>
 </article></details>
-<details id="sec-op-arit-8-6" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
-<span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Radici di zero.</span>
+<details id="sec-op-arit-9-6" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Radici di zero.</span>
 </h4></summary>
 <article class="example example-like knowl__content">
-<div class="para" id="sec-op-arit-8-6-2-1">Calcola dalla definizione <span class="process-math">\(\sqrt[n]{0}\)</span> per qualsiasi valore di <span class="process-math">\(n\)</span> (ecluso lo zero).<div class="autopermalink" aria-hidden="true" data-description="Capoverso"><a tabindex="-1" href="#sec-op-arit-8-6-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="para" id="sec-op-arit-9-6-2-1">Calcola dalla definizione <span class="process-math">\(\sqrt[n]{0}\)</span> per qualsiasi valore di <span class="process-math">\(n\)</span> (ecluso lo zero).<div class="autopermalink" data-description="Capoverso"><a href="#sec-op-arit-9-6-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="sec-op-arit-8-6-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<details id="sec-op-arit-9-6-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="solution solution-like knowl__content">
-<div class="para" id="sec-op-arit-8-6-3-1">Abbiamo <span class="process-math">\(a=0\)</span> e <span class="process-math">\(n\)</span> qualsiasi (tranne lo zero). Quindi cerchiamo quel numero <span class="process-math">\(b\)</span> che elvato alla <span class="process-math">\(n\)</span> dà come risultato 0. Questo numero è <span class="process-math">\(b=0\)</span> (0 elevato a qualsiasi potenza dà come risultato 0), quindi <span class="process-math">\(\sqrt[n]{0}=0\)</span> indipendentemente dall’indice della radice.<div class="autopermalink" aria-hidden="true" data-description="Capoverso"><a tabindex="-1" href="#sec-op-arit-8-6-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="para" id="sec-op-arit-9-6-3-1">Abbiamo <span class="process-math">\(a=0\)</span> e <span class="process-math">\(n\)</span> qualsiasi (tranne lo zero). Quindi cerchiamo quel numero <span class="process-math">\(b\)</span> che elvato alla <span class="process-math">\(n\)</span> dà come risultato 0. Questo numero è <span class="process-math">\(b=0\)</span> (0 elevato a qualsiasi potenza dà come risultato 0), quindi <span class="process-math">\(\sqrt[n]{0}=0\)</span> indipendentemente dall’indice della radice.<div class="autopermalink" data-description="Capoverso"><a href="#sec-op-arit-9-6-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Soluzione 1.3.8.1"><a tabindex="-1" href="#sec-op-arit-8-6-3" title="Copy heading and permalink for Soluzione 1.3.8.1" aria-label="Copy heading and permalink for Soluzione 1.3.8.1">🔗</a></div>
+<div class="autopermalink" data-description="Soluzione 1.3.9.1"><a href="#sec-op-arit-9-6-3" title="Copy heading and permalink for Soluzione 1.3.9.1" aria-label="Copy heading and permalink for Soluzione 1.3.9.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Esempio 1.3.8: Radici di zero"><a tabindex="-1" href="#sec-op-arit-8-6" title="Copy heading and permalink for Esempio 1.3.8: Radici di zero" aria-label="Copy heading and permalink for Esempio 1.3.8: Radici di zero">🔗</a></div>
-</article></details><div class="autopermalink" aria-hidden="true" data-description="Sottoparagrafo 1.3.6: Estrazione di radice"><a tabindex="-1" href="#sec-op-arit-8" title="Copy heading and permalink for Sottoparagrafo 1.3.6: Estrazione di radice" aria-label="Copy heading and permalink for Sottoparagrafo 1.3.6: Estrazione di radice">🔗</a></div>
-</section><div class="autopermalink" aria-hidden="true" data-description="Paragrafo 1.3: Operazioni aritmetiche"><a tabindex="-1" href="#sec-op-arit" title="Copy heading and permalink for Paragrafo 1.3: Operazioni aritmetiche" aria-label="Copy heading and permalink for Paragrafo 1.3: Operazioni aritmetiche">🔗</a></div>
+<div class="autopermalink" data-description="Esempio 1.3.9: Radici di zero"><a href="#sec-op-arit-9-6" title="Copy heading and permalink for Esempio 1.3.9: Radici di zero" aria-label="Copy heading and permalink for Esempio 1.3.9: Radici di zero">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Sottoparagrafo 1.3.7: Estrazione di radice"><a href="#sec-op-arit-9" title="Copy heading and permalink for Sottoparagrafo 1.3.7: Estrazione di radice" aria-label="Copy heading and permalink for Sottoparagrafo 1.3.7: Estrazione di radice">🔗</a></div>
+</section><div class="autopermalink" data-description="Paragrafo 1.3: Operazioni aritmetiche"><a href="#sec-op-arit" title="Copy heading and permalink for Paragrafo 1.3: Operazioni aritmetiche" aria-label="Copy heading and permalink for Paragrafo 1.3: Operazioni aritmetiche">🔗</a></div>
 </section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="sec-insiemi.html" title="Precedente"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prec</span></a><a class="top-button button" href="#" title="[top]"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">[top]</span></a><a class="next-button button" href="ch-equazioni.html" title="Successivo"><span class="name">Succ</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec-insiemi.html" title="Precedente"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prec</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-espr-lett.html" title="Successivo"><span class="name">Succ</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
