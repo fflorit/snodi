@@ -46,7 +46,7 @@
 <xi:include href="./exint-op-aritm.ptx" />
 
 <subsection>
-    <title>Eleveamento a potenza</title>
+    <title>Elevamento a potenza</title>
     <p></p>
 </subsection>
 
@@ -55,7 +55,7 @@
     <definition><title>Estrazione di radice</title><idx>radicale</idx>
     <statement><p>L'<term>estrazione di radice</term> è quell'operazione che associa a due numeri <m>a</m> e <m>n\in \N-\{0\}</m> quel numero <m>b</m> tale che:
         <md>\sqrt[n]{a}=b \qquad b^n=a</md>
-    <m>a</m> prende il nome di <term>radicando</term> e <m>n</m> il nome di <term>indice</term> e si parla di radice <m>n</m>-esima del numero <m>a</m>. Se <m>n</m> non è inidcato si sottointende il valore <m>n=2</m>.</p>
+    <m>a</m> prende il nome di <term>radicando</term> e <m>n</m> il nome di <term>indice</term> e si parla di radice <m>n</m>-esima del numero <m>a</m>. Se <m>n</m> non è indicato si sottintende il valore <m>n=2</m>.</p>
     </statement>
     </definition>
     <p>La radice è quindi quel numero che elevato all'indice della radice restituisce il radicando. Il radicando è allora il risultato di un elevamento a potenza nei numeri reali e il segno del risultato dipende dall'esponente della potenza (indice della radice): se <m>n</m> è pari il risultato di <m>b^n</m> sarà positivo o nullo, mentre se <m>n</m> è dispari il risultato di <m>b^n</m> potrà essere qualsiasi numero. Questo genera quella che è la <alert>condizione di esistenza</alert> delle radici nei numeri reali: il radicando di una radice di indice pari deve essere positivo o nullo, mentre non ci sono condizioni se l'indice è dispari. Scriveremo quindi:
@@ -82,9 +82,9 @@
         <li><m>\sqrt{-81}</m></li>
     </ol></p></statement>
     <solution><ol marker='a)'>
-        <li>Abbiamo <m>a=4</m> e <m>n=2</m>. Quindi cerchiamo quel numero <m>b</m> che elvato alla 2 dà come risultato 4. Questo numero è <m>b=2</m>, quindi <m>\sqrt{4}=2</m>. Si potrebbe dire anche che -2 è una soluzione, ma per definizione la radice di indice pari è positiva o nulla.</li>
-        <li>Abbiamo <m>a=81</m> e <m>n=4</m>. Quindi cerchiamo quel numero <m>b</m> che elvato alla 4 dà come risultato 81. Questo numero è <m>b=3</m>, quindi <m>\sqrt[4]{81}=3</m>. Si potrebbe dire anche che -3 è una soluzione, ma per definizione la radice di indice pari è positiva o nulla.</li>
-        <li>Abbiamo <m>a=-81</m> e <m>n=2</m>. Quindi cerchiamo quel numero <m>b</m> che elvato alla 2 dà come risultato -81. Questo numero non esiste, perchè un numero reale elevato a una potenza pari non può risultare in un numero negativo. <m>\sqrt{-81}</m> non esiste nei numeri reali, in accordo con le condizioni di esistenza.</li>
+        <li>Abbiamo <m>a=4</m> e <m>n=2</m>. Quindi cerchiamo quel numero <m>b</m> che elevato alla 2 dà come risultato 4. Questo numero è <m>b=2</m>, quindi <m>\sqrt{4}=2</m>. Si potrebbe dire anche che -2 è una soluzione, ma per definizione la radice di indice pari è positiva o nulla.</li>
+        <li>Abbiamo <m>a=81</m> e <m>n=4</m>. Quindi cerchiamo quel numero <m>b</m> che elevato alla 4 dà come risultato 81. Questo numero è <m>b=3</m>, quindi <m>\sqrt[4]{81}=3</m>. Si potrebbe dire anche che -3 è una soluzione, ma per definizione la radice di indice pari è positiva o nulla.</li>
+        <li>Abbiamo <m>a=-81</m> e <m>n=2</m>. Quindi cerchiamo quel numero <m>b</m> che elevato alla 2 dà come risultato -81. Questo numero non esiste, perché un numero reale elevato a una potenza pari non può risultare in un numero negativo. <m>\sqrt{-81}</m> non esiste nei numeri reali, in accordo con le condizioni di esistenza.</li>
     </ol></solution>
     </example>
 
@@ -94,14 +94,14 @@
         <li><m>\sqrt[3]{-27}</m></li>
     </ol></p></statement>
     <solution><ol marker='a)'>
-        <li>Abbiamo <m>a=8</m> e <m>n=3</m>. Quindi cerchiamo quel numero <m>b</m> che elvato alla 3 dà come risultato 8. Questo numero è <m>b=2</m>, quindi <m>\sqrt[3]{8}=2</m>.</li>
-        <li>Abbiamo <m>a=-27</m> e <m>n=3</m>. Quindi cerchiamo quel numero <m>b</m> che elvato alla 3 dà come risultato -27. Questo numero è <m>b=-3</m>, quindi <m>\sqrt[3]{-27}=-3</m>. Da notare che in questo caso non ci sono problemi con il numero negativo sotto radice perchè l'indice della radice è dispari.</li>
+        <li>Abbiamo <m>a=8</m> e <m>n=3</m>. Quindi cerchiamo quel numero <m>b</m> che elevato alla 3 dà come risultato 8. Questo numero è <m>b=2</m>, quindi <m>\sqrt[3]{8}=2</m>.</li>
+        <li>Abbiamo <m>a=-27</m> e <m>n=3</m>. Quindi cerchiamo quel numero <m>b</m> che elevato alla 3 dà come risultato -27. Questo numero è <m>b=-3</m>, quindi <m>\sqrt[3]{-27}=-3</m>. Da notare che in questo caso non ci sono problemi con il numero negativo sotto radice perch* l'indice della radice è dispari.</li>
     </ol></solution>
     </example>
 
     <example><title>Radici di zero</title>
-    <statement><p>Calcola dalla definizione <m>\sqrt[n]{0}</m> per qualsiasi valore di <m>n</m> (ecluso lo zero).</p></statement>
-    <solution><p>Abbiamo <m>a=0</m> e <m>n</m> qualsiasi (tranne lo zero). Quindi cerchiamo quel numero <m>b</m> che elvato alla <m>n</m> dà come risultato 0. Questo numero è <m>b=0</m> (0 elevato a qualsiasi potenza dà come risultato 0), quindi <m>\sqrt[n]{0}=0</m> indipendentemente dall'indice della radice.</p></solution>
+    <statement><p>Calcola dalla definizione <m>\sqrt[n]{0}</m> per qualsiasi valore di <m>n</m> (escluso lo zero).</p></statement>
+    <solution><p>Abbiamo <m>a=0</m> e <m>n</m> qualsiasi (tranne lo zero). Quindi cerchiamo quel numero <m>b</m> che elevato alla <m>n</m> dà come risultato 0. Questo numero è <m>b=0</m> (0 elevato a qualsiasi potenza dà come risultato 0), quindi <m>\sqrt[n]{0}=0</m> indipendentemente dall'indice della radice.</p></solution>
     </example>
 </subsection>
 

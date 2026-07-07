@@ -6,7 +6,7 @@
         Il seguente esercizio interattivo ti permette di verificare le tue abilità di calcolo con le frazioni per le operazioni elementari di somma, sottrazione, moltiplicazione e divisione.
     </p>
     <exercise>
-        <title>Operazioni elementari tra numeri razionali</title>
+        <title>&#x2728; Operazioni elementari tra numeri razionali</title>
         <webwork>
             <pg-code>
                 loadMacros(
