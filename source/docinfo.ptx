@@ -46,34 +46,74 @@
     \newcommand{\Heq}{\stackrel{\text{H}}{=}}
 
     <!-- Macro per disegnare la parabolina nella soluzione delle disequazioni di secondo grado -->
-    <!-- Richiede un argomento: soluzioni dell'equazione associata (se nessuno va lasciato vuoto, se 1 si indica il numero, se due si indica la lista ordinata {x1,x2} -->
+    <!-- Richiede due argomenti: Soluzioni dell'equazione associata (se nessuno va lasciato vuoto, se 1 si indica il numero, se due si indica la lista ordinata {x1,x2}
+                                 Verso della disuguaglianza: g per maggiore e l per minore-->
     <!-- Ha un parametro opzionale: concavità 1 verso l'alto (default), -1 verso il basso -->
-    \newcommand{\parabolina}[2][1]{
+    \newcommand{\parabolina}[3][1]{
       \ifx\relax#2\relax
-        % Se è vuoto, definiamo manualmente nS a 0 (o quello che preferisci)
         \gdef\nS{0}
       \else
         \foreach \x [count=\xx] in #2 {\global\let\nS=\xx}
       \fi
-      \ifnum#1>0
+      \ifnum #1>0\relax
         \def\pos{below}
       \else
         \def\pos{above}
       \fi
       \begin{tikzpicture}
         \begin{axis}[xmin=-2,xmax=2, ymin=-2,ymax=2, axis y line=none, axis lines=middle, xtick=\empty, width=3.5cm, clip=false]
-          \ifnum \nS=0 \addplot[domain=-1.5:1.5] {#1*(x^2+1)}; \fi
-          \ifnum \nS=1
-            \addplot[domain=-1.5:1.5] {#1*(x^2)};
-            \addplot[mark=*, mark size=1pt, font=\tiny, inner xsep=0, inner ysep=2pt] coordinates {(0,0)} node[\pos]{$#2$};
+          \ifnum \nS=0\relax
+            \addplot[domain=-1.5:1.5] {#1*(x^2+1)};
+            \ifnum #1\gt0\relax
+              \ifnum\pdfstrcmp{#3}{g}=0\relax
+                \addplot[ultra thick, red, opacity=.3, domain=-1.7:1.7] {0};
+              \fi
+            \fi
+            \ifnum #1\lt0\relax
+              \ifnum\pdfstrcmp{#3}{l}=0\relax
+                \addplot[ultra thick, red, opacity=.3, domain=-1.7:1.7] {0};
+              \fi
+            \fi
           \fi
-          \ifnum \nS=2
+          \ifnum \nS=1\relax
+            \addplot[domain=-1.5:1.5] {#1*(x^2)};
+            \addplot[mark=o, mark size=1pt, font=\tiny, inner xsep=0, inner ysep=2pt] coordinates {(0,0)} node[\pos]{$#2$};
+            \ifnum #1>0\relax
+              \ifnum\pdfstrcmp{#3}{g}=0\relax
+                \addplot[ultra thick, red, opacity=.3, domain=-1.7:1.7] {0};
+              \fi
+            \fi
+            \ifnum #1\lt0\relax
+              \ifnum\pdfstrcmp{#3}{l}=0\relax
+                \addplot[ultra thick, red, opacity=.3, domain=-1.7:1.7] {0};
+              \fi
+            \fi
+          \fi
+          \ifnum \nS=2\relax
             \addplot[domain=-1.5:1.5] {#1*(x^2-1)};
-            \addplot[mark=*, mark size=1pt, draw=none] coordinates {(-1,0) (1,0)};
+            \addplot[mark=o, mark size=1pt, draw=none] coordinates {(-1,0) (1,0)};
             \draw[font=\tiny] 
             \foreach \x [count=\xx] in #2 {
-              (\xx*2-3,0) node[\pos, fill=white, fill opacity=.3, text opacity=1, text=black, inner xsep=0, inner ysep=2pt]{$\x$}
+              (\xx*2-3,0) node[\pos, fill=white, fill opacity=.7, text opacity=1, text=black, inner xsep=0, inner ysep=2pt]{$\x$}
             };
+            \ifnum #1\gt0\relax
+              \ifnum\pdfstrcmp{#3}{g}=0\relax
+                \addplot[ultra thick, red, opacity=.3, domain=-1.7:-1] {0};
+                \addplot[ultra thick, red, opacity=.3, domain=1:1.7] {0};
+              \fi
+              \ifnum\pdfstrcmp{#3}{l}=0\relax
+                \addplot[ultra thick, red, opacity=.3, domain=-1:1] {0};
+              \fi
+            \fi
+            \ifnum #1\lt0\relax
+              \ifnum\pdfstrcmp{#3}{l}=0\relax
+                \addplot[ultra thick, red, opacity=.3, domain=-1.7:-1] {0};
+                \addplot[ultra thick, red, opacity=.3, domain=1:1.7] {0};
+              \fi
+              \ifnum\pdfstrcmp{#3}{g}=0\relax
+                \addplot[ultra thick, red, opacity=.3, domain=-1:1] {0};
+              \fi
+            \fi
           \fi
         \end{axis}
       \end{tikzpicture}
