@@ -354,6 +354,9 @@
 
     <example><title>Disequazione razionale intera di terzo grado</title>
     <statement><p>Risolvi <m>x^3+x^2-2x\le 0</m> per <m>x\in \R</m>.</p></statement>
+    <answer>
+        <p><md>S=(-\infty, 2] \cup [0,1]</md></p>
+    </answer>
     <solution>
         <p>
             Il grafico dei segni era stato tracciato nell'<xref ref="ex-grafico-segni-pol-3"/>.
@@ -374,6 +377,9 @@
 
     <example><title>Disequazione razionale fratta</title>
     <statement><p>Risolvi <md>\frac{x^2-3x+2}{x^2-9}\ge 0</md> per <m>x\in \R</m>.</p></statement>
+    <answer>
+        <p><md>S=(-\infty, -3) \cup [1,2] \cup (3,+\infty)</md></p>
+    </answer>
     <solution>
         <p>
             Il grafico dei segni era stato tracciato nell'<xref ref="ex-grafico-segni-fraz-alg-1"/>.

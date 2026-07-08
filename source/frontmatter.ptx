@@ -28,9 +28,12 @@
     <colophon-items/>
   </colophon>
 
-  <!-- <preface>
-      <p>Prefazione...</p>
-  </preface> -->
+  <preface>
+    <title>Come usare il libro</title>
+    <p>Il libro è pensato con un'idea di base: teoria e applicazioni non sono due mondi distinti. Il libro è diviso per argomenti, ma gli esempi e gli esercizi saranno indicati vicino alla relativa parte di teoria e non in una sezione separata. Per ora ci sono due tipi di applicazioni: gli esempi e gli esercizi.</p>
+    <p>Gli esempi hanno un testo e una soluzione, cioè lo svolgimento passo a passo. Alcune volte sono fornite più soluzioni con tecniche diverse, ma il risultato finale è lo stesso. Puoi provare a risolvere l'esercizio prima di vedere la soluzione e poi controllare se la tua procedura è corretta. Se l'esercizio prevede una risposta numerica <q>secca</q> (come la soluzione di un'equazione), è disponibile anche la risposta senza tutto il procedimento.</p>
+    <p>Gli esercizi contrassegnati con il simbolo &#x2728; sono dei generatori di esercizi. Cliccando sul pulsante <c>Attiva</c> attiverai l'ambiente di inserimento e controllo risultati. Alcuni esercizi hanno dei campi in cui puoi indicare il risultato: col pulsante <c>Controlla le risposte</c> potrai verificare la correttezza delle risposte che hai inserito; col pulsante <c>Mostra</c> potrai vedere i risultati dei campi richiesti. Se è prevista una procedura sarà disponibile anche la soluzione nel menù a tendina. Il tasto <c>Casuale</c> genera un nuovo esercizio, mentre <c>Azzera</c> chiude l'ambiente di generazione. Ricorda che una volta <q>perso</q> l'esercizio cliccando su uno di questi ultimi due tasti, sarà quasi impossibile recuperare il testo, quindi ricopialo bene se vuoi fare un controllo successivo!</p>
+  </preface>
 
   <!-- <dedication>
     <p>
