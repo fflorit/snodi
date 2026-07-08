@@ -18,8 +18,13 @@
 
   <appendix>
     <title>Assiomi, definizioni, teoremi</title>
-    <list-of elements="axiom definition theorem" divisions="chapter" empty="yes"/>
-</appendix>
+    <list-of elements="axiom definition theorem" divisions="chapter"/>
+  </appendix>
+
+  <appendix>
+    <title>Algoritmi e procedure</title>
+    <list-of elements="algorithm" divisions="chapter"/>
+  </appendix>
 
   <index>
     <title>Indice analitico</title>
