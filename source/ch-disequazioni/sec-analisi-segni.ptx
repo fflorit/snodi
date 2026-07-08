@@ -227,7 +227,7 @@
 
 
 
-    <example><title>Studio del segno di una frazione algebrica 1</title>
+    <example xml:id="ex-grafico-segni-fraz-alg-1"><title>Studio del segno di una frazione algebrica 1</title>
     <statement><p>Studia il segno di <md>\frac{x^2-3x+2}{x^2-9}</md> al variare di <m>x\in \R</m>.</p></statement>
     <solution>
         <p>
@@ -368,6 +368,26 @@
         <p>
             quindi si vanno a considerare nell'ultima riga (risultato) solo intervalli e valori coi simboli <m>-</m> e <m>0</m>. Questi sono gli intervalli <m>x\le -2 \vee 0 \le x \le 1</m>, quindi la soluzione della disequazione è:
             <md>S=(-\infty, 2] \cup [0,1]</md>
+        </p>
+    </solution>
+    </example>
+
+    <example><title>Disequazione razionale fratta</title>
+    <statement><p>Risolvi <md>\frac{x^2-3x+2}{x^2-9}\ge 0</md> per <m>x\in \R</m>.</p></statement>
+    <solution>
+        <p>
+            Il grafico dei segni era stato tracciato nell'<xref ref="ex-grafico-segni-fraz-alg-1"/>.
+        </p>
+        <image width="40%">
+            <latex-image>
+                \begin{tikzpicture}
+                    \GraficoSegni{{-3,1,2,3}}{{{N/+,,+,0,-,0,+,,+}, {D/+,0,-,,-,,-,0,+}, {{N/D}/+,\nexists,-,0,+,0,-,\nexists,+}}}
+                \end{tikzpicture}
+            </latex-image>
+        </image>
+        <p>
+            quindi si vanno a considerare nell'ultima riga (risultato) solo intervalli e valori coi simboli <m>+</m> e <m>0</m>. Questi sono gli intervalli <m>x\lt -3 \vee 1\le x \le 2 \vee x \gt 3</m>, quindi la soluzione della disequazione è:
+            <md>S=(-\infty, -3) \cup [1,2] \cup (3,+\infty)</md>
         </p>
     </solution>
     </example>
