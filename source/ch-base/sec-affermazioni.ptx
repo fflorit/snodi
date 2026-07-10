@@ -1,20 +1,20 @@
 <?xml version='1.0' encoding='utf-8'?>
 
 <section xml:id="sec-affermazioni" xmlns:xi="http://www.w3.org/2001/XInclude">
-<title>Affermazioni matematiche</title>
+<title>Affermazioni matematiche e logica</title>
 <introduction>
     <blockquote>
         <p>You can prove anything you want by coldly logical reason &#x2014; if you pick the proper postulates.</p>
         <attribution>Isaac Asimov, <q>Reason</q> in <em>I, Robot</em> (1950)</attribution>
     </blockquote>
 
-    <p>La matematica si basa su ragionamenti logici che partono da delle affermazioni base per trarre delle conclusioni vere finchè sono vere le affermazioni base. Ogni considerazione matematica che abbiamo visto (e che vedremo) è basata su questo principio. Elenchiamo ora come si chiamano queste affermazioni nel linguaggio della matematica.</p>
+    <p>La matematica si basa su ragionamenti logici che partono da delle affermazioni base per trarre delle conclusioni vere finché sono vere le affermazioni base. Ogni considerazione matematica che abbiamo visto (e che vedremo) è basata su questo principio. Elenchiamo ora come si chiamano queste affermazioni nel linguaggio della matematica.</p>
 </introduction>
 
 <subsection>
     <title>Definizione</title>
     <definition><title>Definizione</title><idx><h>proposizione</h><h>definizione</h></idx>
-    <statement><p>Si chiama <term>definizione</term> una proposizione che descrive, chiaramente e sinteticamente, un ente matematico (algebrico o geometrico) servendosi di termini aventi un significato noto.</p></statement>
+    <statement><p>Si chiama <term>definizione</term> una proposizione (una frase) che descrive, chiaramente e sinteticamente, un ente matematico (algebrico o geometrico) servendosi di termini aventi un significato noto.</p></statement>
     </definition>
     <p>La definizione è solo un <q>chiamare qualcosa di complicato con un nome più semplice o unico</q>. Soprattutto quando si svolgono dei conti è comodo definire con un nome diverso un insieme di oggetti/operazioni. Ogni tanto vedremo una relazione di uguaglianza specifica (<m>\defeq</m>) per indicare che si tratta di una definizione e non di un passaggio matematico particolare. <notation><usage><m>\defeq</m></usage><description>Definizione di una quantità</description></notation></p>
     <p>Esempio di definizione: definizione di postulato, definizione del discriminante di un’equazione di secondo grado <m>\Delta\defeq b^2-4ac</m>, definizione della variabile ausiliaria nelle equazioni risolvibili per sostituzione (come le trinomie).</p>
@@ -63,6 +63,67 @@
     <p>Le congetture sono quindi delle affermazioni che si verificano nella pratica, senza però averne certezza logico-matematica. Sono quindi dei teoremi senza dimostrazione rigorosa.</p>
     <p>Esempi di congetture: problemi per il millennio, congettura di Collatz.</p>
     <p>Di solito la dimostrazione delle congetture più rilevanti porta a un premio in denaro (oltre che magari a qualche medaglia). Per esempio i problemi del millennio hanno un premio di un milione di dollari!</p>
+</subsection>
+
+
+<subsection>
+    <title>Logica classica</title>
+    <p>La logica è quella branca della matematica che permette di trarre conclusioni coerenti a partire da assiomi o teoremi già dimostrati, configurandosi come l'ossatura concettuale del ragionamento scientifico. Le regole fondamentali della logica si originano dal pensiero di Aristotele (IV secolo a.C.), che per primo cercò di codificare le leggi del pensiero corretto attraverso i sillogismi. L'obiettivo era creare delle regole per stabilire se un ragionamento (un insieme di proposizioni) era coerente e corretto. La logica matematica attualmente in uso si è sviluppata tra il XIX e il XX secolo grazie al lavoro, tra gli altri, di George Boole e Augustus De Morgan, che posero le basi formali della logica creando un vero e proprio linguaggio simbolico. Vedremo solo alcuni aspetti della logica, che ci saranno utili in particolare per leggere e comprendere alcune scritture matematiche.</p>
+    <p>Una proposizione (una frase, sia testuale che sotto forma di formule) si indica con il simbolo <m>:</m> (letto <q>tale che</q><notation><usage><m>:, t.c., |</m></usage><description>Tale che</description></notation>). Per esempio <m>p:</m><q>oggi piove</q> è la definizione di una proposizione <m>p</m> che contiene al suo interno l'informazione che oggi piove. La proposizione può essere anche una formula come <m>p:x=1</m>, che indica una proposizione <m>p</m> che contiene al suo interno l'informazione che <m>x</m> ha valore 1.</p>
+    <p>Per ogni proposizione <m>p</m> esiste la proposizione <term>contraria</term> <m>\neg p</m> che ha il significato opposto a quello di <m>p</m>. Per esempio la proposizione <m>p:</m><q>oggi piove</q> ha come proposizione contraria <m>\neg p:</m><q>oggi non piove</q>.</p>
+    <p>Una proposizione, quando è compresa da chi legge, può essere solo vera o falsa. Vale infatti il principio del terzo escluso (o principio di bivalenza):</p>
+    <axiom xml:id="ax-terzo-escluso"><title>Principio del terzo escluso</title><idx><h>principio</h><h>del terzo escluso</h></idx>
+        <statement>
+            <p>
+                Secondo il <term>principio del terzo escluso</term> (in latino <foreign xml:lang="la">tertium non datur</foreign>), una proposizione <m>p</m> è vera oppure è falsa, non c'è una terza opzione o una via di mezzo. In maniera equivalente si dice che non possono essere vere contemporaneamente sia una proposizione <m>p</m> che la sua contraria <m>\neg p</m>.
+            </p>
+        </statement>
+    </axiom>
+    <p>Il principio del terzo escluso è il principio della coerenza matematica: non possiamo dimostrare qualcosa (una frase, un calcolo) e ammettere che sia vero anche il contrario, in quanto si creerebbe una <term>contraddizione</term>. Troveremo spesso nei prossimi capitoli più modi per risolvere un problema, ma tutti dovranno essere coerenti tra loro (dobbiamo arrivare allo stesso risultato), quindi non violeremo mai il principio del terzo escluso. I calcoli sono di fatto delle proposizioni mascherate e ci portano a delle conclusioni come in un ragionamento: se il ragionamento è contraddittorio, allora è sicuramente falso, cioè <alert>una procedura (dimostrativa o di calcolo) contraddittoria è sicuramente sbagliata, senza eccezioni</alert> e commettere un errore di questo tipo è anche un errore grave.</p>
+    <p>
+        Se si considerano più proposizioni è possibile collegarle tra loro attraverso dei <term>connettivi logici</term> e i più usati sono <m>\wedge</m> (letto <q>E</q>) e <m>\vee</m> (letto <q>O</q>)<notation><usage><m>\wedge, \vee</m></usage><description>E (e anche), O (oppure)</description></notation>. Per esempio: <m>p:</m><q>oggi studio matematica</q> e <m>q:</m><q>oggi studio inglese</q> possono essere collegate in più modi, tra cui:
+        <ul>
+            <li><p><m>p\wedge q:</m><q>oggi studio matematica E oggi studio inglese</q> per indicare che studierò entrambe le materie</p></li>
+            <li><p><m>p\vee q:</m><q>oggi studio matematica O oggi studio inglese</q> per indicare che studierò una materia o l'altra o entrambe</p></li>
+        </ul>
+        Queste conclusioni sono spesso facilmente visibili nelle cosiddette <term>tavole di verità</term> che dicono cosa succede al risultato di una connessione logica di due proposizioni in base al fatto che le proposizioni siano vere (V) o false (F).
+    </p>
+    <tabular halign="center">
+        <row header="yes" bottom="minor" ><cell><m>p</m></cell> <cell><m>q</m></cell> <cell><m>p\wedge q</m></cell> <cell><m>p\vee q</m></cell></row>
+        <row><cell>V</cell> <cell>V</cell> <cell>V</cell> <cell>V</cell></row>
+        <row><cell>V</cell> <cell>F</cell> <cell>F</cell> <cell>V</cell></row>
+        <row><cell>F</cell> <cell>V</cell> <cell>F</cell> <cell>V</cell></row>
+        <row><cell>F</cell> <cell>F</cell> <cell>F</cell> <cell>F</cell></row>
+    </tabular>
+    <p>Riprendendo l'esempio dello studio di matematica e inglese. Se mi viene chiesto <q>oggi hai studiato matematica e inglese?</q> mi viene chiesto se è vera <m>p\wedge q</m>: dalla tabella di verità, la risposta <q>sì</q> è vera (non mento) soltanto quando ho studiato entrambe le materie (cioè sono vere sia <m>p</m> che <m>q</m>); la risposta <q>sì</q> è falsa (o la risposta <q>no</q> è vera, cioè mento) se non ho studiato una delle due materie o nessuna delle due. Se la domanda fosse stata <q>oggi hai studiato?</q> (sottintendendo <q>matematica o inglese</q>) avrei dovuto valutare se è vera <m>p\vee q</m>: dalla tabella di verità, la risposta <q>sì</q> è vera (non mento) a patto che abbia studiato almeno una delle due materie (cioè siano vere <m>p</m> o <m>q</m> o entrambe); la risposta <q>sì</q> è falsa (mento) se non ho studiato nessuna delle due materie.</p>
+
+    <p>Se il verificarsi di una proposizione implica il verificarsi di un'altra, si parla di <term>implicazione logica</term> che viene indicata col connettivo <m>\rightarrow</m><notation><usage><m>\rightarrow</m></usage><description>Se &#8230; allora &#8230;</description></notation>. Per esempio <m>p\rightarrow q</m> (letto <q>se <m>p</m>, allora <m>q</m></q>) indica che quando <m>p</m> è vera allora anche <m>q</m> è vera, ma non è detto che sia vera l'<term>implicazione inversa</term> <m>q\rightarrow p</m>. La proposizione <m>p</m> coincide con la <term>protasi</term> del periodo ipotetico, mentre <m>q</m> coincide con l'<term>apodosi</term>. Per esempio <m>p:</m><q>studio matematica tutti i giorni</q> e <m>q:</m><q>ottengo un bel voto</q> possono essere collegate così: <m>p\rightarrow q:</m><q>SE studio matematica tutti i giorni, ALLORA ottengo un bel voto</q>, ma questo non significa che l'aver preso un bel voto è conseguenza di aver studiato matematica tutti i giorni (potrei aver studiato solo il giorno prima della verifica o potrei aver copiato senza studiare); dall'altro lato so per certo che se prendo un brutto voto (cioè è vera <m>\neg q</m>) allora vuol dire che non ho studiato tutti i giorni matematica (cioè è vera <m>\neg q</m>): questo è il cosiddetto <term>principio della contronominale</term>, cioè se si verifica <m>p\rightarrow q</m>, allora si verifica anche <m>\neg q\rightarrow \neg p</m>. Dire che un'implicazione è vera significa dire che il ragionamento è coerente e corretto, per cui si può ottenere la tavola di verità:</p>
+    <tabular halign="center">
+        <row header="yes" bottom="minor" ><cell><m>p</m></cell> <cell><m>q</m></cell> <cell><m>\neg p</m></cell> <cell><m>\neg q</m></cell> <cell><m>p\rightarrow q</m></cell> <cell><m>\neg q\rightarrow \neg p</m></cell></row>
+        <row><cell>V</cell> <cell>V</cell> <cell>F</cell> <cell>F</cell> <cell>V</cell> <cell>V</cell></row>
+        <row><cell>V</cell> <cell>F</cell> <cell>F</cell> <cell>V</cell> <cell>F</cell> <cell>F</cell></row>
+        <row><cell>F</cell> <cell>V</cell> <cell>V</cell> <cell>F</cell> <cell>V</cell> <cell>V</cell></row>
+        <row><cell>F</cell> <cell>F</cell> <cell>V</cell> <cell>V</cell> <cell>V</cell> <cell>F</cell></row>
+    </tabular>
+    <p>Se per un'implicazione logica è vera anche la contronominale si parla di <term>doppia implicazione logica</term> e usa il simbolo <m>\leftrightarrow</m> <notation><usage><m>\leftrightarrow</m></usage><description>Se e solo se &#8230; allora &#8230;</description></notation>. Per esempio <m>p\leftrightarrow q</m> (letto <q>se e solo se <m>p</m>, allora <m>q</m></q>) indica che quando <m>p</m> è vera allora anche <m>q</m> è vera e viceversa. Riprendendo l'esempio <m>p:</m><q>studio matematica tutti i giorni</q> e <m>q:</m><q>ottengo un bel voto</q> possono dare <m>p\leftrightarrow q:</m><q>SE E SOLO SE studio matematica tutti i giorni, ALLORA ottengo un bel voto</q>, indicando che l'unico modo per prendere un bel voto è studiare matematica tutti i giorni, quindi l'aver preso un bel voto implica che ho studiato matematica tutti i giorni (non ho studiato solo il giorno prima della verifica non posso/riesco a copiare durante la verifica). Per fare un altro esempio, la quasi totalità delle leggi sulle agevolazioni fiscali funziona attraverso delle doppie implicazioni logiche: si ottiene una determinata detrazione/deduzione nella dichiarazione dei redditi se e solo se sono soddisfatti certi criteri da parte del richiedente. In generale si può costruire la tavola di verità (per vedere la correttezza del ragionamento):</p>
+    <tabular halign="center">
+        <row header="yes" bottom="minor" ><cell><m>p</m></cell> <cell><m>q</m></cell> <cell><m>p\leftrightarrow q</m></cell></row>
+        <row><cell>V</cell> <cell>V</cell> <cell>V</cell></row>
+        <row><cell>V</cell> <cell>F</cell> <cell>F</cell></row>
+        <row><cell>F</cell> <cell>V</cell> <cell>F</cell></row>
+        <row><cell>F</cell> <cell>F</cell> <cell>V</cell></row>
+    </tabular>
+
+    <example>
+        <title>Implicazioni logiche</title>
+        <statement>
+            <p>Consideriamo le due proposizioni <m>p:</m><q>oggi piove</q> e <m>q:</m><q>oggi faccio i compiti</q>. Scrivi a parole e commenta le implicazioni <m>p\rightarrow q</m> e <m>p\leftrightarrow q</m>.</p>
+        </statement>
+        <solution>
+            <p><m>p\rightarrow q:</m><q>Se oggi piove allora faccio i compiti</q> significa che se piove faccio sicuramente i compiti (niente scuse!). Se non ho fatto i compiti sicuramente non pioveva (principio della contronominale). Questo però vuol dire che se non piove posso comunque fare i compiti (non vale l’implicazione inversa <m>q\rightarrow p:</m>).</p>
+            <p><m>p\leftrightarrow q:</m><q>Se e solo se piove allora faccio i compiti</q> significa che faccio i compiti solo e soltanto se piove (e in nessuna altra circostanza). Questo significa che se piove sono diligente e faccio i compiti, ma se c’è il sole i compiti non li faccio di certo! Questo vuol dire anche che piove solo quando faccio i compiti (vale l'implicazione inversa).</p>
+        </solution>
+    </example>
 </subsection>
 
 </section>
