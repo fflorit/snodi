@@ -48,7 +48,7 @@
         <title>Ordinamento numeri</title>
         <statement>
             <p>
-                Trascina e ordina i seguenti numeri dal maggiore (più in alto) al minore (più in basso).
+                Trascina e ordina i seguenti numeri dal minore (più a sinistra) al maggiore (più a destra).
             </p>
         </statement>
         <blocks layout="horizontal">
