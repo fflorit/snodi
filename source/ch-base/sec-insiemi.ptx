@@ -1,15 +1,15 @@
 <?xml version='1.0' encoding='utf-8'?>
 
 <section xml:id="sec-insiemi" xmlns:xi="http://www.w3.org/2001/XInclude">
-<title>Insiemi, operazioni tra insiemi, insiemi numerici, intervalli</title>
+<title>Insiemi, operazioni tra insiemi, insiemi numerici</title>
 <introduction>
     <p>Gli insiemi e i sottoinsiemi sono alla base della maggior parte delle scritture matematiche. Tra i più usati possiamo ricordare gli insiemi numerici, l'insieme delle soluzioni di un'equazione o una disequazione, l'insieme di definizione di una funzione, eccetera. Gli insiemi in generale non contengono solo numeri: potrebbero contenere oggetti astratti, parole, lettere e perfino altri insiemi.
     </p>
 </introduction>
 
-<subsection>
+<subsection xml:id="subsec-insiemi-op">
     <title>Insiemi e operazioni</title>
-    <p>La definizione di <term>insieme</term> non esiste, perché è un <em>ente primitivo</em> della matematica e non ci serve una definizione per capire cos'è in quanto è intuitivo. Definiamo quindi solo la notazione: un insieme composto si indica solitamente con una lettera maiuscola e i suoi elementi, se indicati singolarmente, vanno indicati dopo l'uguale, tra parentesi graffe separati da virgole <notation><usage><m>A = \{a_1, a_2, a_3, \dots\}</m></usage><description>Insieme con elementi specificati</description></notation><idx>insieme</idx>
+    <p>La definizione di <term>insieme</term> non esiste, perché è un <em>ente primitivo</em> della matematica e non ci serve una definizione per capire cos'è in quanto è intuitivo. Definiamo quindi solo la notazione: un insieme composto si indica solitamente con una lettera maiuscola e i suoi elementi, se indicati singolarmente, vanno indicati dopo l'uguale, tra parentesi graffe separati da virgole <notation><usage><m>\{a_1, a_2, a_3, \dots\}</m></usage><description>Insieme con elementi specificati</description></notation><idx>insieme</idx>
     <md>A = \{a_1, a_2, a_3, \dots\}</md>
     Per esempio: l'insieme <m>L</m> delle lettere che compongono la parola <q>matematica</q> è <m>L=\{a, c, e, i, m, t\}</m>; l'insieme delle soluzioni (radici) dell'equazione di secondo grado <m>x^2-1=0</m> è <m>S=\{-1,1\}</m> o anche <m>S=\{\pm 1\}</m>.</p>
     <p>Per indicare che un elemento <term>appartiene</term> a un insieme (cioè che l'elemento è uno degli elementi dell'insieme) useremo il simbolo <m>\in</m>. Negli esempi precedenti <m>a \in L</m> (tra gli altri) e <m>-1 \in S</m>. Se un elemento <term>non appartiene</term> a un insieme usiamo il simbolo <m>\not\in</m>. Per esempio la lettera b non fa parte della parola <q>matematica</q>, quindi <m>b\not\in L</m>.<notation><usage><m>\in, \not\in</m></usage><description>Appartiene, non appartiene</description></notation></p>
@@ -17,11 +17,14 @@
     <p>Se un insieme <m>A</m> ha tutti gli elementi contenuti in un altro insieme <m>B</m>, allora si dice che <m>A</m> è un <term>sottoinsieme</term> di <m>B</m><idx><h>insieme</h><h>sottoinsieme</h></idx> e si indica come <m>A\subseteq B</m><notation><usage><m>\subseteq</m></usage><description>Sottoinsieme</description></notation>. Per esempio l'insieme <m>L_1=\{a, e, m, o, r\}</m> delle lettere che costituiscono la parola <q>amore</q> è un sottoinsieme di <m>L_2=\{a, e, m, o, r, t\}</m> delle lettere che costituiscono la parola <q>teorema</q>, quindi <m>L_1\subseteq L_2</m>.</p>
     <p>Tra insiemi si posso fare delle operazioni binarie (cioè fra due insiemi <m>A</m> e <m>B</m>) che danno come risultato un altro insieme e in particolare utilizzeremo: <notation><usage><m>\cup,\cap</m></usage><description>Unione, intersezione</description></notation>
     <ul>
-    <li>l'<term>unione</term> <m>A \cup B</m>, cioè l'insieme gli elementi comuni e non comuni dei due insiemi;</li>
-    <li>l'<term>intersezione</term> <m>A \cap B</m>, cioè l'insieme dei soli elementi comuni dei due insiemi</li>
+    <li><p>l'<term>unione</term> <m>A \cup B\defeq \{x\in A \vee x\in B\}</m>, cioè l'insieme gli elementi comuni e non comuni dei due insiemi;</p></li>
+    <li><p>l'<term>intersezione</term> <m>A \cap B \defeq \{x\in A \wedge x\in B\}</m>, cioè l'insieme dei soli elementi comuni dei due insiemi</p></li>
     </ul>
     Per esempio consideriamo le parole <q>matematica</q> e <q>divertente</q> e gli insiemi <m>L_1=\{a, c, e, i, m, t\}</m> e <m>L_2=\{d, e, i, n, r, t, v\}</m> delle lettere che compongono le due parole. Le parole <q>matematica divertente</q> hanno come insieme delle lettere l'unione dei due insiemi <m>L_1 \cup L_2 = \{a, c, d, e, i, m, n, r, t, v\}</m> (da notare che non abbiamo contato due volte gli elementi comuni). L'insieme delle lettere che accomunano le due parole è invece l'intersezione dei due insiemi di partenza <m>L_1 \cap L_2 = \{e, i, t\}</m> (quindi c'è qualcosa di divertente nella matematica e viceversa!). Se avessimo scelto altre parole l'intersezione avrebbe potuto dare come risultato l'insieme vuoto: <q>radici</q> e <q>bello</q> non hanno lettere in comune, infatti <m>L_1 = \{a, c, d, i, r\}</m> e <m>L_2 = \{b, e, l, o\}</m> hanno <m>L_1 \cap L_2 = \emptyset</m> (non c'è niente di bello nelle radici e viceversa!). Per questi esempi unione e intersezione vanno fatte confrontando gli insiemi manualmente; vedremo che per gli insiemi numerici queste operazioni sono molto più veloci.
     </p>
+
+    <p>Esiste anche un'altra operazione che useremo spesso, la <term>sottrazione insiemistica</term> che come suggerisce il nome sottrae elementi da un insieme all'altro e si indica <m>A - B\defeq \{x\in A \wedge x\not\in B\}</m>. Questa operazione è particolarmente comoda quando si vogliono escludere solo uno o alcuni elementi da un insieme più grande. Per esempio se <m>L</m> è l'insieme delle lettere dell'alfabeto inglese, l'insieme delle lettere dell'alfabeto italiano è <m>L-\{j,k,x,y\}</m>.</p>
+    
 </subsection>
 
 <subsection>
@@ -36,15 +39,42 @@
         <xi:include href="../../assets/latex-images/fig-insiemi-numerici.tex" parse="text" />
     </latex-image></image>
     </sidebyside>
-    <p>Una proprietà importante di tutti gli insiemi numerici (eccetto quello dei numeri complessi) è che i numeri possono essere ordinati. Esiste quindi una <term>relazione d'ordine</term> che permette di ordinare i numeri dal più piccolo al più grande e anche di rappresentare i numeri su una <term>linea orientata</term>. Questo permette di scrivere delle relazioni tra numeri come <m>\frac{3}{9}=\frac{1}{3}</m>, <m>-1\lt 0</m> oppure <m>\pi\gt 3</m> con i simboli di <term>uguaglianza</term> (<m>=</m>) e disuguaglianza stretta (<term>minore</term> <m>\lt</m> e <term>maggiore</term> <m>\gt</m>). Esistono anche i simboli di disuguaglianza <term>minore o uguale</term> <m>\le</m> e di <term>maggiore o uguale</term> <m>\ge</m> che permettono di confrontare numeri, ammettendo che possano anche essere uguali tra loro. Esiste anche il simbolo di disuguaglianza <term>diverso</term> <m>\ne</m> per indicare che due numeri non sono uguali.<notation><usage><m>=, \lt, \gt, \le, \ge, \ne</m></usage><description>Uguale, minore, maggiore, minore o uguale, maggiore o uguale, diverso</description></notation></p>
+    <p>Una proprietà importante di tutti gli insiemi numerici (eccetto quello dei numeri complessi) è che i numeri possono essere ordinati. Esiste quindi una <term>relazione d'ordine</term> che permette di ordinare i numeri dal più piccolo al più grande e anche di rappresentare i numeri su una <term>linea orientata</term>. Questo permette di scrivere delle relazioni tra numeri come <m>\frac{3}{9}=\frac{1}{3}</m>, <m>-1\lt 0</m> oppure <m>\pi\gt 3</m> con i simboli di <term>uguaglianza</term> (<m>=</m>) e disuguaglianza stretta (<term>strettamente minore</term> <m>\lt</m> e <term>strettamente maggiore</term> <m>\gt</m>). Esistono anche i simboli di disuguaglianza <term>minore o uguale</term> <m>\le</m> e di <term>maggiore o uguale</term> <m>\ge</m> che permettono di confrontare numeri, ammettendo che possano anche essere uguali tra loro. Esiste anche il simbolo di disuguaglianza <term>diverso</term> <m>\ne</m> per indicare che due numeri non sono uguali.<notation><usage><m>=, \lt, \gt, \le, \ge, \ne</m></usage><description>Uguale, strettamente minore, strettamente maggiore, minore o uguale, maggiore o uguale, diverso</description></notation></p>
     <image><latex-image>
         <xi:include href="../../assets/latex-images/fig-linea-numeri.tex" parse="text" />
     </latex-image></image>
-</subsection>
 
-<subsection>
-    <title>Intervalli</title>
-    <p>Tra i sottoinsiemi degli insiemi numerici troviamo anche gli <term>intervalli</term>.</p>
+    <exercise label="ex-ord-num">
+        <title>Ordinamento numeri</title>
+        <statement>
+            <p>
+                Trascina e ordina i seguenti numeri dal maggiore (più in alto) al minore (più in basso).
+            </p>
+        </statement>
+        <blocks layout="horizontal">
+            <block order="7"> <m>-2</m> </block>
+            <block order="8"> <m>-\sqrt{3}</m> </block>
+            <block order="10"> <m>-\frac{3}{2}</m> </block>
+            <block order="2"> <m>-\frac{1}{2}</m> </block>
+            <block order="1"> <m>0</m> </block>
+            <block order="9"> <m>\frac{1}{3}</m> </block>
+            <block order="6"> <m>0.75</m> </block>
+            <block order="12"> <m>1</m> </block>
+            <block order="11"> <m>\sqrt{2}</m> </block>
+            <block order="5"> <m>2</m> </block>
+            <block order="4"> <m>\pi</m> </block>
+            <block order="13"> <m>\frac{9}{2}</m> </block>
+            <block order="3"> <m>5</m>  </block>
+        </blocks>
+    </exercise>
+
+
+    <p>Per comodità definiamo anche altri particolari insiemi numerici che troveremo in futuro:
+    <ul>
+        <li>l'<term>insieme dei numeri reali strettamente positivi</term> <m>\R^+</m>, che contiene tutti i numeri reali positivi (non lo zero), cioè <m>\R^+ \defeq \{x\in\R: x\gt 0\}</m><notation><usage><m>\R^+</m></usage><description>Insieme esteso dei numeri reali</description></notation><idx><h>insieme</h><h>dei numeri reali strettamente positivi</h></idx></li>
+        <li>l'<term>insieme dei numeri reali positivi o nulli</term> <m>\R^+_0</m>, che contiene tutti i numeri reali positivi e lo zero, cioè <m>\R^+_0 \defeq \{x\in\R: x\ge 0\}=\R^+ \cup \{0\}</m><notation><usage><m>\R^+_0</m></usage><description>Insieme esteso dei numeri reali</description></notation><idx><h>insieme</h><h>dei numeri reali strettamente positivi</h></idx></li>
+        <li>l'<term>insieme esteso dei numeri reali</term> <m>\R^*</m>, definito dall'unione dei numeri reali con i due concetti di <m>+\infty</m> e <m>-\infty</m>, cioè <m>\R^* \defeq \R \cup \{-\infty,+\infty\}</m><notation><usage><m>\R^*</m></usage><description>Insieme esteso dei numeri reali</description></notation><idx><h>insieme</h><h>esteso dei numeri reali</h></idx></li>
+    </ul></p>
 </subsection>
 
 </section>
