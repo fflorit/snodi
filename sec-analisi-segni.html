@@ -58,15 +58,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.1.8';
+eBookConfig.runestone_version = '8.1.11';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.917dfc3cfe0bb764.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.d40a1acc1751a0b6.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
+<script src="_static/prefix-runtime.8b6d53d5a91823a0.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.2901d6466316ff22.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.66fa8a682a32c0ac.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="_static/pretext/js/dist/pretext-webwork/2.20/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://cdn.geogebra.org/apps/deployggb.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Calcola (Sage)';
 </script>
 </head>
@@ -75,7 +75,7 @@ eBookConfig.enable_chatcodes =  false;
 <h1 class="heading"><a href="snodi.html"><span class="title">Snodi</span> <span class="subtitle">TBD</span></a></h1>
 <p class="byline">Federico Florit (Curatore)</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
-<button class="toc-toggle button" title="Indice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Indice</span></button><a class="index-button button" href="backmatter-4.html" title="Indice analitico"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Indice analitico</span></a><div class="ptx-search-box">
+<button class="toc-toggle button" title="Indice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Indice</span></button><a class="index-button button" href="backmatter-5.html" title="Indice analitico"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Indice analitico</span></a><div class="ptx-search-box">
 <div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search book" commandfor="ptx-search-dialog" command="show-modal"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog" closedby="closerequest"><div class="ptx-search-dialog-controls">
 <input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close search" id="ptx-search-close" class="ptx-search-close" commandfor="ptx-search-dialog" command="close"><span class="material-symbols-outlined">close</span></button>
@@ -114,32 +114,71 @@ true);
 
 
 
-\newcommand{\parabolina}[2][1]{
+\newcommand{\parabolina}[3][1]{
   \ifx\relax#2\relax
-    
     \gdef\nS{0}
   \else
     \foreach \x [count=\xx] in #2 {\global\let\nS=\xx}
   \fi
-  \ifnum#1&gt;0
+  \ifnum #1&gt;0\relax
     \def\pos{below}
   \else
     \def\pos{above}
   \fi
   \begin{tikzpicture}
     \begin{axis}[xmin=-2,xmax=2, ymin=-2,ymax=2, axis y line=none, axis lines=middle, xtick=\empty, width=3.5cm, clip=false]
-      \ifnum \nS=0 \addplot[domain=-1.5:1.5] {#1*(x^2+1)}; \fi
-      \ifnum \nS=1
-        \addplot[domain=-1.5:1.5] {#1*(x^2)};
-        \addplot[mark=*, mark size=1pt, font=\tiny, inner xsep=0, inner ysep=2pt] coordinates {(0,0)} node[\pos]{$#2$};
+      \ifnum \nS=0\relax
+        \addplot[domain=-1.5:1.5] {#1*(x^2+1)};
+        \ifnum #1\gt0\relax
+          \ifnum\pdfstrcmp{#3}{g}=0\relax
+            \addplot[ultra thick, red, opacity=.3, domain=-1.7:1.7] {0};
+          \fi
+        \fi
+        \ifnum #1\lt0\relax
+          \ifnum\pdfstrcmp{#3}{l}=0\relax
+            \addplot[ultra thick, red, opacity=.3, domain=-1.7:1.7] {0};
+          \fi
+        \fi
       \fi
-      \ifnum \nS=2
+      \ifnum \nS=1\relax
+        \addplot[domain=-1.5:1.5] {#1*(x^2)};
+        \addplot[mark=o, mark size=1pt, font=\tiny, inner xsep=0, inner ysep=2pt] coordinates {(0,0)} node[\pos]{$#2$};
+        \ifnum #1&gt;0\relax
+          \ifnum\pdfstrcmp{#3}{g}=0\relax
+            \addplot[ultra thick, red, opacity=.3, domain=-1.7:1.7] {0};
+          \fi
+        \fi
+        \ifnum #1\lt0\relax
+          \ifnum\pdfstrcmp{#3}{l}=0\relax
+            \addplot[ultra thick, red, opacity=.3, domain=-1.7:1.7] {0};
+          \fi
+        \fi
+      \fi
+      \ifnum \nS=2\relax
         \addplot[domain=-1.5:1.5] {#1*(x^2-1)};
-        \addplot[mark=*, mark size=1pt, draw=none] coordinates {(-1,0) (1,0)};
+        \addplot[mark=o, mark size=1pt, draw=none] coordinates {(-1,0) (1,0)};
         \draw[font=\tiny] 
         \foreach \x [count=\xx] in #2 {
-          (\xx*2-3,0) node[\pos, fill=white, fill opacity=.3, text opacity=1, text=black, inner xsep=0, inner ysep=2pt]{$\x$}
+          (\xx*2-3,0) node[\pos, fill=white, fill opacity=.7, text opacity=1, text=black, inner xsep=0, inner ysep=2pt]{$\x$}
         };
+        \ifnum #1\gt0\relax
+          \ifnum\pdfstrcmp{#3}{g}=0\relax
+            \addplot[ultra thick, red, opacity=.3, domain=-1.7:-1] {0};
+            \addplot[ultra thick, red, opacity=.3, domain=1:1.7] {0};
+          \fi
+          \ifnum\pdfstrcmp{#3}{l}=0\relax
+            \addplot[ultra thick, red, opacity=.3, domain=-1:1] {0};
+          \fi
+        \fi
+        \ifnum #1\lt0\relax
+          \ifnum\pdfstrcmp{#3}{l}=0\relax
+            \addplot[ultra thick, red, opacity=.3, domain=-1.7:-1] {0};
+            \addplot[ultra thick, red, opacity=.3, domain=1:1.7] {0};
+          \fi
+          \ifnum\pdfstrcmp{#3}{g}=0\relax
+            \addplot[ultra thick, red, opacity=.3, domain=-1:1] {0};
+          \fi
+        \fi
       \fi
     \end{axis}
   \end{tikzpicture}
@@ -175,6 +214,56 @@ true);
     \draw[dotted] (\xx-1,0) -- ++(0,\pos-\spazio); 
   }
 }
+
+
+\newcommand{\GraficoLinee}[3][x]{
+  \def\spazio{0.6}
+  \def\emptyvar{}
+  \def\chiuso{c}
+  \foreach \x [count=\xx] in #2 {
+    \global\let\numNum=\xx
+    \draw[thin] (\xx-1,-.1) -- ++(0,.2) node[above]{$\x$}; 
+  }
+  \draw[-latex, ultra thick] (-1,0) -- (\numNum,0) node[above]{$#1$}; 
+
+  \foreach \l\mode in #3 {
+    \gdef\aFatto{0}
+    \foreach \m [count=\k from -1] in \mode {
+      \ifx\m\emptyvar
+      \else
+        \ifnum\k=-1 
+          \node (a) at (\k,-\l*\spazio) {};
+          \gdef\aFatto{1}
+        \else
+          \ifnum\k=\numNum 
+              \node (b) at (\k,-\l*\spazio) {};
+          \else 
+            \ifx\m\chiuso
+              \ifnum\l=0
+                \tikzset{stileNodo/.style={circle, fill=red, fill opacity=.5, inner sep=2pt}}
+              \else
+                \tikzset{stileNodo/.style={circle, fill, inner sep=2pt}}
+              \fi
+            \else
+              \tikzset{stileNodo/.style={draw, circle, inner sep=2pt}}
+            \fi
+            \ifnum\aFatto=0
+              \node[stileNodo] (a) at (\k,-\l*\spazio) {};
+              \gdef\aFatto{1}
+            \else
+              \node[stileNodo] (b) at (\k,-\l*\spazio) {};
+            \fi
+          \fi
+        \fi
+      \fi
+    }
+    \ifnum\l=0
+      \draw[line width=4pt, red, opacity=.5] (a) -- (b);
+    \else
+      \draw[ultra thick] (a) -- (b);
+    \fi
+  }
+}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -183,45 +272,59 @@ true);
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
-<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Materiale iniziale</span></a></div></li>
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Materiale iniziale</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Come usare il libro</span></a></div></li>
+</ul>
+</li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-base.html" class="internal"><span class="codenumber">1</span> <span class="title">Concetti base</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-affermazioni.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Affermazioni matematiche</span></a></div>
+<div class="toc-title-box"><a href="sec-affermazioni.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Affermazioni matematiche e logica</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-affermazioni.html#sec-affermazioni-3" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Definizione</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-affermazioni.html#sec-affermazioni-4" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Postulato o assioma</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-affermazioni.html#sec-affermazioni-5" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Teorema</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-affermazioni.html#sec-affermazioni-6" class="internal"><span class="codenumber">1.1.4</span> <span class="title">Corollario e lemma</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-affermazioni.html#sec-affermazioni-7" class="internal"><span class="codenumber">1.1.5</span> <span class="title">Congettura</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-affermazioni.html#sec-affermazioni-8" class="internal"><span class="codenumber">1.1.6</span> <span class="title">Logica classica</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-insiemi.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Insiemi, operazioni tra insiemi, insiemi numerici, intervalli</span></a></div>
+<div class="toc-title-box"><a href="sec-insiemi.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Insiemi, operazioni tra insiemi, insiemi numerici</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-insiemi.html#sec-insiemi-3" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Insiemi e operazioni</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-insiemi.html#subsec-insiemi-op" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Insiemi e operazioni</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-insiemi.html#sec-insiemi-4" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Insiemi numerici</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-insiemi.html#sec-insiemi-5" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Intervalli</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-op-arit.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Operazioni aritmetiche</span></a></div>
+<div class="toc-title-box"><a href="sec-intervalli.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Intervalli e loro operazioni</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-op-arit.html#sec-op-arit-3" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Somma</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-op-arit.html#sec-op-arit-4" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Moltiplicazione</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-op-arit.html#sec-op-arit-5" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Sottrazione</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-op-arit.html#sec-op-arit-6" class="internal"><span class="codenumber">1.3.4</span> <span class="title">Divisione</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-op-arit.html#exint-op-aritm" class="internal"><span class="codenumber">1.3.5</span> <span class="title">Esercizi sulle operazioni base</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-op-arit.html#sec-op-arit-8" class="internal"><span class="codenumber">1.3.6</span> <span class="title">Eleveamento a potenza</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-op-arit.html#sec-op-arit-9" class="internal"><span class="codenumber">1.3.7</span> <span class="title">Estrazione di radice</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-intervalli.html#sec-intervalli-3" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Intervalli</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-intervalli.html#sec-intervalli-4" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Unione di intervalli</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-intervalli.html#sec-intervalli-5" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Intersezione di intervalli</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-espr-lett.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Espressioni letterali</span></a></div>
+<div class="toc-title-box"><a href="sec-op-arit.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Operazioni aritmetiche</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-espr-lett.html#sec-espr-lett-3" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Monomi</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-espr-lett.html#sec-espr-lett-4" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Polinomi</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-op-arit.html#sec-op-arit-3" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Somma</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-op-arit.html#sec-op-arit-4" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Moltiplicazione</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-op-arit.html#sec-op-arit-5" class="internal"><span class="codenumber">1.4.3</span> <span class="title">Sottrazione</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-op-arit.html#sec-op-arit-6" class="internal"><span class="codenumber">1.4.4</span> <span class="title">Divisione</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-op-arit.html#exint-op-aritm" class="internal"><span class="codenumber">1.4.5</span> <span class="title">Esercizi sulle operazioni base</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-op-arit.html#sec-op-arit-8" class="internal"><span class="codenumber">1.4.6</span> <span class="title">Elevamento a potenza</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-op-arit.html#sec-op-arit-9" class="internal"><span class="codenumber">1.4.7</span> <span class="title">Estrazione di radice</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-espr-lett.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Espressioni letterali</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-espr-lett.html#sec-espr-lett-3" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Monomi</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-espr-lett.html#sec-espr-lett-4" class="internal"><span class="codenumber">1.5.2</span> <span class="title">Polinomi</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -231,21 +334,15 @@ true);
 <div class="toc-title-box"><a href="ch-disequazioni.html" class="internal"><span class="codenumber">3</span> <span class="title">Disequazioni</span></a></div>
 <ul class="structural toc-item-list contains-active"><li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="sec-analisi-segni.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Studio del segno</span></a></div>
-<ul class="structural toc-item-list active"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-analisi-segni.html#sec-analisi-segni-3" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Grafico dei segni</span></a></div></li></ul>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-analisi-segni.html#sec-analisi-segni-3" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Grafico dei segni</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-analisi-segni.html#sec-analisi-segni-4" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Risolvere disequazioni col grafico dei segni</span></a></div></li>
+</ul>
 </li></ul>
 </li>
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-funzioni.html" class="internal"><span class="codenumber">4</span> <span class="title">Funzioni</span></a></div></li>
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-piano-cartesiano.html" class="internal"><span class="codenumber">5</span> <span class="title">Piano cartesiano</span></a></div></li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-retta.html" class="internal"><span class="codenumber">6</span> <span class="title">Retta</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-equazione.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Equazione della retta</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-equazione.html#subsec-a-subsection" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Teoremi e dimostrazioni</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-retta_interattiva.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Esempio interattivo</span></a></div></li>
-</ul>
-</li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-retta.html" class="internal"><span class="codenumber">6</span> <span class="title">Retta</span></a></div></li>
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-parabola.html" class="internal"><span class="codenumber">7</span> <span class="title">Parabola</span></a></div></li>
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-esponenziali-logaritmi.html" class="internal"><span class="codenumber">8</span> <span class="title">Funzioni esponenziali e logaritmiche</span></a></div></li>
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-limiti.html" class="internal"><span class="codenumber">9</span> <span class="title">Limiti</span></a></div></li>
@@ -259,7 +356,8 @@ true);
 <ul class="structural toc-item-list">
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Notazione</span></a></div></li>
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="codenumber">B</span> <span class="title">Assiomi, definizioni, teoremi</span></a></div></li>
-<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="title">Indice analitico</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="codenumber">C</span> <span class="title">Algoritmi e procedure</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-5.html" class="internal"><span class="title">Indice analitico</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
@@ -275,9 +373,71 @@ true);
 <h3 class="heading hide-type">
 <span class="type">Sottoparagrafo</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Grafico dei segni</span>
 </h3>
-<div class="para" id="sec-analisi-segni-3-2">La tecnica più efficace per studiare il segno di un polinomio, una frazione algebrica o qualsiasi altra espressione letterale è usare la tecnica del <i class="foreign" lang="la">divide et impera</i>, separando il problema in sottoproblemi più piccoli e semplici da risolvere. Nel caso dello studio del segno si cerca di scopporre qualsiasi espressione in fattori (i polinomi in particolare vengono scomposti in fattori di grado 2 al massimo), così che sia possibile studiare il segno di ogni fattore per poi riunire queste informazioni in quello che si chiama il <dfn class="terminology">grafico di segni</dfn>.<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="para" id="sec-analisi-segni-3-2">La tecnica più efficace per studiare il segno di un polinomio, una frazione algebrica o qualsiasi altra espressione letterale è usare la tecnica del <i class="foreign" lang="la">divide et impera</i>, separando il problema in sotto-problemi più piccoli e semplici da risolvere. Nel caso dello studio del segno si cerca di scomporre qualsiasi espressione in fattori (i polinomi in particolare vengono scomposti in fattori di grado 2 al massimo), così che sia possibile studiare il segno di ogni fattore per poi riunire queste informazioni in quello che si chiama il <dfn class="terminology">grafico di segni</dfn>.<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="para" id="sec-analisi-segni-3-3">Questo strumento è utilizzato ogniqualvolta sia possibile scomporre un’espressione letterale in fattori, ottenendo delle moltiplicazioni tra espressioni. Questo può accadere per esempio nelle disequazioni con polinomi di grado superiore al secondo o nelle disequazioni trascendenti. Visto che la divisione è un particolare tipo di moltiplicazione, il grafico dei segni si usa anche nelle disequazioni fratte. In questo caso il grafico dei segni sarà anche utile per generare o verificare le C.E. dell’espressione letterale.<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-3" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="para" id="sec-analisi-segni-3-3">Questo strumento è utilizzato ogniqualvolta sia possibile scomporre un’espressione letterale in fattori, ottenendo delle moltiplicazioni tra espressioni. Ciò può accadere per esempio nelle disequazioni con polinomi di grado superiore al secondo o nelle disequazioni trascendenti. Visto che la divisione è un particolare tipo di moltiplicazione, il grafico dei segni si usa anche nelle disequazioni fratte. In questo caso il grafico dei segni sarà anche utile per generare o verificare le C.E. dell’espressione letterale.<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-3" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="para" id="sec-analisi-segni-3-4">Il grafico dei segni è quindi una forma grafica compatta per indicare il segno di un’espressione letterale (per esempio <span class="process-math">\(f(x)\)</span>) al variare del valore della lettera (per esempio <span class="process-math">\(x\)</span>). Va sottolineato che in questo grafico non è importante il valore assoluto dell’espressione letterale, ma solo il suo segno; i valori importanti (riportati nel grafico) sono quelli della lettera.<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-4" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="para" id="sec-analisi-segni-3-5">Il grafico è composto da una linea orientata di valori della lettera e da più righe sotto di essa, una per ogni espressione letterale analizzata, che indicano il segno dell’espressione letterale al variare della lettera. Per fare un esempio di una riga del grafico di segni guardiamo il seguente schema:<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-5" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/sec-analisi-segni-3-6.svg" role="img" class="contained"></div>
+<div class="para logical" id="sec-analisi-segni-3-7">
+<div class="para">La riga indica che l’espressione <span class="process-math">\(F\)</span> cambia segno in base al valore di <span class="process-math">\(x\text{.}\)</span> In particolare:</div>
+<ul class="disc" id="sec-analisi-segni-3-7-3">
+<li id="sec-analisi-segni-3-7-3-1">
+<div class="para" id="sec-analisi-segni-3-7-3-1-1">
+<span class="process-math">\(F\)</span> è positiva (<span class="process-math">\(+\)</span>) per i valori di <span class="process-math">\(x\)</span> compresi tra <span class="process-math">\(-3\)</span> e <span class="process-math">\(1\)</span> (valori da vedere nella prima riga), cioè per <span class="process-math">\(-3\lt x \lt 1\text{;}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-7-3-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#sec-analisi-segni-3-7-3-1" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+<li id="sec-analisi-segni-3-7-3-2">
+<div class="para" id="sec-analisi-segni-3-7-3-2-1">
+<span class="process-math">\(F\)</span> è negativa (<span class="process-math">\(-\)</span>) per i valori di <span class="process-math">\(x\)</span> inferiori a (“prima di”) <span class="process-math">\(-3\)</span> oppure superiori a (“dopo di”) <span class="process-math">\(1\text{,}\)</span> cioè per <span class="process-math">\(x \lt -3 \vee x \gt 1\text{;}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-7-3-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#sec-analisi-segni-3-7-3-2" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+<li id="sec-analisi-segni-3-7-3-3">
+<div class="para" id="sec-analisi-segni-3-7-3-3-1">
+<span class="process-math">\(F\)</span> è nulla (<span class="process-math">\(0\)</span>) per i valori di <span class="process-math">\(x\)</span> pari a <span class="process-math">\(-3\)</span> oppure <span class="process-math">\(1\text{,}\)</span> cioè per <span class="process-math">\(x = -3 \vee x = 1\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-7-3-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#sec-analisi-segni-3-7-3-3" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+</ul>
+<div class="para">Guardiamo un altro esempio:</div>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-7" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/sec-analisi-segni-3-8.svg" role="img" class="contained"></div>
+<div class="para logical" id="sec-analisi-segni-3-9">
+<div class="para">La riga indica che l’espressione <span class="process-math">\(F\)</span> cambia segno in base al valore di <span class="process-math">\(x\)</span> e sottosta a delle C.E. in quanto, per qualche valore di <span class="process-math">\(x\text{,}\)</span> l’espressione <span class="process-math">\(F\)</span> non esiste (<span class="process-math">\(\nexists\)</span>). In particolare:</div>
+<ul class="disc" id="sec-analisi-segni-3-9-6">
+<li id="sec-analisi-segni-3-9-6-1">
+<div class="para" id="sec-analisi-segni-3-9-6-1-1">
+<span class="process-math">\(F\)</span> è positiva (<span class="process-math">\(+\)</span>) per i valori di <span class="process-math">\(x\)</span> superiori a <span class="process-math">\(2\text{,}\)</span> cioè per <span class="process-math">\(x \gt 2\text{;}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-9-6-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#sec-analisi-segni-3-9-6-1" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+<li id="sec-analisi-segni-3-9-6-2">
+<div class="para" id="sec-analisi-segni-3-9-6-2-1">
+<span class="process-math">\(F\)</span> è negativa (<span class="process-math">\(-\)</span>) per i valori di <span class="process-math">\(x\)</span> compresi tra <span class="process-math">\(-1\)</span> e <span class="process-math">\(2\text{,}\)</span> cioè per <span class="process-math">\(-1 \lt x \lt 2\text{;}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-9-6-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#sec-analisi-segni-3-9-6-2" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+<li id="sec-analisi-segni-3-9-6-3">
+<div class="para" id="sec-analisi-segni-3-9-6-3-1">
+<span class="process-math">\(F\)</span> è nulla (<span class="process-math">\(0\)</span>) per <span class="process-math">\(x\)</span> pari a <span class="process-math">\(2\text{,}\)</span> cioè per <span class="process-math">\(x = 2\text{;}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-9-6-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#sec-analisi-segni-3-9-6-3" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+<li id="sec-analisi-segni-3-9-6-4">
+<div class="para" id="sec-analisi-segni-3-9-6-4-1">
+<span class="process-math">\(F\)</span> non esiste (<span class="process-math">\(\nexists\)</span>) per valori di <span class="process-math">\(x\)</span> pari o inferiori a <span class="process-math">\(-1\text{,}\)</span> cioè per <span class="process-math">\(x \le -1\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-9-6-4-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#sec-analisi-segni-3-9-6-4" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+</ul>
+<div class="para">Il grafico però non è già pronto nella pratica, ma va costruito sulla base dell’espressione letterale. Vediamo come:</div>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-9" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <article class="algorithm theorem-like" id="alg-grafico-segni"><h4 class="heading">
 <span class="type">Algoritmo</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Costruzione del grafico dei segni.</span>
@@ -370,147 +530,819 @@ true);
 </div>
 <div class="autopermalink" data-description="Algoritmo 3.1.1: Costruzione del grafico dei segni"><a href="#alg-grafico-segni" title="Copy heading and permalink for Algoritmo 3.1.1: Costruzione del grafico dei segni" aria-label="Copy heading and permalink for Algoritmo 3.1.1: Costruzione del grafico dei segni">🔗</a></div>
 </article>
-<details id="sec-analisi-segni-3-5" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
-<span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Studio del segno di un polinomio di terzo grado.</span>
+<details id="sec-analisi-segni-3-11" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Preparazione di una riga del grafico di segni (grado 1).</span>
 </h4></summary>
 <article class="example example-like knowl__content">
-<div class="para" id="sec-analisi-segni-3-5-2-1">Studia il segno di <span class="process-math">\(P_3(x)=x^3+x^2-2x\)</span> al variare di <span class="process-math">\(x\in \R\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-5-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="para" id="sec-analisi-segni-3-11-2-1">Determina la riga del grafico dei segni per l’espressione <span class="process-math">\(F=2x-4\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-11-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="sec-analisi-segni-3-5-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<details id="sec-analisi-segni-3-11-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="solution solution-like knowl__content">
-<div class="para logical" id="sec-analisi-segni-3-5-3-1">
+<div class="para logical" id="sec-analisi-segni-3-11-3-1">
+<div class="para">Seguiamo l’<a href="sec-analisi-segni.html#alg-grafico-segni" class="xref" data-knowl="./knowl/xref/alg-grafico-segni.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Algoritmo 3.1.1: Costruzione del grafico dei segni">Algoritmo 3.1.1</a>:</div>
+<ol class="decimal" id="sec-analisi-segni-3-11-3-1-2">
+<li id="sec-analisi-segni-3-11-3-1-2-1">
+<div class="para" id="sec-analisi-segni-3-11-3-1-2-1-1">Il polinomio è già scomposto e nominato.<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-11-3-1-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto 1"><a href="#sec-analisi-segni-3-11-3-1-2-1" title="Copy heading and permalink for Punto 1" aria-label="Copy heading and permalink for Punto 1">🔗</a></div>
+</li>
+<li id="sec-analisi-segni-3-11-3-1-2-2">
+<div class="para" id="sec-analisi-segni-3-11-3-1-2-2-1">Non ci sono C.E. in quanto l’espressione è un polinomio (razionale intera)<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-11-3-1-2-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto 2"><a href="#sec-analisi-segni-3-11-3-1-2-2" title="Copy heading and permalink for Punto 2" aria-label="Copy heading and permalink for Punto 2">🔗</a></div>
+</li>
+<li id="sec-analisi-segni-3-11-3-1-2-3">
+<div class="para logical" id="sec-analisi-segni-3-11-3-1-2-3-1">
+<div class="para">Si studia il segno <span class="process-math">\(F\)</span> risolvendo</div>
+<div class="displaymath process-math" id="sec-analisi-segni-3-11-3-1-2-3-1-2">
+\begin{equation*}
+F\ge 0 \qquad 2x-4\ge 0 \qquad 2x \ge 4 \qquad x\ge 2
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-11-3-1-2-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto 3"><a href="#sec-analisi-segni-3-11-3-1-2-3" title="Copy heading and permalink for Punto 3" aria-label="Copy heading and permalink for Punto 3">🔗</a></div>
+</li>
+<li id="sec-analisi-segni-3-11-3-1-2-4">
+<div class="para" id="sec-analisi-segni-3-11-3-1-2-4-1">Si traccia una linea orizzontale orientata (una freccia verso destra) e si posiziona l’unico valore ottenuto negli intervalli al punto precedente<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-11-3-1-2-4-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/sec-analisi-segni-3-11-3-1-2-4-2.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Punto 4"><a href="#sec-analisi-segni-3-11-3-1-2-4" title="Copy heading and permalink for Punto 4" aria-label="Copy heading and permalink for Punto 4">🔗</a></div>
+</li>
+<li id="sec-analisi-segni-3-11-3-1-2-5">
+<div class="para logical" id="sec-analisi-segni-3-11-3-1-2-5-1">
+<div class="para">Si posizionano nella riga dei segni:</div>
+<ul class="disc" id="sec-analisi-segni-3-11-3-1-2-5-1-1">
+<li id="sec-analisi-segni-3-11-3-1-2-5-1-1-1">
+<div class="para" id="sec-analisi-segni-3-11-3-1-2-5-1-1-1-1">l’unico <span class="process-math">\(0\)</span> sulla linea verticale in corrispondenza di 2;<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-11-3-1-2-5-1-1-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#sec-analisi-segni-3-11-3-1-2-5-1-1-1" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+<li id="sec-analisi-segni-3-11-3-1-2-5-1-1-2">
+<div class="para" id="sec-analisi-segni-3-11-3-1-2-5-1-1-2-1">
+<span class="process-math">\(+\)</span> dopo 2 (cioè per <span class="process-math">\(x\gt 2\)</span>);<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-11-3-1-2-5-1-1-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#sec-analisi-segni-3-11-3-1-2-5-1-1-2" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+<li id="sec-analisi-segni-3-11-3-1-2-5-1-1-3">
+<div class="para" id="sec-analisi-segni-3-11-3-1-2-5-1-1-3-1">
+<span class="process-math">\(-\)</span> nello spazio rimasto vuoto<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-11-3-1-2-5-1-1-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#sec-analisi-segni-3-11-3-1-2-5-1-1-3" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+</ul>
+<div class="para">ottenendo:</div>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-11-3-1-2-5-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/sec-analisi-segni-3-11-3-1-2-5-2.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Punto 5"><a href="#sec-analisi-segni-3-11-3-1-2-5" title="Copy heading and permalink for Punto 5" aria-label="Copy heading and permalink for Punto 5">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-11-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Soluzione 3.1.2.1"><a href="#sec-analisi-segni-3-11-3" title="Copy heading and permalink for Soluzione 3.1.2.1" aria-label="Copy heading and permalink for Soluzione 3.1.2.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esempio 3.1.2: Preparazione di una riga del grafico di segni (grado 1)"><a href="#sec-analisi-segni-3-11" title="Copy heading and permalink for Esempio 3.1.2: Preparazione di una riga del grafico di segni (grado 1)" aria-label="Copy heading and permalink for Esempio 3.1.2: Preparazione di una riga del grafico di segni (grado 1)">🔗</a></div>
+</article></details>
+<details id="sec-analisi-segni-3-12" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Preparazione di una riga del grafico di segni (grado 2).</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="sec-analisi-segni-3-12-2-1">Determina la riga del grafico dei segni per l’espressione <span class="process-math">\(F=x^2 -x-2\)</span> senza scomporla ulteriormente.<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-12-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec-analisi-segni-3-12-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="sec-analisi-segni-3-12-3-1">
+<div class="para">Seguiamo l’<a href="sec-analisi-segni.html#alg-grafico-segni" class="xref" data-knowl="./knowl/xref/alg-grafico-segni.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Algoritmo 3.1.1: Costruzione del grafico dei segni">Algoritmo 3.1.1</a>:</div>
+<ol class="decimal" id="sec-analisi-segni-3-12-3-1-2">
+<li id="sec-analisi-segni-3-12-3-1-2-1">
+<div class="para" id="sec-analisi-segni-3-12-3-1-2-1-1">Il polinomio non viene scomposto (perché basta che sia di grado 2) ed è già nominato.<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-12-3-1-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto 1"><a href="#sec-analisi-segni-3-12-3-1-2-1" title="Copy heading and permalink for Punto 1" aria-label="Copy heading and permalink for Punto 1">🔗</a></div>
+</li>
+<li id="sec-analisi-segni-3-12-3-1-2-2">
+<div class="para" id="sec-analisi-segni-3-12-3-1-2-2-1">Non ci sono C.E. in quanto l’espressione è un polinomio (razionale intera)<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-12-3-1-2-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto 2"><a href="#sec-analisi-segni-3-12-3-1-2-2" title="Copy heading and permalink for Punto 2" aria-label="Copy heading and permalink for Punto 2">🔗</a></div>
+</li>
+<li id="sec-analisi-segni-3-12-3-1-2-3">
+<div class="para logical" id="sec-analisi-segni-3-12-3-1-2-3-1">
+<div class="para">Si studia il segno <span class="process-math">\(F\)</span> risolvendo</div>
+<div class="displaymath process-math" id="sec-analisi-segni-3-12-3-1-2-3-1-2">
+\begin{equation*}
+F\ge 0 \qquad x^2 -x-2\ge 0
+\end{equation*}
+</div>
+<div class="para">che va risolta partendo dall’equazione associata e disegnando la parabolina:</div>
+<div class="displaymath process-math" id="sec-analisi-segni-3-12-3-1-2-3-1-3">
+\begin{equation*}
+\text{Eq. assoc.} \quad x^2-x-2 = 0
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="sec-analisi-segni-3-12-3-1-2-3-1-4">
+\begin{equation*}
+\Delta=1+8=9
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-12-3-1-2-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="sidebyside">
+<div class="sbsrow" style="margin-left:0%;margin-right:5%;grid-template-columns:78.9473684210526% 21.0526315789474%;column-gap:0%;">
+<div class="sbspanel sbspanel--middle middle" style="">
+<div class="para logical" id="sec-analisi-segni-3-12-3-1-2-3-2-1">
+<div class="displaymath process-math" id="sec-analisi-segni-3-12-3-1-2-3-2-1-1">
+\begin{equation*}
+x_{1,2}= \dfrac{1\pm \sqrt{9}}{2} = \dfrac{1\pm 3}{2} = \begin{cases}-1\\2\end{cases} 
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-12-3-1-2-3-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+</div>
+<div class="sbspanel sbspanel--middle middle" style=""><div class="image-box"><img src="generated/latex-image/sec-analisi-segni-3-12-3-1-2-3-2-2.svg" role="img" class="contained"></div></div>
+</div>
+</div>
+<div class="para" id="sec-analisi-segni-3-12-3-1-2-3-3">che permette di ottenere il risultato <span class="process-math">\(x\le -1 \vee x\ge 2\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-12-3-1-2-3-3" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto 3"><a href="#sec-analisi-segni-3-12-3-1-2-3" title="Copy heading and permalink for Punto 3" aria-label="Copy heading and permalink for Punto 3">🔗</a></div>
+</li>
+<li id="sec-analisi-segni-3-12-3-1-2-4">
+<div class="para" id="sec-analisi-segni-3-12-3-1-2-4-1">Si traccia una linea orizzontale orientata (una freccia verso destra) e si posizionano gli estremi degli intervalli ottenuti al punto precedente<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-12-3-1-2-4-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/sec-analisi-segni-3-12-3-1-2-4-2.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Punto 4"><a href="#sec-analisi-segni-3-12-3-1-2-4" title="Copy heading and permalink for Punto 4" aria-label="Copy heading and permalink for Punto 4">🔗</a></div>
+</li>
+<li id="sec-analisi-segni-3-12-3-1-2-5">
+<div class="para logical" id="sec-analisi-segni-3-12-3-1-2-5-1">
+<div class="para">Si posizionano nella riga dei segni:</div>
+<ul class="disc" id="sec-analisi-segni-3-12-3-1-2-5-1-1">
+<li id="sec-analisi-segni-3-12-3-1-2-5-1-1-1">
+<div class="para" id="sec-analisi-segni-3-12-3-1-2-5-1-1-1-1">due <span class="process-math">\(0\)</span> sulle linee verticali in corrispondenza di -1 e 2;<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-12-3-1-2-5-1-1-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#sec-analisi-segni-3-12-3-1-2-5-1-1-1" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+<li id="sec-analisi-segni-3-12-3-1-2-5-1-1-2">
+<div class="para" id="sec-analisi-segni-3-12-3-1-2-5-1-1-2-1">
+<span class="process-math">\(+\)</span> prima di -1 (cioè per <span class="process-math">\(x\lt -1\)</span>) e uno dopo 2 (cioè per <span class="process-math">\(x\gt 2\)</span>);<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-12-3-1-2-5-1-1-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#sec-analisi-segni-3-12-3-1-2-5-1-1-2" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+<li id="sec-analisi-segni-3-12-3-1-2-5-1-1-3">
+<div class="para" id="sec-analisi-segni-3-12-3-1-2-5-1-1-3-1">
+<span class="process-math">\(-\)</span> nello spazio rimasto vuoto<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-12-3-1-2-5-1-1-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#sec-analisi-segni-3-12-3-1-2-5-1-1-3" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+</ul>
+<div class="para">ottenendo:</div>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-12-3-1-2-5-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/sec-analisi-segni-3-12-3-1-2-5-2.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Punto 5"><a href="#sec-analisi-segni-3-12-3-1-2-5" title="Copy heading and permalink for Punto 5" aria-label="Copy heading and permalink for Punto 5">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-12-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Soluzione 3.1.3.1"><a href="#sec-analisi-segni-3-12-3" title="Copy heading and permalink for Soluzione 3.1.3.1" aria-label="Copy heading and permalink for Soluzione 3.1.3.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esempio 3.1.3: Preparazione di una riga del grafico di segni (grado 2)"><a href="#sec-analisi-segni-3-12" title="Copy heading and permalink for Esempio 3.1.3: Preparazione di una riga del grafico di segni (grado 2)" aria-label="Copy heading and permalink for Esempio 3.1.3: Preparazione di una riga del grafico di segni (grado 2)">🔗</a></div>
+</article></details>
+<details id="ex-grafico-segni-pol-3" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Studio del segno di un polinomio di terzo grado.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="ex-grafico-segni-pol-3-2-1">Studia il segno di <span class="process-math">\(P_3(x)=x^3+x^2-2x\)</span> al variare di <span class="process-math">\(x\in \R\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-pol-3-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="ex-grafico-segni-pol-3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-grafico-segni-pol-3-3-1">
+<div class="para">Seguiamo l’<a href="sec-analisi-segni.html#alg-grafico-segni" class="xref" data-knowl="./knowl/xref/alg-grafico-segni.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Algoritmo 3.1.1: Costruzione del grafico dei segni">Algoritmo 3.1.1</a>:</div>
+<ol class="decimal" id="ex-grafico-segni-pol-3-3-1-2">
+<li id="ex-grafico-segni-pol-3-3-1-2-1">
+<div class="para logical" id="ex-grafico-segni-pol-3-3-1-2-1-1">
 <div class="para">Si scompone il polinomio. Per raccoglimento totale:</div>
-<div class="displaymath process-math" id="sec-analisi-segni-3-5-3-1-1">
+<div class="displaymath process-math" id="ex-grafico-segni-pol-3-3-1-2-1-1-1">
 \begin{equation*}
 P_3(x)=x^3+x^2-2x = \underbrace{x}_{F_1}\underbrace{(x^2+x-2)}_{F_2}
 \end{equation*}
 </div>
 <div class="para">che fornisce due fattori <span class="process-math">\(F_1\)</span> e <span class="process-math">\(F_2\)</span> di grado massimo 2.</div>
-<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-5-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-pol-3-3-1-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="para logical" id="sec-analisi-segni-3-5-3-2">
+<div class="autopermalink" data-description="Punto 1"><a href="#ex-grafico-segni-pol-3-3-1-2-1" title="Copy heading and permalink for Punto 1" aria-label="Copy heading and permalink for Punto 1">🔗</a></div>
+</li>
+<li id="ex-grafico-segni-pol-3-3-1-2-2">
+<div class="para" id="ex-grafico-segni-pol-3-3-1-2-2-1">Non ci sono C.E. in quanto tutti i fattori sono polinomi (razionali interi)<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-pol-3-3-1-2-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto 2"><a href="#ex-grafico-segni-pol-3-3-1-2-2" title="Copy heading and permalink for Punto 2" aria-label="Copy heading and permalink for Punto 2">🔗</a></div>
+</li>
+<li id="ex-grafico-segni-pol-3-3-1-2-3">
+<div class="para logical" id="ex-grafico-segni-pol-3-3-1-2-3-1">
 <div class="para">Si studia il segno dei due fattori:</div>
-<div class="displaymath process-math" id="sec-analisi-segni-3-5-3-2-1">
+<div class="displaymath process-math" id="ex-grafico-segni-pol-3-3-1-2-3-1-1">
 \begin{equation*}
 F_1\ge0 \qquad x\ge 0
 \end{equation*}
 </div>
-<div class="displaymath process-math" id="sec-analisi-segni-3-5-3-2-2">
+<div class="displaymath process-math" id="ex-grafico-segni-pol-3-3-1-2-3-1-2">
 \begin{equation*}
 F_2\ge0 \qquad x^2+x-2\ge 0
 \end{equation*}
 </div>
 <div class="para">che va risolta partendo dall’equazione associata e disegnando la parabolina:</div>
-<div class="displaymath process-math" id="sec-analisi-segni-3-5-3-2-3">
+<div class="displaymath process-math" id="ex-grafico-segni-pol-3-3-1-2-3-1-3">
 \begin{equation*}
 \text{Eq. assoc.} \quad x^2+x-2 = 0
 \end{equation*}
 </div>
-<div class="displaymath process-math" id="sec-analisi-segni-3-5-3-2-4">
+<div class="displaymath process-math" id="ex-grafico-segni-pol-3-3-1-2-3-1-4">
 \begin{equation*}
 \Delta=1+8=9
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-5-3-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-pol-3-3-1-2-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="sidebyside">
 <div class="sbsrow" style="margin-left:0%;margin-right:5%;grid-template-columns:78.9473684210526% 21.0526315789474%;column-gap:0%;">
 <div class="sbspanel sbspanel--middle middle" style="">
-<div class="para logical" id="sec-analisi-segni-3-5-3-3-1">
-<div class="displaymath process-math" id="sec-analisi-segni-3-5-3-3-1-1">
+<div class="para logical" id="ex-grafico-segni-pol-3-3-1-2-3-2-1">
+<div class="displaymath process-math" id="ex-grafico-segni-pol-3-3-1-2-3-2-1-1">
 \begin{equation*}
 x_{1,2}= \dfrac{-1\pm \sqrt{9}}{2} = \dfrac{-1\pm 3}{2} = \begin{cases}-2\\1\end{cases} 
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-5-3-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-pol-3-3-1-2-3-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 </div>
-<div class="sbspanel sbspanel--middle middle" style=""><div class="image-box"><img src="generated/latex-image/sec-analisi-segni-3-5-3-3-2.svg" role="img" class="contained"></div></div>
+<div class="sbspanel sbspanel--middle middle" style=""><div class="image-box"><img src="generated/latex-image/ex-grafico-segni-pol-3-3-1-2-3-2-2.svg" role="img" class="contained"></div></div>
 </div>
 </div>
-<div class="para logical" id="sec-analisi-segni-3-5-3-4">
-<div class="displaymath process-math" id="sec-analisi-segni-3-5-3-4-1">
+<div class="para logical" id="ex-grafico-segni-pol-3-3-1-2-3-3">
+<div class="displaymath process-math" id="ex-grafico-segni-pol-3-3-1-2-3-3-1">
 \begin{equation*}
 x\le -2 \vee x\ge 1
 \end{equation*}
 </div>
-<div class="para">Si può quindi costruire il grafico dei segni con due righe per i due fattori e una riga finale per la moltiplicazione:</div>
-<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-5-3-4" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-pol-3-3-1-2-3-3" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/sec-analisi-segni-3-5-3-5.svg" role="img" class="contained"></div>
-<div class="para" id="sec-analisi-segni-3-5-3-6">Visto che <span class="process-math">\(P_3=F_1\cdot F_2\text{,}\)</span> otteniamo che il polinomio di terzo grado ha tre zeri <span class="process-math">\(\{-2,0,1\}\text{,}\)</span> è positivo in <span class="process-math">\((-2,0)\cup(1,+\infty)\)</span> e negativo in <span class="process-math">\((-\infty,-2)\cup(0,1)\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-5-3-6" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Punto 3"><a href="#ex-grafico-segni-pol-3-3-1-2-3" title="Copy heading and permalink for Punto 3" aria-label="Copy heading and permalink for Punto 3">🔗</a></div>
+</li>
+<li id="ex-grafico-segni-pol-3-3-1-2-4">
+<div class="para" id="ex-grafico-segni-pol-3-3-1-2-4-1">Si traccia una linea orizzontale orientata (una freccia verso destra) e si posizionano gli estremi degli intervalli ottenuti al punto precedente<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-pol-3-3-1-2-4-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Soluzione 3.1.2.1"><a href="#sec-analisi-segni-3-5-3" title="Copy heading and permalink for Soluzione 3.1.2.1" aria-label="Copy heading and permalink for Soluzione 3.1.2.1">🔗</a></div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/ex-grafico-segni-pol-3-3-1-2-4-2.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Punto 4"><a href="#ex-grafico-segni-pol-3-3-1-2-4" title="Copy heading and permalink for Punto 4" aria-label="Copy heading and permalink for Punto 4">🔗</a></div>
+</li>
+<li id="ex-grafico-segni-pol-3-3-1-2-5">
+<div class="para logical" id="ex-grafico-segni-pol-3-3-1-2-5-1">
+<div class="para">Si posizionano nella riga dei segni di <span class="process-math">\(F_1\text{:}\)</span>
+</div>
+<ul class="disc" id="ex-grafico-segni-pol-3-3-1-2-5-1-2">
+<li id="ex-grafico-segni-pol-3-3-1-2-5-1-2-1">
+<div class="para" id="ex-grafico-segni-pol-3-3-1-2-5-1-2-1-1">uno <span class="process-math">\(0\)</span> sulla linea verticale in corrispondenza di 0;<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-pol-3-3-1-2-5-1-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#ex-grafico-segni-pol-3-3-1-2-5-1-2-1" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+<li id="ex-grafico-segni-pol-3-3-1-2-5-1-2-2">
+<div class="para" id="ex-grafico-segni-pol-3-3-1-2-5-1-2-2-1">
+<span class="process-math">\(+\)</span> dopo di 0 (cioè per <span class="process-math">\(x\gt 0\)</span>);<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-pol-3-3-1-2-5-1-2-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#ex-grafico-segni-pol-3-3-1-2-5-1-2-2" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+<li id="ex-grafico-segni-pol-3-3-1-2-5-1-2-3">
+<div class="para" id="ex-grafico-segni-pol-3-3-1-2-5-1-2-3-1">
+<span class="process-math">\(-\)</span> negli spazi rimasti vuoti<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-pol-3-3-1-2-5-1-2-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#ex-grafico-segni-pol-3-3-1-2-5-1-2-3" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+</ul>
+<div class="para">Si posizionano nella riga dei segni di <span class="process-math">\(F_2\text{:}\)</span>
+</div>
+<ul class="disc" id="ex-grafico-segni-pol-3-3-1-2-5-1-4">
+<li id="ex-grafico-segni-pol-3-3-1-2-5-1-4-1">
+<div class="para" id="ex-grafico-segni-pol-3-3-1-2-5-1-4-1-1">due <span class="process-math">\(0\)</span> sulle linee verticali in corrispondenza di -2 e 1;<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-pol-3-3-1-2-5-1-4-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#ex-grafico-segni-pol-3-3-1-2-5-1-4-1" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+<li id="ex-grafico-segni-pol-3-3-1-2-5-1-4-2">
+<div class="para" id="ex-grafico-segni-pol-3-3-1-2-5-1-4-2-1">
+<span class="process-math">\(+\)</span> prima di -2 (cioè per <span class="process-math">\(x\lt -2\)</span>) e dopo di 1 (cioè per <span class="process-math">\(x\gt 1\)</span>);<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-pol-3-3-1-2-5-1-4-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#ex-grafico-segni-pol-3-3-1-2-5-1-4-2" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+<li id="ex-grafico-segni-pol-3-3-1-2-5-1-4-3">
+<div class="para" id="ex-grafico-segni-pol-3-3-1-2-5-1-4-3-1">
+<span class="process-math">\(-\)</span> negli spazi rimasti vuoti<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-pol-3-3-1-2-5-1-4-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#ex-grafico-segni-pol-3-3-1-2-5-1-4-3" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+</ul>
+<div class="para">Si ottiene:</div>
+<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-pol-3-3-1-2-5-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/ex-grafico-segni-pol-3-3-1-2-5-2.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Punto 5"><a href="#ex-grafico-segni-pol-3-3-1-2-5" title="Copy heading and permalink for Punto 5" aria-label="Copy heading and permalink for Punto 5">🔗</a></div>
+</li>
+<li id="ex-grafico-segni-pol-3-3-1-2-6">
+<div class="para" id="ex-grafico-segni-pol-3-3-1-2-6-1">Visto che <span class="process-math">\(P_3=F_1\cdot F_2\)</span> si calcola la riga del prodotto, seguendo le regole dell’algoritmo e ottenendo:<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-pol-3-3-1-2-6-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/ex-grafico-segni-pol-3-3-1-2-6-2.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Punto 6"><a href="#ex-grafico-segni-pol-3-3-1-2-6" title="Copy heading and permalink for Punto 6" aria-label="Copy heading and permalink for Punto 6">🔗</a></div>
+</li>
+</ol>
+<div class="para">Otteniamo che il polinomio di terzo grado ha tre zeri <span class="process-math">\(\{-2,0,1\}\text{,}\)</span> è positivo in <span class="process-math">\((-2,0)\cup(1,+\infty)\)</span> e negativo in <span class="process-math">\((-\infty,-2)\cup(0,1)\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-pol-3-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Soluzione 3.1.4.1"><a href="#ex-grafico-segni-pol-3-3" title="Copy heading and permalink for Soluzione 3.1.4.1" aria-label="Copy heading and permalink for Soluzione 3.1.4.1">🔗</a></div>
 </div></details>
-<details id="sec-analisi-segni-3-5-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<details id="ex-grafico-segni-pol-3-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="solution solution-like knowl__content">
-<div class="para logical" id="sec-analisi-segni-3-5-4-1">
+<div class="para logical" id="ex-grafico-segni-pol-3-4-1">
+<div class="para">Seguiamo l’<a href="sec-analisi-segni.html#alg-grafico-segni" class="xref" data-knowl="./knowl/xref/alg-grafico-segni.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Algoritmo 3.1.1: Costruzione del grafico dei segni">Algoritmo 3.1.1</a>:</div>
+<ol class="decimal" id="ex-grafico-segni-pol-3-4-1-2">
+<li id="ex-grafico-segni-pol-3-4-1-2-1">
+<div class="para logical" id="ex-grafico-segni-pol-3-4-1-2-1-1">
 <div class="para">Si scompone il polinomio. Per raccoglimento totale:</div>
-<div class="displaymath process-math" id="sec-analisi-segni-3-5-4-1-1">
+<div class="displaymath process-math" id="ex-grafico-segni-pol-3-4-1-2-1-1-1">
 \begin{equation*}
 P_3(x)=x^3+x^2-2x = x(x^2+x-2)
 \end{equation*}
 </div>
-<div class="para">e poi mediante il trinomio speciale <span class="process-math">\(s=1,p=-2\)</span> che fornisce la coppia <span class="process-math">\((-1,2)\text{,}\)</span> quindi:</div>
-<div class="displaymath process-math" id="sec-analisi-segni-3-5-4-1-4">
+<div class="para">e usando il trinomio speciale con <span class="process-math">\(s=1\)</span> e <span class="process-math">\(p=-2\)</span> si ottiene la coppia <span class="process-math">\((-1,2)\)</span> e quindi</div>
+<div class="displaymath process-math" id="ex-grafico-segni-pol-3-4-1-2-1-1-5">
 \begin{equation*}
-P_3(x)= x(x^2+x-2) = \underbrace{x}_{F_1} \underbrace{(x-1)}_{F_2} \underbrace{(x+2)}_{F_3}
+P_3(x)=x(x^2+x-2) = \underbrace{x}_{F_1} \underbrace{(x-1)}_{F_2} \underbrace{(x+2)}_{F_3}
 \end{equation*}
 </div>
 <div class="para">che fornisce tre fattori <span class="process-math">\(F_1\text{,}\)</span> <span class="process-math">\(F_2\)</span> e <span class="process-math">\(F_3\)</span> di grado 1.</div>
-<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-5-4-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-pol-3-4-1-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="para logical" id="sec-analisi-segni-3-5-4-2">
+<div class="autopermalink" data-description="Punto 1"><a href="#ex-grafico-segni-pol-3-4-1-2-1" title="Copy heading and permalink for Punto 1" aria-label="Copy heading and permalink for Punto 1">🔗</a></div>
+</li>
+<li id="ex-grafico-segni-pol-3-4-1-2-2">
+<div class="para" id="ex-grafico-segni-pol-3-4-1-2-2-1">Non ci sono C.E. in quanto tutti i fattori sono polinomi (razionali interi)<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-pol-3-4-1-2-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto 2"><a href="#ex-grafico-segni-pol-3-4-1-2-2" title="Copy heading and permalink for Punto 2" aria-label="Copy heading and permalink for Punto 2">🔗</a></div>
+</li>
+<li id="ex-grafico-segni-pol-3-4-1-2-3">
+<div class="para logical" id="ex-grafico-segni-pol-3-4-1-2-3-1">
 <div class="para">Si studia il segno dei tre fattori:</div>
-<div class="displaymath process-math" id="sec-analisi-segni-3-5-4-2-1">
+<div class="displaymath process-math" id="ex-grafico-segni-pol-3-4-1-2-3-1-1">
 \begin{equation*}
 F_1\ge0 \qquad x\ge 0
 \end{equation*}
 </div>
-<div class="displaymath process-math" id="sec-analisi-segni-3-5-4-2-2">
+<div class="displaymath process-math" id="ex-grafico-segni-pol-3-4-1-2-3-1-2">
 \begin{equation*}
 F_2\ge0 \qquad x-1\ge 0 \qquad x\ge 1
 \end{equation*}
 </div>
-<div class="displaymath process-math" id="sec-analisi-segni-3-5-4-2-3">
+<div class="displaymath process-math" id="ex-grafico-segni-pol-3-4-1-2-3-1-3">
 \begin{equation*}
 F_3\ge0 \qquad x+2\ge 0 \qquad x\ge -2
 \end{equation*}
 </div>
-<div class="para">Si può quindi costruire il grafico dei segni con tre righe per i tre fattori e una riga finale per la moltiplicazione:</div>
-<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-5-4-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-pol-3-4-1-2-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/sec-analisi-segni-3-5-4-3.svg" role="img" class="contained"></div>
-<div class="para" id="sec-analisi-segni-3-5-4-4">Visto che <span class="process-math">\(P_3=F_{123}=F_1\cdot F_2\cdot F_3\text{,}\)</span> otteniamo che il polinomio di terzo grado ha tre zeri <span class="process-math">\(\{-2,0,1\}\text{,}\)</span> è positivo in <span class="process-math">\((-2,0)\cup(1,+\infty)\)</span> e negativo in <span class="process-math">\((-\infty,-2)\cup(0,1)\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-5-4-4" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Punto 3"><a href="#ex-grafico-segni-pol-3-4-1-2-3" title="Copy heading and permalink for Punto 3" aria-label="Copy heading and permalink for Punto 3">🔗</a></div>
+</li>
+<li id="ex-grafico-segni-pol-3-4-1-2-4">
+<div class="para" id="ex-grafico-segni-pol-3-4-1-2-4-1">Si traccia una linea orizzontale orientata (una freccia verso destra) e si posizionano gli estremi degli intervalli ottenuti al punto precedente<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-pol-3-4-1-2-4-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Soluzione 3.1.2.2"><a href="#sec-analisi-segni-3-5-4" title="Copy heading and permalink for Soluzione 3.1.2.2" aria-label="Copy heading and permalink for Soluzione 3.1.2.2">🔗</a></div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/ex-grafico-segni-pol-3-4-1-2-4-2.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Punto 4"><a href="#ex-grafico-segni-pol-3-4-1-2-4" title="Copy heading and permalink for Punto 4" aria-label="Copy heading and permalink for Punto 4">🔗</a></div>
+</li>
+<li id="ex-grafico-segni-pol-3-4-1-2-5">
+<div class="para logical" id="ex-grafico-segni-pol-3-4-1-2-5-1">
+<div class="para">Si posizionano nella riga dei segni di <span class="process-math">\(F_1\text{:}\)</span>
+</div>
+<ul class="disc" id="ex-grafico-segni-pol-3-4-1-2-5-1-2">
+<li id="ex-grafico-segni-pol-3-4-1-2-5-1-2-1">
+<div class="para" id="ex-grafico-segni-pol-3-4-1-2-5-1-2-1-1">uno <span class="process-math">\(0\)</span> sulla linea verticale in corrispondenza di 0;<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-pol-3-4-1-2-5-1-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#ex-grafico-segni-pol-3-4-1-2-5-1-2-1" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+<li id="ex-grafico-segni-pol-3-4-1-2-5-1-2-2">
+<div class="para" id="ex-grafico-segni-pol-3-4-1-2-5-1-2-2-1">
+<span class="process-math">\(+\)</span> dopo di 0 (cioè per <span class="process-math">\(x\gt 0\)</span>);<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-pol-3-4-1-2-5-1-2-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#ex-grafico-segni-pol-3-4-1-2-5-1-2-2" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+<li id="ex-grafico-segni-pol-3-4-1-2-5-1-2-3">
+<div class="para" id="ex-grafico-segni-pol-3-4-1-2-5-1-2-3-1">
+<span class="process-math">\(-\)</span> negli spazi rimasti vuoti<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-pol-3-4-1-2-5-1-2-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#ex-grafico-segni-pol-3-4-1-2-5-1-2-3" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+</ul>
+<div class="para">Si posizionano nella riga dei segni di <span class="process-math">\(F_2\text{:}\)</span>
+</div>
+<ul class="disc" id="ex-grafico-segni-pol-3-4-1-2-5-1-4">
+<li id="ex-grafico-segni-pol-3-4-1-2-5-1-4-1">
+<div class="para" id="ex-grafico-segni-pol-3-4-1-2-5-1-4-1-1">uno <span class="process-math">\(0\)</span> sulla linea verticale in corrispondenza di 1;<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-pol-3-4-1-2-5-1-4-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#ex-grafico-segni-pol-3-4-1-2-5-1-4-1" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+<li id="ex-grafico-segni-pol-3-4-1-2-5-1-4-2">
+<div class="para" id="ex-grafico-segni-pol-3-4-1-2-5-1-4-2-1">
+<span class="process-math">\(+\)</span> dopo di 1 (cioè per <span class="process-math">\(x\gt 1\)</span>);<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-pol-3-4-1-2-5-1-4-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#ex-grafico-segni-pol-3-4-1-2-5-1-4-2" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+<li id="ex-grafico-segni-pol-3-4-1-2-5-1-4-3">
+<div class="para" id="ex-grafico-segni-pol-3-4-1-2-5-1-4-3-1">
+<span class="process-math">\(-\)</span> negli spazi rimasti vuoti<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-pol-3-4-1-2-5-1-4-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#ex-grafico-segni-pol-3-4-1-2-5-1-4-3" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+</ul>
+<div class="para">Si posizionano nella riga dei segni di <span class="process-math">\(F_3\text{:}\)</span>
+</div>
+<ul class="disc" id="ex-grafico-segni-pol-3-4-1-2-5-1-6">
+<li id="ex-grafico-segni-pol-3-4-1-2-5-1-6-1">
+<div class="para" id="ex-grafico-segni-pol-3-4-1-2-5-1-6-1-1">uno <span class="process-math">\(0\)</span> sulla linea verticale in corrispondenza di -2;<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-pol-3-4-1-2-5-1-6-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#ex-grafico-segni-pol-3-4-1-2-5-1-6-1" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+<li id="ex-grafico-segni-pol-3-4-1-2-5-1-6-2">
+<div class="para" id="ex-grafico-segni-pol-3-4-1-2-5-1-6-2-1">
+<span class="process-math">\(+\)</span> dopo di -2 (cioè per <span class="process-math">\(x\gt -2\)</span>);<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-pol-3-4-1-2-5-1-6-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#ex-grafico-segni-pol-3-4-1-2-5-1-6-2" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+<li id="ex-grafico-segni-pol-3-4-1-2-5-1-6-3">
+<div class="para" id="ex-grafico-segni-pol-3-4-1-2-5-1-6-3-1">
+<span class="process-math">\(-\)</span> negli spazi rimasti vuoti<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-pol-3-4-1-2-5-1-6-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#ex-grafico-segni-pol-3-4-1-2-5-1-6-3" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+</ul>
+<div class="para">Si ottiene:</div>
+<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-pol-3-4-1-2-5-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/ex-grafico-segni-pol-3-4-1-2-5-2.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Punto 5"><a href="#ex-grafico-segni-pol-3-4-1-2-5" title="Copy heading and permalink for Punto 5" aria-label="Copy heading and permalink for Punto 5">🔗</a></div>
+</li>
+<li id="ex-grafico-segni-pol-3-4-1-2-6">
+<div class="para" id="ex-grafico-segni-pol-3-4-1-2-6-1">Visto che <span class="process-math">\(P_3=F_1\cdot F_2\cdot F_3\)</span> si calcola la riga del prodotto, seguendo le regole dell’algoritmo e ottenendo:<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-pol-3-4-1-2-6-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/ex-grafico-segni-pol-3-4-1-2-6-2.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Punto 6"><a href="#ex-grafico-segni-pol-3-4-1-2-6" title="Copy heading and permalink for Punto 6" aria-label="Copy heading and permalink for Punto 6">🔗</a></div>
+</li>
+</ol>
+<div class="para">Otteniamo che il polinomio di terzo grado ha tre zeri <span class="process-math">\(\{-2,0,1\}\text{,}\)</span> è positivo in <span class="process-math">\((-2,0)\cup(1,+\infty)\)</span> e negativo in <span class="process-math">\((-\infty,-2)\cup(0,1)\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-pol-3-4-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Soluzione 3.1.4.2"><a href="#ex-grafico-segni-pol-3-4" title="Copy heading and permalink for Soluzione 3.1.4.2" aria-label="Copy heading and permalink for Soluzione 3.1.4.2">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" data-description="Esempio 3.1.2: Studio del segno di un polinomio di terzo grado"><a href="#sec-analisi-segni-3-5" title="Copy heading and permalink for Esempio 3.1.2: Studio del segno di un polinomio di terzo grado" aria-label="Copy heading and permalink for Esempio 3.1.2: Studio del segno di un polinomio di terzo grado">🔗</a></div>
+<div class="autopermalink" data-description="Esempio 3.1.4: Studio del segno di un polinomio di terzo grado"><a href="#ex-grafico-segni-pol-3" title="Copy heading and permalink for Esempio 3.1.4: Studio del segno di un polinomio di terzo grado" aria-label="Copy heading and permalink for Esempio 3.1.4: Studio del segno di un polinomio di terzo grado">🔗</a></div>
 </article></details>
-<details id="sec-analisi-segni-3-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
-<span class="type">Esercizio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Studio del segno di una frazione algebrica.</span>
+<details id="sec-analisi-segni-3-14" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Studio del segno di una frazione algebrica 1.</span>
 </h4></summary>
-<article class="exercise exercise-like knowl__content"><div id="sec-analisi-segni-3-6-ww-inner" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="2" data-localize-correct="Giusto" data-localize-incorrect="Sbagliato" data-localize-blank="Spazio vuoto" data-localize-submit="Invia" data-localize-check-responses="Controlla le risposte" data-localize-reveal="Mostra" data-localize-randomize="Casuale" data-localize-reset="Azzera" data-localize-hint="Suggerimento" data-localize-solution="Soluzione" data-origin="generated" data-problemSource="Snodi/3_1_3-Studio_del_segno_di_una_frazione_algebrica.pg" data-documentID="" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('sec-analisi-segni-3-6-ww-inner')">Attiva</button></div>
+<article class="example example-like knowl__content">
+<div class="para logical" id="sec-analisi-segni-3-14-2-1">
+<div class="para">Studia il segno di</div>
+<div class="displaymath process-math" id="sec-analisi-segni-3-14-2-1-1">
+\begin{equation*}
+\frac{x^2+1}{3-x}
+\end{equation*}
+</div>
+<div class="para">al variare di <span class="process-math">\(x\in \R\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-14-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec-analisi-segni-3-14-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="sec-analisi-segni-3-14-3-1">
+<div class="para">Seguiamo l’<a href="sec-analisi-segni.html#alg-grafico-segni" class="xref" data-knowl="./knowl/xref/alg-grafico-segni.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Algoritmo 3.1.1: Costruzione del grafico dei segni">Algoritmo 3.1.1</a>:</div>
+<ol class="decimal" id="sec-analisi-segni-3-14-3-1-2">
+<li id="sec-analisi-segni-3-14-3-1-2-1">
+<div class="para" id="sec-analisi-segni-3-14-3-1-2-1-1">La frazione è vista come il rapporto tra <span class="process-math">\(N=x^2+1\)</span> e <span class="process-math">\(D=3-x\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-14-3-1-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto 1"><a href="#sec-analisi-segni-3-14-3-1-2-1" title="Copy heading and permalink for Punto 1" aria-label="Copy heading and permalink for Punto 1">🔗</a></div>
+</li>
+<li id="sec-analisi-segni-3-14-3-1-2-2">
+<div class="para" id="sec-analisi-segni-3-14-3-1-2-2-1">Non ci sono C.E. per i fattori in quanto numeratore e denominatore sono polinomi (razionali interi). La frazione algebrica avrebbe una C.E., ma questa verrà in automatico alla fine dello studio del segno.<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-14-3-1-2-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto 2"><a href="#sec-analisi-segni-3-14-3-1-2-2" title="Copy heading and permalink for Punto 2" aria-label="Copy heading and permalink for Punto 2">🔗</a></div>
+</li>
+<li id="sec-analisi-segni-3-14-3-1-2-3">
+<div class="para logical" id="sec-analisi-segni-3-14-3-1-2-3-1">
+<div class="para">Si studia il segno dei due polinomi. Per il numeratore:</div>
+<div class="displaymath process-math" id="sec-analisi-segni-3-14-3-1-2-3-1-1">
+\begin{equation*}
+N\ge0 \qquad x^2+1\ge 0
+\end{equation*}
+</div>
+<div class="para">che va risolta partendo dall’equazione associata (secondo grado binomia) e disegnando la parabolina:</div>
+<div class="displaymath process-math" id="sec-analisi-segni-3-14-3-1-2-3-1-2">
+\begin{equation*}
+\text{Eq. assoc.} \quad x^2+1 = 0
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-14-3-1-2-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="sidebyside">
+<div class="sbsrow" style="margin-left:0%;margin-right:5%;grid-template-columns:78.9473684210526% 21.0526315789474%;column-gap:0%;">
+<div class="sbspanel sbspanel--middle middle" style="">
+<div class="para logical" id="sec-analisi-segni-3-14-3-1-2-3-2-1">
+<div class="displaymath process-math" id="sec-analisi-segni-3-14-3-1-2-3-2-1-1">
+\begin{equation*}
+x^2=-1
+\end{equation*}
+</div>
+<div class="para">che non ha soluzione (la formula completa avrebbe fornito <span class="process-math">\(\Delta=0-4=-4\)</span>).</div>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-14-3-1-2-3-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+</div>
+<div class="sbspanel sbspanel--middle middle" style=""><div class="image-box"><img src="generated/latex-image/sec-analisi-segni-3-14-3-1-2-3-2-2.svg" role="img" class="contained"></div></div>
+</div>
+</div>
+<div class="para" id="sec-analisi-segni-3-14-3-1-2-3-3">La disequazione è invece verificata <span class="process-math">\(\forall x \in \R\text{,}\)</span> cioè il numeratore è sempre positivo (e mai zero). Alla stessa conclusione si giungeva guardando il polinomio <span class="process-math">\(N\text{:}\)</span> <span class="process-math">\(x^2\)</span> è un numero positivo (al minimo nullo) e sommando 1 si può ottenere solo un numero pari o superiore a 1, quindi positivo indipendentemente dal valore di <span class="process-math">\(x\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-14-3-1-2-3-3" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="para logical" id="sec-analisi-segni-3-14-3-1-2-3-4">
+<div class="para">Per il denominatore:</div>
+<div class="displaymath process-math" id="sec-analisi-segni-3-14-3-1-2-3-4-1">
+\begin{equation*}
+D\ge0 \qquad 3-x\ge 0 \qquad x\le 3
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-14-3-1-2-3-4" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto 3"><a href="#sec-analisi-segni-3-14-3-1-2-3" title="Copy heading and permalink for Punto 3" aria-label="Copy heading and permalink for Punto 3">🔗</a></div>
+</li>
+<li id="sec-analisi-segni-3-14-3-1-2-4">
+<div class="para" id="sec-analisi-segni-3-14-3-1-2-4-1">Si traccia una linea orizzontale orientata (una freccia verso destra) e si posizionano gli estremi degli intervalli ottenuti al punto precedente<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-14-3-1-2-4-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/sec-analisi-segni-3-14-3-1-2-4-2.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Punto 4"><a href="#sec-analisi-segni-3-14-3-1-2-4" title="Copy heading and permalink for Punto 4" aria-label="Copy heading and permalink for Punto 4">🔗</a></div>
+</li>
+<li id="sec-analisi-segni-3-14-3-1-2-5">
+<div class="para logical" id="sec-analisi-segni-3-14-3-1-2-5-1">
+<div class="para">Si posizionano solo dei <span class="process-math">\(+\)</span> nella riga dei segni di <span class="process-math">\(N\)</span> in quanto è sempre positivo. Si posizionano nella riga dei segni di <span class="process-math">\(D\text{:}\)</span>
+</div>
+<ul class="disc" id="sec-analisi-segni-3-14-3-1-2-5-1-4">
+<li id="sec-analisi-segni-3-14-3-1-2-5-1-4-1">
+<div class="para" id="sec-analisi-segni-3-14-3-1-2-5-1-4-1-1">uno <span class="process-math">\(0\)</span> sulla linea verticale in corrispondenza di 3;<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-14-3-1-2-5-1-4-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#sec-analisi-segni-3-14-3-1-2-5-1-4-1" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+<li id="sec-analisi-segni-3-14-3-1-2-5-1-4-2">
+<div class="para" id="sec-analisi-segni-3-14-3-1-2-5-1-4-2-1">
+<span class="process-math">\(+\)</span> dopo di 3 (cioè per <span class="process-math">\(x\lt 3\)</span>);<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-14-3-1-2-5-1-4-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#sec-analisi-segni-3-14-3-1-2-5-1-4-2" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+<li id="sec-analisi-segni-3-14-3-1-2-5-1-4-3">
+<div class="para" id="sec-analisi-segni-3-14-3-1-2-5-1-4-3-1">
+<span class="process-math">\(-\)</span> nello spazio rimasto vuoto<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-14-3-1-2-5-1-4-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#sec-analisi-segni-3-14-3-1-2-5-1-4-3" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+</ul>
+<div class="para">Si ottiene:</div>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-14-3-1-2-5-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/sec-analisi-segni-3-14-3-1-2-5-2.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Punto 5"><a href="#sec-analisi-segni-3-14-3-1-2-5" title="Copy heading and permalink for Punto 5" aria-label="Copy heading and permalink for Punto 5">🔗</a></div>
+</li>
+<li id="sec-analisi-segni-3-14-3-1-2-6">
+<div class="para" id="sec-analisi-segni-3-14-3-1-2-6-1">Si calcola la riga del rapporto, seguendo le regole dell’algoritmo e ottenendo:<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-14-3-1-2-6-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/sec-analisi-segni-3-14-3-1-2-6-2.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Punto 6"><a href="#sec-analisi-segni-3-14-3-1-2-6" title="Copy heading and permalink for Punto 6" aria-label="Copy heading and permalink for Punto 6">🔗</a></div>
+</li>
+</ol>
+<div class="para">Otteniamo che la frazione algebrica non ha zeri, è positiva in <span class="process-math">\((-\infty,3)\text{,}\)</span> negativa in <span class="process-math">\((3,+\infty)\)</span> e non esiste per <span class="process-math">\(x=3\)</span> (ecco le C.E. della frazione!).</div>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-3-14-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Soluzione 3.1.5.1"><a href="#sec-analisi-segni-3-14-3" title="Copy heading and permalink for Soluzione 3.1.5.1" aria-label="Copy heading and permalink for Soluzione 3.1.5.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esempio 3.1.5: Studio del segno di una frazione algebrica 1"><a href="#sec-analisi-segni-3-14" title="Copy heading and permalink for Esempio 3.1.5: Studio del segno di una frazione algebrica 1" aria-label="Copy heading and permalink for Esempio 3.1.5: Studio del segno di una frazione algebrica 1">🔗</a></div>
+</article></details>
+<details id="ex-grafico-segni-fraz-alg-1" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Studio del segno di una frazione algebrica 2.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="ex-grafico-segni-fraz-alg-1-2-1">
+<div class="para">Studia il segno di</div>
+<div class="displaymath process-math" id="ex-grafico-segni-fraz-alg-1-2-1-1">
+\begin{equation*}
+\frac{x^2-3x+2}{x^2-9}
+\end{equation*}
+</div>
+<div class="para">al variare di <span class="process-math">\(x\in \R\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-fraz-alg-1-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="ex-grafico-segni-fraz-alg-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-grafico-segni-fraz-alg-1-3-1">
+<div class="para">Seguiamo l’<a href="sec-analisi-segni.html#alg-grafico-segni" class="xref" data-knowl="./knowl/xref/alg-grafico-segni.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Algoritmo 3.1.1: Costruzione del grafico dei segni">Algoritmo 3.1.1</a>:</div>
+<ol class="decimal" id="ex-grafico-segni-fraz-alg-1-3-1-2">
+<li id="ex-grafico-segni-fraz-alg-1-3-1-2-1">
+<div class="para" id="ex-grafico-segni-fraz-alg-1-3-1-2-1-1">La frazione è vista come il rapporto tra <span class="process-math">\(N=x^2-3x+2\)</span> e <span class="process-math">\(D=x^2-9\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-fraz-alg-1-3-1-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto 1"><a href="#ex-grafico-segni-fraz-alg-1-3-1-2-1" title="Copy heading and permalink for Punto 1" aria-label="Copy heading and permalink for Punto 1">🔗</a></div>
+</li>
+<li id="ex-grafico-segni-fraz-alg-1-3-1-2-2">
+<div class="para" id="ex-grafico-segni-fraz-alg-1-3-1-2-2-1">Non ci sono C.E. per i fattori in quanto numeratore e denominatore sono polinomi (razionali interi). La frazione algebrica avrebbe una C.E., ma questa verrà in automatico alla fine dello studio del segno.<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-fraz-alg-1-3-1-2-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto 2"><a href="#ex-grafico-segni-fraz-alg-1-3-1-2-2" title="Copy heading and permalink for Punto 2" aria-label="Copy heading and permalink for Punto 2">🔗</a></div>
+</li>
+<li id="ex-grafico-segni-fraz-alg-1-3-1-2-3">
+<div class="para logical" id="ex-grafico-segni-fraz-alg-1-3-1-2-3-1">
+<div class="para">Si studia il segno dei due polinomi. Per il numeratore:</div>
+<div class="displaymath process-math" id="ex-grafico-segni-fraz-alg-1-3-1-2-3-1-1">
+\begin{equation*}
+N\ge0 \qquad x^2-3x+2\ge 0
+\end{equation*}
+</div>
+<div class="para">che va risolta partendo dall’equazione associata (secondo grado completa) e disegnando la parabolina:</div>
+<div class="displaymath process-math" id="ex-grafico-segni-fraz-alg-1-3-1-2-3-1-2">
+\begin{equation*}
+\text{Eq. assoc.} \quad x^2-3x+2 = 0
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="ex-grafico-segni-fraz-alg-1-3-1-2-3-1-3">
+\begin{equation*}
+\Delta=9-8=1
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-fraz-alg-1-3-1-2-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="sidebyside">
+<div class="sbsrow" style="margin-left:0%;margin-right:5%;grid-template-columns:78.9473684210526% 21.0526315789474%;column-gap:0%;">
+<div class="sbspanel sbspanel--middle middle" style="">
+<div class="para logical" id="ex-grafico-segni-fraz-alg-1-3-1-2-3-2-1">
+<div class="displaymath process-math" id="ex-grafico-segni-fraz-alg-1-3-1-2-3-2-1-1">
+\begin{equation*}
+x_{1,2}= \dfrac{3\pm \sqrt{1}}{2} = \dfrac{3\pm 1}{2} = \begin{cases}1\\2\end{cases} 
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-fraz-alg-1-3-1-2-3-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+</div>
+<div class="sbspanel sbspanel--middle middle" style=""><div class="image-box"><img src="generated/latex-image/ex-grafico-segni-fraz-alg-1-3-1-2-3-2-2.svg" role="img" class="contained"></div></div>
+</div>
+</div>
+<div class="para logical" id="ex-grafico-segni-fraz-alg-1-3-1-2-3-3">
+<div class="displaymath process-math" id="ex-grafico-segni-fraz-alg-1-3-1-2-3-3-1">
+\begin{equation*}
+x\le 1 \vee x\ge 2
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-fraz-alg-1-3-1-2-3-3" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="para logical" id="ex-grafico-segni-fraz-alg-1-3-1-2-3-4">
+<div class="para">Per il denominatore:</div>
+<div class="displaymath process-math" id="ex-grafico-segni-fraz-alg-1-3-1-2-3-4-1">
+\begin{equation*}
+D\ge0 \qquad x^2-9\ge 0
+\end{equation*}
+</div>
+<div class="para">che va risolta partendo dall’equazione associata (secondo grado binomia) e disegnando la parabolina:</div>
+<div class="displaymath process-math" id="ex-grafico-segni-fraz-alg-1-3-1-2-3-4-2">
+\begin{equation*}
+\text{Eq. assoc.} \quad x^2-9 = 0
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="ex-grafico-segni-fraz-alg-1-3-1-2-3-4-3">
+\begin{equation*}
+x^2 = 9
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-fraz-alg-1-3-1-2-3-4" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="sidebyside">
+<div class="sbsrow" style="margin-left:0%;margin-right:5%;grid-template-columns:78.9473684210526% 21.0526315789474%;column-gap:0%;">
+<div class="sbspanel sbspanel--middle middle" style="">
+<div class="para logical" id="ex-grafico-segni-fraz-alg-1-3-1-2-3-5-1">
+<div class="displaymath process-math" id="ex-grafico-segni-fraz-alg-1-3-1-2-3-5-1-1">
+\begin{equation*}
+x_{1,2}= \pm \sqrt{9} = \pm 3 
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-fraz-alg-1-3-1-2-3-5-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+</div>
+<div class="sbspanel sbspanel--middle middle" style=""><div class="image-box"><img src="generated/latex-image/ex-grafico-segni-fraz-alg-1-3-1-2-3-5-2.svg" role="img" class="contained"></div></div>
+</div>
+</div>
+<div class="para logical" id="ex-grafico-segni-fraz-alg-1-3-1-2-3-6">
+<div class="displaymath process-math" id="ex-grafico-segni-fraz-alg-1-3-1-2-3-6-1">
+\begin{equation*}
+x\le -3 \vee x\ge 3
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-fraz-alg-1-3-1-2-3-6" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto 3"><a href="#ex-grafico-segni-fraz-alg-1-3-1-2-3" title="Copy heading and permalink for Punto 3" aria-label="Copy heading and permalink for Punto 3">🔗</a></div>
+</li>
+<li id="ex-grafico-segni-fraz-alg-1-3-1-2-4">
+<div class="para" id="ex-grafico-segni-fraz-alg-1-3-1-2-4-1">Si traccia una linea orizzontale orientata (una freccia verso destra) e si posizionano gli estremi degli intervalli ottenuti al punto precedente<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-fraz-alg-1-3-1-2-4-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/ex-grafico-segni-fraz-alg-1-3-1-2-4-2.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Punto 4"><a href="#ex-grafico-segni-fraz-alg-1-3-1-2-4" title="Copy heading and permalink for Punto 4" aria-label="Copy heading and permalink for Punto 4">🔗</a></div>
+</li>
+<li id="ex-grafico-segni-fraz-alg-1-3-1-2-5">
+<div class="para logical" id="ex-grafico-segni-fraz-alg-1-3-1-2-5-1">
+<div class="para">Si posizionano nella riga dei segni di <span class="process-math">\(N\text{:}\)</span>
+</div>
+<ul class="disc" id="ex-grafico-segni-fraz-alg-1-3-1-2-5-1-2">
+<li id="ex-grafico-segni-fraz-alg-1-3-1-2-5-1-2-1">
+<div class="para" id="ex-grafico-segni-fraz-alg-1-3-1-2-5-1-2-1-1">due <span class="process-math">\(0\)</span> sulle linee verticali in corrispondenza di 1 e 2;<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-fraz-alg-1-3-1-2-5-1-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#ex-grafico-segni-fraz-alg-1-3-1-2-5-1-2-1" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+<li id="ex-grafico-segni-fraz-alg-1-3-1-2-5-1-2-2">
+<div class="para" id="ex-grafico-segni-fraz-alg-1-3-1-2-5-1-2-2-1">
+<span class="process-math">\(+\)</span> prima di 1 (cioè per <span class="process-math">\(x\lt 1\)</span>) e dopo 2 (cioè per <span class="process-math">\(x\gt 2\)</span>);<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-fraz-alg-1-3-1-2-5-1-2-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#ex-grafico-segni-fraz-alg-1-3-1-2-5-1-2-2" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+<li id="ex-grafico-segni-fraz-alg-1-3-1-2-5-1-2-3">
+<div class="para" id="ex-grafico-segni-fraz-alg-1-3-1-2-5-1-2-3-1">
+<span class="process-math">\(-\)</span> negli spazi rimasti vuoti<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-fraz-alg-1-3-1-2-5-1-2-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#ex-grafico-segni-fraz-alg-1-3-1-2-5-1-2-3" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+</ul>
+<div class="para">Si posizionano nella riga dei segni di <span class="process-math">\(D\text{:}\)</span>
+</div>
+<ul class="disc" id="ex-grafico-segni-fraz-alg-1-3-1-2-5-1-4">
+<li id="ex-grafico-segni-fraz-alg-1-3-1-2-5-1-4-1">
+<div class="para" id="ex-grafico-segni-fraz-alg-1-3-1-2-5-1-4-1-1">due <span class="process-math">\(0\)</span> sulle linee verticali in corrispondenza di -3 e 3;<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-fraz-alg-1-3-1-2-5-1-4-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#ex-grafico-segni-fraz-alg-1-3-1-2-5-1-4-1" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+<li id="ex-grafico-segni-fraz-alg-1-3-1-2-5-1-4-2">
+<div class="para" id="ex-grafico-segni-fraz-alg-1-3-1-2-5-1-4-2-1">
+<span class="process-math">\(+\)</span> prima di -3 (cioè per <span class="process-math">\(x\lt -3\)</span>) e dopo 3 (cioè per <span class="process-math">\(x\gt 3\)</span>);<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-fraz-alg-1-3-1-2-5-1-4-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#ex-grafico-segni-fraz-alg-1-3-1-2-5-1-4-2" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+<li id="ex-grafico-segni-fraz-alg-1-3-1-2-5-1-4-3">
+<div class="para" id="ex-grafico-segni-fraz-alg-1-3-1-2-5-1-4-3-1">
+<span class="process-math">\(-\)</span> negli spazi rimasti vuoti<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-fraz-alg-1-3-1-2-5-1-4-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#ex-grafico-segni-fraz-alg-1-3-1-2-5-1-4-3" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+</ul>
+<div class="para">Si ottiene:</div>
+<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-fraz-alg-1-3-1-2-5-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/ex-grafico-segni-fraz-alg-1-3-1-2-5-2.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Punto 5"><a href="#ex-grafico-segni-fraz-alg-1-3-1-2-5" title="Copy heading and permalink for Punto 5" aria-label="Copy heading and permalink for Punto 5">🔗</a></div>
+</li>
+<li id="ex-grafico-segni-fraz-alg-1-3-1-2-6">
+<div class="para" id="ex-grafico-segni-fraz-alg-1-3-1-2-6-1">Si calcola la riga del rapporto, seguendo le regole dell’algoritmo e ottenendo:<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-fraz-alg-1-3-1-2-6-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/ex-grafico-segni-fraz-alg-1-3-1-2-6-2.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Punto 6"><a href="#ex-grafico-segni-fraz-alg-1-3-1-2-6" title="Copy heading and permalink for Punto 6" aria-label="Copy heading and permalink for Punto 6">🔗</a></div>
+</li>
+</ol>
+<div class="para">Otteniamo che la frazione algebrica ha due zeri <span class="process-math">\(\{1,2\}\text{,}\)</span> è positiva in <span class="process-math">\((-\infty,-3)\cup(1,2)\cup(3,+\infty)\text{,}\)</span> negativa in <span class="process-math">\((-3,1)\cup(2,3)\)</span> e non esiste per due valori <span class="process-math">\(x=\pm 3\)</span> (ecco le C.E.!).</div>
+<div class="autopermalink" data-description="Capoverso"><a href="#ex-grafico-segni-fraz-alg-1-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Soluzione 3.1.6.1"><a href="#ex-grafico-segni-fraz-alg-1-3" title="Copy heading and permalink for Soluzione 3.1.6.1" aria-label="Copy heading and permalink for Soluzione 3.1.6.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esempio 3.1.6: Studio del segno di una frazione algebrica 2"><a href="#ex-grafico-segni-fraz-alg-1" title="Copy heading and permalink for Esempio 3.1.6: Studio del segno di una frazione algebrica 2" aria-label="Copy heading and permalink for Esempio 3.1.6: Studio del segno di una frazione algebrica 2">🔗</a></div>
+</article></details>
+<details id="sec-analisi-segni-3-16" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Esercizio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">✨ Studio del segno di una frazione algebrica.</span>
+</h4></summary>
+<article class="exercise exercise-like knowl__content"><div id="sec-analisi-segni-3-16-ww-inner" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="2" data-localize-correct="Giusto" data-localize-incorrect="Sbagliato" data-localize-blank="Spazio vuoto" data-localize-submit="Invia" data-localize-check-responses="Controlla le risposte" data-localize-reveal="Mostra" data-localize-randomize="Casuale" data-localize-reset="Azzera" data-localize-hint="Suggerimento" data-localize-solution="Soluzione" data-origin="generated" data-problemSource="Snodi/3_1_7-_Studio_del_segno_di_una_frazione_algebrica.pg" data-documentID="" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('sec-analisi-segni-3-16-ww-inner')">Attiva</button></div>
 <div class="problem-contents">
-<div class="para" id="extracted-sec-analisi-segni-3-6-1-1-1">Studia il segno della frazione algebrica<div class="autopermalink" data-description="Capoverso"><a href="#extracted-sec-analisi-segni-3-6-1-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="para" id="extracted-sec-analisi-segni-3-16-1-1-1">Studia il segno della frazione algebrica<div class="autopermalink" data-description="Capoverso"><a href="#extracted-sec-analisi-segni-3-16-1-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div> 
-<div class="para logical" id="extracted-sec-analisi-segni-3-6-1-1-2">
-<div class="displaymath process-math" id="extracted-sec-analisi-segni-3-6-1-1-2-1">
+<div class="para logical" id="extracted-sec-analisi-segni-3-16-1-1-2">
+<div class="displaymath process-math" id="extracted-sec-analisi-segni-3-16-1-1-2-1">
 \begin{equation*}
 \frac{x^{2}+7x+10}{2-x}
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Capoverso"><a href="#extracted-sec-analisi-segni-3-6-1-1-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Capoverso"><a href="#extracted-sec-analisi-segni-3-16-1-1-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div> 
-<div class="para" id="extracted-sec-analisi-segni-3-6-1-1-3">al variare di <span class="process-math">\(x \in \mathbb R\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#extracted-sec-analisi-segni-3-6-1-1-3" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="para" id="extracted-sec-analisi-segni-3-16-1-1-3">al variare di <span class="process-math">\(x \in \mathbb R\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#extracted-sec-analisi-segni-3-16-1-1-3" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="extracted-sec-analisi-segni-3-6-1-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<details id="extracted-sec-analisi-segni-3-16-1-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="solution solution-like knowl__content">
-<div class="para" id="extracted-sec-analisi-segni-3-6-1-2-1">Dopo aver studiato il segno di numeratore e denominatore (risolvendo <span class="process-math">\(N\ge 0\)</span> e <span class="process-math">\(D\ge 0\)</span>), si ottiene il grafico dei segni:<div class="autopermalink" data-description="Capoverso"><a href="#extracted-sec-analisi-segni-3-6-1-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="para" id="extracted-sec-analisi-segni-3-16-1-2-1">Dopo aver studiato il segno di numeratore e denominatore (risolvendo <span class="process-math">\(N\ge 0\)</span> e <span class="process-math">\(D\ge 0\)</span>), si ottiene il grafico dei segni:<div class="autopermalink" data-description="Capoverso"><a href="#extracted-sec-analisi-segni-3-16-1-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="tabular-box natural-width"><table class="tabular">
 <tr class="header-horizontal">
@@ -554,13 +1386,138 @@ F_3\ge0 \qquad x+2\ge 0 \qquad x\ge -2
 <td class="c t b0 r0 l0 t0 lines"><span class="process-math">\(-\)</span></td>
 </tr>
 </table></div>
-<div class="autopermalink" data-description="Soluzione 3.1.3.1"><a href="#extracted-sec-analisi-segni-3-6-1-2" title="Copy heading and permalink for Soluzione 3.1.3.1" aria-label="Copy heading and permalink for Soluzione 3.1.3.1">🔗</a></div>
+<div class="autopermalink" data-description="Soluzione 3.1.7.1"><a href="#extracted-sec-analisi-segni-3-16-1-2" title="Copy heading and permalink for Soluzione 3.1.7.1" aria-label="Copy heading and permalink for Soluzione 3.1.7.1">🔗</a></div>
 </div></details>
 </div>
 </div>
 </div>
-<div class="autopermalink" data-description="Esercizio 3.1.3: Studio del segno di una frazione algebrica"><a href="#sec-analisi-segni-3-6" title="Copy heading and permalink for Esercizio 3.1.3: Studio del segno di una frazione algebrica" aria-label="Copy heading and permalink for Esercizio 3.1.3: Studio del segno di una frazione algebrica">🔗</a></div>
+<div class="autopermalink" data-description="Esercizio 3.1.7: ✨ Studio del segno di una frazione algebrica"><a href="#sec-analisi-segni-3-16" title="Copy heading and permalink for Esercizio 3.1.7: ✨ Studio del segno di una frazione algebrica" aria-label="Copy heading and permalink for Esercizio 3.1.7: ✨ Studio del segno di una frazione algebrica">🔗</a></div>
 </article></details><div class="autopermalink" data-description="Sottoparagrafo 3.1.1: Grafico dei segni"><a href="#sec-analisi-segni-3" title="Copy heading and permalink for Sottoparagrafo 3.1.1: Grafico dei segni" aria-label="Copy heading and permalink for Sottoparagrafo 3.1.1: Grafico dei segni">🔗</a></div>
+</section>
+<section class="subsection" id="sec-analisi-segni-4">
+<h3 class="heading hide-type">
+<span class="type">Sottoparagrafo</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Risolvere disequazioni col grafico dei segni</span>
+</h3>
+<div class="para logical" id="sec-analisi-segni-4-2">
+<div class="para">Qualsiasi disequazione in forma normale è risolvibile se si riesce a tracciare il grafico dei segni. La disequazione in forma normale</div>
+<div class="displaymath process-math" id="sec-analisi-segni-4-2-1">
+\begin{equation*}
+f(x) \gtreqless 0
+\end{equation*}
+</div>
+<div class="para">è risolvibile studiando il segno di <span class="process-math">\(f(x)\)</span> (qualunque espressione sia) e selezionando solo gli intervalli/valori di <span class="process-math">\(x\)</span> che soddisfano la richiesta della disequazione nella riga del risultato:</div>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-4-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b1 r0 l0 t0 lines">Disequazione</th>
+<th scope="col" class="c m b1 r0 l0 t0 lines">Selezionare</th>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\gt\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(+\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ge\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(+,0\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\lt\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\le\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-,0\)</span></td>
+</tr>
+</table></div>
+<div class="para" id="sec-analisi-segni-4-4">
+<em class="alert">In nessun caso</em> si considerano gli intervalli/valori contrassegnati con <span class="process-math">\(\nexists\)</span> in quanto sarebbe una violazione delle C.E. dell’espressione <span class="process-math">\(f(x)\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-4-4" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<details id="sec-analisi-segni-4-5" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Disequazione razionale intera di terzo grado.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="sec-analisi-segni-4-5-2-1">Risolvi <span class="process-math">\(x^3+x^2-2x\le 0\)</span> per <span class="process-math">\(x\in \R\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-4-5-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec-analisi-segni-4-5-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para logical" id="sec-analisi-segni-4-5-3-1">
+<div class="displaymath process-math" id="sec-analisi-segni-4-5-3-1-1">
+\begin{equation*}
+S=(-\infty, 2] \cup [0,1]
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-4-5-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Risposta 3.1.8.1"><a href="#sec-analisi-segni-4-5-3" title="Copy heading and permalink for Risposta 3.1.8.1" aria-label="Copy heading and permalink for Risposta 3.1.8.1">🔗</a></div>
+</div></details>
+<details id="sec-analisi-segni-4-5-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="sec-analisi-segni-4-5-4-1">Il grafico dei segni era stato tracciato nell’<a href="sec-analisi-segni.html#ex-grafico-segni-pol-3" class="xref" data-knowl="./knowl/xref/ex-grafico-segni-pol-3.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Esempio 3.1.4: Studio del segno di un polinomio di terzo grado">Esempio 3.1.4</a>.<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-4-5-4-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/sec-analisi-segni-4-5-4-2.svg" role="img" class="contained"></div>
+<div class="para logical" id="sec-analisi-segni-4-5-4-3">
+<div class="para">quindi si vanno a considerare nell’ultima riga (risultato) solo intervalli e valori coi simboli <span class="process-math">\(-\)</span> e <span class="process-math">\(0\text{.}\)</span> Questi sono gli intervalli <span class="process-math">\(x\le -2 \vee 0 \le x \le 1\text{,}\)</span> quindi la soluzione della disequazione è:</div>
+<div class="displaymath process-math" id="sec-analisi-segni-4-5-4-3-4">
+\begin{equation*}
+S=(-\infty, 2] \cup [0,1]
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-4-5-4-3" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Soluzione 3.1.8.1"><a href="#sec-analisi-segni-4-5-4" title="Copy heading and permalink for Soluzione 3.1.8.1" aria-label="Copy heading and permalink for Soluzione 3.1.8.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esempio 3.1.8: Disequazione razionale intera di terzo grado"><a href="#sec-analisi-segni-4-5" title="Copy heading and permalink for Esempio 3.1.8: Disequazione razionale intera di terzo grado" aria-label="Copy heading and permalink for Esempio 3.1.8: Disequazione razionale intera di terzo grado">🔗</a></div>
+</article></details>
+<details id="sec-analisi-segni-4-6" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Disequazione razionale fratta.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="sec-analisi-segni-4-6-2-1">
+<div class="para">Risolvi</div>
+<div class="displaymath process-math" id="sec-analisi-segni-4-6-2-1-1">
+\begin{equation*}
+\frac{x^2-3x+2}{x^2-9}\ge 0
+\end{equation*}
+</div>
+<div class="para">per <span class="process-math">\(x\in \R\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-4-6-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec-analisi-segni-4-6-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para logical" id="sec-analisi-segni-4-6-3-1">
+<div class="displaymath process-math" id="sec-analisi-segni-4-6-3-1-1">
+\begin{equation*}
+S=(-\infty, -3) \cup [1,2] \cup (3,+\infty)
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-4-6-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Risposta 3.1.9.1"><a href="#sec-analisi-segni-4-6-3" title="Copy heading and permalink for Risposta 3.1.9.1" aria-label="Copy heading and permalink for Risposta 3.1.9.1">🔗</a></div>
+</div></details>
+<details id="sec-analisi-segni-4-6-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="sec-analisi-segni-4-6-4-1">Il grafico dei segni era stato tracciato nell’<a href="sec-analisi-segni.html#ex-grafico-segni-fraz-alg-1" class="xref" data-knowl="./knowl/xref/ex-grafico-segni-fraz-alg-1.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Esempio 3.1.6: Studio del segno di una frazione algebrica 2">Esempio 3.1.6</a>.<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-4-6-4-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/sec-analisi-segni-4-6-4-2.svg" role="img" class="contained"></div>
+<div class="para logical" id="sec-analisi-segni-4-6-4-3">
+<div class="para">quindi si vanno a considerare nell’ultima riga (risultato) solo intervalli e valori coi simboli <span class="process-math">\(+\)</span> e <span class="process-math">\(0\text{.}\)</span> Questi sono gli intervalli <span class="process-math">\(x\lt -3 \vee 1\le x \le 2 \vee x \gt 3\text{,}\)</span> quindi la soluzione della disequazione è:</div>
+<div class="displaymath process-math" id="sec-analisi-segni-4-6-4-3-4">
+\begin{equation*}
+S=(-\infty, -3) \cup [1,2] \cup (3,+\infty)
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-analisi-segni-4-6-4-3" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Soluzione 3.1.9.1"><a href="#sec-analisi-segni-4-6-4" title="Copy heading and permalink for Soluzione 3.1.9.1" aria-label="Copy heading and permalink for Soluzione 3.1.9.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esempio 3.1.9: Disequazione razionale fratta"><a href="#sec-analisi-segni-4-6" title="Copy heading and permalink for Esempio 3.1.9: Disequazione razionale fratta" aria-label="Copy heading and permalink for Esempio 3.1.9: Disequazione razionale fratta">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Sottoparagrafo 3.1.2: Risolvere disequazioni col grafico dei segni"><a href="#sec-analisi-segni-4" title="Copy heading and permalink for Sottoparagrafo 3.1.2: Risolvere disequazioni col grafico dei segni" aria-label="Copy heading and permalink for Sottoparagrafo 3.1.2: Risolvere disequazioni col grafico dei segni">🔗</a></div>
 </section><div class="autopermalink" data-description="Paragrafo 3.1: Studio del segno"><a href="#sec-analisi-segni" title="Copy heading and permalink for Paragrafo 3.1: Studio del segno" aria-label="Copy heading and permalink for Paragrafo 3.1: Studio del segno">🔗</a></div>
 </section>
 </div>

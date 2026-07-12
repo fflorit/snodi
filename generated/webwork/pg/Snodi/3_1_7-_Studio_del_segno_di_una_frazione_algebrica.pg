@@ -1,0 +1,210 @@
+
+            DOCUMENT();
+
+loadMacros(
+    "PGstandard.pl",
+    "MathObjects.pl",
+    "PGML.pl",
+    "contextFraction.pl"
+);
+
+# Genera quattro soluzioni reali intere
+$solN1 = random(-9, 9, 1);
+$solN2 = random(-9, 9, 1);
+$solD1 = random(-9, 9, 1);
+$solD2 = random(-9, 9, 1);
+
+# Calcola i coefficienti dei polinomi a numeratore (N) e denominatore (D)
+$aN = 1;
+$aD = 1;
+$bN = -($solN1 + $solN2);
+$cN = $solN1 * $solN2;
+$bD = -($solD1 + $solD2);
+$cD = $solD1 * $solD2;
+
+# Con la probabilità del 20% crea una soluzione radionale a N oppure D
+$probF = random(0,1,.01);
+$denS = random(2, 5, 1);
+if ($probF < 0.1) {#sol razionale a numeratore
+  $solN1 = $solN1/$denS;
+  $aN = $denS;
+  $bN = -$denS*($solN1 + $solN2);
+} elsif ($probF < 0.2) {#sol razionale a denominatore
+  $solD1 = $solD1/$denS;
+  $aD = $denS;
+  $bD = -$denS*($solD1 + $solD2);
+} else {
+  $denS = 1;
+}
+
+# Con la probabilità del 10% rendi il Delta < 0 a N oppure a D
+$probDn = random(0,1,.01);
+$caseDn = 0;
+if ($probDn < 0.05) {#sol complesse coniugate a numeratore
+  $re = $solN1; #parte reale
+  $im = random(1, 4, 1); #parte immaginaria
+  $bN = -2*$re;
+  $cN = $re**2 + $im**2;
+  $caseDn = 1; #caso 1: Delta<0 a N
+} elsif ($probDn < 0.1) {#sol complesse coniugate a denominatore
+  $re = $solD1; #parte reale
+  $im = random(1, 4, 1); #parte immaginaria
+  $bD = -2*$re;
+  $cD = $re**2 + $im**2;
+  $caseDn = 2; #caso 2: Delta<0 a D
+} else {
+  $re = 0;
+  $im = 0;
+}
+
+# Con la probabilità del 30% cambia segno a N oppure D
+$probSign = random(0,1,.01);
+if ($probSign < 0.15) {#cambia segno a numeratore
+    $aN = -($aN);
+    $bN = -($bN);
+    $cN = -($cN);
+} elsif ($probSign < 0.3) {#cambia segno a denominatore
+    $aD = -($aD);
+    $bD = -($bD);
+    $cD = -($cD);
+}
+
+# Semplifica le espressioni
+$N = Compute("($aN)*x^2+($bN)*x+($cN)")->reduce;
+$D = Compute("($aD)*x^2+($bD)*x+($cD)")->reduce;
+
+# Crea il vettore delle soluzioni reali distinte
+@sols = ();
+
+# Con la probabilità del 30% riduci il grado a numeratore
+$probRN = random(0,1,.01);
+if ($probRN < 0.3) {
+  $aN = $denS;
+  $bN = $solN1*$denS;
+  if ($probSign < 0.3) {
+    $aN = -($aN);
+    $bN = -($bN);
+  }
+  $N = Compute("($aN)*x-($bN)")->reduce;
+  push(@sols, $solN1);
+} else {
+  if ($caseDn != 1) {push(@sols, $solN1, $solN2);}
+}
+
+# Con la probabilità del 30% riduci il grado a denominatore
+$probRD = random(0,1,.01);
+if ($probRD < 0.3) {
+  $aD = $denS;
+  $bD = $solD1*$denS;
+  if ($probSign < 0.3) {
+    $aD = -($aD);
+    $bD = -($bD);
+  }
+  $D = Compute("($aD)*x-($bD)")->reduce;
+  push(@sols, $solD1);
+} else {
+  if ($caseDn != 2) {push(@sols, $solD1, $solD2);}
+}
+
+# .......... da qui in poi è indifferente che espressione hanno N o D ..........
+@x0 = num_sort(uniq(@sols)); #array ordinato degli zeri unici di N e D
+$nx = @x0; #numero di zeri reali distinti
+
+# Crea un array di test del segno e degli zeri
+@test = ($x0[0] - 1);
+for ($i = 0; $i < $nx - 1; $i++) {
+    push(@test, $x0[$i]);
+    $media = ($x0[$i] + $x0[$i+1]) / 2;
+    push(@test, $media);
+}
+push(@test, $x0[-1]);
+push(@test, $x0[-1] + 1);
+
+# Valuta i segni nelle tre righe della tabella
+@num_top = ();
+@segnoN = ();
+@segnoD = ();
+@segnoF = ();
+for ($i = 0; $i < @test; $i++) {
+  $Ntmp = $N->eval(x => $test[$i]);
+  $Dtmp = $D->eval(x => $test[$i]);
+  $Ftmp = $Ntmp*$Dtmp; #svolge il prodotto per evitare i problemi della divisione per zero, che viene gestita a mano
+
+  if ($i % 2 != 0) {
+    Context("Fraction");
+    $tfrac = Fraction($test[$i]);
+    Context("Numeric");
+
+    #colonna in corrispondenza del valore numerico
+    push(@num_top, "\($tfrac\)");
+
+    if ($Ntmp != 0) {
+      push(@segnoN, " ");
+    } else {
+      push(@segnoN, "\(0\)");
+    }
+
+    if ($Dtmp != 0) {
+      #zero solo del numeratore
+      push(@segnoD, " ");
+      push(@segnoF, "\(0\)");
+    } else {
+      push(@segnoD, "\(0\)");
+      push(@segnoF, "\(\nexists\)");
+    }
+  } else {
+    #colonna tra i valori numerici
+    push(@num_top, " ");
+
+    if ($Ntmp > 0) {
+        push(@segnoN, "\(+\)");
+    } else {
+        push(@segnoN, "\(-\)");
+    }
+
+    if ($Dtmp > 0) {
+        push(@segnoD, "\(+\)");
+    } else {
+        push(@segnoD, "\(-\)");
+    }
+
+    if ($Ftmp > 0) {
+        push(@segnoF, "\(+\)");
+    } else {
+        push(@segnoF, "\(-\)");
+    }
+  }
+}
+
+
+
+
+# ---------------------- OUTPUT ----------------------
+Context()->texStrings;
+TEXT(beginproblem());
+
+BEGIN_TEXT
+Studia il segno della frazione algebrica
+
+\[ \frac{$N}{$D} \]
+
+al variare di \(x \in \mathbb R \).
+END_TEXT
+
+
+BEGIN_SOLUTION
+Dopo aver studiato il segno di numeratore e denominatore (risolvendo \(N\ge 0\) e \(D\ge 0\)), si ottiene il grafico dei segni:
+\{
+DataTable(
+  [
+    [["", headerrow => 1, midrule=>1], @num_top],
+    ["\(N \)", @segnoN],
+    [["\(D \)", midrule=>1], @segnoD],
+    ["\(N/D \)", @segnoF]
+  ],
+);
+\}
+END_SOLUTION
+
+ENDDOCUMENT();
+        

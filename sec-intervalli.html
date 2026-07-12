@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="it-IT" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Intervalli e loro operazioni</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: true,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta name="twitter:title" content="Snodi">
+<meta property="og:title" content="Snodi">
+<meta property="book:title" content="Snodi">
+<meta name="twitter:description" content="TBD">
+<meta property="og:description" content="TBD">
+<meta name="twitter:card" content="summary">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.42"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.1.11';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.8b6d53d5a91823a0.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.2901d6466316ff22.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.66fa8a682a32c0ac.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="_static/pretext/js/dist/pretext-webwork/2.20/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://cdn.geogebra.org/apps/deployggb.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Calcola (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Vai all'indice generale</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="snodi.html"><span class="title">Snodi</span> <span class="subtitle">TBD</span></a></h1>
+<p class="byline">Federico Florit (Curatore)</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Indice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Indice</span></button><a class="index-button button" href="backmatter-5.html" title="Indice analitico"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Indice analitico</span></a><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search book" commandfor="ptx-search-dialog" command="show-modal"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog" closedby="closerequest"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close search" id="ptx-search-close" class="ptx-search-close" commandfor="ptx-search-dialog" command="close"><span class="material-symbols-outlined">close</span></button>
+</div>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="ptx-search-results-heading">Risultati: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>Nessun risultato.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
+</div>
+<span class="nav-other-controls"><button id="calculator-toggle" class="calculator-toggle button" title="Show calculator" aria-expanded="false" aria-controls="calculator-container"><span class="icon material-symbols-outlined" aria-hidden="true">&#xea5f;</span><span class="name">Calc</span></button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
+<script>
+var ggbApp = new GGBApplet({"appName": "classic",
+    "width": 330,
+    "height": 600,
+    "showToolBar": true,
+    "showAlgebraInput": true,
+    "perspective": "G/A",
+    "algebraInputPosition": "bottom",
+    "scaleContainerClass": "calculator-container",
+    "allowUpscale": true,
+    "autoHeight": true,
+    "disableAutoScale": false},
+true);
+</script><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-insiemi.html" title="Precedente"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prec</span></a><a class="up-button button" href="ch-base.html" title="Su"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Su</span></a><a class="next-button button" href="sec-op-arit.html" title="Successivo"><span class="name">Succ</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+
+
+\newcommand{\defeq}{\stackrel{\text{def}}{=}}
+
+\newcommand{\Heq}{\stackrel{\text{H}}{=}}
+
+
+
+
+\newcommand{\parabolina}[3][1]{
+  \ifx\relax#2\relax
+    \gdef\nS{0}
+  \else
+    \foreach \x [count=\xx] in #2 {\global\let\nS=\xx}
+  \fi
+  \ifnum #1&gt;0\relax
+    \def\pos{below}
+  \else
+    \def\pos{above}
+  \fi
+  \begin{tikzpicture}
+    \begin{axis}[xmin=-2,xmax=2, ymin=-2,ymax=2, axis y line=none, axis lines=middle, xtick=\empty, width=3.5cm, clip=false]
+      \ifnum \nS=0\relax
+        \addplot[domain=-1.5:1.5] {#1*(x^2+1)};
+        \ifnum #1\gt0\relax
+          \ifnum\pdfstrcmp{#3}{g}=0\relax
+            \addplot[ultra thick, red, opacity=.3, domain=-1.7:1.7] {0};
+          \fi
+        \fi
+        \ifnum #1\lt0\relax
+          \ifnum\pdfstrcmp{#3}{l}=0\relax
+            \addplot[ultra thick, red, opacity=.3, domain=-1.7:1.7] {0};
+          \fi
+        \fi
+      \fi
+      \ifnum \nS=1\relax
+        \addplot[domain=-1.5:1.5] {#1*(x^2)};
+        \addplot[mark=o, mark size=1pt, font=\tiny, inner xsep=0, inner ysep=2pt] coordinates {(0,0)} node[\pos]{$#2$};
+        \ifnum #1&gt;0\relax
+          \ifnum\pdfstrcmp{#3}{g}=0\relax
+            \addplot[ultra thick, red, opacity=.3, domain=-1.7:1.7] {0};
+          \fi
+        \fi
+        \ifnum #1\lt0\relax
+          \ifnum\pdfstrcmp{#3}{l}=0\relax
+            \addplot[ultra thick, red, opacity=.3, domain=-1.7:1.7] {0};
+          \fi
+        \fi
+      \fi
+      \ifnum \nS=2\relax
+        \addplot[domain=-1.5:1.5] {#1*(x^2-1)};
+        \addplot[mark=o, mark size=1pt, draw=none] coordinates {(-1,0) (1,0)};
+        \draw[font=\tiny] 
+        \foreach \x [count=\xx] in #2 {
+          (\xx*2-3,0) node[\pos, fill=white, fill opacity=.7, text opacity=1, text=black, inner xsep=0, inner ysep=2pt]{$\x$}
+        };
+        \ifnum #1\gt0\relax
+          \ifnum\pdfstrcmp{#3}{g}=0\relax
+            \addplot[ultra thick, red, opacity=.3, domain=-1.7:-1] {0};
+            \addplot[ultra thick, red, opacity=.3, domain=1:1.7] {0};
+          \fi
+          \ifnum\pdfstrcmp{#3}{l}=0\relax
+            \addplot[ultra thick, red, opacity=.3, domain=-1:1] {0};
+          \fi
+        \fi
+        \ifnum #1\lt0\relax
+          \ifnum\pdfstrcmp{#3}{l}=0\relax
+            \addplot[ultra thick, red, opacity=.3, domain=-1.7:-1] {0};
+            \addplot[ultra thick, red, opacity=.3, domain=1:1.7] {0};
+          \fi
+          \ifnum\pdfstrcmp{#3}{g}=0\relax
+            \addplot[ultra thick, red, opacity=.3, domain=-1:1] {0};
+          \fi
+        \fi
+      \fi
+    \end{axis}
+  \end{tikzpicture}
+}
+
+
+
+
+\newcommand{\GraficoSegni}[3][x]{
+  \def\spazio{0.8}
+  \foreach \x [count=\xx] in #2 {
+    \global\let\numNum=\xx
+    \draw[thin] (\xx-1,-.1) -- ++(0,.2) node[above]{$\x$}; 
+  }
+  \draw[-latex, ultra thick] (-1,0) -- (\numNum,0) node[above]{$#1$}; 
+  
+  \foreach \f\l [count=\ll] in #3 {
+    \global\let\numRighe=\ll
+    
+    \draw (-1.5,-\ll*\spazio+.25) node{$\f$} ++(.5,0)
+    foreach \s in \l {
+        ++(.5,0) node{$\s$}
+    }
+    ;
+  }
+  \pgfmathsetmacro\pos{-\spazio*(2*\numRighe-1)/2+.25} 
+  
+  \ifnum \numRighe&gt;1
+    \draw (-2,\pos) -- (\numNum,\pos);
+  \fi
+
+  \foreach \x [count=\xx] in #2 {
+    \draw[dotted] (\xx-1,0) -- ++(0,\pos-\spazio); 
+  }
+}
+
+
+\newcommand{\GraficoLinee}[3][x]{
+  \def\spazio{0.6}
+  \def\emptyvar{}
+  \def\chiuso{c}
+  \foreach \x [count=\xx] in #2 {
+    \global\let\numNum=\xx
+    \draw[thin] (\xx-1,-.1) -- ++(0,.2) node[above]{$\x$}; 
+  }
+  \draw[-latex, ultra thick] (-1,0) -- (\numNum,0) node[above]{$#1$}; 
+
+  \foreach \l\mode in #3 {
+    \gdef\aFatto{0}
+    \foreach \m [count=\k from -1] in \mode {
+      \ifx\m\emptyvar
+      \else
+        \ifnum\k=-1 
+          \node (a) at (\k,-\l*\spazio) {};
+          \gdef\aFatto{1}
+        \else
+          \ifnum\k=\numNum 
+              \node (b) at (\k,-\l*\spazio) {};
+          \else 
+            \ifx\m\chiuso
+              \ifnum\l=0
+                \tikzset{stileNodo/.style={circle, fill=red, fill opacity=.5, inner sep=2pt}}
+              \else
+                \tikzset{stileNodo/.style={circle, fill, inner sep=2pt}}
+              \fi
+            \else
+              \tikzset{stileNodo/.style={draw, circle, inner sep=2pt}}
+            \fi
+            \ifnum\aFatto=0
+              \node[stileNodo] (a) at (\k,-\l*\spazio) {};
+              \gdef\aFatto{1}
+            \else
+              \node[stileNodo] (b) at (\k,-\l*\spazio) {};
+            \fi
+          \fi
+        \fi
+      \fi
+    }
+    \ifnum\l=0
+      \draw[line width=4pt, red, opacity=.5] (a) -- (b);
+    \else
+      \draw[ultra thick] (a) -- (b);
+    \fi
+  }
+}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Materiale iniziale</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Come usare il libro</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-base.html" class="internal"><span class="codenumber">1</span> <span class="title">Concetti base</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-affermazioni.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Affermazioni matematiche e logica</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-affermazioni.html#sec-affermazioni-3" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Definizione</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-affermazioni.html#sec-affermazioni-4" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Postulato o assioma</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-affermazioni.html#sec-affermazioni-5" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Teorema</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-affermazioni.html#sec-affermazioni-6" class="internal"><span class="codenumber">1.1.4</span> <span class="title">Corollario e lemma</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-affermazioni.html#sec-affermazioni-7" class="internal"><span class="codenumber">1.1.5</span> <span class="title">Congettura</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-affermazioni.html#sec-affermazioni-8" class="internal"><span class="codenumber">1.1.6</span> <span class="title">Logica classica</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-insiemi.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Insiemi, operazioni tra insiemi, insiemi numerici</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-insiemi.html#subsec-insiemi-op" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Insiemi e operazioni</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-insiemi.html#sec-insiemi-4" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Insiemi numerici</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec-intervalli.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Intervalli e loro operazioni</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-intervalli.html#sec-intervalli-3" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Intervalli</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-intervalli.html#sec-intervalli-4" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Unione di intervalli</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-intervalli.html#sec-intervalli-5" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Intersezione di intervalli</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-op-arit.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Operazioni aritmetiche</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-op-arit.html#sec-op-arit-3" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Somma</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-op-arit.html#sec-op-arit-4" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Moltiplicazione</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-op-arit.html#sec-op-arit-5" class="internal"><span class="codenumber">1.4.3</span> <span class="title">Sottrazione</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-op-arit.html#sec-op-arit-6" class="internal"><span class="codenumber">1.4.4</span> <span class="title">Divisione</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-op-arit.html#exint-op-aritm" class="internal"><span class="codenumber">1.4.5</span> <span class="title">Esercizi sulle operazioni base</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-op-arit.html#sec-op-arit-8" class="internal"><span class="codenumber">1.4.6</span> <span class="title">Elevamento a potenza</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-op-arit.html#sec-op-arit-9" class="internal"><span class="codenumber">1.4.7</span> <span class="title">Estrazione di radice</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-espr-lett.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Espressioni letterali</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-espr-lett.html#sec-espr-lett-3" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Monomi</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-espr-lett.html#sec-espr-lett-4" class="internal"><span class="codenumber">1.5.2</span> <span class="title">Polinomi</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-equazioni.html" class="internal"><span class="codenumber">2</span> <span class="title">Equazioni</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-disequazioni.html" class="internal"><span class="codenumber">3</span> <span class="title">Disequazioni</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-analisi-segni.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Studio del segno</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-analisi-segni.html#sec-analisi-segni-3" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Grafico dei segni</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-analisi-segni.html#sec-analisi-segni-4" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Risolvere disequazioni col grafico dei segni</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-funzioni.html" class="internal"><span class="codenumber">4</span> <span class="title">Funzioni</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-piano-cartesiano.html" class="internal"><span class="codenumber">5</span> <span class="title">Piano cartesiano</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-retta.html" class="internal"><span class="codenumber">6</span> <span class="title">Retta</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-parabola.html" class="internal"><span class="codenumber">7</span> <span class="title">Parabola</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-esponenziali-logaritmi.html" class="internal"><span class="codenumber">8</span> <span class="title">Funzioni esponenziali e logaritmiche</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-limiti.html" class="internal"><span class="codenumber">9</span> <span class="title">Limiti</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-derivate.html" class="internal"><span class="codenumber">10</span> <span class="title">Derivate</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-sudio-funzione.html" class="internal"><span class="codenumber">11</span> <span class="title">Studio di funzione</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-economia.html" class="internal"><span class="codenumber">12</span> <span class="title">Applicazioni all’economia</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-mat-fin.html" class="internal"><span class="codenumber">13</span> <span class="title">Matematica finanziaria</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-storia.html" class="internal"><span class="codenumber">14</span> <span class="title">Storia della matematica</span></a></div></li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Appendici</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Notazione</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="codenumber">B</span> <span class="title">Assiomi, definizioni, teoremi</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="codenumber">C</span> <span class="title">Algoritmi e procedure</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-5.html" class="internal"><span class="title">Indice analitico</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="sec-intervalli">
+<h2 class="heading hide-type">
+<span class="type">Paragrafo</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Intervalli e loro operazioni</span>
+</h2>
+<section class="introduction" id="sec-intervalli-2">
+<div class="para" id="sec-intervalli-2-1">Tra i sottoinsiemi degli insiemi numerici troviamo anche gli <dfn class="terminology">intervalli</dfn>. Considereremo gli intervalli di numeri reali in quanto sono quelli che vedremo più spesso. Essendo gli intervalli degli insiemi è possibile svolgere delle operazioni, come l’unione e l’intersezione.<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div></section>
+<section class="subsection" id="sec-intervalli-3">
+<h3 class="heading hide-type">
+<span class="type">Sottoparagrafo</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Intervalli</span>
+</h3>
+<article class="definition definition-like" id="sec-intervalli-3-2"><h4 class="heading">
+<span class="type">Definizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Intervallo.</span>
+</h4>
+<div class="para" id="sec-intervalli-3-2-3-1">Si definisce <dfn class="terminology">intervallo</dfn> (di numeri reali) un sottoinsieme dei numeri reali formato da tutti i punti della linea dei numeri compresi tra due valori <span class="process-math">\(a\)</span> e <span class="process-math">\(b\text{,}\)</span> chiamati <dfn class="terminology">estremi</dfn>. Gli estremi possono essere o meno appartenenti all’intervallo. Gli estremi dell’intervallo possono anche essere infiniti.<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-2-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definizione 1.3.1: Intervallo"><a href="#sec-intervalli-3-2" title="Copy heading and permalink for Definizione 1.3.1: Intervallo" aria-label="Copy heading and permalink for Definizione 1.3.1: Intervallo">🔗</a></div>
+</article>
+<div class="para logical" id="sec-intervalli-3-3">
+<div class="para">Esistono vari tipi di intervallo, in base al fatto che gli estremi siano inclusi o esclusi, finiti o infiniti. Si ipotizza sempre <span class="process-math">\(a,b\in\R^* : a\lt b\)</span> (letto: “<span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> appartenenti all’insieme esteso dei numeri reali tali che <span class="process-math">\(a\)</span> sia strettamente minore di <span class="process-math">\(b\)</span>”). <span class="process-math">\(a\)</span> viene chiamato <dfn class="terminology">estremo inferiore</dfn> e <span class="process-math">\(b\)</span> <dfn class="terminology">estremo superiore</dfn>. Esistono vari modi per indicare gli intervalli: la notazione compatta con le parentesi tonde e quadre (usata in questo libro), la notazione compatta con le sole parentesi quadre (che non verrà usata in questo libro) e la notazione estesa con le parentesi graffe (usata in questo libro). Le varie notazioni avranno scopi diversi e useremo quella più comoda secondo l’obbiettivo. In base al fatto che gli estremi siano inclusi o esclusi si distinguono i concetti di:</div>
+<ul class="disc" id="sec-intervalli-3-3-7">
+<li id="sec-intervalli-3-3-7-1">
+<div class="para" id="sec-intervalli-3-3-7-1-1">intervallo <dfn class="terminology">aperto</dfn> <span class="process-math">\((a,b)\defeq \{x\in\R : a \lt x \lt b\}\text{:}\)</span> è un insieme di numeri reali compresi tra i due estremi e con estremi entrambi esclusi<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-3-7-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#sec-intervalli-3-3-7-1" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+<li id="sec-intervalli-3-3-7-2">
+<div class="para" id="sec-intervalli-3-3-7-2-1">intervallo <dfn class="terminology">chiuso</dfn> <span class="process-math">\([a,b]\defeq \{x\in\R : a \le x \le b\}\text{:}\)</span> è un insieme di numeri reali compresi tra i due estremi e con estremi entrambi inclusi<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-3-7-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#sec-intervalli-3-3-7-2" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+<li id="sec-intervalli-3-3-7-3">
+<div class="para" id="sec-intervalli-3-3-7-3-1">intervallo <dfn class="terminology">chiuso a sinistra</dfn> <span class="process-math">\([a,b)\defeq \{x\in\R : a \le x \lt b\}\text{:}\)</span> è un insieme di numeri reali compresi tra i due estremi e con l’estremo sinistro (inferiore) incluso e quello destro (superiore) escluso<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-3-7-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#sec-intervalli-3-3-7-3" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+<li id="sec-intervalli-3-3-7-4">
+<div class="para" id="sec-intervalli-3-3-7-4-1">intervallo <dfn class="terminology">chiuso a destra</dfn> <span class="process-math">\((a,b]\defeq \{x\in\R : a \lt x \le b\}\text{:}\)</span> è un insieme di numeri reali compresi tra i due estremi e con l’estremo sinistro (inferiore) escluso e quello destro (superiore) incluso<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-3-7-4-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#sec-intervalli-3-3-7-4" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+</ul>
+<div class="para">Per ricordare: nella notazione a tonde e quadre, la parentesi tonda indica che l’estremo di fianco ad essa non è incluso, mentre la parentesi quadra indica che l’estremo è incluso nell’intervallo; nella notazione con le parentesi graffe gli estremi vengono inclusi se nel simbolo di disuguaglianza c’è l’uguale, altrimenti sono esclusi.</div>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-3" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="para logical" id="sec-intervalli-3-4">
+<div class="para">Se entrambi gli estremi dell’intervallo sono finiti, cioè <span class="process-math">\(a,b\in\R\text{,}\)</span> si parla di intervallo <dfn class="terminology">limitato</dfn>. Se uno o entrambi gli estremi di un intervallo sono infiniti, cioè se <span class="process-math">\(a=-\infty\)</span> e/o <span class="process-math">\(b=+\infty\text{,}\)</span> si parla di:</div>
+<ul class="disc" id="sec-intervalli-3-4-5">
+<li id="sec-intervalli-3-4-5-1">
+<div class="para" id="sec-intervalli-3-4-5-1-1">intervallo <dfn class="terminology">illimitato inferiormente</dfn> (o a sinistra) se <span class="process-math">\(a=-\infty \wedge b\ne +\infty\)</span> e ci sono i due casi <span class="process-math">\((-\infty,b)\defeq \{x\in\R : x \lt b\}\)</span> e <span class="process-math">\((-\infty,b]\defeq \{x\in\R : x \ge a\}\)</span> in base al fatto che <span class="process-math">\(a\)</span> sia incluso o escluso<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-4-5-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#sec-intervalli-3-4-5-1" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+<li id="sec-intervalli-3-4-5-2">
+<div class="para" id="sec-intervalli-3-4-5-2-1">intervallo <dfn class="terminology">illimitato superiormente</dfn> (o a destra) se <span class="process-math">\(a\ne -\infty \wedge b=+\infty\)</span> e ci sono i due casi <span class="process-math">\((a,+\infty)\defeq \{x\in\R : x \gt a\}\)</span> e <span class="process-math">\([a,+\infty)\defeq \{x\in\R : x \ge a\}\)</span> in base al fatto che <span class="process-math">\(a\)</span> sia incluso o escluso<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-4-5-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#sec-intervalli-3-4-5-2" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+<li id="sec-intervalli-3-4-5-3">
+<div class="para" id="sec-intervalli-3-4-5-3-1">intervallo <dfn class="terminology">illimitato sia inferiormente che superiormente</dfn> (o illimitato) se <span class="process-math">\(a= -\infty \wedge b=+\infty\)</span> ed esiste l’unico caso <span class="process-math">\((-\infty,+\infty)\defeq \{\forall x\in\R\} = \R\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-4-5-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#sec-intervalli-3-4-5-3" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+</ul>
+<div class="para">In un intervallo illimitato <em class="alert">l’estremo infinito è sempre escluso</em> e va indicato di fianco a una parentesi tonda nella notazione a tonde e quadre.</div>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-4" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<details id="sec-intervalli-3-5" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Classificazione e notazione degli intervalli 1.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="sec-intervalli-3-5-2-1">
+<div class="para">Classifica i seguenti intervalli e per ognuno scrivi la forma con le parentesi graffe:</div>
+<ol class="decimal" id="sec-intervalli-3-5-2-1-1">
+<li id="sec-intervalli-3-5-2-1-1-1">
+<div class="para" id="sec-intervalli-3-5-2-1-1-1-1">
+<span class="process-math">\(\displaystyle [-2,2]\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-5-2-1-1-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto 1"><a href="#sec-intervalli-3-5-2-1-1-1" title="Copy heading and permalink for Punto 1" aria-label="Copy heading and permalink for Punto 1">🔗</a></div>
+</li>
+<li id="sec-intervalli-3-5-2-1-1-2">
+<div class="para" id="sec-intervalli-3-5-2-1-1-2-1">
+<span class="process-math">\(\displaystyle [4,+\infty)\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-5-2-1-1-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto 2"><a href="#sec-intervalli-3-5-2-1-1-2" title="Copy heading and permalink for Punto 2" aria-label="Copy heading and permalink for Punto 2">🔗</a></div>
+</li>
+<li id="sec-intervalli-3-5-2-1-1-3">
+<div class="para" id="sec-intervalli-3-5-2-1-1-3-1">
+<span class="process-math">\(\displaystyle (-1,3]\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-5-2-1-1-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto 3"><a href="#sec-intervalli-3-5-2-1-1-3" title="Copy heading and permalink for Punto 3" aria-label="Copy heading and permalink for Punto 3">🔗</a></div>
+</li>
+<li id="sec-intervalli-3-5-2-1-1-4">
+<div class="para" id="sec-intervalli-3-5-2-1-1-4-1">
+<span class="process-math">\(\displaystyle (1,2)\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-5-2-1-1-4-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto 4"><a href="#sec-intervalli-3-5-2-1-1-4" title="Copy heading and permalink for Punto 4" aria-label="Copy heading and permalink for Punto 4">🔗</a></div>
+</li>
+<li id="sec-intervalli-3-5-2-1-1-5">
+<div class="para" id="sec-intervalli-3-5-2-1-1-5-1">
+<span class="process-math">\(\displaystyle (-\infty,1)\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-5-2-1-1-5-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto 5"><a href="#sec-intervalli-3-5-2-1-1-5" title="Copy heading and permalink for Punto 5" aria-label="Copy heading and permalink for Punto 5">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-5-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec-intervalli-3-5-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para logical" id="sec-intervalli-3-5-3-1">
+<ol class="decimal" id="sec-intervalli-3-5-3-1-1">
+<li id="sec-intervalli-3-5-3-1-1-1">
+<div class="para" id="sec-intervalli-3-5-3-1-1-1-1">Intervallo limitato, chiuso. <span class="process-math">\(\{x\in\R : -2 \le x \le 2\}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-5-3-1-1-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto 1"><a href="#sec-intervalli-3-5-3-1-1-1" title="Copy heading and permalink for Punto 1" aria-label="Copy heading and permalink for Punto 1">🔗</a></div>
+</li>
+<li id="sec-intervalli-3-5-3-1-1-2">
+<div class="para" id="sec-intervalli-3-5-3-1-1-2-1">Intervallo illimitato superiormente, chiuso a sinistra. <span class="process-math">\(\{x\in\R : x \ge 4\}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-5-3-1-1-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto 2"><a href="#sec-intervalli-3-5-3-1-1-2" title="Copy heading and permalink for Punto 2" aria-label="Copy heading and permalink for Punto 2">🔗</a></div>
+</li>
+<li id="sec-intervalli-3-5-3-1-1-3">
+<div class="para" id="sec-intervalli-3-5-3-1-1-3-1">Intervallo limitato, chiuso a destra. <span class="process-math">\(\{x\in\R : 1 \lt x \le 3\}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-5-3-1-1-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto 3"><a href="#sec-intervalli-3-5-3-1-1-3" title="Copy heading and permalink for Punto 3" aria-label="Copy heading and permalink for Punto 3">🔗</a></div>
+</li>
+<li id="sec-intervalli-3-5-3-1-1-4">
+<div class="para" id="sec-intervalli-3-5-3-1-1-4-1">Intervallo limitato, aperto. <span class="process-math">\(\{x\in\R : 1 \lt x \lt 2\}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-5-3-1-1-4-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto 4"><a href="#sec-intervalli-3-5-3-1-1-4" title="Copy heading and permalink for Punto 4" aria-label="Copy heading and permalink for Punto 4">🔗</a></div>
+</li>
+<li id="sec-intervalli-3-5-3-1-1-5">
+<div class="para" id="sec-intervalli-3-5-3-1-1-5-1">Intervallo illimitato inferiormente, aperto. <span class="process-math">\(\{x\in\R : x \lt 1\}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-5-3-1-1-5-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto 5"><a href="#sec-intervalli-3-5-3-1-1-5" title="Copy heading and permalink for Punto 5" aria-label="Copy heading and permalink for Punto 5">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-5-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Risposta 1.3.2.1"><a href="#sec-intervalli-3-5-3" title="Copy heading and permalink for Risposta 1.3.2.1" aria-label="Copy heading and permalink for Risposta 1.3.2.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esempio 1.3.2: Classificazione e notazione degli intervalli 1"><a href="#sec-intervalli-3-5" title="Copy heading and permalink for Esempio 1.3.2: Classificazione e notazione degli intervalli 1" aria-label="Copy heading and permalink for Esempio 1.3.2: Classificazione e notazione degli intervalli 1">🔗</a></div>
+</article></details>
+<details id="sec-intervalli-3-6" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Classificazione e notazione degli intervalli 2.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="sec-intervalli-3-6-2-1">
+<div class="para">Classifica i seguenti intervalli e per ognuno scrivi la forma con le parentesi tonde e quadre:</div>
+<ol class="decimal" id="sec-intervalli-3-6-2-1-1">
+<li id="sec-intervalli-3-6-2-1-1-1">
+<div class="para" id="sec-intervalli-3-6-2-1-1-1-1">
+<span class="process-math">\(\displaystyle \{x\in\R : 0 \le x \le 2\}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-6-2-1-1-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto 1"><a href="#sec-intervalli-3-6-2-1-1-1" title="Copy heading and permalink for Punto 1" aria-label="Copy heading and permalink for Punto 1">🔗</a></div>
+</li>
+<li id="sec-intervalli-3-6-2-1-1-2">
+<div class="para" id="sec-intervalli-3-6-2-1-1-2-1">
+<span class="process-math">\(\displaystyle \{x\in\R : x \le -3\}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-6-2-1-1-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto 2"><a href="#sec-intervalli-3-6-2-1-1-2" title="Copy heading and permalink for Punto 2" aria-label="Copy heading and permalink for Punto 2">🔗</a></div>
+</li>
+<li id="sec-intervalli-3-6-2-1-1-3">
+<div class="para" id="sec-intervalli-3-6-2-1-1-3-1">
+<span class="process-math">\(\displaystyle \{x\in\R : 1 \le x \lt 4\}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-6-2-1-1-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto 3"><a href="#sec-intervalli-3-6-2-1-1-3" title="Copy heading and permalink for Punto 3" aria-label="Copy heading and permalink for Punto 3">🔗</a></div>
+</li>
+<li id="sec-intervalli-3-6-2-1-1-4">
+<div class="para" id="sec-intervalli-3-6-2-1-1-4-1">
+<span class="process-math">\(\displaystyle \{x\in\R : x \gt 0\}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-6-2-1-1-4-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto 4"><a href="#sec-intervalli-3-6-2-1-1-4" title="Copy heading and permalink for Punto 4" aria-label="Copy heading and permalink for Punto 4">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-6-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec-intervalli-3-6-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para logical" id="sec-intervalli-3-6-3-1">
+<ol class="decimal" id="sec-intervalli-3-6-3-1-1">
+<li id="sec-intervalli-3-6-3-1-1-1">
+<div class="para" id="sec-intervalli-3-6-3-1-1-1-1">Intervallo limitato, chiuso. <span class="process-math">\([0,2]\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-6-3-1-1-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto 1"><a href="#sec-intervalli-3-6-3-1-1-1" title="Copy heading and permalink for Punto 1" aria-label="Copy heading and permalink for Punto 1">🔗</a></div>
+</li>
+<li id="sec-intervalli-3-6-3-1-1-2">
+<div class="para" id="sec-intervalli-3-6-3-1-1-2-1">Intervallo illimitato inferiormente, chiuso a destra. <span class="process-math">\((-\infty,-3]\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-6-3-1-1-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto 2"><a href="#sec-intervalli-3-6-3-1-1-2" title="Copy heading and permalink for Punto 2" aria-label="Copy heading and permalink for Punto 2">🔗</a></div>
+</li>
+<li id="sec-intervalli-3-6-3-1-1-3">
+<div class="para" id="sec-intervalli-3-6-3-1-1-3-1">Intervallo limitato, chiuso a sinistra. <span class="process-math">\([1,4)\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-6-3-1-1-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto 3"><a href="#sec-intervalli-3-6-3-1-1-3" title="Copy heading and permalink for Punto 3" aria-label="Copy heading and permalink for Punto 3">🔗</a></div>
+</li>
+<li id="sec-intervalli-3-6-3-1-1-4">
+<div class="para" id="sec-intervalli-3-6-3-1-1-4-1">Intervallo illimitato superiormente, aperto. <span class="process-math">\((0,+\infty)\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-6-3-1-1-4-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto 4"><a href="#sec-intervalli-3-6-3-1-1-4" title="Copy heading and permalink for Punto 4" aria-label="Copy heading and permalink for Punto 4">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-6-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Risposta 1.3.3.1"><a href="#sec-intervalli-3-6-3" title="Copy heading and permalink for Risposta 1.3.3.1" aria-label="Copy heading and permalink for Risposta 1.3.3.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esempio 1.3.3: Classificazione e notazione degli intervalli 2"><a href="#sec-intervalli-3-6" title="Copy heading and permalink for Esempio 1.3.3: Classificazione e notazione degli intervalli 2" aria-label="Copy heading and permalink for Esempio 1.3.3: Classificazione e notazione degli intervalli 2">🔗</a></div>
+</article></details>
+<div class="para" id="sec-intervalli-3-7">Gli intervalli possono essere anche rappresentati graficamente usando la retta dei numeri reali in un <dfn class="terminology">grafico di linee</dfn>. Questo strumento verrà utilizzato in varie occasioni, in particolare per ottenere velocemente i risultati delle operazioni tra intervalli (unione e intersezione) necessari quando si risolvono per esempio sistemi di disequazioni.<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-7" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="para" id="sec-intervalli-3-8">Il grafico è composto da una linea orientata di valori numerici di solito reali su cui vengono indicati gli estremi dell’intervallo (o degli intervalli) in esame e delle linee con dei pallini che indicano il tipo di intervallo. Per fare un esempio di una riga del grafico di linee guardiamo il seguente schema:<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-8" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/sec-intervalli-3-9.svg" role="img" class="contained"></div>
+<div class="para" id="sec-intervalli-3-10">La riga indica che l’intervallo è limitato e ha estremi -3 e 1, entrambi inclusi in quanto viene usato un pallino pieno per indicare che l’estremo è incluso e un pallino vuoto per indicare che è escluso (“c’è un buco o manca un pezzetto”). L’intervallo è quindi <span class="process-math">\([-3,1]=\{x\in\R: -3\le x \le 1\}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-10" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/sec-intervalli-3-11.svg" role="img" class="contained"></div>
+<div class="para" id="sec-intervalli-3-12">In questo caso si tratta di un intervallo illimitato superiormente e 2 come estremo inferiore, 2 escluso in quanto viene usato un pallino vuoto. L’intervallo è quindi <span class="process-math">\((2,+\infty)=\{x\in\R: x \gt 2\}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-12" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="para" id="sec-intervalli-3-13">Il grafico però non è già pronto nella pratica, ma va costruito partendo dall’intervallo: è indifferente quale notazione di intervallo si usa. Vediamo come:<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-13" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<article class="algorithm theorem-like" id="alg-grafico-linee"><h4 class="heading">
+<span class="type">Algoritmo</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Disegno di un intervallo nel grafico di linee.</span>
+</h4>
+<div class="para logical" id="alg-grafico-linee-2-1">
+<ol class="decimal" id="alg-grafico-linee-2-1-1">
+<li id="alg-grafico-linee-2-1-1-1">
+<div class="para" id="p-derived-alg-grafico-linee-2-1-1-1">Si traccia una linea orizzontale orientata (una freccia verso destra), si dispongono <em class="alert">in ordine</em> gli estremi finiti dell’intervallo.</div>
+<div class="autopermalink" data-description="Punto 1"><a href="#alg-grafico-linee-2-1-1-1" title="Copy heading and permalink for Punto 1" aria-label="Copy heading and permalink for Punto 1">🔗</a></div>
+</li>
+<li id="alg-grafico-linee-2-1-1-2">
+<div class="para" id="p-derived-alg-grafico-linee-2-1-1-2">Per ogni numero indicato si disegna un pallino al di sotto della freccia, allineandolo verticalmente: pieno se l’estremo è incluso, vuoto se è escluso</div>
+<div class="autopermalink" data-description="Punto 2"><a href="#alg-grafico-linee-2-1-1-2" title="Copy heading and permalink for Punto 2" aria-label="Copy heading and permalink for Punto 2">🔗</a></div>
+</li>
+<li id="alg-grafico-linee-2-1-1-3">
+<div class="para logical" id="alg-grafico-linee-2-1-1-3-1">
+<div class="para">Si tracciano delle linee a partire dai pallini:</div>
+<ul class="disc" id="alg-grafico-linee-2-1-1-3-1-1">
+<li id="alg-grafico-linee-2-1-1-3-1-1-1">
+<div class="para" id="alg-grafico-linee-2-1-1-3-1-1-1-1">per intervalli limitati si traccia una linea che unisce i due pallini, per indicare che i numeri compresi tra i due estremi sono inclusi<div class="autopermalink" data-description="Capoverso"><a href="#alg-grafico-linee-2-1-1-3-1-1-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#alg-grafico-linee-2-1-1-3-1-1-1" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+<li id="alg-grafico-linee-2-1-1-3-1-1-2">
+<div class="para" id="alg-grafico-linee-2-1-1-3-1-1-2-1">per intervalli illimitati inferiormente si traccia una linea che va verso sinistra dall’unico pallino, per indicare che i numeri inferiori all’estremo destro sono inclusi<div class="autopermalink" data-description="Capoverso"><a href="#alg-grafico-linee-2-1-1-3-1-1-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#alg-grafico-linee-2-1-1-3-1-1-2" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+<li id="alg-grafico-linee-2-1-1-3-1-1-3">
+<div class="para" id="alg-grafico-linee-2-1-1-3-1-1-3-1">per intervalli illimitati superiormente si traccia una linea che va verso destra dall’unico pallino, per indicare che i numeri superiori all’estremo sinistro sono inclusi<div class="autopermalink" data-description="Capoverso"><a href="#alg-grafico-linee-2-1-1-3-1-1-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#alg-grafico-linee-2-1-1-3-1-1-3" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Capoverso"><a href="#alg-grafico-linee-2-1-1-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto 3"><a href="#alg-grafico-linee-2-1-1-3" title="Copy heading and permalink for Punto 3" aria-label="Copy heading and permalink for Punto 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Capoverso"><a href="#alg-grafico-linee-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Algoritmo 1.3.4: Disegno di un intervallo nel grafico di linee"><a href="#alg-grafico-linee" title="Copy heading and permalink for Algoritmo 1.3.4: Disegno di un intervallo nel grafico di linee" aria-label="Copy heading and permalink for Algoritmo 1.3.4: Disegno di un intervallo nel grafico di linee">🔗</a></div>
+</article>
+<details id="sec-intervalli-3-15" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Preparazione di una riga del grafico di linee 1.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="sec-intervalli-3-15-2-1">Determina la riga del grafico di linee per l’intervallo <span class="process-math">\([-5,1)=\{x\in\R: -5 \le x \lt 1\}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-15-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec-intervalli-3-15-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="sec-intervalli-3-15-3-1">
+<div class="para">Seguiamo l’<a href="sec-intervalli.html#alg-grafico-linee" class="xref" data-knowl="./knowl/xref/alg-grafico-linee.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Algoritmo 1.3.4: Disegno di un intervallo nel grafico di linee">Algoritmo 1.3.4</a>:</div>
+<ol class="decimal" id="sec-intervalli-3-15-3-1-2">
+<li id="sec-intervalli-3-15-3-1-2-1">
+<div class="para" id="sec-intervalli-3-15-3-1-2-1-1">Tracciamo una linea orizzontale orientata (una freccia verso destra) e posizioniamo i due valori degli estremi<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-15-3-1-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/sec-intervalli-3-15-3-1-2-1-2.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Punto 1"><a href="#sec-intervalli-3-15-3-1-2-1" title="Copy heading and permalink for Punto 1" aria-label="Copy heading and permalink for Punto 1">🔗</a></div>
+</li>
+<li id="sec-intervalli-3-15-3-1-2-2">
+<div class="para" id="sec-intervalli-3-15-3-1-2-2-1">Si disegna un pallino pieno sotto il 5 perché l’estremo è incluso e uno vuoto sotto 1 perché è escluso, poi si uniscono i pallini con una linea perché l’intervallo è limitato (sono d’interesse anche i numeri compresi tra -5 e 1), ottenendo:<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-15-3-1-2-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/sec-intervalli-3-15-3-1-2-2-2.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Punto 2"><a href="#sec-intervalli-3-15-3-1-2-2" title="Copy heading and permalink for Punto 2" aria-label="Copy heading and permalink for Punto 2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-15-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Soluzione 1.3.5.1"><a href="#sec-intervalli-3-15-3" title="Copy heading and permalink for Soluzione 1.3.5.1" aria-label="Copy heading and permalink for Soluzione 1.3.5.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esempio 1.3.5: Preparazione di una riga del grafico di linee 1"><a href="#sec-intervalli-3-15" title="Copy heading and permalink for Esempio 1.3.5: Preparazione di una riga del grafico di linee 1" aria-label="Copy heading and permalink for Esempio 1.3.5: Preparazione di una riga del grafico di linee 1">🔗</a></div>
+</article></details>
+<details id="sec-intervalli-3-16" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Preparazione di una riga del grafico di linee 2.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="sec-intervalli-3-16-2-1">Determina la riga del grafico di linee per l’intervallo <span class="process-math">\((-\infty,3]=\{x\in\R: x \le 3\}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-16-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec-intervalli-3-16-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="sec-intervalli-3-16-3-1">
+<div class="para">Seguiamo l’<a href="sec-intervalli.html#alg-grafico-linee" class="xref" data-knowl="./knowl/xref/alg-grafico-linee.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Algoritmo 1.3.4: Disegno di un intervallo nel grafico di linee">Algoritmo 1.3.4</a>:</div>
+<ol class="decimal" id="sec-intervalli-3-16-3-1-2">
+<li id="sec-intervalli-3-16-3-1-2-1">
+<div class="para" id="sec-intervalli-3-16-3-1-2-1-1">Tracciamo una linea orizzontale orientata (una freccia verso destra) e posizioniamo l’unico valore finito degli estremi<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-16-3-1-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/sec-intervalli-3-16-3-1-2-1-2.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Punto 1"><a href="#sec-intervalli-3-16-3-1-2-1" title="Copy heading and permalink for Punto 1" aria-label="Copy heading and permalink for Punto 1">🔗</a></div>
+</li>
+<li id="sec-intervalli-3-16-3-1-2-2">
+<div class="para" id="sec-intervalli-3-16-3-1-2-2-1">Si disegna un pallino pieno sotto il 3 perché l’estremo è incluso, poi si traccia una linea dal pallino verso sinistra (visto che sono d’interesse anche i numeri inferiori a -3), ottenendo:<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-16-3-1-2-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/sec-intervalli-3-16-3-1-2-2-2.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Punto 2"><a href="#sec-intervalli-3-16-3-1-2-2" title="Copy heading and permalink for Punto 2" aria-label="Copy heading and permalink for Punto 2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-16-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Soluzione 1.3.6.1"><a href="#sec-intervalli-3-16-3" title="Copy heading and permalink for Soluzione 1.3.6.1" aria-label="Copy heading and permalink for Soluzione 1.3.6.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esempio 1.3.6: Preparazione di una riga del grafico di linee 2"><a href="#sec-intervalli-3-16" title="Copy heading and permalink for Esempio 1.3.6: Preparazione di una riga del grafico di linee 2" aria-label="Copy heading and permalink for Esempio 1.3.6: Preparazione di una riga del grafico di linee 2">🔗</a></div>
+</article></details>
+<details id="sec-intervalli-3-17" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Preparazione di una riga del grafico di linee 3.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="sec-intervalli-3-17-2-1">Determina la riga del grafico di linee per l’intervallo <span class="process-math">\((0,1)=\{x\in\R: 0 \lt x \lt 1\}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-17-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec-intervalli-3-17-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="sec-intervalli-3-17-3-1">
+<div class="para">Seguiamo l’<a href="sec-intervalli.html#alg-grafico-linee" class="xref" data-knowl="./knowl/xref/alg-grafico-linee.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Algoritmo 1.3.4: Disegno di un intervallo nel grafico di linee">Algoritmo 1.3.4</a>:</div>
+<ol class="decimal" id="sec-intervalli-3-17-3-1-2">
+<li id="sec-intervalli-3-17-3-1-2-1">
+<div class="para" id="sec-intervalli-3-17-3-1-2-1-1">Tracciamo una linea orizzontale orientata (una freccia verso destra) e posizioniamo i due valori degli estremi<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-17-3-1-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/sec-intervalli-3-17-3-1-2-1-2.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Punto 1"><a href="#sec-intervalli-3-17-3-1-2-1" title="Copy heading and permalink for Punto 1" aria-label="Copy heading and permalink for Punto 1">🔗</a></div>
+</li>
+<li id="sec-intervalli-3-17-3-1-2-2">
+<div class="para" id="sec-intervalli-3-17-3-1-2-2-1">Si disegnano due pallini vuoti sotto entrambi gli estremi perché sono esclusi (l’intervallo è aperto), poi si uniscono i pallini con una linea perché l’intervallo è limitato (sono d’interesse solo i numeri compresi tra 0 e 1), ottenendo:<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-17-3-1-2-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/sec-intervalli-3-17-3-1-2-2-2.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Punto 2"><a href="#sec-intervalli-3-17-3-1-2-2" title="Copy heading and permalink for Punto 2" aria-label="Copy heading and permalink for Punto 2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-3-17-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Soluzione 1.3.7.1"><a href="#sec-intervalli-3-17-3" title="Copy heading and permalink for Soluzione 1.3.7.1" aria-label="Copy heading and permalink for Soluzione 1.3.7.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esempio 1.3.7: Preparazione di una riga del grafico di linee 3"><a href="#sec-intervalli-3-17" title="Copy heading and permalink for Esempio 1.3.7: Preparazione di una riga del grafico di linee 3" aria-label="Copy heading and permalink for Esempio 1.3.7: Preparazione di una riga del grafico di linee 3">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Sottoparagrafo 1.3.1: Intervalli"><a href="#sec-intervalli-3" title="Copy heading and permalink for Sottoparagrafo 1.3.1: Intervalli" aria-label="Copy heading and permalink for Sottoparagrafo 1.3.1: Intervalli">🔗</a></div>
+</section>
+<section class="subsection" id="sec-intervalli-4">
+<h3 class="heading hide-type">
+<span class="type">Sottoparagrafo</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Unione di intervalli</span>
+</h3>
+<div class="para" id="sec-intervalli-4-2">Come abbiamo visto nel <a href="sec-insiemi.html#subsec-insiemi-op" class="internal" title="Sottoparagrafo 1.2.1: Insiemi e operazioni">Sottoparagrafo 1.2.1</a> esiste l’unione di insiemi e, visto che gli intervalli sono sottoinsiemi, esiste anche l’unione tra intervalli. Questo serve di solito in certe operazioni finali nella soluzione di equazioni o disequazioni, quando più procedure distinti hanno dato soluzioni accettabili e si vuole concludere che tutte le alternative vanno bene per il procedimento.<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-4-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<article class="algorithm theorem-like" id="alg-grafico-unione"><h4 class="heading">
+<span class="type">Algoritmo</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Costruzione del grafico di unione.</span>
+</h4>
+<div class="para logical" id="alg-grafico-unione-2-1">
+<ol class="decimal" id="alg-grafico-unione-2-1-1">
+<li id="alg-grafico-unione-2-1-1-1">
+<div class="para" id="p-derived-alg-grafico-unione-2-1-1-1">Si traccia una linea orizzontale orientata (una freccia verso destra), si dispongono <em class="alert">in ordine</em> gli estremi finiti di tutti gli intervalli considerati.</div>
+<div class="autopermalink" data-description="Punto 1"><a href="#alg-grafico-unione-2-1-1-1" title="Copy heading and permalink for Punto 1" aria-label="Copy heading and permalink for Punto 1">🔗</a></div>
+</li>
+<li id="alg-grafico-unione-2-1-1-2">
+<div class="para" id="p-derived-alg-grafico-unione-2-1-1-2">Tutti gli intervalli da unire vengono tracciati <em class="alert">sulla stessa riga</em>, seguendo per ognuno i punti 2 e 3 dell’<a href="sec-intervalli.html#alg-grafico-linee" class="xref" data-knowl="./knowl/xref/alg-grafico-linee.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Algoritmo 1.3.4: Disegno di un intervallo nel grafico di linee">Algoritmo 1.3.4</a>.</div>
+<div class="autopermalink" data-description="Punto 2"><a href="#alg-grafico-unione-2-1-1-2" title="Copy heading and permalink for Punto 2" aria-label="Copy heading and permalink for Punto 2">🔗</a></div>
+</li>
+<li id="alg-grafico-unione-2-1-1-3">
+<div class="para" id="p-derived-alg-grafico-unione-2-1-1-3">Il risultato verrà indicato graficamente sulla linea orientata evidenziando tutti i tratti di retta e i punti che compaiono in almeno uno degli intervalli (l’unione considera tutte le parti comuni e non comuni degli intervalli).</div>
+<div class="autopermalink" data-description="Punto 3"><a href="#alg-grafico-unione-2-1-1-3" title="Copy heading and permalink for Punto 3" aria-label="Copy heading and permalink for Punto 3">🔗</a></div>
+</li>
+<li id="alg-grafico-unione-2-1-1-4">
+<div class="para" id="p-derived-alg-grafico-unione-2-1-1-4">Si scrive la forma algebrica del risultato ottenuto al punto precedente. Se più intervalli hanno parti comuni (sovrapposte), l’unione forma un unico intervallo tra le parti. Se gli intervalli non hanno parti in comune, l’unione esiste e si indicherà algebricamente col simbolo <span class="process-math">\(\cup\)</span> per la notazione con le parentesi tonde e quadre o col simbolo <span class="process-math">\(\vee\)</span> nella notazione a parentesi graffe.</div>
+<div class="autopermalink" data-description="Punto 4"><a href="#alg-grafico-unione-2-1-1-4" title="Copy heading and permalink for Punto 4" aria-label="Copy heading and permalink for Punto 4">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Capoverso"><a href="#alg-grafico-unione-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Algoritmo 1.3.8: Costruzione del grafico di unione"><a href="#alg-grafico-unione" title="Copy heading and permalink for Algoritmo 1.3.8: Costruzione del grafico di unione" aria-label="Copy heading and permalink for Algoritmo 1.3.8: Costruzione del grafico di unione">🔗</a></div>
+</article>
+<div class="para" id="sec-intervalli-4-4">Va sottolineato che l’unione di intervalli fornisce sempre un risultato non vuoto (come invece può accadere in altre operazioni).<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-4-4" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="para" id="sec-intervalli-4-5">Per avere un’idea meno matematica di come si calcola il risultato: possiamo pensare di “schiacciare” gli intervalli uno sopra l’altro cercando di “fonderli”, così che eventuali buchi (pallini vuoti o interruzioni) di un intervallo vengano tappati dall’altro intervallo, se allineato bene.<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-4-5" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<details id="sec-intervalli-4-6" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Unione di intervalli con parti in comune.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="sec-intervalli-4-6-2-1">Determina <span class="process-math">\((-1,3)\cup[2,5]\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-4-6-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec-intervalli-4-6-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para logical" id="sec-intervalli-4-6-3-1">
+<div class="displaymath process-math" id="sec-intervalli-4-6-3-1-1">
+\begin{equation*}
+(-1,3)\cup[2,5]=(-1,5]
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-4-6-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Risposta 1.3.9.1"><a href="#sec-intervalli-4-6-3" title="Copy heading and permalink for Risposta 1.3.9.1" aria-label="Copy heading and permalink for Risposta 1.3.9.1">🔗</a></div>
+</div></details>
+<details id="sec-intervalli-4-6-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="sec-intervalli-4-6-4-1">
+<div class="para">Seguiamo l’<a href="sec-intervalli.html#alg-grafico-unione" class="xref" data-knowl="./knowl/xref/alg-grafico-unione.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Algoritmo 1.3.8: Costruzione del grafico di unione">Algoritmo 1.3.8</a>:</div>
+<ol class="decimal" id="sec-intervalli-4-6-4-1-2">
+<li id="sec-intervalli-4-6-4-1-2-1">
+<div class="para" id="sec-intervalli-4-6-4-1-2-1-1">Tracciamo una linea orizzontale orientata (una freccia verso destra) e posizioniamo i quattro valori degli estremi, facendo attenzione all’ordine<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-4-6-4-1-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/sec-intervalli-4-6-4-1-2-1-2.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Punto 1"><a href="#sec-intervalli-4-6-4-1-2-1" title="Copy heading and permalink for Punto 1" aria-label="Copy heading and permalink for Punto 1">🔗</a></div>
+</li>
+<li id="sec-intervalli-4-6-4-1-2-2">
+<div class="para" id="sec-intervalli-4-6-4-1-2-2-1">Si disegnano i due intervalli sulla stessa riga, ottenendo:<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-4-6-4-1-2-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/sec-intervalli-4-6-4-1-2-2-2.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Punto 2"><a href="#sec-intervalli-4-6-4-1-2-2" title="Copy heading and permalink for Punto 2" aria-label="Copy heading and permalink for Punto 2">🔗</a></div>
+</li>
+<li id="sec-intervalli-4-6-4-1-2-3">
+<div class="para" id="sec-intervalli-4-6-4-1-2-3-1">Si vede che alcune parti sono in comune e si traccia il risultato grafico evidenziando tutti i tratti di retta e i punti che compaiono in almeno uno degli intervalli: il -1 rimane escluso perché non appartiene a nessuno dei due intervalli, mentre 3 viene incluso perché appartiene al secondo intervallo:<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-4-6-4-1-2-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/sec-intervalli-4-6-4-1-2-3-2.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Punto 3"><a href="#sec-intervalli-4-6-4-1-2-3" title="Copy heading and permalink for Punto 3" aria-label="Copy heading and permalink for Punto 3">🔗</a></div>
+</li>
+<li id="sec-intervalli-4-6-4-1-2-4">
+<div class="para" id="p-derived-sec-intervalli-4-6-4-1-2-4">Vediamo che i due intervalli si sono “fusi” in uno unico che va da -1 (escluso) a 5 (incluso). Scriviamo quindi il risultato: <span class="process-math">\((-1,3)\cup[2,5]=(-1,5]=\{x\in\R: -1\lt x \le 5\}\)</span>
+</div>
+<div class="autopermalink" data-description="Punto 4"><a href="#sec-intervalli-4-6-4-1-2-4" title="Copy heading and permalink for Punto 4" aria-label="Copy heading and permalink for Punto 4">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-4-6-4-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Soluzione 1.3.9.1"><a href="#sec-intervalli-4-6-4" title="Copy heading and permalink for Soluzione 1.3.9.1" aria-label="Copy heading and permalink for Soluzione 1.3.9.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esempio 1.3.9: Unione di intervalli con parti in comune"><a href="#sec-intervalli-4-6" title="Copy heading and permalink for Esempio 1.3.9: Unione di intervalli con parti in comune" aria-label="Copy heading and permalink for Esempio 1.3.9: Unione di intervalli con parti in comune">🔗</a></div>
+</article></details>
+<details id="sec-intervalli-4-7" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Unione di intervalli senza parti in comune.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="sec-intervalli-4-7-2-1">Determina <span class="process-math">\((-1,0)\cup[2,+\infty)\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-4-7-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec-intervalli-4-7-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para" id="sec-intervalli-4-7-3-1">
+<span class="process-math">\((-1,0)\cup[2,+\infty)\)</span> non è ulteriormente semplificabile, quindi rimane così.<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-4-7-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Risposta 1.3.10.1"><a href="#sec-intervalli-4-7-3" title="Copy heading and permalink for Risposta 1.3.10.1" aria-label="Copy heading and permalink for Risposta 1.3.10.1">🔗</a></div>
+</div></details>
+<details id="sec-intervalli-4-7-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="sec-intervalli-4-7-4-1">
+<div class="para">Seguiamo l’<a href="sec-intervalli.html#alg-grafico-unione" class="xref" data-knowl="./knowl/xref/alg-grafico-unione.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Algoritmo 1.3.8: Costruzione del grafico di unione">Algoritmo 1.3.8</a>:</div>
+<ol class="decimal" id="sec-intervalli-4-7-4-1-2">
+<li id="sec-intervalli-4-7-4-1-2-1">
+<div class="para" id="sec-intervalli-4-7-4-1-2-1-1">Tracciamo una linea orizzontale orientata (una freccia verso destra) e posizioniamo i tre valori degli estremi finiti, facendo attenzione all’ordine<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-4-7-4-1-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/sec-intervalli-4-7-4-1-2-1-2.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Punto 1"><a href="#sec-intervalli-4-7-4-1-2-1" title="Copy heading and permalink for Punto 1" aria-label="Copy heading and permalink for Punto 1">🔗</a></div>
+</li>
+<li id="sec-intervalli-4-7-4-1-2-2">
+<div class="para" id="sec-intervalli-4-7-4-1-2-2-1">Si disegnano i due intervalli sulla stessa riga, ottenendo:<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-4-7-4-1-2-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/sec-intervalli-4-7-4-1-2-2-2.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Punto 2"><a href="#sec-intervalli-4-7-4-1-2-2" title="Copy heading and permalink for Punto 2" aria-label="Copy heading and permalink for Punto 2">🔗</a></div>
+</li>
+<li id="sec-intervalli-4-7-4-1-2-3">
+<div class="para" id="sec-intervalli-4-7-4-1-2-3-1">Si vede che non ci sono parti in comune e quindi si “ricopiano” gli intervalli sulla riga del risultato:<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-4-7-4-1-2-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/sec-intervalli-4-7-4-1-2-3-2.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Punto 3"><a href="#sec-intervalli-4-7-4-1-2-3" title="Copy heading and permalink for Punto 3" aria-label="Copy heading and permalink for Punto 3">🔗</a></div>
+</li>
+<li id="sec-intervalli-4-7-4-1-2-4">
+<div class="para" id="p-derived-sec-intervalli-4-7-4-1-2-4">Non è quindi possibile scrivere un risultato più compatto di <span class="process-math">\((-1,0)\cup[2,+\infty)=\{x\in\R: -1\lt x \lt 0 \vee x \ge 2\}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Punto 4"><a href="#sec-intervalli-4-7-4-1-2-4" title="Copy heading and permalink for Punto 4" aria-label="Copy heading and permalink for Punto 4">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-4-7-4-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Soluzione 1.3.10.1"><a href="#sec-intervalli-4-7-4" title="Copy heading and permalink for Soluzione 1.3.10.1" aria-label="Copy heading and permalink for Soluzione 1.3.10.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esempio 1.3.10: Unione di intervalli senza parti in comune"><a href="#sec-intervalli-4-7" title="Copy heading and permalink for Esempio 1.3.10: Unione di intervalli senza parti in comune" aria-label="Copy heading and permalink for Esempio 1.3.10: Unione di intervalli senza parti in comune">🔗</a></div>
+</article></details>
+<div class="para" id="sec-intervalli-4-8">Emerge un importante aspetto: l’unione di intervalli disgiunti (senza parti comuni) dà un risultato che prevede l’uso di <span class="process-math">\(\cup\)</span> per la notazione con le parentesi tonde e quadre, che si traduce in un simbolo <span class="process-math">\(\vee\)</span> nella notazione con le graffe. Questo significa che il fatto di avere alternative (O logico) è il duale dell’unione degli intervalli. Ne segue che una scrittura come <span class="process-math">\(\{x\in\R: x \le 0 \vee x \gt 1\}\)</span> coincide con l’unione di due intervalli, cioè <span class="process-math">\((-\infty,0]\cup (1,+\infty)\text{.}\)</span> L’unione di intervalli è fondamentale per esempio per la risoluzione di disequazioni di secondo grado, disequazioni irrazionali o equazioni/disequazioni con valori assoluti.<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-4-8" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="para" id="sec-intervalli-4-9">Capiterà spesso di incontrare delle condizioni del tipo <span class="process-math">\(x\ne 1\)</span> oppure delle scritture come <span class="process-math">\(\R-{0}\text{.}\)</span> Queste sono interpretabili come intervalli, vediamo un esempio:<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-4-9" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<details id="sec-intervalli-4-10" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Caso particolare: esclusione di valori singoli.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="sec-intervalli-4-10-2-1">Determina la riga del grafico di linee per <span class="process-math">\(\R-\{2\}=\{x\in\R:x\ne 2\}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-4-10-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec-intervalli-4-10-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="sec-intervalli-4-10-3-1">
+<div class="para">
+<span class="process-math">\(\R-\{2\}\)</span> indica un insieme che contiene tutti i numeri reali tranne il 2. Questo significa che comprende tutti i numeri strettamente minori di 2 e strettamente superiori a 2:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/alg-grafico-unione.html" id="sec-intervalli-4-10-3-1-2">
+\begin{equation*}
+\R-\{2\}=\{x\in\R:x\ne 2\} = \{x\in\R:x\lt 2 \vee x\gt 2\} = (-\infty,2)\cup (2,+\infty)
+\end{equation*}
+</div>
+<div class="para">Questo può essere rappresentato nel grafico di linee come una linea con un pallino vuoto in corrispondenza di 2 (seguendo l’<a href="sec-intervalli.html#alg-grafico-unione" class="xref" data-knowl="./knowl/xref/alg-grafico-unione.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Algoritmo 1.3.8: Costruzione del grafico di unione">Algoritmo 1.3.8</a>):</div>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-4-10-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/sec-intervalli-4-10-3-2.svg" role="img" class="contained"></div>
+<div class="para" id="sec-intervalli-4-10-3-3">Ogni volta che si esclude un valore singolo, questo si traduce in un pallino vuoto nel grafico di segni.<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-4-10-3-3" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Soluzione 1.3.11.1"><a href="#sec-intervalli-4-10-3" title="Copy heading and permalink for Soluzione 1.3.11.1" aria-label="Copy heading and permalink for Soluzione 1.3.11.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esempio 1.3.11: Caso particolare: esclusione di valori singoli"><a href="#sec-intervalli-4-10" title="Copy heading and permalink for Esempio 1.3.11: Caso particolare: esclusione di valori singoli" aria-label="Copy heading and permalink for Esempio 1.3.11: Caso particolare: esclusione di valori singoli">🔗</a></div>
+</article></details>
+<details id="sec-intervalli-4-11" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Unione di unioni.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="sec-intervalli-4-11-2-1">Determina l’unione tra <span class="process-math">\(\{x\in\R: x\lt -2 \vee x\gt 2\}\)</span> e <span class="process-math">\(\{x\in\R: 0 \le x \le 2\}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-4-11-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec-intervalli-4-11-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para logical" id="sec-intervalli-4-11-3-1">
+<div class="displaymath process-math" id="sec-intervalli-4-11-3-1-1">
+\begin{equation*}
+((-\infty,-2)\cup(2,+\infty))\cup [0,2]=(-\infty,-2)\cup[0,+\infty)
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-4-11-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Risposta 1.3.12.1"><a href="#sec-intervalli-4-11-3" title="Copy heading and permalink for Risposta 1.3.12.1" aria-label="Copy heading and permalink for Risposta 1.3.12.1">🔗</a></div>
+</div></details>
+<details id="sec-intervalli-4-11-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="sec-intervalli-4-11-4-1">
+<div class="para">Seguiamo l’<a href="sec-intervalli.html#alg-grafico-unione" class="xref" data-knowl="./knowl/xref/alg-grafico-unione.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Algoritmo 1.3.8: Costruzione del grafico di unione">Algoritmo 1.3.8</a> ricordando che il primo intervallo è già un’unione di intervalli disgiunti:</div>
+<ol class="decimal" id="sec-intervalli-4-11-4-1-2">
+<li id="sec-intervalli-4-11-4-1-2-1">
+<div class="para" id="sec-intervalli-4-11-4-1-2-1-1">Tracciamo una linea orizzontale orientata (una freccia verso destra) e posizioniamo i tre valori degli estremi finiti, facendo attenzione all’ordine<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-4-11-4-1-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/sec-intervalli-4-11-4-1-2-1-2.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Punto 1"><a href="#sec-intervalli-4-11-4-1-2-1" title="Copy heading and permalink for Punto 1" aria-label="Copy heading and permalink for Punto 1">🔗</a></div>
+</li>
+<li id="sec-intervalli-4-11-4-1-2-2">
+<div class="para" id="sec-intervalli-4-11-4-1-2-2-1">Si disegnano gli intervalli sulla stessa riga, ottenendo:<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-4-11-4-1-2-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/sec-intervalli-4-11-4-1-2-2-2.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Punto 2"><a href="#sec-intervalli-4-11-4-1-2-2" title="Copy heading and permalink for Punto 2" aria-label="Copy heading and permalink for Punto 2">🔗</a></div>
+</li>
+<li id="sec-intervalli-4-11-4-1-2-3">
+<div class="para" id="sec-intervalli-4-11-4-1-2-3-1">Si vede che due intervalli si uniscono perché il pallino pieno di un intervallo “tappa il buco” dell’altro intervallo, ottenendo il risultato:<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-4-11-4-1-2-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/sec-intervalli-4-11-4-1-2-3-2.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Punto 3"><a href="#sec-intervalli-4-11-4-1-2-3" title="Copy heading and permalink for Punto 3" aria-label="Copy heading and permalink for Punto 3">🔗</a></div>
+</li>
+<li id="sec-intervalli-4-11-4-1-2-4">
+<div class="para" id="p-derived-sec-intervalli-4-11-4-1-2-4">Il risultato diventa quindi <span class="process-math">\((-\infty,-2)\cup[0,+\infty)=\{x\in\R: x \lt -2 \vee x \ge 0\}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Punto 4"><a href="#sec-intervalli-4-11-4-1-2-4" title="Copy heading and permalink for Punto 4" aria-label="Copy heading and permalink for Punto 4">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-4-11-4-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Soluzione 1.3.12.1"><a href="#sec-intervalli-4-11-4" title="Copy heading and permalink for Soluzione 1.3.12.1" aria-label="Copy heading and permalink for Soluzione 1.3.12.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esempio 1.3.12: Unione di unioni"><a href="#sec-intervalli-4-11" title="Copy heading and permalink for Esempio 1.3.12: Unione di unioni" aria-label="Copy heading and permalink for Esempio 1.3.12: Unione di unioni">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Sottoparagrafo 1.3.2: Unione di intervalli"><a href="#sec-intervalli-4" title="Copy heading and permalink for Sottoparagrafo 1.3.2: Unione di intervalli" aria-label="Copy heading and permalink for Sottoparagrafo 1.3.2: Unione di intervalli">🔗</a></div>
+</section>
+<section class="subsection" id="sec-intervalli-5">
+<h3 class="heading hide-type">
+<span class="type">Sottoparagrafo</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Intersezione di intervalli</span>
+</h3>
+<div class="para" id="sec-intervalli-5-2">Intersezione, il grafico di unione<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-5-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<article class="algorithm theorem-like" id="alg-grafico-intersezione"><h4 class="heading">
+<span class="type">Algoritmo</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Costruzione del grafico di intersezione.</span>
+</h4>
+<div class="para logical" id="alg-grafico-intersezione-2-1">
+<ol class="decimal" id="alg-grafico-intersezione-2-1-1">
+<li id="alg-grafico-intersezione-2-1-1-1">
+<div class="para" id="p-derived-alg-grafico-intersezione-2-1-1-1">Si traccia una linea orizzontale orientata (una freccia verso destra), si dispongono <em class="alert">in ordine</em> gli estremi finiti di tutti gli intervalli considerati.</div>
+<div class="autopermalink" data-description="Punto 1"><a href="#alg-grafico-intersezione-2-1-1-1" title="Copy heading and permalink for Punto 1" aria-label="Copy heading and permalink for Punto 1">🔗</a></div>
+</li>
+<li id="alg-grafico-intersezione-2-1-1-2">
+<div class="para" id="p-derived-alg-grafico-intersezione-2-1-1-2">Tutti gli intervalli da intersecare vengono tracciati <em class="alert">su righe distinte</em>, seguendo per ognuno i punti 2 e 3 dell’<a href="sec-intervalli.html#alg-grafico-linee" class="xref" data-knowl="./knowl/xref/alg-grafico-linee.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Algoritmo 1.3.4: Disegno di un intervallo nel grafico di linee">Algoritmo 1.3.4</a>.</div>
+<div class="autopermalink" data-description="Punto 2"><a href="#alg-grafico-intersezione-2-1-1-2" title="Copy heading and permalink for Punto 2" aria-label="Copy heading and permalink for Punto 2">🔗</a></div>
+</li>
+<li id="alg-grafico-intersezione-2-1-1-3">
+<div class="para" id="p-derived-alg-grafico-intersezione-2-1-1-3">Il risultato verrà indicato graficamente sulla linea orientata evidenziando tutti i tratti di retta e i punti che compaiono in tutti degli intervalli (l’intersezione considera solo le parti comuni degli intervalli).</div>
+<div class="autopermalink" data-description="Punto 3"><a href="#alg-grafico-intersezione-2-1-1-3" title="Copy heading and permalink for Punto 3" aria-label="Copy heading and permalink for Punto 3">🔗</a></div>
+</li>
+<li id="alg-grafico-intersezione-2-1-1-4">
+<div class="para" id="p-derived-alg-grafico-intersezione-2-1-1-4">Si scrive la forma algebrica del risultato ottenuto al punto precedente. Se gli intervalli non hanno parti in comune, l’intersezione fornisce come risultato l’insieme vuoto. Se nella riga del risultato grafico si ottengono più intervalli separati, la soluzione è la loro unione.</div>
+<div class="autopermalink" data-description="Punto 4"><a href="#alg-grafico-intersezione-2-1-1-4" title="Copy heading and permalink for Punto 4" aria-label="Copy heading and permalink for Punto 4">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Capoverso"><a href="#alg-grafico-intersezione-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Algoritmo 1.3.13: Costruzione del grafico di intersezione"><a href="#alg-grafico-intersezione" title="Copy heading and permalink for Algoritmo 1.3.13: Costruzione del grafico di intersezione" aria-label="Copy heading and permalink for Algoritmo 1.3.13: Costruzione del grafico di intersezione">🔗</a></div>
+</article>
+<div class="para" id="sec-intervalli-5-4">Per una regola più pratica sul calcolo del risultato: fanno parte dell’intersezione finale solo quei pezzi di intervallo (linee e pallini pieni) che compaioni su tutte le righe, quindi non c’è modo di “sanare” un buco con l’intersezione (come invece è possibile fare con l’unione).<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-5-4" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<details id="sec-intervalli-5-5" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Intersezione di intervalli con parti in comune.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="sec-intervalli-5-5-2-1">Determina <span class="process-math">\((-1,3)\cap[2,5]\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-5-5-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec-intervalli-5-5-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para logical" id="sec-intervalli-5-5-3-1">
+<div class="displaymath process-math" id="sec-intervalli-5-5-3-1-1">
+\begin{equation*}
+(-1,3)\cap[2,5]=[2,3)
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-5-5-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Risposta 1.3.14.1"><a href="#sec-intervalli-5-5-3" title="Copy heading and permalink for Risposta 1.3.14.1" aria-label="Copy heading and permalink for Risposta 1.3.14.1">🔗</a></div>
+</div></details>
+<details id="sec-intervalli-5-5-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="sec-intervalli-5-5-4-1">
+<div class="para">Seguiamo l’<a href="sec-intervalli.html#alg-grafico-intersezione" class="xref" data-knowl="./knowl/xref/alg-grafico-intersezione.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Algoritmo 1.3.13: Costruzione del grafico di intersezione">Algoritmo 1.3.13</a>:</div>
+<ol class="decimal" id="sec-intervalli-5-5-4-1-2">
+<li id="sec-intervalli-5-5-4-1-2-1">
+<div class="para" id="sec-intervalli-5-5-4-1-2-1-1">Tracciamo una linea orizzontale orientata (una freccia verso destra) e posizioniamo i quattro valori degli estremi, facendo attenzione all’ordine<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-5-5-4-1-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/sec-intervalli-5-5-4-1-2-1-2.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Punto 1"><a href="#sec-intervalli-5-5-4-1-2-1" title="Copy heading and permalink for Punto 1" aria-label="Copy heading and permalink for Punto 1">🔗</a></div>
+</li>
+<li id="sec-intervalli-5-5-4-1-2-2">
+<div class="para" id="sec-intervalli-5-5-4-1-2-2-1">Si disegnano i due intervalli su righe distinte, ottenendo:<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-5-5-4-1-2-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/sec-intervalli-5-5-4-1-2-2-2.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Punto 2"><a href="#sec-intervalli-5-5-4-1-2-2" title="Copy heading and permalink for Punto 2" aria-label="Copy heading and permalink for Punto 2">🔗</a></div>
+</li>
+<li id="sec-intervalli-5-5-4-1-2-3">
+<div class="para" id="sec-intervalli-5-5-4-1-2-3-1">Si vede che alcune parti sono in comune e si traccia il risultato grafico evidenziando solo tali parti: 2 è incluso perché appartiene a entrambi gli intervalli, mentre 3 viene escluso perché non appartiene al primo intervallo:<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-5-5-4-1-2-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/sec-intervalli-5-5-4-1-2-3-2.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Punto 3"><a href="#sec-intervalli-5-5-4-1-2-3" title="Copy heading and permalink for Punto 3" aria-label="Copy heading and permalink for Punto 3">🔗</a></div>
+</li>
+<li id="sec-intervalli-5-5-4-1-2-4">
+<div class="para" id="p-derived-sec-intervalli-5-5-4-1-2-4">Vediamo che i due intervalli si sono “contratti” in uno unico che va da 2 (incluso) a 3 (escluso). Scriviamo quindi il risultato: <span class="process-math">\((-1,3)\cap[2,5]=[2,3)\{x\in\R: 2\le x \lt 3\}\)</span>
+</div>
+<div class="autopermalink" data-description="Punto 4"><a href="#sec-intervalli-5-5-4-1-2-4" title="Copy heading and permalink for Punto 4" aria-label="Copy heading and permalink for Punto 4">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-5-5-4-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Soluzione 1.3.14.1"><a href="#sec-intervalli-5-5-4" title="Copy heading and permalink for Soluzione 1.3.14.1" aria-label="Copy heading and permalink for Soluzione 1.3.14.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esempio 1.3.14: Intersezione di intervalli con parti in comune"><a href="#sec-intervalli-5-5" title="Copy heading and permalink for Esempio 1.3.14: Intersezione di intervalli con parti in comune" aria-label="Copy heading and permalink for Esempio 1.3.14: Intersezione di intervalli con parti in comune">🔗</a></div>
+</article></details>
+<details id="sec-intervalli-5-6" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Intersezione nella vita quotidiana.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="sec-intervalli-5-6-2-1">Aragorn, Legolas e Gimli vogliono andare in vacanza il prossimo mese. Aragorn non può prima del 10 del mese, Legolas può solo dal 5 al 20, Gimli deve tornare al lavoro il 19. Quando i tre possono andare in vacanza?<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-5-6-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec-intervalli-5-6-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para" id="sec-intervalli-5-6-3-1">Dal 10 incluso al 19 escluso (al 18 incluso).<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-5-6-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Risposta 1.3.15.1"><a href="#sec-intervalli-5-6-3" title="Copy heading and permalink for Risposta 1.3.15.1" aria-label="Copy heading and permalink for Risposta 1.3.15.1">🔗</a></div>
+</div></details>
+<details id="sec-intervalli-5-6-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="sec-intervalli-5-6-4-1">Possiamo scrivere le date disponibili come se fossero degli intervalli (in questo caso useremo i numeri naturali visto che non consideriamo le frazioni di giorno): <span class="process-math">\(A=[10,+\infty)=\{x\in\N: x \ge 10\}\text{,}\)</span> <span class="process-math">\(L=[5,20]=\{x\in\N: 5 \le x \le 20\}\)</span> e <span class="process-math">\(G=(-\infty, 19)=\{x\in\N: x \lt 19\}\text{.}\)</span> Costruiamo un grafico di intersezione per incrociare le loro agende:<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-5-6-4-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/sec-intervalli-5-6-4-2.svg" role="img" class="contained"></div>
+<div class="para" id="sec-intervalli-5-6-4-3">Si vede che l’unico momento in cui possono andare in vacanza è tra il 10 incluso e il 19 escluso, cioè nel periodo <span class="process-math">\(A\cap L \cap G[10,19)=\{x\in\N: 10 \le x \lt 19\}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-5-6-4-3" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Soluzione 1.3.15.1"><a href="#sec-intervalli-5-6-4" title="Copy heading and permalink for Soluzione 1.3.15.1" aria-label="Copy heading and permalink for Soluzione 1.3.15.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esempio 1.3.15: Intersezione nella vita quotidiana"><a href="#sec-intervalli-5-6" title="Copy heading and permalink for Esempio 1.3.15: Intersezione nella vita quotidiana" aria-label="Copy heading and permalink for Esempio 1.3.15: Intersezione nella vita quotidiana">🔗</a></div>
+</article></details>
+<div class="para" id="sec-intervalli-5-7">Emerge un importante aspetto: l’intersezione di intervalli prevede la compresenza dei valori degli intervalli ed è il duale dell’E logica (<span class="process-math">\(\wedge\)</span>). Ne segue che una scrittura come <span class="process-math">\(\{x\in\R: x \ge 0 \wedge x \le 1\}\)</span> coincide con l’intersezione di due intervalli, cioè <span class="process-math">\([0,+\infty)\cap (-\infty,1]\text{.}\)</span> L’intersezione di intervalli è fondamentale per esempio per la risoluzione di sistemi di equazioni/disequazioni.<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-5-7" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<details id="sec-intervalli-5-8" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Operazioni miste 1.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="sec-intervalli-5-8-2-1">Determina <span class="process-math">\(\{x\in\R: x\lt -2 \vee x\gt 2\} \cap \{x\in\R: 0 \le x \le 4\}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-5-8-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec-intervalli-5-8-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para logical" id="sec-intervalli-5-8-3-1">
+<div class="displaymath process-math" id="sec-intervalli-5-8-3-1-1">
+\begin{equation*}
+((-\infty,-2)\cup(2,+\infty))\cap [0,4]=(2,4]
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-5-8-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Risposta 1.3.16.1"><a href="#sec-intervalli-5-8-3" title="Copy heading and permalink for Risposta 1.3.16.1" aria-label="Copy heading and permalink for Risposta 1.3.16.1">🔗</a></div>
+</div></details>
+<details id="sec-intervalli-5-8-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="sec-intervalli-5-8-4-1">
+<div class="para">Seguiamo l’<a href="sec-intervalli.html#alg-grafico-intersezione" class="xref" data-knowl="./knowl/xref/alg-grafico-intersezione.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Algoritmo 1.3.13: Costruzione del grafico di intersezione">Algoritmo 1.3.13</a> ricordando che il primo intervallo è già un’unione di intervalli disgiunti:</div>
+<ol class="decimal" id="sec-intervalli-5-8-4-1-2">
+<li id="sec-intervalli-5-8-4-1-2-1">
+<div class="para" id="sec-intervalli-5-8-4-1-2-1-1">Tracciamo una linea orizzontale orientata (una freccia verso destra) e posizioniamo i quattro valori degli estremi finiti, facendo attenzione all’ordine<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-5-8-4-1-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/sec-intervalli-5-8-4-1-2-1-2.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Punto 1"><a href="#sec-intervalli-5-8-4-1-2-1" title="Copy heading and permalink for Punto 1" aria-label="Copy heading and permalink for Punto 1">🔗</a></div>
+</li>
+<li id="sec-intervalli-5-8-4-1-2-2">
+<div class="para" id="sec-intervalli-5-8-4-1-2-2-1">Disegniamo gli intervalli, ottenendo:<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-5-8-4-1-2-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/sec-intervalli-5-8-4-1-2-2-2.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Punto 2"><a href="#sec-intervalli-5-8-4-1-2-2" title="Copy heading and permalink for Punto 2" aria-label="Copy heading and permalink for Punto 2">🔗</a></div>
+</li>
+<li id="sec-intervalli-5-8-4-1-2-3">
+<div class="para" id="sec-intervalli-5-8-4-1-2-3-1">Si vede che esistono delle parti in comune alle due righe, quindi otteniamo:<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-5-8-4-1-2-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/sec-intervalli-5-8-4-1-2-3-2.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Punto 3"><a href="#sec-intervalli-5-8-4-1-2-3" title="Copy heading and permalink for Punto 3" aria-label="Copy heading and permalink for Punto 3">🔗</a></div>
+</li>
+<li id="sec-intervalli-5-8-4-1-2-4">
+<div class="para" id="p-derived-sec-intervalli-5-8-4-1-2-4">Il risultato diventa quindi <span class="process-math">\((2,4]=\{x\in\R: 2 \lt x \le 4\}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Punto 4"><a href="#sec-intervalli-5-8-4-1-2-4" title="Copy heading and permalink for Punto 4" aria-label="Copy heading and permalink for Punto 4">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-5-8-4-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Soluzione 1.3.16.1"><a href="#sec-intervalli-5-8-4" title="Copy heading and permalink for Soluzione 1.3.16.1" aria-label="Copy heading and permalink for Soluzione 1.3.16.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esempio 1.3.16: Operazioni miste 1"><a href="#sec-intervalli-5-8" title="Copy heading and permalink for Esempio 1.3.16: Operazioni miste 1" aria-label="Copy heading and permalink for Esempio 1.3.16: Operazioni miste 1">🔗</a></div>
+</article></details>
+<details id="sec-intervalli-5-9" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Operazioni miste 2.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="sec-intervalli-5-9-2-1">Determina <span class="process-math">\(\{x\in\R: x\ne \pm 3\} \cap \{x\in\R: x\le 0\}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-5-9-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec-intervalli-5-9-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para logical" id="sec-intervalli-5-9-3-1">
+<div class="displaymath process-math" id="sec-intervalli-5-9-3-1-1">
+\begin{equation*}
+(\R-\{\pm 3\})\cap (-\infty,0]=(-\infty,0]-\{-3\}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-5-9-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Risposta 1.3.17.1"><a href="#sec-intervalli-5-9-3" title="Copy heading and permalink for Risposta 1.3.17.1" aria-label="Copy heading and permalink for Risposta 1.3.17.1">🔗</a></div>
+</div></details>
+<details id="sec-intervalli-5-9-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="sec-intervalli-5-9-4-1">
+<div class="para">Seguiamo l’<a href="sec-intervalli.html#alg-grafico-intersezione" class="xref" data-knowl="./knowl/xref/alg-grafico-intersezione.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Algoritmo 1.3.13: Costruzione del grafico di intersezione">Algoritmo 1.3.13</a> ricordando che il primo intervallo è il caso particolare di valori esclusi:</div>
+<ol class="decimal" id="sec-intervalli-5-9-4-1-2">
+<li id="sec-intervalli-5-9-4-1-2-1">
+<div class="para" id="sec-intervalli-5-9-4-1-2-1-1">Tracciamo una linea orizzontale orientata (una freccia verso destra) e posizioniamo i tre valori degli estremi finiti, facendo attenzione all’ordine<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-5-9-4-1-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/sec-intervalli-5-9-4-1-2-1-2.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Punto 1"><a href="#sec-intervalli-5-9-4-1-2-1" title="Copy heading and permalink for Punto 1" aria-label="Copy heading and permalink for Punto 1">🔗</a></div>
+</li>
+<li id="sec-intervalli-5-9-4-1-2-2">
+<div class="para" id="sec-intervalli-5-9-4-1-2-2-1">Disegniamo gli intervalli, ottenendo:<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-5-9-4-1-2-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/sec-intervalli-5-9-4-1-2-2-2.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Punto 2"><a href="#sec-intervalli-5-9-4-1-2-2" title="Copy heading and permalink for Punto 2" aria-label="Copy heading and permalink for Punto 2">🔗</a></div>
+</li>
+<li id="sec-intervalli-5-9-4-1-2-3">
+<div class="para" id="sec-intervalli-5-9-4-1-2-3-1">Si vede che esistono delle parti in comune alle due righe, ma viene anche generato un buco nell’intervallo finale:<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-5-9-4-1-2-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/sec-intervalli-5-9-4-1-2-3-2.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Punto 3"><a href="#sec-intervalli-5-9-4-1-2-3" title="Copy heading and permalink for Punto 3" aria-label="Copy heading and permalink for Punto 3">🔗</a></div>
+</li>
+<li id="sec-intervalli-5-9-4-1-2-4">
+<div class="para" id="p-derived-sec-intervalli-5-9-4-1-2-4">Il risultato diventa quindi <span class="process-math">\((-\infty,0]-\{-3\}=\{x\in\R: x\le 0 \wedge x\ne -3\}\)</span> che può essere scritto anche come <span class="process-math">\((-\infty,-3)\cup(-3,0]=\{x\in\R: x\lt -3 \vee -3 \lt x\le 0\}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Punto 4"><a href="#sec-intervalli-5-9-4-1-2-4" title="Copy heading and permalink for Punto 4" aria-label="Copy heading and permalink for Punto 4">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-intervalli-5-9-4-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Soluzione 1.3.17.1"><a href="#sec-intervalli-5-9-4" title="Copy heading and permalink for Soluzione 1.3.17.1" aria-label="Copy heading and permalink for Soluzione 1.3.17.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esempio 1.3.17: Operazioni miste 2"><a href="#sec-intervalli-5-9" title="Copy heading and permalink for Esempio 1.3.17: Operazioni miste 2" aria-label="Copy heading and permalink for Esempio 1.3.17: Operazioni miste 2">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Sottoparagrafo 1.3.3: Intersezione di intervalli"><a href="#sec-intervalli-5" title="Copy heading and permalink for Sottoparagrafo 1.3.3: Intersezione di intervalli" aria-label="Copy heading and permalink for Sottoparagrafo 1.3.3: Intersezione di intervalli">🔗</a></div>
+</section><div class="autopermalink" data-description="Paragrafo 1.3: Intervalli e loro operazioni"><a href="#sec-intervalli" title="Copy heading and permalink for Paragrafo 1.3: Intervalli e loro operazioni" aria-label="Copy heading and permalink for Paragrafo 1.3: Intervalli e loro operazioni">🔗</a></div>
+</section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="sec-insiemi.html" title="Precedente"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prec</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-op-arit.html" title="Successivo"><span class="name">Succ</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

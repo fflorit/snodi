@@ -6,10 +6,10 @@ screenHeaderFile  = Snodi/header/Snodi.pg
 description       = Snodi
 problemListV2
 problem_start
-source_file = Snodi/1_3_5-Operazioni_elementari_tra_numeri_razionali.pg
+source_file = Snodi/1_4_5-_Operazioni_elementari_tra_numeri_razionali.pg
 problem_id = 5
 problem_end
 problem_start
-source_file = Snodi/3_1_3-Studio_del_segno_di_una_frazione_algebrica.pg
-problem_id = 3
+source_file = Snodi/3_1_7-_Studio_del_segno_di_una_frazione_algebrica.pg
+problem_id = 7
 problem_end
