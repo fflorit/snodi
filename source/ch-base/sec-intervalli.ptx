@@ -1,0 +1,537 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<section xml:id="sec-intervalli" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Intervalli e loro operazioni</title>
+<introduction>
+    <p>Tra i sottoinsiemi degli insiemi numerici troviamo anche gli <term>intervalli</term>. Considereremo gli intervalli di numeri reali in quanto sono quelli che vedremo più spesso. Essendo gli intervalli degli insiemi è possibile svolgere delle operazioni, come l'unione e l'intersezione.</p>
+</introduction>
+
+<subsection>
+    <title>Intervalli</title>
+    <definition><title>Intervallo</title><idx>intervallo</idx>
+    <statement><p>Si definisce <term>intervallo</term> (di numeri reali) un sottoinsieme dei numeri reali formato da tutti i punti della linea dei numeri compresi tra due valori <m>a</m> e <m>b</m>, chiamati <term>estremi</term>. Gli estremi possono essere o meno appartenenti all'intervallo. Gli estremi dell'intervallo possono anche essere infiniti.</p></statement>
+    </definition>
+    <p>
+        Esistono vari tipi di intervallo, in base al fatto che gli estremi siano inclusi o esclusi, finiti o infiniti. Si ipotizza sempre <m>a,b\in\R^* : a\lt b</m> (letto: <q><m>a</m> e <m>b</m> appartenenti all'insieme esteso dei numeri reali tali che <m>a</m> sia strettamente minore di <m>b</m></q>). <m>a</m> viene chiamato <term>estremo inferiore</term> e <m>b</m> <term>estremo superiore</term>. Esistono vari modi per indicare gli intervalli: la notazione compatta con le parentesi tonde e quadre (usata in questo libro), la notazione compatta con le sole parentesi quadre (che non verrà usata in questo libro) e la notazione estesa con le parentesi graffe (usata in questo libro). Le varie notazioni avranno scopi diversi e useremo quella più comoda secondo l'obbiettivo. In base al fatto che gli estremi siano inclusi o esclusi si distinguono i concetti di:
+        <ul>
+            <li><p>intervallo <term>aperto</term> <m>(a,b)\defeq \{x\in\R : a \lt x \lt b\}</m>: è un insieme di numeri reali compresi tra i due estremi e con estremi entrambi esclusi<idx><h>intervallo</h><h>aperto</h></idx></p></li>
+            <li><p>intervallo <term>chiuso</term> <m>[a,b]\defeq \{x\in\R : a \le x \le b\}</m>: è un insieme di numeri reali compresi tra i due estremi e con estremi entrambi inclusi<idx><h>intervallo</h><h>chiuso</h></idx></p></li>
+            <li><p>intervallo <term>chiuso a sinistra</term> <m>[a,b)\defeq \{x\in\R : a \le x \lt b\}</m>: è un insieme di numeri reali compresi tra i due estremi e con l'estremo sinistro (inferiore) incluso e quello destro (superiore) escluso<idx><h>intervallo</h><h>chiuso a sinistra</h></idx></p></li>
+            <li><p>intervallo <term>chiuso a destra</term> <m>(a,b]\defeq \{x\in\R : a \lt x \le b\}</m>: è un insieme di numeri reali compresi tra i due estremi e con l'estremo sinistro (inferiore) escluso e quello destro (superiore) incluso<idx><h>intervallo</h><h>chiuso a destra</h></idx></p></li>
+        </ul>
+        Per ricordare: nella notazione a tonde e quadre, la parentesi tonda indica che l'estremo di fianco ad essa non è incluso, mentre la parentesi quadra indica che l'estremo è incluso nell'intervallo; nella notazione con le parentesi graffe gli estremi vengono inclusi se nel simbolo di disuguaglianza c'è l'uguale, altrimenti sono esclusi.
+    </p>
+    <p>
+        Se entrambi gli estremi dell'intervallo sono finiti, cioè <m>a,b\in\R</m>, si parla di intervallo <term>limitato</term>. Se uno o entrambi gli estremi di un intervallo sono infiniti, cioè se <m>a=-\infty</m> e/o <m>b=+\infty</m>, si parla di:
+        <ul>
+            <li><p>intervallo <term>illimitato inferiormente</term> (o a sinistra) se <m>a=-\infty \wedge b\ne +\infty</m> e ci sono i due casi <m>(-\infty,b)\defeq \{x\in\R : x \lt b\}</m> e <m>(-\infty,b]\defeq \{x\in\R : x \ge a\}</m> in base al fatto che <m>a</m> sia incluso o escluso<idx><h>intervallo</h><h>illimitato inferiormente</h></idx></p></li>
+            <li><p>intervallo <term>illimitato superiormente</term> (o a destra) se <m>a\ne -\infty \wedge b=+\infty</m> e ci sono i due casi <m>(a,+\infty)\defeq \{x\in\R : x \gt a\}</m> e <m>[a,+\infty)\defeq \{x\in\R : x \ge a\}</m> in base al fatto che <m>a</m> sia incluso o escluso<idx><h>intervallo</h><h>illimitato superiormente</h></idx></p></li>
+            <li><p>intervallo <term>illimitato sia inferiormente che superiormente</term> (o illimitato) se <m>a= -\infty \wedge b=+\infty</m> ed esiste l'unico caso <m>(-\infty,+\infty)\defeq \{\forall x\in\R\} = \R</m><idx><h>intervallo</h><h>illimitato sia inferiormente che superiormente</h></idx></p></li>
+        </ul>
+        In un intervallo illimitato <alert>l'estremo infinito è sempre escluso</alert> e va indicato di fianco a una parentesi tonda nella notazione a tonde e quadre.
+    </p>
+
+
+
+
+    <example>
+        <title>Classificazione e notazione degli intervalli 1</title>
+        <statement>
+            <p>Classifica i seguenti intervalli e per ognuno scrivi la forma con le parentesi graffe:<ol>
+                <li><p><m>[-2,2]</m></p></li>
+                <li><p><m>[4,+\infty)</m></p></li>
+                <li><p><m>(-1,3]</m></p></li>
+                <li><p><m>(1,2)</m></p></li>
+                <li><p><m>(-\infty,1)</m></p></li>
+            </ol></p>
+        </statement>
+        <answer>
+            <p><ol>
+                <li><p>Intervallo limitato, chiuso. <m>\{x\in\R : -2 \le x \le 2\}</m></p></li>
+                <li><p>Intervallo illimitato superiormente, chiuso a sinistra. <m>\{x\in\R : x \ge 4\}</m></p></li>
+                <li><p>Intervallo limitato, chiuso a destra. <m>\{x\in\R : 1 \lt x \le 3\}</m></p></li>
+                <li><p>Intervallo limitato, aperto. <m>\{x\in\R : 1 \lt x \lt 2\}</m></p></li>
+                <li><p>Intervallo illimitato inferiormente, aperto. <m>\{x\in\R : x \lt 1\}</m></p></li>
+            </ol></p>
+        </answer>
+    </example>
+
+    <example>
+        <title>Classificazione e notazione degli intervalli 2</title>
+        <statement>
+            <p>Classifica i seguenti intervalli e per ognuno scrivi la forma con le parentesi tonde e quadre:<ol>
+                <li><p><m>\{x\in\R : 0 \le x \le 2\}</m></p></li>
+                <li><p><m>\{x\in\R : x \le -3\}</m></p></li>
+                <li><p><m>\{x\in\R : 1 \le x \lt 4\}</m></p></li>
+                <li><p><m>\{x\in\R : x \gt 0\}</m></p></li>
+            </ol></p>
+        </statement>
+        <answer>
+            <p><ol>
+                <li><p>Intervallo limitato, chiuso. <m>[0,2]</m></p></li>
+                <li><p>Intervallo illimitato inferiormente, chiuso a destra. <m>(-\infty,-3]</m></p></li>
+                <li><p>Intervallo limitato, chiuso a sinistra. <m>[1,4)</m></p></li>
+                <li><p>Intervallo illimitato superiormente, aperto. <m>(0,+\infty)</m></p></li>
+            </ol></p>
+        </answer>
+    </example>
+
+    <!-- <p>
+        Esercizio classifica gli intervalli ... TBD
+    </p>
+
+    <p>
+        Esercizio scrivi la forma con le parentesi dalle disuguaglianze ... TBD
+    </p>
+
+    <p>
+        Esercizio scrivi le disequazioni dalla forma con le parentesi ... TBD
+    </p> -->
+
+    <p>Gli intervalli possono essere anche rappresentati graficamente usando la retta dei numeri reali in un <term>grafico di linee</term><idx><h>grafico</h><h>di linee</h></idx>. Questo strumento verrà utilizzato in varie occasioni, in particolare per ottenere velocemente i risultati delle operazioni tra intervalli (unione e intersezione) necessari quando si risolvono per esempio sistemi di disequazioni.</p>
+    <p>Il grafico è composto da una linea orientata di valori numerici di solito reali su cui vengono indicati gli estremi dell'intervallo (o degli intervalli) in esame e delle linee con dei pallini che indicano il tipo di intervallo. Per fare un esempio di una riga del grafico di linee guardiamo il seguente schema:</p>
+    <image width="40%">
+        <latex-image>
+            \begin{tikzpicture}
+                \GraficoLinee{{-3,1}}{{{1/,c,c,}}}
+            \end{tikzpicture}
+        </latex-image>
+    </image>
+    <p>La riga indica che l'intervallo è limitato e ha estremi -3 e 1, entrambi inclusi in quanto viene usato un pallino pieno per indicare che l'estremo è incluso e un pallino vuoto per indicare che è escluso (<q>c'è un buco o manca un pezzetto</q>). L'intervallo è quindi <m>[-3,1]=\{x\in\R: -3\le x \le 1\}</m>.</p>
+    <image width="40%">
+        <latex-image>
+            \begin{tikzpicture}
+                \GraficoLinee{{2}}{{{1/,a,a}}}
+            \end{tikzpicture}
+        </latex-image>
+    </image>
+    <p>In questo caso si tratta di un intervallo illimitato superiormente e 2 come estremo inferiore, 2 escluso in quanto viene usato un pallino vuoto. L'intervallo è quindi <m>(2,+\infty)=\{x\in\R: x \gt 2\}</m>.</p>
+
+    <p>Il grafico però non è già pronto nella pratica, ma va costruito partendo dall'intervallo: è indifferente quale notazione di intervallo si usa. Vediamo come:</p>
+
+    <algorithm xml:id="alg-grafico-linee">
+        <title>Disegno di un intervallo nel grafico di linee</title>
+        <statement><p>
+            <ol>
+                <li>Si traccia una linea orizzontale orientata (una freccia verso destra), si dispongono <alert>in ordine</alert> gli estremi finiti dell'intervallo.</li>
+                <li>Per ogni numero indicato si disegna un pallino al di sotto della freccia, allineandolo verticalmente: pieno se l'estremo è incluso, vuoto se è escluso</li>
+                <li><p>Si tracciano delle linee a partire dai pallini:<ul>
+                    <li><p>per intervalli limitati si traccia una linea che unisce i due pallini, per indicare che i numeri compresi tra i due estremi sono inclusi</p></li>
+                    <li><p>per intervalli illimitati inferiormente si traccia una linea che va verso sinistra dall'unico pallino, per indicare che i numeri inferiori all'estremo destro sono inclusi</p></li>
+                    <li><p>per intervalli illimitati superiormente si traccia una linea che va verso destra dall'unico pallino, per indicare che i numeri superiori all'estremo sinistro sono inclusi</p></li>
+                </ul></p></li>
+            </ol>
+        </p></statement>
+    </algorithm>
+
+    <example><title>Preparazione di una riga del grafico di linee 1</title>
+        <statement><p>Determina la riga del grafico di linee per l'intervallo <m>[-5,1)=\{x\in\R: -5 \le x \lt 1\}</m>.</p></statement>
+        <solution>
+            <p>Seguiamo l'<xref ref="alg-grafico-linee"/>:<ol>
+                <li><p>Tracciamo una linea orizzontale orientata (una freccia verso destra) e posizioniamo i due valori degli estremi
+                </p>
+                    <image width="40%">
+                        <latex-image>
+                            \begin{tikzpicture}
+                                \GraficoLinee{{-5,1}}{{}}
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </li>
+                <li><p>Si disegna un pallino pieno sotto il 5 perché l'estremo è incluso e uno vuoto sotto 1 perché è escluso, poi si uniscono i pallini con una linea perché l'intervallo è limitato (sono d'interesse anche i numeri compresi tra -5 e 1), ottenendo:
+                </p>
+                <image width="40%">
+                    <latex-image>
+                        \begin{tikzpicture}
+                                \GraficoLinee{{-5,1}}{{{1/,c,a,}}}
+                        \end{tikzpicture}
+                    </latex-image>
+                </image></li>
+            </ol></p>
+        </solution>
+    </example>
+
+    <example><title>Preparazione di una riga del grafico di linee 2</title>
+        <statement><p>Determina la riga del grafico di linee per l'intervallo <m>(-\infty,3]=\{x\in\R: x \le 3\}</m>.</p></statement>
+        <solution>
+            <p>Seguiamo l'<xref ref="alg-grafico-linee"/>:<ol>
+                <li><p>Tracciamo una linea orizzontale orientata (una freccia verso destra) e posizioniamo l'unico valore finito degli estremi
+                </p>
+                    <image width="40%">
+                        <latex-image>
+                            \begin{tikzpicture}
+                                \GraficoLinee{{3}}{{}}
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </li>
+                <li><p>Si disegna un pallino pieno sotto il 3 perché l'estremo è incluso, poi si traccia una linea dal pallino verso sinistra (visto che sono d'interesse anche i numeri inferiori a -3), ottenendo:
+                </p>
+                <image width="40%">
+                    <latex-image>
+                        \begin{tikzpicture}
+                                \GraficoLinee{{3}}{{{1/a,c,}}}
+                        \end{tikzpicture}
+                    </latex-image>
+                </image></li>
+            </ol></p>
+        </solution>
+    </example>
+
+    <example><title>Preparazione di una riga del grafico di linee 3</title>
+        <statement><p>Determina la riga del grafico di linee per l'intervallo <m>(0,1)=\{x\in\R: 0 \lt x \lt 1\}</m>.</p></statement>
+        <solution>
+            <p>Seguiamo l'<xref ref="alg-grafico-linee"/>:<ol>
+                <li><p>Tracciamo una linea orizzontale orientata (una freccia verso destra) e posizioniamo i due valori degli estremi
+                </p>
+                    <image width="40%">
+                        <latex-image>
+                            \begin{tikzpicture}
+                                \GraficoLinee{{0,1}}{{}}
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </li>
+                <li><p>Si disegnano due pallini vuoti sotto entrambi gli estremi perché sono esclusi (l'intervallo è aperto), poi si uniscono i pallini con una linea perché l'intervallo è limitato (sono d'interesse solo i numeri compresi tra 0 e 1), ottenendo:
+                </p>
+                <image width="40%">
+                    <latex-image>
+                        \begin{tikzpicture}
+                                \GraficoLinee{{0,1}}{{{1/,a,a,}}}
+                        \end{tikzpicture}
+                    </latex-image>
+                </image></li>
+            </ol></p>
+        </solution>
+    </example>
+
+</subsection>
+
+<subsection>
+    <title>Unione di intervalli</title>
+    <p>
+        Come abbiamo visto nel <xref ref="subsec-insiemi-op" /> esiste l'unione di insiemi e, visto che gli intervalli sono sottoinsiemi, esiste anche l'unione tra intervalli. Questo serve di solito in certe operazioni finali nella soluzione di equazioni o disequazioni, quando più procedure distinti hanno dato soluzioni accettabili e si vuole concludere che tutte le alternative vanno bene per il procedimento.
+    </p>
+    <algorithm xml:id="alg-grafico-unione">
+        <title>Costruzione del grafico di unione</title>
+        <statement><p>
+            <ol>
+                <li>Si traccia una linea orizzontale orientata (una freccia verso destra), si dispongono <alert>in ordine</alert> gli estremi finiti di tutti gli intervalli considerati.</li>
+                <li>Tutti gli intervalli da unire vengono tracciati <alert>sulla stessa riga</alert>, seguendo per ognuno i punti 2 e 3 dell'<xref ref="alg-grafico-linee"/>.</li>
+                <li>Il risultato verrà indicato graficamente sulla linea orientata evidenziando tutti i tratti di retta e i punti che compaiono in almeno uno degli intervalli (l'unione considera tutte le parti comuni e non comuni degli intervalli).</li>
+                <li>Si scrive la forma algebrica del risultato ottenuto al punto precedente. Se più intervalli hanno parti comuni (sovrapposte), l'unione forma un unico intervallo tra le parti. Se gli intervalli non hanno parti in comune, l'unione esiste e si indicherà algebricamente col simbolo <m>\cup</m> per la notazione con le parentesi tonde e quadre o col simbolo <m>\vee</m> nella notazione a parentesi graffe.</li>
+            </ol>
+        </p></statement>
+    </algorithm>
+    <p>Va sottolineato che l'unione di intervalli fornisce sempre un risultato non vuoto (come invece può accadere in altre operazioni).</p>
+    <p>Per avere un'idea meno matematica di come si calcola il risultato: possiamo pensare di <q>schiacciare</q> gli intervalli uno sopra l'altro cercando di <q>fonderli</q>, così che eventuali buchi (pallini vuoti o interruzioni) di un intervallo vengano tappati dall'altro intervallo, se allineato bene.</p>
+
+    <example><title>Unione di intervalli con parti in comune</title>
+        <statement><p>Determina <m>(-1,3)\cup[2,5]</m>.</p></statement>
+        <answer>
+            <p><md>(-1,3)\cup[2,5]=(-1,5]</md></p>
+        </answer>
+        <solution>
+            <p>Seguiamo l'<xref ref="alg-grafico-unione"/>:<ol>
+                <li><p>Tracciamo una linea orizzontale orientata (una freccia verso destra) e posizioniamo i quattro valori degli estremi, facendo attenzione all'ordine
+                </p>
+                    <image width="40%">
+                        <latex-image>
+                            \begin{tikzpicture}
+                                \GraficoLinee{{-1,2,3,5}}{{}}
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </li>
+                <li><p>Si disegnano i due intervalli sulla stessa riga, ottenendo:
+                </p>
+                <image width="40%">
+                    <latex-image>
+                        \begin{tikzpicture}
+                                \GraficoLinee{{-1,2,3,5}}{{{1/,a,,a,,}, {1/,,c,,c,}}}
+                        \end{tikzpicture}
+                    </latex-image>
+                </image></li>
+                <li><p>Si vede che alcune parti sono in comune e si traccia il risultato grafico evidenziando tutti i tratti di retta e i punti che compaiono in almeno uno degli intervalli: il -1 rimane escluso perché non appartiene a nessuno dei due intervalli, mentre 3 viene incluso perché appartiene al secondo intervallo:</p>
+                <image width="40%">
+                    <latex-image>
+                        \begin{tikzpicture}
+                                \GraficoLinee{{-1,2,3,5}}{{{1/,a,,a,,}, {1/,,c,,c,}, {0/,a,,,c,}}}
+                        \end{tikzpicture}
+                    </latex-image>
+                </image></li>
+                <li>Vediamo che i due intervalli si sono <q>fusi</q> in uno unico che va da -1 (escluso) a 5 (incluso). Scriviamo quindi il risultato: <m>(-1,3)\cup[2,5]=(-1,5]=\{x\in\R: -1\lt x \le 5\}</m></li>
+            </ol></p>
+        </solution>
+    </example>
+
+    <example><title>Unione di intervalli senza parti in comune</title>
+        <statement><p>Determina <m>(-1,0)\cup[2,+\infty)</m>.</p></statement>
+        <answer>
+            <p><m>(-1,0)\cup[2,+\infty)</m> non è ulteriormente semplificabile, quindi rimane così.</p>
+        </answer>
+        <solution>
+            <p>Seguiamo l'<xref ref="alg-grafico-unione"/>:<ol>
+                <li><p>Tracciamo una linea orizzontale orientata (una freccia verso destra) e posizioniamo i tre valori degli estremi finiti, facendo attenzione all'ordine
+                </p>
+                    <image width="40%">
+                        <latex-image>
+                            \begin{tikzpicture}
+                                \GraficoLinee{{-1,0,2}}{{}}
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </li>
+                <li><p>Si disegnano i due intervalli sulla stessa riga, ottenendo:
+                </p>
+                <image width="40%">
+                    <latex-image>
+                        \begin{tikzpicture}
+                                \GraficoLinee{{-1,0,2}}{{{1/,a,a,,}, {1/,,,c,a}}}
+                        \end{tikzpicture}
+                    </latex-image>
+                </image></li>
+                <li><p>Si vede che non ci sono parti in comune e quindi si <q>ricopiano</q> gli intervalli sulla riga del risultato:</p>
+                <image width="40%">
+                    <latex-image>
+                        \begin{tikzpicture}
+                                \GraficoLinee{{-1,0,2}}{{{1/,a,a,,}, {1/,,,c,a}, {0/,a,a,,}, {0/,,,c,a}}}
+                        \end{tikzpicture}
+                    </latex-image>
+                </image></li>
+                <li>Non è quindi possibile scrivere un risultato più compatto di <m>(-1,0)\cup[2,+\infty)=\{x\in\R: -1\lt x \lt 0 \vee x \ge 2\}</m>.</li>
+            </ol></p>
+        </solution>
+    </example>
+
+    <p>Emerge un importante aspetto: l'unione di intervalli disgiunti (senza parti comuni) dà un risultato che prevede l'uso di <m>\cup</m> per la notazione con le parentesi tonde e quadre, che si traduce in un simbolo <m>\vee</m> nella notazione con le graffe. Questo significa che il fatto di avere alternative (O logico) è il duale dell'unione degli intervalli. Ne segue che una scrittura come <m>\{x\in\R: x \le 0 \vee x \gt 1\}</m> coincide con l'unione di due intervalli, cioè <m>(-\infty,0]\cup (1,+\infty)</m>. L'unione di intervalli è fondamentale per esempio per la risoluzione di disequazioni di secondo grado, disequazioni irrazionali o equazioni/disequazioni con valori assoluti.</p>
+
+    <p>Capiterà spesso di incontrare delle condizioni del tipo <m>x\ne 1</m> oppure delle scritture come <m>\R-{0}</m>. Queste sono interpretabili come intervalli, vediamo un esempio:</p>
+
+    <example><title>Caso particolare: esclusione di valori singoli</title>
+        <statement><p>Determina la riga del grafico di linee per <m>\R-\{2\}=\{x\in\R:x\ne 2\}</m>.</p></statement>
+        <solution>
+            <p>
+                <m>\R-\{2\}</m> indica un insieme che contiene tutti i numeri reali tranne il 2. Questo significa che comprende tutti i numeri strettamente minori di 2 e strettamente superiori a 2:
+                <md>
+                    \R-\{2\}=\{x\in\R:x\ne 2\} = \{x\in\R:x\lt 2 \vee x\gt 2\} = (-\infty,2)\cup (2,+\infty)
+                </md>
+                Questo può essere rappresentato nel grafico di linee come una linea con un pallino vuoto in corrispondenza di 2 (seguendo l'<xref ref="alg-grafico-unione"/>):
+            </p>
+            <image width="40%">
+                <latex-image>
+                    \begin{tikzpicture}
+                            \GraficoLinee{{2}}{{{1/a,a,}, {1/,a,a}}}
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+            <p>
+                Ogni volta che si esclude un valore singolo, questo si traduce in un pallino vuoto nel grafico di segni.
+            </p>
+        </solution>
+    </example>
+
+    <example><title>Unione di unioni</title>
+        <statement><p>Determina l'unione tra <m>\{x\in\R: x\lt -2 \vee x\gt 2\}</m> e <m>\{x\in\R: 0 \le x \le 2\}</m>.</p></statement>
+        <answer>
+            <p><md>((-\infty,-2)\cup(2,+\infty))\cup [0,2]=(-\infty,-2)\cup[0,+\infty)</md></p>
+        </answer>
+        <solution>
+            <p>Seguiamo l'<xref ref="alg-grafico-unione"/> ricordando che il primo intervallo è già un'unione di intervalli disgiunti:<ol>
+                <li><p>Tracciamo una linea orizzontale orientata (una freccia verso destra) e posizioniamo i tre valori degli estremi finiti, facendo attenzione all'ordine
+                </p>
+                    <image width="40%">
+                        <latex-image>
+                            \begin{tikzpicture}
+                                \GraficoLinee{{-2,0,2}}{{}}
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </li>
+                <li><p>Si disegnano gli intervalli sulla stessa riga, ottenendo:
+                </p>
+                <image width="40%">
+                    <latex-image>
+                        \begin{tikzpicture}
+                                \GraficoLinee{{-2,0,2}}{{{1/a,a,,,}, {1/,,,a,a}, {1/,,c,c,}}}
+                        \end{tikzpicture}
+                    </latex-image>
+                </image></li>
+                <li><p>Si vede che due intervalli si uniscono perché il pallino pieno di un intervallo <q>tappa il buco</q> dell'altro intervallo, ottenendo il risultato:</p>
+                <image width="40%">
+                    <latex-image>
+                        \begin{tikzpicture}
+                                \GraficoLinee{{-2,0,2}}{{{1/a,a,,,}, {1/,,,a,a}, {1/,,c,c,}, {0/a,a,,,}, {0/,,c,,a}}}
+                        \end{tikzpicture}
+                    </latex-image>
+                </image></li>
+                <li>Il risultato diventa quindi <m>(-\infty,-2)\cup[0,+\infty)=\{x\in\R: x \lt -2 \vee x \ge 0\}</m>.</li>
+            </ol></p>
+        </solution>
+    </example>
+
+</subsection>
+
+<subsection>
+    <title>Intersezione di intervalli</title>
+    <p>
+        Intersezione, il grafico di unione
+    </p>
+    <algorithm xml:id="alg-grafico-intersezione">
+        <title>Costruzione del grafico di intersezione</title>
+        <statement><p>
+            <ol>
+                <li>Si traccia una linea orizzontale orientata (una freccia verso destra), si dispongono <alert>in ordine</alert> gli estremi finiti di tutti gli intervalli considerati.</li>
+                <li>Tutti gli intervalli da intersecare vengono tracciati <alert>su righe distinte</alert>, seguendo per ognuno i punti 2 e 3 dell'<xref ref="alg-grafico-linee"/>.</li>
+                <li>Il risultato verrà indicato graficamente sulla linea orientata evidenziando tutti i tratti di retta e i punti che compaiono in tutti degli intervalli (l'intersezione considera solo le parti comuni degli intervalli).</li>
+                <li>Si scrive la forma algebrica del risultato ottenuto al punto precedente. Se gli intervalli non hanno parti in comune, l'intersezione fornisce come risultato l'insieme vuoto. Se nella riga del risultato grafico si ottengono più intervalli separati, la soluzione è la loro unione.</li>
+            </ol>
+        </p></statement>
+    </algorithm>
+    <p>Per una regola più pratica sul calcolo del risultato: fanno parte dell'intersezione finale solo quei pezzi di intervallo (linee e pallini pieni) che compaioni su tutte le righe, quindi non c'è modo di <q>sanare</q> un buco con l'intersezione (come invece è possibile fare con l'unione).</p>
+
+    <example><title>Intersezione di intervalli con parti in comune</title>
+        <statement><p>Determina <m>(-1,3)\cap[2,5]</m>.</p></statement>
+        <answer>
+            <p><md>(-1,3)\cap[2,5]=[2,3)</md></p>
+        </answer>
+        <solution>
+            <p>Seguiamo l'<xref ref="alg-grafico-intersezione"/>:<ol>
+                <li><p>Tracciamo una linea orizzontale orientata (una freccia verso destra) e posizioniamo i quattro valori degli estremi, facendo attenzione all'ordine
+                </p>
+                    <image width="40%">
+                        <latex-image>
+                            \begin{tikzpicture}
+                                \GraficoLinee{{-1,2,3,5}}{{}}
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </li>
+                <li><p>Si disegnano i due intervalli su righe distinte, ottenendo:
+                </p>
+                <image width="40%">
+                    <latex-image>
+                        \begin{tikzpicture}
+                                \GraficoLinee{{-1,2,3,5}}{{{1/,a,,a,,}, {2/,,c,,c,}}}
+                        \end{tikzpicture}
+                    </latex-image>
+                </image></li>
+                <li><p>Si vede che alcune parti sono in comune e si traccia il risultato grafico evidenziando solo tali parti: 2 è incluso perché appartiene a entrambi gli intervalli, mentre 3 viene escluso perché non appartiene al primo intervallo:</p>
+                <image width="40%">
+                    <latex-image>
+                        \begin{tikzpicture}
+                                \GraficoLinee{{-1,2,3,5}}{{{1/,a,,a,,}, {2/,,c,,c,}, {0/,,c,a,,}}}
+                        \end{tikzpicture}
+                    </latex-image>
+                </image></li>
+                <li>Vediamo che i due intervalli si sono <q>contratti</q> in uno unico che va da 2 (incluso) a 3 (escluso). Scriviamo quindi il risultato: <m>(-1,3)\cap[2,5]=[2,3)\{x\in\R: 2\le x \lt 3\}</m></li>
+            </ol></p>
+        </solution>
+    </example>
+
+    <example>
+        <title>Intersezione nella vita quotidiana</title>
+        <statement>
+            <p>Aragorn, Legolas e Gimli vogliono andare in vacanza il prossimo mese. Aragorn non può prima del 10 del mese, Legolas può solo dal 5 al 20, Gimli deve tornare al lavoro il 19. Quando i tre possono andare in vacanza?</p>
+        </statement>
+        <answer>
+            <p>Dal 10 incluso al 19 escluso (al 18 incluso).</p>
+        </answer>
+        <solution>
+            <p>Possiamo scrivere le date disponibili come se fossero degli intervalli (in questo caso useremo i numeri naturali visto che non consideriamo le frazioni di giorno): <m>A=[10,+\infty)=\{x\in\N: x \ge 10\}</m>, <m>L=[5,20]=\{x\in\N: 5 \le x \le 20\}</m> e <m>G=(-\infty, 19)=\{x\in\N: x \lt 19\}</m>. Costruiamo un grafico di intersezione per incrociare le loro agende:</p>
+            <image width="40%">
+                <latex-image>
+                    \begin{tikzpicture}
+                            \GraficoLinee{{5,10,19,20}}{{{1/,,c,,,a}, {2/,c,,,c,}, {3/a,,,a,,}, {0/,,c,a,,}}}
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+            <p>Si vede che l'unico momento in cui possono andare in vacanza è tra il 10 incluso e il 19 escluso, cioè nel periodo <m>A\cap L \cap G[10,19)=\{x\in\N: 10 \le x \lt 19\}</m>.</p>
+        </solution>
+        
+    </example>
+
+    <p>Emerge un importante aspetto: l'intersezione di intervalli prevede la compresenza dei valori degli intervalli ed è il duale dell'E logica (<m>\wedge</m>). Ne segue che una scrittura come <m>\{x\in\R: x \ge 0 \wedge x \le 1\}</m> coincide con l'intersezione di due intervalli, cioè <m>[0,+\infty)\cap (-\infty,1]</m>. L'intersezione di intervalli è fondamentale per esempio per la risoluzione di sistemi di equazioni/disequazioni.</p>
+
+    <example><title>Operazioni miste 1</title>
+        <statement><p>Determina <m>\{x\in\R: x\lt -2 \vee x\gt 2\} \cap \{x\in\R: 0 \le x \le 4\}</m>.</p></statement>
+        <answer>
+            <p><md>((-\infty,-2)\cup(2,+\infty))\cap [0,4]=(2,4]</md></p>
+        </answer>
+        <solution>
+            <p>Seguiamo l'<xref ref="alg-grafico-intersezione"/> ricordando che il primo intervallo è già un'unione di intervalli disgiunti:<ol>
+                <li><p>Tracciamo una linea orizzontale orientata (una freccia verso destra) e posizioniamo i quattro valori degli estremi finiti, facendo attenzione all'ordine
+                </p>
+                    <image width="40%">
+                        <latex-image>
+                            \begin{tikzpicture}
+                                \GraficoLinee{{-2,0,2,4}}{{}}
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </li>
+                <li><p>Disegniamo gli intervalli, ottenendo:
+                </p>
+                <image width="40%">
+                    <latex-image>
+                        \begin{tikzpicture}
+                                \GraficoLinee{{-2,0,2,4}}{{{1/a,a,,,,}, {1/,,,a,,a}, {2/,,c,,c,}}}
+                        \end{tikzpicture}
+                    </latex-image>
+                </image></li>
+                <li><p>Si vede che esistono delle parti in comune alle due righe, quindi otteniamo:</p>
+                <image width="40%">
+                    <latex-image>
+                        \begin{tikzpicture}
+                                \GraficoLinee{{-2,0,2,4}}{{{1/a,a,,,,}, {1/,,,a,,a}, {2/,,c,,c,}, {0/,,,a,c,}}}
+                        \end{tikzpicture}
+                    </latex-image>
+                </image></li>
+                <li>Il risultato diventa quindi <m>(2,4]=\{x\in\R: 2 \lt x \le 4\}</m>.</li>
+            </ol></p>
+        </solution>
+    </example>
+
+
+    <example><title>Operazioni miste 2</title>
+        <statement><p>Determina <m>\{x\in\R: x\ne \pm 3\} \cap \{x\in\R: x\le 0\}</m>.</p></statement>
+        <answer>
+            <p><md>(\R-\{\pm 3\})\cap (-\infty,0]=(-\infty,0]-\{-3\}</md></p>
+        </answer>
+        <solution>
+            <p>Seguiamo l'<xref ref="alg-grafico-intersezione"/> ricordando che il primo intervallo è il caso particolare di valori esclusi:<ol>
+                <li><p>Tracciamo una linea orizzontale orientata (una freccia verso destra) e posizioniamo i tre valori degli estremi finiti, facendo attenzione all'ordine
+                </p>
+                    <image width="40%">
+                        <latex-image>
+                            \begin{tikzpicture}
+                                \GraficoLinee{{-3,0,3}}{{}}
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </li>
+                <li><p>Disegniamo gli intervalli, ottenendo:
+                </p>
+                <image width="40%">
+                    <latex-image>
+                        \begin{tikzpicture}
+                                \GraficoLinee{{-3,0,3}}{{{1/a,a,,,}, {1/,a,,a,}, {1/,,,a,a}, {2/a,,c,,}}}
+                        \end{tikzpicture}
+                    </latex-image>
+                </image></li>
+                <li><p>Si vede che esistono delle parti in comune alle due righe, ma viene anche generato un buco nell'intervallo finale:</p>
+                <image width="40%">
+                    <latex-image>
+                        \begin{tikzpicture}
+                                \GraficoLinee{{-3,0,3}}{{{1/a,a,,,}, {1/,a,,a,}, {1/,,,a,a}, {2/a,,c,,}, {0/a,a,,,}, {0/,a,c,,}}}
+                        \end{tikzpicture}
+                    </latex-image>
+                </image></li>
+                <li>Il risultato diventa quindi <m>(-\infty,0]-\{-3\}=\{x\in\R: x\le 0 \wedge x\ne -3\}</m> che può essere scritto anche come <m>(-\infty,-3)\cup(-3,0]=\{x\in\R: x\lt -3 \vee -3 \lt x\le 0\}</m>.</li>
+            </ol></p>
+        </solution>
+    </example>
+
+</subsection>
+
+</section>

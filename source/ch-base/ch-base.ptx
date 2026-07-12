@@ -8,6 +8,7 @@
 
   <xi:include href="./sec-affermazioni.ptx" />
   <xi:include href="./sec-insiemi.ptx" />
+  <xi:include href="./sec-intervalli.ptx" />
   <xi:include href="./sec-op-arit.ptx" />
   <xi:include href="./sec-espr-lett.ptx" />
 

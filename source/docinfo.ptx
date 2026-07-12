@@ -150,6 +150,58 @@
         \draw[dotted] (\xx-1,0) -- ++(0,\pos-\spazio); %riga verticale puntinata per ogni numero
       }
     }
+
+
+    \newcommand{\GraficoLinee}[3][x]{
+      \def\spazio{0.6}
+      \def\emptyvar{}
+      \def\chiuso{c}
+      \foreach \x [count=\xx] in #2 {
+        \global\let\numNum=\xx
+        \draw[thin] (\xx-1,-.1) -- ++(0,.2) node[above]{$\x$}; %tick sull'asse
+      }
+      \draw[-latex, ultra thick] (-1,0) -- (\numNum,0) node[above]{$#1$}; %asse
+
+      \foreach \l\mode in #3 {
+        \gdef\aFatto{0}
+        \foreach \m [count=\k from -1] in \mode {
+          \ifx\m\emptyvar
+          \else
+            \ifnum\k=-1 %-infty
+              \node (a) at (\k,-\l*\spazio) {};
+              \gdef\aFatto{1}
+            \else
+              \ifnum\k=\numNum %+infty
+                  \node (b) at (\k,-\l*\spazio) {};
+              \else %estremo finito
+                \ifx\m\chiuso
+                  \ifnum\l=0
+                    \tikzset{stileNodo/.style={circle, fill=red, fill opacity=.5, inner sep=2pt}}
+                  \else
+                    \tikzset{stileNodo/.style={circle, fill, inner sep=2pt}}
+                  \fi
+                \else
+                  \tikzset{stileNodo/.style={draw, circle, inner sep=2pt}}
+                \fi
+                \ifnum\aFatto=0
+                  \node[stileNodo] (a) at (\k,-\l*\spazio) {};
+                  \gdef\aFatto{1}
+                \else
+                  \node[stileNodo] (b) at (\k,-\l*\spazio) {};
+                \fi
+              \fi
+            \fi
+          \fi
+        }
+        \ifnum\l=0
+          \draw[line width=4pt, red, opacity=.5] (a) -- (b);
+        \else
+          \draw[ultra thick] (a) -- (b);
+        \fi
+      }
+    }
+
+
   </macros>
 
   <latex-image-preamble>
